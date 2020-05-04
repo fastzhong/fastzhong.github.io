@@ -1,0 +1,54 @@
+baseURL = "https://www.fastzhong.com"
+title = "Alan Zhong"
+theme = "hugo-notepadium"
+copyright = "©2020 fastzhong.com"
+
+defaultContentLanguage = "zh"
+# Enable Disqus
+disqusShortname = "fastzhong"
+enableEmoji = true
+enableRobotsTXT = true
+# Google Analytics
+googleAnalytics = "UA-47315632-2"
+hasCJKLanguage = true
+languageCode = "zh-CN"  # for the RSS generation
+
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
+readingTime = true  # show reading time after article date
+logo = "fastzhong.png"
+slogan = ""
+#license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
+
+[params.assets]
+css = ["css/fonts.css"]
+js = ["js/all.min.js"]
+
+[params.comments]
+enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+[params.math]
+enable = false # load math globally, default: false. You can always enable math on per page.
+use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
+
+[params.syntax]
+use = "hljs"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "darcula"
+darkTheme = "darcula"
+
+[params.nav]
+showCategories = true       # /categories/
+showTags = true             # /tags/
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5

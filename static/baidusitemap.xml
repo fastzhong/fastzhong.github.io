@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://fastzhong.com/2016/10/01/hexo/</loc>
+    <lastmod>2019-12-31T03:01:38.003Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World - Hexo 建立个人独立博客</title>
+        <pubTime>2016-09-30T17:00:00.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="tooling" url="http://fastzhong.com/categories/tooling/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2016/10/02/%E6%83%A0%E6%99%AE%E5%89%8D%E6%80%BB%E8%A3%81%E5%AD%99%E6%8C%AF%E8%80%80%E8%B0%88%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2019-12-31T02:59:15.344Z</lastmod>
+    <data>
+        <display>
+        <title>惠普前总裁孙振耀谈职业生涯规划（转载 ）</title>
+        <pubTime>2016-10-02T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="common sense &amp; nonsense" url="http://fastzhong.com/categories/common-sense-nonsense/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2016/10/03/%E6%9D%8E%E5%AE%89%E7%9A%84%E6%A2%A6%E6%83%B3/</loc>
+    <lastmod>2019-12-31T02:58:38.995Z</lastmod>
+    <data>
+        <display>
+        <title>Ang Lee - A Never-Ending Dream 李安的梦想（ 转载）</title>
+        <pubTime>2016-10-03T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="common sense &amp; nonsense" url="http://fastzhong.com/categories/common-sense-nonsense/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2016/10/05/%E5%A4%A7%E7%89%9B%E7%BB%99%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E7%9A%847%E4%B8%AA%E5%BB%BA%E8%AE%AE/</loc>
+    <lastmod>2019-12-31T02:58:00.620Z</lastmod>
+    <data>
+        <display>
+        <title>大牛给计算机专业学生的 7 个建议（Joel Spolsky）</title>
+        <pubTime>2016-10-05T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="common sense &amp; nonsense" url="http://fastzhong.com/categories/common-sense-nonsense/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/02/28/ansible/</loc>
+    <lastmod>2019-12-31T02:50:55.336Z</lastmod>
+    <data>
+        <display>
+        <title>自动化神器 Ansible</title>
+        <pubTime>2017-02-28T04:00:00.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="devops" url="http://fastzhong.com/categories/devops/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/05/09/docker101/</loc>
+    <lastmod>2019-12-30T21:50:07.728Z</lastmod>
+    <data>
+        <display>
+        <title>容器技术 - Docker 101</title>
+        <pubTime>2017-05-08T17:00:00.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud native" url="http://fastzhong.com/categories/cloud-native/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/08/19/%E5%A4%AA%E5%A4%9A%E4%BA%BA%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E5%8F%AB%E6%94%BF%E5%BA%9C/</loc>
+    <lastmod>2019-12-30T21:40:51.512Z</lastmod>
+    <data>
+        <display>
+        <title>太多人不知道什么叫政府（陈丹青）（转载 ）</title>
+        <pubTime>2017-08-19T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="common sense &amp; nonsense" url="http://fastzhong.com/categories/common-sense-nonsense/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/09/01/chrome%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2019-12-30T21:40:04.225Z</lastmod>
+    <data>
+        <display>
+        <title>牛叉的 Chrome - 它的小伙伴们</title>
+        <pubTime>2017-08-31T17:00:00.000Z</pubTime>
+        
+        <tag>web</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="tooling" url="http://fastzhong.com/categories/tooling/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/09/06/vscode-intro/</loc>
+    <lastmod>2019-12-30T21:34:51.306Z</lastmod>
+    <data>
+        <display>
+        <title>编辑神器 - Visual Studio Code</title>
+        <pubTime>2017-09-06T04:00:00.000Z</pubTime>
+        
+        <tag>visual studio code</tag>
+         
+         
+           
+             
+              <breadCrumb title="tooling" url="http://fastzhong.com/categories/tooling/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/10/01/python-intro/</loc>
+    <lastmod>2019-12-30T21:32:38.062Z</lastmod>
+    <data>
+        <display>
+        <title>我看到了天堂，它是用 Python 编写的</title>
+        <pubTime>2017-10-01T04:00:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="programming" url="http://fastzhong.com/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/10/10/python-env/</loc>
+    <lastmod>2019-12-30T21:31:13.107Z</lastmod>
+    <data>
+        <display>
+        <title>Python - 开发环境</title>
+        <pubTime>2017-10-10T04:00:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="programming" url="http://fastzhong.com/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/11/01/modern-javascript-explained-for-dinosaurs/</loc>
+    <lastmod>2019-12-30T21:29:44.393Z</lastmod>
+    <data>
+        <display>
+        <title>给恐龙们解释一下当今的 Javascipt（译文）</title>
+        <pubTime>2017-11-01T04:00:00.000Z</pubTime>
+        
+        <tag>web</tag>
+         
+        <tag>fullstack</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="programming" url="http://fastzhong.com/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/01/30/serverless101/</loc>
+    <lastmod>2019-12-30T21:25:49.419Z</lastmod>
+    <data>
+        <display>
+        <title>serverless 101</title>
+        <pubTime>2018-01-30T04:00:00.000Z</pubTime>
+        
+        <tag>serverless</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud native" url="http://fastzhong.com/categories/cloud-native/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/02/11/modern-css-explained-for-dinosaurs/</loc>
+    <lastmod>2019-12-30T21:20:02.553Z</lastmod>
+    <data>
+        <display>
+        <title>给恐龙们解释一下当今的 CSS（译文）</title>
+        <pubTime>2018-02-11T04:00:00.000Z</pubTime>
+        
+        <tag>web</tag>
+         
+        <tag>fullstack</tag>
+         
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="programming" url="http://fastzhong.com/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/08/15/devops-pipeline/</loc>
+    <lastmod>2019-12-30T21:09:41.061Z</lastmod>
+    <data>
+        <display>
+        <title>devops pipeline</title>
+        <pubTime>2018-08-15T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="devops" url="http://fastzhong.com/categories/devops/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/12/31/mac/</loc>
+    <lastmod>2019-12-30T21:02:34.290Z</lastmod>
+    <data>
+        <display>
+        <title>Mac 设置（2018 岁末版）</title>
+        <pubTime>2018-12-30T17:00:00.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="tooling" url="http://fastzhong.com/categories/tooling/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/07/15/interview/</loc>
+    <lastmod>2019-08-10T01:39:15.702Z</lastmod>
+    <data>
+        <display>
+        <title>是时候发飙了</title>
+        <pubTime>2018-07-15T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="common sense &amp; nonsense" url="http://fastzhong.com/categories/common-sense-nonsense/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/08/15/git-flow/</loc>
+    <lastmod>2019-08-10T01:36:36.249Z</lastmod>
+    <data>
+        <display>
+        <title>git flow for great team collaboration</title>
+        <pubTime>2018-08-15T04:00:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="devops" url="http://fastzhong.com/categories/devops/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2017/09/25/dotfiles/</loc>
+    <lastmod>2019-08-09T08:30:31.387Z</lastmod>
+    <data>
+        <display>
+        <title>dotfiles</title>
+        <pubTime>2017-09-24T17:00:00.000Z</pubTime>
+        
+        <tag>dotfiles</tag>
+         
+         
+           
+             
+              <breadCrumb title="shell" url="http://fastzhong.com/categories/shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://fastzhong.com/2017/01/11/Principles-of-Good-Programming/</loc>
+    <lastmod>2019-08-09T07:20:56.931Z</lastmod>
+    <data>
+        <display>
+        <title>Principles of Good Programming</title>
+        <pubTime>2017-01-11T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="better developer" url="http://fastzhong.com/categories/better-developer/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/10/06/microservices101/</loc>
+    <lastmod>2019-04-28T23:38:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>我看微服务（Microservices）</title>
+        <pubTime>2018-10-06T04:00:00.000Z</pubTime>
+        
+        <tag>microservices</tag>
+         
+         
+           
+             
+              <breadCrumb title="architecture" url="http://fastzhong.com/categories/architecture/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/04/15/markdown/</loc>
+    <lastmod>2018-12-30T07:40:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>2分钟了解Markdown语法</title>
+        <pubTime>2018-04-14T17:00:00.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="tooling" url="http://fastzhong.com/categories/tooling/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/10/05/sql-server-alwayson/</loc>
+    <lastmod>2018-12-30T07:38:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>SQL Server 高可用以及 AlwaysOn</title>
+        <pubTime>2018-10-05T04:00:00.000Z</pubTime>
+        
+        <tag>sql server</tag>
+         
+         
+           
+             
+              <breadCrumb title="software development" url="http://fastzhong.com/categories/software-development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fastzhong.com/2018/08/22/vagrant/</loc>
+    <lastmod>2018-12-30T00:34:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vagrant 小技巧</title>
+        <pubTime>2018-08-22T04:00:00.000Z</pubTime>
+        
+        <tag>vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="devops" url="http://fastzhong.com/categories/devops/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>
