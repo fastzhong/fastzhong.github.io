@@ -4,7 +4,6 @@ date = "2018-08-15T12:19:19+08:00"
 categories = ["DevOps"]
 tags = []
 toc = false
-draft = true
 +++
 
 别扯了，DevOps 的核心就是自动化 - `全程自动化`
