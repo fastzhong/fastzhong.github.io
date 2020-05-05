@@ -5,7 +5,6 @@ readingTime = true
 categories = ["DevOps"]
 tags = []
 toc = false
-draft = false
 +++
 
 dotfiles - 你肯定知道我说的是什么，不然就不要往下看了。
@@ -23,11 +22,11 @@ $ echo ".mdot/" >> $HOME/.gitignore
 $ mdot remote add origin git@github-fastzhong:fastzhong/mdot.git
 ```
 
--   建立一个 ["Git base repository"](http://blog.csdn.net/pcplayer/article/details/72784096) --> `.mdot`，用这个 Git 仓库跟踪所有的 dotfiles
--   建立一个方便的 Git 命令行 alias ---> `mdot`
+-   建立一个 ["Git base repository"](http://blog.csdn.net/pcplayer/article/details/72784096) （ <font color="yellow">.mdot</font>），用这个 Git 仓库跟踪所有的 dotfiles
+-   建立一个方便的 git 命令行 alias （<font color="yellow">mdot</font>）
 -   "local" 和通常版本控制情况不同，默认下不显示没有跟踪的文件状态（跟踪文件必须先显式指明）
 -   把 alias 放入 .zshrc（或者 .bashrc）
--   让 Git 忽略 .mdot/，因为 .mdot/ 本身是仓库
+-   让 git 忽略 .mdot/，因为 .mdot/ 本身是仓库
 -   加入到 Github
 
 #### 接下来就可以开始跟踪 dotfiles
