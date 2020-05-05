@@ -12,13 +12,11 @@ toc = false
 
 Wordpress，Blogger，Tumblr，Medium，...，统统不入法眼，程序员喜欢自己干。基本的顺序：
 
-🆓🆓🆓
-
 -   _domain_：首先得注册和购买域名，Gandi，namecheap，GoDaddy 等
 -   _GitHub_：博客服务器和存放的地方，通过 git 来同步本地和 Github 的内容
 -   Visual Studio Code/Typora：博客内容编辑器，或者任何其它 markdown 编辑器
 -   _Hugo_：博客生成器
--   _netlify_: 自动构建，CDN 加速，HTTPS，等， 一条龙服务
+-   _netlify_: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务
 
 静态博客生成器多如牛毛，各种比较在此：
 

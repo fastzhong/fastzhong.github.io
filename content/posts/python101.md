@@ -198,7 +198,7 @@ pyenv 的截胡是通过 Path 环境变量：
 $(pyenv root)/shims:/usr/local/bin:/usr/bin:/bin
 ```
 
-#### 安装 pyenv
+-   安装 pyenv
 
 ```bash
 $ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
@@ -227,7 +227,7 @@ eval "$(pyenv virtualenv-init -)"
 
 没有的话或者其它 shell 如 zsh，自己手动加入。
 
-#### 使用 pyenv
+-   使用 pyenv
 
 ```bash
 $ pyenv
@@ -301,7 +301,7 @@ $ pyenv shell 3.6.2
 
 pip & virtualenv 这里只是作为背景知识简单介绍，直接使用 poetry。
 
-#### pip
+-   pip
 
 pip 用来安装、升级和卸载第三方包，Python 已经自带，也是曾经使用最广泛的。
 
@@ -328,11 +328,13 @@ Commands:
   help                        Show help for commands.
 ```
 
-#### virtualenv
+-   virtualenv
 
 virrtualenv 将 python 解释器，依赖的包，和每个项目建立一对一关系，这样不同项目就不互相影响了，所以称之为虚拟环境。poetry 将每个项目的虚拟环境存储在 virtualenvs.path 指定的目录之下。
 
-#### poetry 安装
+#### poetry
+
+-   poetry 安装
 
 安装后，查看 poetry 的默认设置：
 
@@ -350,7 +352,7 @@ virtualenvs.path = "{cache-dir}/virtualenvs"  # /Users/xxx/Library/Caches/pypoet
 
 修改 virtualenvs.in-project = false <font color="yellow">→ true</font>
 
-#### poetry 使用
+-   poetry 使用
 
 -   类似 node.js 里的 project.yml，PEP 518 引入的新标准 pyproject.toml 文件管理依赖列表和项目的各种 meta 信息，用来替代 Pipfile、requirements.txt、setup.py、setup.cfg、MANIFEST.in 等等各种配置文件。
 -   依赖分为两种，普通依赖（生产环境）和开发依赖。
@@ -443,17 +445,13 @@ _卸载包_：
 $ poetry remove package
 ```
 
-### Pycharm
+### 其它
 
-参考文章：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [PyCharm 功夫](/posts/pycharm/)
+Pycharm：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [PyCharm 功夫](/posts/pycharm/)
 
-### VS Code
+VS Code：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [VS Code 功夫](/posts/vscode/)
 
-参考文章：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [VS Code 功夫](/posts/vscode/)
-
-### Jupyter
-
-🗓TBD
+Jupyter：🗓TBD
 
 ## Python 项目最佳实践模板
 

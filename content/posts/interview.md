@@ -12,11 +12,11 @@ draft = false
 
 <!--more-->
 
-## <i class="fas fa-theater-masks"></i>&nbsp;&nbsp; 对工作的理解
+## 对工作的理解
 
 找工作最核心的一个问题就是“如何判断一个好的工作”，而答案的关键就是如何让自己受益最大。
 
-基本顺序是：好老板 → 好薪水 → 公司的商业性质和名气 → 职位的性质和前景
+<i class="fas fa-theater-masks"></i>&nbsp;&nbsp;基本顺序是：好老板 → 好薪水 → 公司的商业性质和名气 → 职位的性质和前景
 
 ### 好老板
 
@@ -34,25 +34,25 @@ draft = false
 
 选择比努力重要，公司比个人重要，如果立志从事 IT 行业，尽量往 IT 行业顶级公司靠，如 Facebook，Google，Microsoft，等，国内的 等等，成长期千万不要考虑太多的个人得失，准备困难，期望放低，薪水放低，逐步跳槽，曲线救国。
 
-## <i class="far fa-address-card"></i>&nbsp;&nbsp; 简历
+## 简历
 
-好的简历，就是你的形象和工作态度，格式，选词造句，可以直接抄用好的模版，网上很多，我自己的简历格式已经固定十多年了，换一家公司只是加一条经历。
+好的简历&nbsp;&nbsp;<i class="far fa-address-card"></i>，就是你的形象和工作态度，格式，选词造句，可以直接抄用好的模版，网上很多，我自己的简历格式已经固定十多年了，换一家公司只是加一条经历。
 
 简历要简单明了的列出一些基本的事实，例如学校，工作过的公司，项目，专业资格，奖项等，面试官在“日理万机”中需要看几百份甚至上千份的简历，自己可以想象，他是不会也不可能每个字细看的，而且看多了，基本状况一目了然，一两分钟没有吸引到的话，就直接淘汰了。所以重点是除了简单罗列，一定要有自己东西，哪方面让你已众不同，杰出的，例如成功的项目，自己做过哪些具体、特别的贡献；对于新手或普通人，没有强烈的背景或成绩，也可以突出是自己的特质，例如哪些方面表现自己是个负责任，努力学习，或者注重团队合作的人。其实简历也是让你选适合自己的千里马和领导，双向匹配的过程，在信息不透明的情况下，涮选掉你不希望的老板和工作，做到有的放矢，只不过不是主动的方式。
 
-## <i class="fas fa-tasks"></i>&nbsp;&nbsp; 面试前的准备
+## 面试
+
+### 面试前的准备
 
 -   了解公司：公司的 CEO 和管理层，商业运作模式和策略，产品竞争力，同行，财务状况，名声，过去几年的表现（上市公司通过股票市场），近期的大新闻
--   了解老板：资历，技术/非技术背景，所带的团队和业务，猎头反馈
+-   了解老板/面试官：资历，技术/非技术背景，所带的团队和业务，猎头反馈&
 -   了解职位：技术/非技术要求，领域发展前景，薪水范畴，个人喜好
 
-相关网站：[Linkedin](https://www.linkedin.com)，[Glassdoor](https://www.glassdoor.com)，[Comparably](https://www.comparably.com)，[Crunchbase](https://www.crunchbase.com)，[Yahoo Finance](https://finance.yahoo.com)
-
-## <i class="far fa-handshake"></i>&nbsp;&nbsp; 面试
+<i class="fas fa-tasks"></i>&nbsp;&nbsp;相关网站：[Linkedin](https://www.linkedin.com)，[Glassdoor](https://www.glassdoor.com)，[Comparably](https://www.comparably.com)，[Crunchbase](https://www.crunchbase.com)，[Yahoo Finance](https://finance.yahoo.com)
 
 ### 套路
 
-1. _<font color="yellow">个人介绍</font>_：需要准备 1 分钟和 5 分钟两个版本，包括学习经历、工作经历、项目经历、个人优势、一句话总结，一定要自己背得滚瓜烂熟，张口就来
+1. _<font color="yellow">个人介绍 </font>_：需要准备 1 分钟和 5 分钟两个版本，包括学习经历、工作经历、项目经历、个人优势、一句话总结，一定要自己背得滚瓜烂熟，张口就来
 2. _<font color="yellow">抽象概念</font>_：当面试官问你是如何理解多线程的时候，你要知道从定义、来源、实现、问题、优化、应用方面系统性地回答
 3. _<font color="yellow">项目强化</font>_：至少与知识点的比例是五五开，所以必须针对简历中的两个以上的项目，形成包括【架构和实现细节】，【正常流程和异常流程的处理】，【难点+坑+复盘优化】三位一体的组合拳
 4. _<font color="yellow">STAR 模型</font>_：针对综合能力方面的考察，如与人交流、沟通，处理客户的能力；文档，报告，进度控制，处理项目的能力；提高团队协作，竞争力的能力；等等，可参考 [Interview Techniques - STAR Method](https://www.youtube.com/watch?v=0nN7Q7DrI6Q)
@@ -147,7 +147,7 @@ _公司 Company_:
 -   什么让你觉得这家公司会取得成功？
     what makes you think this company will be successful? What do you like most working in this company?
 
-## <i class="far fa-file-code"></i>&nbsp;&nbsp; 算法编程面试
+## 算法编程面试
 
 > `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
 
@@ -155,13 +155,15 @@ _公司 Company_:
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试的准备](/posts/algo101)
 
-## <i class="far fa-file-code"></i>&nbsp;&nbsp; 系统设计面试
+## 系统设计面试
 
 系统设计没有定量定性，比较难准备，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试的准备](/posts/system-design)
 
-## 🆓 Java 面试福利
+## Java 面试福利
+
+🆓
 
 -   [2020 最新 Java 面试题及答案 v3.0](/download/2020最新Java面试题及答案v3.0.pdf)
 -   [JavaGuide 面试突击版.v2](/download/JavaGuide面试突击版.v2.pdf)

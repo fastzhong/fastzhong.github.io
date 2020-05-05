@@ -3,7 +3,7 @@ title = "2 分钟了解 Markdown"
 date = 2018-04-15T19:04:41+08:00
 categories = ["工具"]
 tags = []
-toc = false
+toc = true
 +++
 
 Markdown 和 Json 一样都是好东西，简单、好用，利于专注写作：
@@ -176,7 +176,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 ### 分割线
 
 ```markdown
---- 
+---
 ```
 
 效果：
