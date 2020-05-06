@@ -159,17 +159,17 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 
 还有各种 Python 的解释器，编译器，扩展等，不过 CPython（默认）是最完整的 Python 解释器，即是官方，也是使用的首选。
 
-## Python setup for Year 2020
-
-这个是很多人忽略，或者困恼初学者的地方。学习一门技术，起手架很重要，你需要上手的正确姿势（最佳实践），原因在于电脑和其它工程技术一样，随着日新月异的发展变得不再是 1+1 那么简单。
-
-### Python 版本及各种包
+## Python 版本及各种包
 
 软件开发像搭积木，除了语言本身，更重要的是依赖于各种第三方提供的模块，库，包（各种语言使用的名称不太相同）。做开发的都知道版本和兼容是个通用的大问题，大家都在不同的开发语言上，不停的尝试不同的方法。Python 有两个主流版本 2.x & 3.x 互相不兼容（Python 由于一开始就不是大厂工业化支持，当初属于 Python 之父探索性研究，向后兼容性一直比较不好，快速发展和保证兼容是矛盾的，各有利弊）。Python 3 在 2008 年就出现了，只是近一两才成为首选，但是仍然有众多的包是针对 Python 2 的（这也是 Python 3 这么长时间无法流行起来的原因）。有的时候主版本相同，次版本不同（例如 3.1 & 3.2），细微差别也会导致兼容性问题。除了语言本身，模块和库也有版本兼容性问题，不兼容的模块和库是不能直接拿来用的，想象一下，你机器上同时有两个项目 A 和 B，A 是用 Python 2 开发的，而 B 是用 Python 3 开发的，怎么办？如果 B 依赖于一个第三方的包，版本是 1.0，C 依赖同一个包，但要求版本是 2.0（依赖冲突）。另外还有同一个包可能被依赖多次（层级依赖）。开发人员直接就要面对这个现实而头疼的问题，几十个包不同的版本如何放在同一台机器上，多份拷贝，怎么管理，如何进行升级？嘿嘿，问题不是新的，方法也是不止一种的，这又产生了多一层的混乱：
 
 ![Python environment](/images/python101/python-environment.png)
 
 💡 包管理或者依赖管理是 Python 比较弱的一个方面，这里就不仔细讨论各种 [历史方案](https://packetpushers.net/setting-up-a-python-environment-where-to-develop/) (想了解各种工具的自行 Google)。
+
+## Python setup for Year 2020
+
+这个是很多人忽略，或者困恼初学者的地方。学习一门技术，起手架很重要，你需要上手的正确姿势（最佳实践），原因在于电脑和其它工程技术一样，随着日新月异的发展变得不再是 1+1 那么简单。
 
 下面直接给出答案：
 
@@ -198,7 +198,7 @@ pyenv 的截胡是通过 Path 环境变量：
 $(pyenv root)/shims:/usr/local/bin:/usr/bin:/bin
 ```
 
--   安装 pyenv
+#### 安装 pyenv
 
 ```bash
 $ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
@@ -227,7 +227,7 @@ eval "$(pyenv virtualenv-init -)"
 
 没有的话或者其它 shell 如 zsh，自己手动加入。
 
--   使用 pyenv
+#### 使用 pyenv
 
 ```bash
 $ pyenv
@@ -297,11 +297,11 @@ _指定当前 shell 使用的 Python 版本_：
 $ pyenv shell 3.6.2
 ```
 
-### pip，virtualenv，poetry
+### poetry
 
 pip & virtualenv 这里只是作为背景知识简单介绍，直接使用 poetry。
 
--   pip
+#### pip
 
 pip 用来安装、升级和卸载第三方包，Python 已经自带，也是曾经使用最广泛的。
 
@@ -328,7 +328,7 @@ Commands:
   help                        Show help for commands.
 ```
 
--   virtualenv
+#### virtualenv
 
 virrtualenv 将 python 解释器，依赖的包，和每个项目建立一对一关系，这样不同项目就不互相影响了，所以称之为虚拟环境。poetry 将每个项目的虚拟环境存储在 virtualenvs.path 指定的目录之下。
 
@@ -354,11 +354,11 @@ virtualenvs.path = "{cache-dir}/virtualenvs"  # /Users/xxx/Library/Caches/pypoet
 
 -   poetry 使用
 
--   类似 node.js 里的 project.yml，PEP 518 引入的新标准 pyproject.toml 文件管理依赖列表和项目的各种 meta 信息，用来替代 Pipfile、requirements.txt、setup.py、setup.cfg、MANIFEST.in 等等各种配置文件。
--   依赖分为两种，普通依赖（生产环境）和开发依赖。
--   安装某个包，会在 pyproject.toml 文件中默认使用 upper bound 版本限定，比如 Flask^1.1。这被叫做 Caret requirements，比如某个依赖的版本限定是 ^2.9.0，当你执行 poetry update 的时候，它或许会更新到 2.14.0，但不会更新到 3.0.0；假如固定的版本是 ^0.1.11，它可能会更新到 0.1.19，但不会更新到 0.2.0。总之，在更新依赖的时候不会修改最左边非零的数字号版本，这样的默认设定可以确保你在更新依赖的时候不会更新到具有不兼容变动的版本。另外也支持更多依赖版本限定符号。
--   不会像 Pipenv 那样随时更新你的锁定依赖版本，锁定依赖存储在 poetry.lock 文件里（这个文件会自动生成）。所以，记得把你的 poetry.lock 文件纳入版本控制。
--   执行 poetry 或 poetry list 命令查看所有可用的命令。
+    -   类似 node.js 里的 project.yml，PEP 518 引入的新标准 pyproject.toml 文件管理依赖列表和项目的各种 meta 信息，用来替代 Pipfile、requirements.txt、setup.py、setup.cfg、MANIFEST.in 等等各种配置文件。
+    -   依赖分为两种，普通依赖（生产环境）和开发依赖。
+    -   安装某个包，会在 pyproject.toml 文件中默认使用 upper bound 版本限定，比如 Flask^1.1。这被叫做 Caret requirements，比如某个依赖的版本限定是 ^2.9.0，当你执行 poetry update 的时候，它或许会更新到 2.14.0，但不会更新到 3.0.0；假如固定的版本是 ^0.1.11，它可能会更新到 0.1.19，但不会更新到 0.2.0。总之，在更新依赖的时候不会修改最左边非零的数字号版本，这样的默认设定可以确保你在更新依赖的时候不会更新到具有不兼容变动的版本。另外也支持更多依赖版本限定符号。
+    -   不会像 Pipenv 那样随时更新你的锁定依赖版本，锁定依赖存储在 poetry.lock 文件里（这个文件会自动生成）。所以，记得把你的 poetry.lock 文件纳入版本控制。
+    -   执行 poetry 或 poetry list 命令查看所有可用的命令。
 
 _快速初始化一个新项目_：
 
