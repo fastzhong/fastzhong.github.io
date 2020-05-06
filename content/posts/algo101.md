@@ -18,7 +18,7 @@ draft = true
 
 -   慕课网 🎬 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，我非常喜欢
 
--   极客时间贾超 🎬 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，针对面试，知识点覆盖非常全面
+-   极客时间贾超 🎬 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖非常全面，系统性讲解和练习，如何练，怎们练，跟着一遍下来
 
 -   极客时间王争的专栏 📝 [数据结构与算法之美 ](https://time.geekbang.org/column/intro/126)：算法学习经验
 

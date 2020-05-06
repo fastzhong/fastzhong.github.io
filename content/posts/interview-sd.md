@@ -12,6 +12,8 @@ draft = true
 
 <!--more-->
 
+https://github.com/donnemartin/system-design-primer
+
 之前发过一篇 [淘宝服务端高并发分布式架构演进之路](/posts/taobao/)，其实是互联网应用的典型架构，了解后至少懂得大方向。其中的几个技术点我觉得如果我是面试官一定会问的（因为是现代开发中太普遍的问题）：
 
 -   设计一个企业级权限管理系统

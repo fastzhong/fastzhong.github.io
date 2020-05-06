@@ -14,20 +14,18 @@ draft = true
 
 ---
 
-先来一张图看看我的 VS Code 长啥样：
-
 之前用 Sublime，挺喜欢，不过现在转至 VS Code，虽然没有 Sublime 快，但足已，而且插件更丰富，颜值超靓，更快更新，毕竟是一个人和一个世界软件顶尖公司开发团队的差别。
 
-# 外观
+## 👔 外观
 
 `主题`，`字体`，`颜色` 是构成颜值的关键三要素。
 
 -   _**字体**_：
 
 ```json
-    "editor.fontFamily": "'Fira Code iScript', 'Hack Nerd Font', Consolas, 'Courier Prime'",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+"editor.fontFamily": "'Fira Code iScript', 'Hack Nerd Font', Consolas, 'Courier Prime'",
+"editor.fontLigatures": true,
+"editor.fontSize": 16,
 ```
 
 -   _**主题**_:
@@ -274,9 +272,20 @@ draft = true
 
 ## 🆒 我的插件
 
+插件超多的，所以看着办，这里介绍几个超级好用/必装的。
+
+-   Settings Sync
+    它是一款使用 GitHub 中的 Gists 作为配置文件存储来实现同步的。它可以让我们在无数个设备上同步 VS Code 的配置。
+
+    -   配置 Settings Sync：
+    -   上传本地配置：
+    -   下载配置：
+
 ## ⌨️ 常用快捷键
 
 ![快捷键](/images/vscode/keys.png)
+
+CTRL + , = 打开用户设置
 
 ## ㊙ 操作技巧
 
@@ -293,6 +302,28 @@ draft = true
 
 ## ⚙️ 开发集成
 
-程序开发主要还是用 JebBrain 的全家桶，其它慢慢挖掘。
+### Web
 
-shell
+🗓TBD
+
+### Python
+
+🗓TBD
+
+### Go
+
+🗓TBD
+
+### Java
+
+-   [Language Support for Java, by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+-   [Debugger for Java, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
+-   [Java Dependency Viewer, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
+-   [Maven for Java, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+-   [Java Test Runner, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+
+Spring 支持
+
+-   [Spring Boot Tools](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot)
+-   [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
+-   [Spring Boot Snippets](https://marketplace.visualstudio.com/items?itemName=developersoapbox.vscode-springboot-snippets)
