@@ -61,4 +61,4 @@ toc = false
 
 ![微服务 Devops Pipeline](/images/ms-devops-pipeline.jpg)
 
-🗓TBD：目前我自己为团队设计和打造的流水线（基于 AWS）
+准备打造一个满足中小型团队的现代化流水线原型。

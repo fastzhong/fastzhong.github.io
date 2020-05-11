@@ -161,7 +161,7 @@ _公司 Company_:
 
 系统设计没有定量定性，比较难准备，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试的准备](/posts/interview-system-i)
+🗓TBD
 
 ## Java 面试福利
 
