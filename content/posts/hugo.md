@@ -6,8 +6,7 @@ tags = []
 toc = false
 +++
 
--   Movist Pro：Mac 上最好的 movie 播放器
-    把博客从 Hexo 换成 [Hugo](https://gohugo.io/)，主题采纳 [hugo-notepadium](https://github.com/cntrump/hugo-notepadium) ⏤ Hexo 太多的依赖，Hugo 稍作几个简单的配置即可 👍🏻
+把博客从 Hexo 换成 [Hugo](https://gohugo.io/)，主题采纳 [hugo-notepadium](https://github.com/cntrump/hugo-notepadium) ⏤ Hexo 太多的依赖，Hugo 稍作几个简单的配置即可 👍🏻
 
 <!--more-->
 

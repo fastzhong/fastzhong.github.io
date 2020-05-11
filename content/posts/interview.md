@@ -8,7 +8,7 @@ toc = true
 draft = false
 +++
 
-想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是我这样的小人物 `被面&面了无数次` 后的小总结。现在招聘的地方很多，竞争也越来越激烈。
+想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是我这样的小人物 `被面&面了无数次` 后的小总结。
 
 <!--more-->
 
@@ -55,7 +55,7 @@ draft = false
 1. _<font color="yellow">个人介绍 </font>_：需要准备 1 分钟和 5 分钟两个版本，包括学习经历、工作经历、项目经历、个人优势、一句话总结，一定要自己背得滚瓜烂熟，张口就来
 2. _<font color="yellow">抽象概念</font>_：当面试官问你是如何理解多线程的时候，你要知道从定义、来源、实现、问题、优化、应用方面系统性地回答
 3. _<font color="yellow">项目强化</font>_：至少与知识点的比例是五五开，所以必须针对简历中的两个以上的项目，形成包括【架构和实现细节】，【正常流程和异常流程的处理】，【难点+坑+复盘优化】三位一体的组合拳
-4. _<font color="yellow">STAR 模型</font>_：针对综合能力方面的考察，如与人交流、沟通，处理客户的能力；文档，报告，进度控制，处理项目的能力；提高团队协作，竞争力的能力；等等，可参考 [Interview Techniques - STAR Method](https://www.youtube.com/watch?v=0nN7Q7DrI6Q)
+4. _<font color="yellow">STAR 模型</font>_：针对综合能力方面的考察，如与人交流、沟通，处理客户的能力；文档，报告，进度控制，处理项目的能力；提高团队协作，竞争力的能力；等等，可参考 免费课程 [Grokking the Behavioral Interview](https://www.educative.io/courses/grokking-the-behavioral-interview)
 
     - <font color="yellow">S</font>（Situation）事情是在什么情况下发生；
     - <font color="yellow">T</font>（Task）你是如何明确你的任务的；
@@ -153,13 +153,15 @@ _公司 Company_:
 
 我经历了至少二十次，这也是个装 B 的，除了浪费时间，一点没错。面试造核弹，入职拧螺丝，996 那种拧法，做底层、算法开发的不需要刷题，要刷题的都是做 CRUD。所以除非 Google 之流，其它公司要求算法或编程面试的，我一概回绝。
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试的准备](/posts/algo101)
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 I：指南](/posts/interview-algo-i)  
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构&算法](/posts/interview-algo-ii)  
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：刷题总结&模版](/posts/interview-algo-iii/)
 
 ## 系统设计面试
 
 系统设计没有定量定性，比较难准备，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试的准备](/posts/system-design)
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试的准备](/posts/interview-system-i)
 
 ## Java 面试福利
 

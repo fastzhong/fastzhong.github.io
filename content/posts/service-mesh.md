@@ -1,5 +1,5 @@
 +++
-title = "服务网格（Service Mesh ）101"
+title = "服务网格（Service Mesh）101"
 date = 2010-07-04T10:18:02+08:00
 readingTime = true
 categories = ["系统设计 & 架构"]
