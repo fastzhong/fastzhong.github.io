@@ -14,11 +14,11 @@ draft = true
 
 ## 课程
 
-都是我看过的，都是高高手 👍🏻，**_强烈推荐_** ：
+都是我看过或正在看的，都是高高手 👍🏻，**_强烈推荐_** ：
 
 -   慕课网 🎬 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，我非常喜欢
 
--   极客时间贾超 🎬 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖非常全面，系统性讲解和练习，如何练，怎们练，正在跟着一遍下来
+-   极客时间贾超 🎬 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
 
 -   极客时间王争的专栏 📝 [数据结构与算法之美 ](https://time.geekbang.org/column/intro/126)：算法学习经验
 
@@ -31,8 +31,6 @@ draft = true
 ## leetcode 刷题
 
 💡 刻意练习，刷题是必须的。leetcode 是主力，刷好，面试不是问题。
-
-> 无论按照怎样的顺序来刷题，都需要经历 `题海战术`
 
 ### 刷题指南 & 姿势
 
@@ -53,57 +51,70 @@ draft = true
     -   刷题第五遍
         -   面试前一周恢复性训练
 
--   先刷热门题，前两百多道都是经典题，可以举一反三。 在 [https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/) 页面的右侧。先刷热题 HOT 100，再刷精选 TOP 面试题，之后刷其他的题。按 tag 分类刷，
+-   题目太多了，还是要有刷题策略的：
 
-    -   初期：熟悉掌握各种基本工具  
-        按难度分类，做简单题，广度优先，直接看答案，学最优解，补基础
+    ![leetcode tag](/images/algo/leetcode-tag.webp)
 
-    -   中期：熟悉各种类别题目解题思路  
-        按类别分类，广度优先，背经典题，模版，建立思维体系
+    先刷热门题，前两百多道都是经典题，可以举一反三。 在 [https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/) 页面的右侧。先刷热题 HOT 100，再刷精选 TOP 面试题，之后刷其他的题。
 
-    -   后期：做新题，总结老题，一题多解，多题同解
-        按类别分类，深度优先，
+    -   初期：熟悉掌握各种基本工具，按难度分类，做简单题，广度优先，直接看答案，学最优解，补基础
 
-    -   面试前：做面经，别纠结
-        按公司分类，因公司而异
+    -   中期：熟悉各种类别题目解题思路，按类别分类/tag，广度优先，同一类型强化，背经典题，模版，建立思维体系
 
-#### leetcode & VS Code
+    -   后期：做新题，总结老题，一题多解，多题同解，按类别分类，深度优先
 
-[插件在此](https://github.com/jdneo/vscode-leetcode/blob/master/docs/README_zh-CN.md)
+    -   面试前：做面经，别纠结，按公司分类，因公司而异
 
-### 题目分类 & 题解 
+-   若短期只为应试冲刺的话：
+    -   easy/hard 都不会考，略过，碰到 hard 的就缴枪自认倒霉吧 😓
+    -   一些算法是冷门，同样如果万一碰到了就自认倒霉吧 😓  
+        ![leetcode algo](/images/algo/leetcode-algo.png)
+        ![leetcode top](/images/algo/leetcode-top.png)
 
+> 无论按照怎样的顺序来刷题，想要灭考官，都需要经历 `题海战术`
 
-解题套路：较长，另开一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：刷题总结&模版](/posts/interview-algo-iii/)
+#### 刷题利器
 
-https://docs.google.com/spreadsheets/d/1yRCOJ8KysRVkq0O9IlDriT01tC6lzPapmFO4PCmDJQA/edit#gid=126913158
+[VS Code 的 leetcode 插件](https://github.com/jdneo/vscode-leetcode/blob/master/docs/README_zh-CN.md)
 
-#### 讲解
+1. 唤出 leetcode  
+   ![leetcode](/images/vscode/leetcode.png)
+2. 先 Switch Endpoint 选“中” or “美”，两边 leetcode 不同  
+   ![leetcode endpoint](/images/vscode/leetcode-endpoint.png)
+3. 接下来点击最右边导航条上 leetcode 标签
+   ![leetcode demo](/images/vscode/leetcode-demo.gif)
+4. 刷
 
+### 题目分类 & 题解
 
+#### 分类参考 🗂
 
+-   [花花酱 LeetCode Problem List 题目列表](https://zxi.mytechroad.com/blog/leetcode-problem-categories/)
 
+-   我自己的做题记录
 
--   [cspiration Leetcode 800 题目讲解](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 牛人刷了 3000 道，已转行专业教人刷题
--   [JS 老毕：人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ?p=1)
--   [笔记哥讲题集](https://www.youtube.com/playlist?list=PLbi6Uu6v-4YsjcyE004ifZbsir72kGKsy)
+#### 讲解 💁🏻‍♂️
 
+-   [用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
+-   [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
+-   [花花酱](https://www.youtube.com/user/xxfflower/playlists) 也是个刷题牛人
+-   [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解
+-   [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版
+-   [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
 
+> 解题套路总结，较长，另开一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：刷题总结&模版](/posts/interview-algo-iii/)
 
 ## 📚 刷题参考书
 
-LeetCode 刷完了，可以看看：
+-   [算法竞赛进阶指南]()  
+    ![算法竞赛进阶指南](/images/algo/book-sfjsjjzn.png)
 
--   [算法竞赛进阶指南]()
-
-*   [剑指 Offer（第 2 版）⏬](https://drive.google.com/open?id=118MNIjDQGf-jAL8GOP5YSO1PPeZebBlQ)  
-     <font color="yellow">豆瓣评分 8.3，0.7K+人评价</font> 这本面试宝典上面涵盖了很多经典的算法面试题。 题解：
-    ![剑指 Offer](/images/algo/book-jian.zhi.offer.jpg)
+-   [剑指 Offer（第 2 版）⏬](https://drive.google.com/open?id=118MNIjDQGf-jAL8GOP5YSO1PPeZebBlQ)  
+    ![剑指 Offer](/images/algo/book-jian.zhi.offer.png)
 
 -   [程序员代码面试指南：IT 名企算法与数据结构题目最优解（第 2 版）⏬](https://drive.google.com/open?id=1Vnsqij9A0SnJ2ZNlMQrf5sVvw1_OsSxJ)  
-    <font color="yellow">豆瓣评分 8.7，0.2K+人评价</font> 据说题目相比于《剑指 offer》 来说要难很多，题目涵盖面相比于《剑指 offer》也更加全面。全书一共有将近 300 道真实出现过的经典代码面试题。作者，从 2010 年起专注刷题至今，拥有 10 年算法刷题经验。题解：  
-    ![程序员代码面试指南](/images/algo/book-zuo.cheng.yun.jpeg)
+    ![程序员代码面试指南](/images/algo/book-zuo.cheng.yun.png)
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，刷题对提高还是有好处的，但毕竟是针对面试的，还是要回到长期正规的学习，学以致用应中。
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程技术，开拓思维，非常有好处的 ⏤ 其实，很多高手也在“悄悄”的刷。刷题毕竟是针对面试的，还是要回到长期的学习并学以致用应中。

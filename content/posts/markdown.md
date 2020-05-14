@@ -10,9 +10,7 @@ Markdown 和 Json 一样都是好东西，简单、好用，利于专注写作�
 
 <!--more-->
 
-![using-markup-for-languages-in-hugo_01](/images/2mins-markdown/using-markup-for-languages-in-hugo_01.png)
-
-![using-markup-for-languages-in-hugo_02](/images/2mins-markdown/using-markup-for-languages-in-hugo_02.png)
+![markdown](/images/vscode/markdown.png)
 
 Markdown 就是一种轻量级的标记语言（Lightweight Markup Language），用人话说就是，普通的文本加上简单的排版或格式化语法（特殊标记），和 HTML，RTF 类似，只是 Markdown 的语法非常简单。Markdown 编写工具很多，在线的也有，很多编程开发工具都支持。需要知道，Markdown 语法没有标准，取决于 Markdown 渲染引擎，各个系统略微有差异。VS Code 和 IntelliJ 都支持 Markdown，特别推荐专门的可视化编辑器 [Typora](https://typora.io/)。
 

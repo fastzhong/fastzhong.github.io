@@ -30,10 +30,10 @@ draft = true
 ### 🤼‍♂️ 精进的技巧
 
 -   💡 learn from the best  
-    向最好的人学习，在计算机每个子领域都有最好的人教你，慕课网，极客时间，Youtube 有最好的教程和分享，Github 有开源，Manning，Oreilly，Addision，Pearson，有最好的书，这个年代和 20，30 年前比，真的没有理由学不会，学不好。
+    向最好的人学习，在计算机每个子领域都有最好的人教你，慕课网，极客时间，Youtube，Coursera，Edx 有最好的教程和分享，Github 有开源，Manning，Oreilly，Addision，MK，有最好的书，这个年代和 20，30 年前比，真的没有理由学不会，学不好。
 
 -   💡 stick on the principals and good practices  
-    学习的方法有太多，最重要的是去做，特别是刻意的练习，并把它变成习惯。很多人都只会在面试中，演讲使用名词，但项目中没有严格贯彻，例如 KISS，DRY，YANGNI，SOLID，Andon Board，Time to Drupal，Design Patterns，等等。原则变成习惯后会给自己碰到困难时带来突破的思路。
+    学习的方法有太多，最重要的是去做，特别是刻意的练习，并把它变成习惯。很多人都只会在面试中，演讲使用的名词，但项目中没有严格贯彻，例如 KISS，DRY，YANGNI，SOLID，Andon Board，Time to Drupal，Design Patterns，等等。原则变成习惯后会给自己碰到困难时带来突破的思路。
 
 -   💡 stop receiving information, focus on digesting information  
     资讯泛滥？照着这条做。在学习一个技术的前 30 个小时极为重要，让自己全身心的投入其中，30 小时是成就 1 万小时的关键。
@@ -52,7 +52,7 @@ draft = true
 
 钱不是万能的，但没有钱是玩玩不能的，早点做好积累和投资，这方面的付出绝对值回票价。我太迟才开始关注和学习，其实即使年轻的时候，总是会一点积蓄，也总是会需要投资，例如选择工作，买房子，等等，学会经济和投资的思维方式，越早越好，能力的培养需要时间，而且金钱会促使我们用更深更广的眼光看待这个世界和人群。
 
-## 🤹 软技能
+## 💁🏻‍♂️ 软技能
 
 🗓TBD
 
@@ -60,7 +60,13 @@ draft = true
 
 现在的资讯太多了，我获得的渠道：[0daydown](https://www.0daydown.com/)，[Hackers News](https://news.ycombinator.com/)，[meetup](https://www.meetup.com/)，[reddit](https://www.reddit.com/)，[Telegram](https://telegram.org/)，[Twitter](https://twitter.com/home)，[Youtube Subscription](https://www.youtube.com/feed/channels)，[微信](wechat.com)，当然还有各种 mooc，meetups，mailing list，自媒体，等等，**_Youtube_**、**_Twitter_** 是我比较喜欢逛的地方。年岁渐长，更多去关注人文和史哲。
 
-💡[如何在网上找到自己想要的电子书](https://telegra.ph/findBook-02-12)
+电脑书：
+
+-   [如何在网上找到自己想要的电子书](https://telegra.ph/findBook-02-12)
+-   [Freely available programming books](https://github.com/EbookFoundation/free-programming-books)
+-   [计算机类常用电子书整理，并且附带下载链接](https://github.com/iamshuaidi/CS-Book)
+-   [经典编程书籍大全](https://github.com/jobbole/awesome-programming-books)
+-   [免费的计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
 
 ---
 
