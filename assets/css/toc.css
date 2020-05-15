@@ -17,17 +17,18 @@
     margin: 0;
     padding: 0;
     border: none;
-    line-height: 30px;
+    line-height: 25px;
 }
 .tocify li a {
     display: inline-block;
     text-indent: 5px;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
 }
 .tocify ul li a:before {
     content: "• ";
 }
+
 .tocify ul ul li a:before {
     content: "⁃ ";
     margin-left: 1rem;
