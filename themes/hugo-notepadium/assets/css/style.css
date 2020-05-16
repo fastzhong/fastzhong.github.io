@@ -4,10 +4,9 @@
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', 'Segoe UI', 
-                Ubuntu, Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans',
-                'Helvetica Neue', Helvetica, Arial, Verdana, 'Lucida Grande', 
-                sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "Segoe UI", Ubuntu, Roboto, Oxygen,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, Verdana, "Lucida Grande", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 17px;
   font-weight: 400;
   line-height: 1.6;
@@ -15,12 +14,12 @@ html {
 
 body {
   display: block;
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, 0.85);
   background-color: #f9f9fd;
 
   word-break: normal;
   word-wrap: break-word;
-  
+
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -79,12 +78,12 @@ q {
 
 mark,
 ::selection {
-  background-color: rgba(12, 242, 143, .2);
+  background-color: rgba(12, 242, 143, 0.2);
 }
 
 mark {
-  padding-left: .15em;
-  padding-right: .15em;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
   border-radius: 3px;
 }
 
@@ -92,7 +91,7 @@ code,
 tt,
 kbd,
 samp {
-  font-family: Menlo, Consolas, 'Liberation Mono', monospace;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
   font-weight: 400;
   font-size: 85%;
 }
@@ -184,7 +183,7 @@ acronym {
 
 .image-container .title {
   display: inline-block;
-  opacity: .65;
+  opacity: 0.65;
   font-size: 15px;
   text-align: initial;
   min-height: 22px;
@@ -194,7 +193,7 @@ acronym {
 .base-body {
   display: block;
   margin: -1px auto;
-  max-width: 780px;
+  max-width: 920px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   overflow: hidden;
@@ -224,8 +223,8 @@ acronym {
   margin-top: -5px;
 }
 
-.header.wrap>*,
-.nav.wrap>* {
+.header.wrap > *,
+.nav.wrap > * {
   margin-top: 5px;
 }
 
@@ -249,7 +248,7 @@ acronym {
 }
 
 .site.name {
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .site.slogan {
@@ -262,7 +261,7 @@ acronym {
 .site.slogan .title {
   display: inline-block;
   text-align: initial;
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   min-height: 22px;
 }
 
@@ -277,7 +276,7 @@ acronym {
 
 .footer {
   font-size: 12px;
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -313,20 +312,20 @@ acronym {
   background-color: #fff;
 }
 
-.note.list .item>a:hover,
+.note.list .item > a:hover,
 .nav.item:hover {
-  opacity: .5;
+  opacity: 0.5;
   text-decoration: none;
 }
 
 .tag:hover,
 .category:hover {
-  opacity: .5;
+  opacity: 0.5;
   text-decoration: none;
 }
 
 .note {
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, 0.85);
   display: block;
   text-decoration: none;
 }
@@ -342,7 +341,7 @@ acronym {
 }
 
 .note.date {
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .note.content {
@@ -350,7 +349,7 @@ acronym {
 }
 
 .mldr {
-  opacity: .5;
+  opacity: 0.5;
   font-size: 85%;
 }
 
@@ -389,7 +388,7 @@ acronym {
 }
 
 .article.date {
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   margin-top: 24px;
 }
 
@@ -430,7 +429,7 @@ acronym {
   margin: 0;
 }
 
-.article.navigation p+p {
+.article.navigation p + p {
   margin-top: 5px;
 }
 
@@ -441,7 +440,7 @@ acronym {
 .article.navigation .li {
   display: inline-block;
   font-size: 85%;
-  opacity: .5;
+  opacity: 0.5;
   margin-right: 5px;
 }
 
@@ -486,19 +485,19 @@ acronym {
 }
 
 .pagination ul li a:hover:not(.active) {
-  background-color: rgba(0, 122, 255, .5);
+  background-color: rgba(0, 122, 255, 0.5);
 }
 
 .note.content,
 .article.markdown-body {
-  color: rgba(0,0,0,.65);
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .note.list .item,
 .article-container {
   padding: 20px;
   border-radius: 6px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,.12);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 500px) {
@@ -521,7 +520,7 @@ acronym {
 
 .article.markdown-body {
   display: block;
-  
+
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -532,7 +531,7 @@ acronym {
 .article.markdown-body h4,
 .article.markdown-body h5,
 .article.markdown-body h6 {
-  color: rgba(0,0,0,.8);
+  color: rgba(0, 0, 0, 0.8);
   margin-top: 24px;
   margin-bottom: 20px;
 }
@@ -573,11 +572,11 @@ acronym {
 
 .article.markdown-body blockquote,
 .article.markdown-body q {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .article.markdown-body blockquote {
-  padding: .95em;
+  padding: 0.95em;
   border-radius: 6px;
   border-left: 6px solid #fee450;
   background-color: #fbf8e8;
@@ -585,7 +584,7 @@ acronym {
 
 .article.markdown-body q::before,
 .article.markdown-body q::after {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .article.markdown-body q::before {
@@ -610,7 +609,7 @@ acronym {
 }
 
 .article.markdown-body hr {
-  opacity: .4;
+  opacity: 0.4;
   border-top-style: dashed;
   border-top-color: inherit;
 }
@@ -645,27 +644,27 @@ acronym {
   max-width: 25%;
 }
 
-.article.markdown-body li+li {
+.article.markdown-body li + li {
   margin-top: 20px;
 }
 
-.article.markdown-body>*,
-.article.markdown-body li>*,
-.article.markdown-body blockquote>*,
-.article.markdown-body .footnotes>* {
+.article.markdown-body > *,
+.article.markdown-body li > *,
+.article.markdown-body blockquote > *,
+.article.markdown-body .footnotes > * {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.article.markdown-body> :first-child,
-.article.markdown-body li> :first-child,
-.article.markdown-body blockquote> :first-child {
+.article.markdown-body > :first-child,
+.article.markdown-body li > :first-child,
+.article.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.article.markdown-body> :last-child,
-.article.markdown-body li> :last-child,
-.article.markdown-body blockquote> :last-child {
+.article.markdown-body > :last-child,
+.article.markdown-body li > :last-child,
+.article.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -727,7 +726,7 @@ acronym {
 .article.markdown-body .katex-display,
 .article.markdown-body .MathJax_Display {
   margin: 0;
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
 }
 
 .article.markdown-body .MathJax {
@@ -760,6 +759,6 @@ acronym {
   border: 0;
 }
 
-.article.markdown-body .lntable tr>:first-child {
+.article.markdown-body .lntable tr > :first-child {
   border-right: 1px dashed #e6e6e6;
 }

@@ -1,6 +1,6 @@
 /* tocify */
 .tocify {
-    width: 20%;
+    width: 22%;
     max-height: 90%;
     overflow: auto;
     margin-left: 2%;
@@ -22,17 +22,26 @@
 .tocify li a {
     display: inline-block;
     text-indent: 5px;
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
 }
 .tocify ul li a:before {
     content: "• ";
 }
 
+.tocify ul ul li a {
+    font-size: 12px;
+}
+
 .tocify ul ul li a:before {
     content: "⁃ ";
     margin-left: 1rem;
 }
+
+.tocify ul ul ul li a {
+    font-size: 12px;
+}
+
 .tocify ul ul ul li a:before {
     content: "⁃ ";
     margin-left: 2rem;

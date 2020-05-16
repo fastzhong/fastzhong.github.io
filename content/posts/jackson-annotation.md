@@ -587,7 +587,7 @@ public class OptimizedBooleanDeserializer extends JsonDeserializer<Boolean> {
 }
 ```
 
-### 控制注解（序列化/反序列化）
+### 控制注解
 
 #### @JsonAutoDetect
 
