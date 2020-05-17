@@ -5,7 +5,6 @@ readingTime = true
 categories = ["云 & 云原生"]
 tags = ["serverless"]
 toc = true
-draft = true
 +++
 
 serverless what, why, how
