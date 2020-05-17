@@ -7,7 +7,7 @@ tags = ["java"]
 toc = true
 +++
 
-Json 满天飞，Jackson 作为 Json 序列化/反序列化的最强大工具库，可以说是项目中必备的，有必要记录一下。
+Json 满天飞，Jackson 作为 Json 序列化/反序列化的最强大的 Java 工具库，可以说是项目中必备的，有必要记录一下。
 
 <!--more-->
 

@@ -157,6 +157,8 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 | 2      | 李四 |  30  |
 | 3      | 王二 |  40  |
 
+表格支持还是比较不方便的，可采用在线表格转换工具：[tableconvert](https://tableconvert.com/)
+
 ### 转义
 
 markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析这些字符，而是原样输出。

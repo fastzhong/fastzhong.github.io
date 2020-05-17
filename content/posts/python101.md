@@ -108,16 +108,16 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 
 -   语言五花八门，就像练武功，搞艺术，同一流派还有各种门户，这有契机和因缘，登顶的路从来不只一条，不喜欢 Python，没有关系，别勉强，做别的选择 - Ruby，C++，Haskell，Elang，等。少林寺的当然说少林武功天下第一，合不合自己的胃口，去了少林才知道你是不是武当的料。
 
-和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，网上可以自行查找：
+和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，b 站，youtube，免费/付费，网上可以自行查找：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [8 FREE Tutorials and Websites to Learn Python Programming in 2020](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c)
-
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [8 FREE Tutorials and Websites to Learn Python Programming in 2020](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [10 Best Python Courses Online](https://hackr.io/blog/best-python-courses)
 
 ## Python 解释器
 
 编程语言主要有两类，`解释型` 🆚 `编译型`，来自百度百科的解释：
 
+```txt
 计算机不能直接理解任何除机器语言以外的语言，所以必须要把程序员所写的程序语言翻译成机器语言，计算机才能执行程序。将其他语言翻译成机器语言的工具，被称为编译器。
 
 编译器翻译的方式有两种：一个是 _编译_，一个是 _解释_。两种方式之间的区别在于翻译时间点的不同。当编译器以解释方式运行的时候，也称之为解释器。
@@ -127,6 +127,7 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 解释则不同，解释性语言的程序不需要编译，省了道工序，解释性语言在运行程序的时候才翻译，比如解释性 basic 语言，专门有一个解释器能够直接执行 basic 程序，每个语句都是执行的时候才翻译。这样解释性语言每执行一次就要翻译一次，效率比较低。解释是一句一句的翻译。
 
 编译型与解释型，两者各有利弊。编译型由于直接运行目标机器代码，无中间步骤，已针对平台优化，通常速度和效率高；解释型的抽象于平台，跨平台可移植性好。
+```
 
 > Python 语言到底是被解释还是被编译的？
 
@@ -147,7 +148,7 @@ Python 除了 CPython，还有多种实现 - [Jython](http://www.jython.org/arch
 3. 将它们缓存起来；
 4. 再次碰到同样的 bytecode 时，直接调用已经缓存的机器代码；
 
-偷拿个 JVM 上的 JIT 示意图:
+偷拿个 JVM 上的 JIT 示意图:  
 ![JVM JIT](/images/python101/JIT.png)
 
 JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的程序如 C/C++。PyPy 采用了同样的技术：
