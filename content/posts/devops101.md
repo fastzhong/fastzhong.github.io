@@ -43,9 +43,7 @@ toc = false
 
 -   _运维阶段_ ⏤ <font color="yellow">Kubernetes，监控系统</font>
 
-[CNCF Cloud Native Landscape](https://landscape.cncf.io/) 大量的工具支撑：
-
-![cncf](/images/devops/cncf.png)
+[CNCF Cloud Native Landscape](https://landscape.cncf.io/) 大量的工具支撑
 
 `全程自动化` 是运维的目标，这里有两个核心概念，一个是自动化，一个是全程，具体体现在（一些老大难的地方）：
 
@@ -59,6 +57,6 @@ toc = false
 
 之前为一个微服务项目构建的 pipeline，基本上挺完整的：
 
-![微服务 Devops Pipeline](/images/ms-devops-pipeline.jpg)
+![微服务 Devops Pipeline](/images/devops/devops-pipeline.jpg)
 
 准备打造一个满足中小型团队的现代化流水线原型。
