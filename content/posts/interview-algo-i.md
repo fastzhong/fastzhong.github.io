@@ -102,9 +102,13 @@ draft = true
 -   [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版
 -   [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
 
+> 基本数据结构&算法，较长，另开一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构&算法"](/posts/interview-algo-ii/)
+
 > 解题套路总结，较长，另开一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：刷题总结&模版](/posts/interview-algo-iii/)
 
-## 📚 刷题参考书
+## 刷题参考书
+
+📚 基本上应该是用不上的，没有那么多时间了。
 
 -   [算法竞赛进阶指南]()  
     ![算法竞赛进阶指南](/images/algo/book-sfjsjjzn.png)
@@ -117,4 +121,4 @@ draft = true
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程技术，开拓思维，非常有好处的 ⏤ 其实，很多高手也在“悄悄”的刷。刷题毕竟是针对面试的，还是要回到长期的学习并学以致用应中。
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程技术，开拓思维，非常有好处的 ⏤ 其实，很多高手好像也在“悄悄”的刷。刷题毕竟是针对面试的，还是要回到长期的学习并学以致用应中。
