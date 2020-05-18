@@ -30,13 +30,13 @@ toc = true
 -   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习和实践 ⏤ 学习好的系统设计，学习后面的思想，实际中应用和实现，是提高水平的唯一方法。 系统设计和软件开发一样，范围很广，基础理论杂，主要还是来源于实践经验，所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则的非常适用：
 
     -   <font color="yellow">DRY</font>：Don’t repeat yourself  
-        系统设计中你碰到的问题别人都已经碰到过了，向高手学习他们的解题方法。
+        系统设计中你碰到的问题别人都已经碰到过了，向高手学习他们的解题方法。另外，别重复别人的错误，对于设计和架构，不止学技术，懂得来龙去脉非常重要。
 
     -   <font color="yellow">KISS</font>：Keep it simple, stupid!  
         我更喜欢解读成 Keep it stupid, so it can be simple（笨方法往往是最好的方法）。
 
     -   <font color="yellow">Avoid Creating a YAGNI</font>：You aren’t going to need it  
-        类似 MVP（Minimum Viable Product）- 极简原则，可造可不造 - 别造， 可用可不用 - 别用，不知道怎么做 - 先研究，这在设计 API 时非常有用，同样可以应用在系统设计上。
+        类似 MVP（Minimum Viable Product）- 极简原则，可造可不造 ⏤ 别造， 可用可不用 ⏤ 别用，不知道怎么做 ⏤ 先研究，这在设计 API 时非常有用，同样可以应用在系统设计上。
 
     -   <font color="yellow">Abstraction Principle</font>
 
@@ -54,14 +54,22 @@ toc = true
         完整性和灵活性是架构师和优秀程序猿时常考虑的问题，也是 NB 或菜鸟的区别所在。
 
     -   <font color="yellow">Don’t make me think</font>  
-        理解，定义好问题，问题已经解决一大半了
+        把问题讲清楚，问题已经解决一大半了
 
     -   <font color="yellow">Principle of least astonishment</font>  
         一切和想的一样，no news is good news。
 
     -   <font color="yellow">Avoid Premature Optimization</font>
 
-名校开的分布式系统设计课，数据库系统课，等等，以及列出的阅读清单（reading list）是很好的学习资源。
+名校开的分布式系统设计课，数据库系统课，等等，以及列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
+
+[分布式系统(Distributed System)资料](https://github.com/ty4z2008/Qix/blob/master/ds.md)  
+[分布式系统领域经典论文翻译集](http://duanple.com/?p=170)
+
+通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，对现代数据密集型系统可以有个很好的了解：
+![数据密集型应用系统设计](/images/arch/data-intensive-system.png)
+
+此书有八百多个 Reference，所以也可以进一步精读。
 
 ## 主要的架构模式
 
