@@ -154,19 +154,22 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 ## 微服务/分布式的坑
 
+哈哈，这就是我们牛 x 的微服务系统：  
+![微服务](/images/microservices/the-toaster-project-components.jpg)
+
 > `If u can’t build monoliths properly, microservices won’t help.`
 
--   大规模的微服务实施往往变成一抓就死，一放就散，微服务的引入，各组人马自行乱搞，各种 favor，各种 style，各种代码质量，违背了 KISS 和 DRY 的金典，引入更多更复杂的技术系统变得异常复杂，脆弱，低效和难以维护；
--   一个好的 API 设计已经如此不易，想要设计优良的、对外的、可复用的 service 难度加大；
+-   大规模的微服务实施往往变成一抓就死，一放就散，游击队战术的引入，各组人马自行乱搞，各种 favor，各种 style，各种代码质量，违背了 KISS 和 DRY 的金典，引入更多更复杂的技术系统，使得整体性变得异常复杂，脆弱，低效和难以维护；
+-   一个好的 API 设计已经如此不易，想要设计优良的、对外的、可复用的 service 对大多数小团队其实是无法胜任；
 -   技术滥用或不慎用，把所有的调用都变成多步（REST）或异步（消息系统）从而导致：
 
-    -   性能下降：基于 json 的 REST 调用破坏了数据的正确性判断，同时远程调用链急剧加长；
-    -   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，json 和 REST api 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从 monolith legacy 变成 distributed legacy；
     -   可读性下降、出错性上升：异步调用促使程序的碎片化，增加了流程处理和错误处理的复杂度，降低了程序可读性，响应速度，以及数据处理效率；
-    -   并发问题：由此而导致的网包或 message 丢失，同时并发的 debug 也是比较困难的
+    -   性能下降：基于 json 的 REST 调用破坏了数据的正确性判断，同时远程调用链急剧加长；
+    -   并发问题：由此而导致奇怪问题次数大增，如网包或 message 丢失，同时 debug 变得比较困难的
     -   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个版本；
+    -   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，json 和 REST api 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从 monolith legacy 变成 distributed legacies；
 
--   统一的系统设计和实施 ⏤ 所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加确定 `数据和系统正确性` 的难度 ⏤ distributed state/multiple data versions，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中考虑，这应该是分布式最大的技术难点 ⏤ [`Fallacies of distributed computing`](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)，经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加确定 `数据和系统正确性` 的难度 ⏤ distributed state/multiple data versions，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该是分布式最大的技术难点 ⏤ [`Fallacies of distributed computing`](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)，经典的分布式设计或编码 8 种错误假设：
 
     -   网络是稳定的
     -   网络传输的延迟是零
@@ -177,9 +180,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
     -   传输数据的成本为零
     -   整个网络是同构的
 
-谷歌认为测试必须在生产环境才算是真正的测试。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，是每一个好系统的特征。99% 的软件项目都是被“复杂度”杀死的，而这恰恰刚好和微服务/分布式系统是矛盾的（💡 参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）
-
-![complexity](/images/microservices/complexity.jpeg)
+谷歌认为测试必须在生产环境才算是真正的测试。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，是每一个好系统的特征。99% 的软件项目都是被“复杂度”杀死的，而这恰恰刚好和微服务/分布式系统是矛盾的，（💡 参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
 ## 微服务的总结
 
@@ -188,6 +189,6 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 -   DevOps 必须先行；
 -   复杂度加大，开发体验下降，对开发者要求提高；
 -   大系统本身就不易，大系统的微服务实施须谨慎，相当谨慎；
--   以云原生为基础架构是微服务发展的技术方向；
+-   以云原生为基础架构的微服务是技术发展的方向；
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 软件开发是以最终产品为导向的，所以本质上我倾向把自己当作工程师，软件产品的制造者和拥有者，而非单纯的架构师或者程序员。

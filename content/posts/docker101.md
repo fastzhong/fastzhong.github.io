@@ -1,5 +1,5 @@
 +++
-title = "Docker 快速入门（2020.5更新）"
+title = "Docker 快速入门"
 date = 2017-05-09T07:28:59+08:00
 readingTime = true
 categories = ["云 & 云原生"]
@@ -13,4 +13,3 @@ draft = true
 <!--more-->
 
 ---
-
