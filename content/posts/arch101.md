@@ -27,7 +27,7 @@ toc = true
 
 > 系统设计是一个架构师对项目综合理解的体现
 
--   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习和实践 ⏤ 学习好的系统设计，学习后面的思想，实际中应用和实现，是提高水平的唯一方法。 系统设计和软件开发一样，范围很广，基础理论杂，主要还是来源于实践经验，所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则也非常适用：
+-   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习、思考、实践 ⏤ 学习好的系统设计，思考后面的思想，实际中应用和解决问题，是提高水平的唯一方法。 系统设计和软件开发一样，范围很广，基础理论杂，主要还是来源于实践经验，所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则也非常适用：
 
     -   <font color="yellow">DRY</font>：Don’t repeat yourself  
         系统设计中你碰到的问题别人都已经碰到过了，向高手学习他们的解题方法。另外，别重复别人的错误，对于设计和架构，不止学技术，懂得来龙去脉非常重要。
@@ -60,15 +60,6 @@ toc = true
         一切和想的一样，no news is good news。
 
     -   <font color="yellow">Avoid Premature Optimization</font>
-
-名校开的分布式系统设计课，数据库系统课，等等，以及列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
-
-💡[分布式系统(Distributed System)资料](https://github.com/ty4z2008/Qix/blob/master/ds.md)  
-💡[分布式系统领域经典论文翻译集](http://duanple.com/?p=170)
-
-通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，对现代数据密集型系统采用的技术可以有个很好的了解：
-![数据密集型应用系统设计](/images/arch/data-intensive-system.png)
-此书有八百多个 Reference，所以也可以进一步细读。
 
 ## 主要的架构模式
 
@@ -104,9 +95,24 @@ toc = true
 
 ![microservice](/images/arch/microservice.png)
 
-以上的架构都不新鲜，好坏关键还在于具体应用的技术以及对系统的理解上。4、5 年前就开始了所谓的微服务（Microservices），做过布道，做过大规模实施，下面以此为例，总结自己的思考和理解。
+以上的架构都不新鲜，好坏关键还在于具体应用的技术以及对系统的理解上。
+
+## 分布式系统的学习
+
+入门可参考：[面向分布式系统工程师的分布式系统理论（译）](/posts/distributed101/)
+
+通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，可对现代数据密集型系统采用的技术可以有个很好的了解：
+![数据密集型应用系统设计](/images/arch/data-intensive-system.png)
+此书有八百多个 Reference，所以也可以进一步细读。
+
+名校开的分布式系统设计课，数据库系统课，等等，以及列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
+
+💡[分布式系统(Distributed System)资料](https://github.com/ty4z2008/Qix/blob/master/ds.md)  
+💡[分布式系统领域经典论文翻译集](http://duanple.com/?p=170)
 
 ## 微服务是什么和为什么
+
+4、5 年前就开始了所谓的微服务（Microservices），做过布道，做过大规模实施，下面以此为例，总结自己的思考和理解。
 
 微服务是什么，众说纷纭，不过要说到名词解释，必须看 [Martin 的 Microservices 介绍](https://www.youtube.com/watch?v=2yko4TbC8cI):
 
@@ -146,7 +152,7 @@ toc = true
 
 -   分布式调试：系统调试会变得非常困难，distributed tracing 是必备技术手段
 
-微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度，我认为是开倒车或者说属于第一、二代的技术方案，不完善、不成熟、不是技术的发展大方向。
+微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试，不是发展大方向。
 
 Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [云原生应用（Cloud Native App）101](/posts/cncf101/)  
@@ -155,11 +161,11 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 ## 微服务/分布式的坑
 
 哈哈，这就是我们牛 x 的微服务系统：  
-![微服务](/images/microservices/the-toaster-project-components.jpg)
+![微服务](/images/arch/the-toaster-project-components.jpg)
 
 > `If u can’t build monoliths properly, microservices won’t help.`
 
--   大规模的微服务实施往往变成一抓就死，一放就散，游击队战术的引入，各组人马自行乱搞，各种 favor，各种 style，各种代码质量，违背了 KISS 和 DRY 的金典，引入更多更复杂的技术系统，使得整体性变得异常复杂，脆弱，低效和难以维护；
+-   大规模的微服务实施往往变成一抓就死，一放就散，游击队战术的引入，各组人马自行乱搞，各种 favor，各种 style，各种代码质量，违背了 KISS 和 DRY 的金典，引入更多更复杂的技术，使得整体性变得异常复杂，脆弱，低效和难以维护；
 -   一个好的 API 设计已经如此不易，想要设计优良的、对外的、可复用的 service 对大多数小团队其实是无法胜任；
 -   技术滥用或不慎用，把所有的调用都变成多步（REST）或异步（消息系统）从而导致：
 
@@ -180,7 +186,11 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
     -   传输数据的成本为零
     -   整个网络是同构的
 
-谷歌认为测试必须在生产环境才算是真正的测试。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，是每一个好系统的特征。99% 的软件项目都是被“复杂度”杀死的，而这恰恰刚好和微服务/分布式系统是矛盾的，（💡 参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
+谷歌认为测试必须在生产环境才算是真正的测试。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，是每一个好系统的特征。99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结，（💡 参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
+
+> 作为架构师，抛开各种繁复，其工作核心就是: `对抗熵增 We want to fight entropy`
+
+![complexity](/images/arch/complexity.jpg)
 
 ## 微服务的总结
 
