@@ -89,7 +89,8 @@ draft = false
 
 重点来啦，这是个很多人忽略的地方：面试官最后通常都会问你你有什么想问的，这其实是我面试中最喜欢的部分，碰到优秀的面试官/老板，互动性很强。从这里可以了解未来的老板以及公司，直接正面的反馈很重要。
 
-_职位 The Role_:
+```md
+职位 The Role:
 
 -   这个职位的挑战是什么？
     What are the challenges of this position?
@@ -97,7 +98,7 @@ _职位 The Role_:
 -   职业前景如何？
     What is the career path?
 
-_技术 Tech_:
+技术 Tech:
 
 -   目前公司采用哪些技术栈？对不同技术是如何选择的？为什么这样选择？
     What is the common tech stack used in the project and company? why you choose that over another?
@@ -117,7 +118,7 @@ _技术 Tech_:
 -   如何计划和处理技术和商业目标？决策过程如何？
     How to plan and manage technical goals and business goals? what is the decision making process?
 
-_团队 Team_:
+团队 Team:
 
 -   团队大概多大，新手多还是老手多，能介绍一下团队成员背景吗？
     How big is the team，more juniors or seniors? Can you share the background of the team members?
@@ -128,7 +129,7 @@ _团队 Team_:
 -   团队目前面临的问题有哪些？
     What are the problems the team faces right now？
 
-_公司 Company_:
+公司 Company:
 
 -   目前最大的竞争对手是谁？
     who are the major direct competitors?
@@ -146,26 +147,27 @@ _公司 Company_:
 
 -   什么让你觉得这家公司会取得成功？
     what makes you think this company will be successful? What do you like most working in this company?
+```
 
 ## 算法编程面试
 
 > `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
 
-我经历了至少二十次，这也是个装 B 的，除了浪费时间，一点没错。面试造核弹，入职拧螺丝，996 那种拧法，做底层、算法开发的不需要刷题，要刷题的都是做 CRUD。所以除非 Google 之流，其它公司要求算法或编程面试的，我一概回绝。
+我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 I：指南](/posts/interview-algo-i)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构&算法](/posts/interview-algo-ii)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：刷题总结&模版](/posts/interview-algo-iii/)
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构 & 算法](/posts/interview-algo-ii)  
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 + 总结](/posts/interview-algo-iii/)
 
 ## 系统设计面试
 
-系统设计没有定量定性，比较难准备，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
+系统设计没有难定量定性，范围较广，越有经验越占优。🗓 准备一下还是可以互掐一番的：
 
-🗓TBD
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
 
 ## Java 面试福利
 
-🆓
+🆓 收集了些面试题，也可当作知识复习之用：
 
 -   [2020 最新 Java 面试题及答案 v3.0](/download/2020最新Java面试题及答案v3.0.pdf)
 -   [JavaGuide 面试突击版.v2](/download/JavaGuide面试突击版.v2.pdf)

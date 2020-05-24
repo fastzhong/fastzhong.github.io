@@ -10,7 +10,7 @@ toc = false
 
 <!--more-->
 
-很多人谈论 DevOps，其实是这 5 个基本点：
+很多人谈论 DevOps/CICD，其实是这 5 个基本点：
 
 -   Continuous Integration
 -   Continuous Testing
@@ -55,6 +55,10 @@ toc = false
 -   安全管理全自动化
 
 -   监控、报警、自恢复全自动化
+
+十年前就坚信云计算是发展和进步的方向，正如之前的 internet。
+
+> 基础实施越来越复杂，应该交给云厂商，企业关注在基础设施之上的应用软件和系统
 
 之前为一个微服务项目构建的 pipeline，基本上挺完整的：
 

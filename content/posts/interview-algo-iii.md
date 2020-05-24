@@ -1,5 +1,5 @@
 +++
-title = "算法编程面试 III：刷题总结&模版"
+title = "算法编程面试 III：解题套路 + 总结"
 date = 2010-07-01T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
@@ -12,30 +12,33 @@ draft = true
 
 <!--more-->
 
-## 总结 & 模板
+> 如何精通一个领域：
+>
+> -   Chunk it up 切碎知识点
+> -   Deliberate practicing 刻意练习
+> -   Feedback 获得反馈
 
-### Grokking the Coding Interview: Patterns for Coding Questions
+## 15 种算法套路
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 课程：[Grokking the Coding Interview](https://www.educative.io/courses/grokking-the-coding-interview)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 原文：[14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+```md
+1. Sliding window 滑动窗口类型
+2. Pattern: Sliding window 滑动窗口类型
+3. Fast & Slow pointers 快慢指针类型
+4. Merge Intervals 区间合并类型
+5. Cyclic Sort 循环排序
+6. In-place Reversal of a LinkedList 链表翻转
+7. Tree Breadth First Search 树上的 BFS
+8. Tree Depth First Search 树上的 DFS
+9. Two Heaps 双堆类型
+10. Subsets 子集类型，一般都是使用多重 DFS
+11. Modified Binary Search 改造过的二分
+12. Top ‘K’ Elements 前 K 个系列
+13. K-way merge 多路归并
+14. 0/1 Knapsack (Dynamic Programming) 0/1 背包类型
+15. Topological Sort (Graph) 拓扑排序类型
+```
 
-1. Sliding window，滑动窗口类型
-2. Pattern: Sliding window，滑动窗口类型
-3. Fast & Slow pointers, 快慢指针类型
-4. Merge Intervals，区间合并类型
-5. Cyclic Sort，循环排序
-6. In-place Reversal of a LinkedList，链表翻转
-7. Tree Breadth First Search，树上的 BFS
-8. Tree Depth First Search，树上的 DFS
-9. Two Heaps，双堆类型
-10. Subsets，子集类型，一般都是使用多重 DFS
-11. Modified Binary Search，改造过的二分
-12. Top ‘K’ Elements，前 K 个系列
-13. K-way merge，多路归并
-14. 0/1 Knapsack (Dynamic Programming)，0/1 背包类型
-15. Topological Sort (Graph)，拓扑排序类型
-
-> 1. Pattern: Sliding window，滑动窗口类型
+### Sliding window 滑动窗口类型
 
 滑动窗口类型的题目经常是用来执行数组或是链表上某个区间（窗口）上的操作。比如找最长的全为 1 的子数组长度。滑动窗口一般从第一个元素开始，一直往右边一个一个元素挪动。当然了，根据题目要求，我们可能有固定窗口大小的情况，也有窗口的大小变化的情况。
 
@@ -48,7 +51,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 2. Pattern: two points or iterators, 双指针类型
+### two points or iterators 双指针类型
 
 双指针是这样的模式：两个指针朝着左右方向移动（双指针分为同向双指针和异向双指针），直到他们有一个或是两个都满足某种条件。双指针通常用在排好序的数组或是链表中寻找对子。比如，你需要去比较数组中每个元素和其他元素的关系时，你就需要用到双指针了。
 
@@ -63,7 +66,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 3. Pattern: Fast & Slow pointers, 快慢指针类型
+### Fast & Slow pointers 快慢指针类型
 
 这种模式，有一个非常出门的名字，叫龟兔赛跑。咱们肯定都知道龟兔赛跑啦。但还是再解释一下快慢指针：这种算法的两个指针的在数组上（或是链表上，序列上）的移动速度不一样。还别说，这种方法在解决有环的链表和数组时特别有用。
 
@@ -82,7 +85,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 4. Pattern: Merge Intervals，区间合并类型
+### Merge Intervals 区间合并类型
 
 区间合并模式是一个用来处理有区间重叠的很高效的技术。在设计到区间的很多问题中，通常咱们需要要么判断是否有重叠，要么合并区间，如果他们重叠的话。这个模式是这么起作用的：
 
@@ -99,7 +102,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 5. Pattern: Cyclic Sort，循环排序
+### Cyclic Sort 循环排序
 
 这种模式讲述的是一直很好玩的方法：可以用来处理数组中的数值限定在一定的区间的问题。这种模式一个个遍历数组中的元素，如果当前这个数它不在其应该在的位置的话，咱们就把它和它应该在的那个位置上的数交换一下。你可以尝试将该数放到其正确的位置上，但这复杂度就会是 O(n^2)。这样的话，可能就不是最优解了。因此循环排序的优势就体现出来了。
 
@@ -112,7 +115,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 6. Pattern: In-place Reversal of a LinkedList，链表翻转
+### In-place Reversal of a LinkedList 链表翻转
 
 在众多问题中，题目可能需要你去翻转链表中某一段的节点。通常，要求都是你得原地翻转，就是重复使用这些已经建好的节点，而不使用额外的空间。这个时候，原地翻转模式就要发挥威力了。
 
@@ -126,7 +129,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 7. Pattern: Tree Breadth First Search，树上的 BFS
+### Tree Breadth First Search 树的 BFS
 
 这种模式基于宽搜（Breadth First Search (BFS)），适用于需要遍历一颗树。借助于队列数据结构，从而能保证树的节点按照他们的层数打印出来。打印完当前层所有元素，才能执行到下一层。所有这种需要遍历树且需要一层一层遍历的问题，都能用这种模式高效解决。
 
@@ -138,7 +141,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 8. Pattern: Tree Depth First Search，树上的 DFS
+### Tree Depth First Search 树的 DFS
 
 树形 DFS 基于深搜（Depth First Search (DFS)）技术来实现树的遍历。
 
@@ -156,7 +159,7 @@ draft = true
 
 💡 [经典题目]()
 
-> 9. Pattern: Two Heaps，双堆类型
+### Two Heaps 双堆类型
 
 很多问题中，我们被告知，我们拿到一大把可以分成两队的数字。为了解决这个问题，我们感兴趣的是，怎么把数字分成两半？使得：小的数字都放在一起，大的放在另外一半。双堆模式就能高效解决此类问题。
 
@@ -201,7 +204,7 @@ String Permutations by changing case (medium)
 Balanced Parentheses (hard)
 Unique Generalized Abbreviations (hard)
 
-> 11. Pattern: Modified Binary Search，改造过的二分
+### Modified Binary Search 改造过的二分
 
 当你需要解决的问题的输入是排好序的数组，链表，或是排好序的矩阵，要求咱们寻找某些特定元素。这个时候的不二选择就是二分搜索。这种模式是一种超级牛的用二分来解决问题的方式。
 
@@ -227,7 +230,7 @@ Search in a Sorted Infinite Array (medium)
 Minimum Difference Element (medium)
 Bitonic Array Maximum (easy)
 
-> 12. Pattern: Top ‘K’ Elements，前 K 个系列
+### Top ‘K’ Elements 前 K 个系列
 
 任何让我们求解最大/最小/最频繁的 K 个元素的题，都遵循这种模式。
 
@@ -271,7 +274,7 @@ Sum of Elements (medium)
 
 Rearrange String (hard)
 
-> 13. Pattern: K-way merge，多路归并
+### K-way merge 多路归并
 
 K 路归并能帮咱们解决那些涉及到多组排好序的数组的问题。
 
@@ -297,7 +300,7 @@ Kth Smallest Number in M Sorted Lists (Medium)
 Kth Smallest Number in a Sorted Matrix (Hard)
 Smallest Number Range (Hard)
 
-> 14. Pattern: 0/1 Knapsack (Dynamic Programming)，0/1 背包类型
+### 0/1 Knapsack (Dynamic Programming)，0/1 背包类型
 
 经典题目：
 0/1 Knapsack (medium)
@@ -309,7 +312,7 @@ Minimum Subset Sum Difference (hard)
 
 ![](/images/algo/.jpg)
 
-> 15. Pattern: Topological Sort (Graph)，拓扑排序类型
+### Topological Sort (Graph)，拓扑排序类型
 
 拓扑排序模式用来寻找一种线性的顺序，这些元素之间具有依懒性。比如，如果事件 B 依赖于事件 A，那 A 在拓扑排序顺序中排在 B 的前面。
 
@@ -350,7 +353,7 @@ All Tasks Scheduling Orders (hard)
 
 Alien Dictionary (hard)
 
-### Grokking Dynamic Programming Patterns for Coding Interviews
+## 动态规划套路
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 课程：[Grokking Dynamic Programming](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 原文：[14 Patterns to Ace Any Coding Interview Question](https://medium.com/hackernoon/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)

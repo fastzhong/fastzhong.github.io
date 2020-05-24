@@ -11,16 +11,17 @@ toc = true
 
 <!--more-->
 
-<font color="yellow">🧾 **技术摘要**</font>
+🧾 **技术摘要**
 
-_负载均衡技术_：入口随流量升级
+```md
+负载均衡技术：入口随流量升级
 
 -   DNS 轮询
 -   Nginx Keepalive
 -   LVS
 -   F5
 
-_中间件技术_：
+中间件技术：
 
 -   分布式事务
 -   分布式缓存
@@ -28,13 +29,14 @@ _中间件技术_：
 -   Microservices & Service Mesh
 -   容器化 & 动态服务管理
 
-_数据层技术_：
+数据层技术：
 
 -   数据库中间件
 -   读写分离
 -   拆库、拆表
 -   NoSQL：document，search， graphic， key-value， big data
 -   多活多机房多数据中心
+```
 
 ---
 
