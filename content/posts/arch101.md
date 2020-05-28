@@ -114,6 +114,8 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 ![数据密集型应用系统设计](/images/arch/data-intensive-system.png)
 此书有八百多个 Reference，所以也可以进一步细读。
 
+题外：系统偏向以命令方式还是数据方式集成是个难点，很多架构师都没有想清楚，导致系统混乱不堪。
+
 ✦ [云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)涵盖了大多数的技术点，可以以此为导向深挖。
 
 ✦ 名校开的分布式系统设计课，数据库系统课，等等，以及所列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
@@ -153,6 +155,8 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 如果在 IT 界呆得够久，了解分布式一路走来的历程，就会明白“微服务”从技术讲没有什么特殊的新问题，只是技术手段的不断翻新。关键的技术点包括：
 
+![微服务技术栈](/images/microservices/microservices-stack.jpg)
+
 -   分布式调用：由于分布，调用变得困难，本地的方法调用，都变成了 RPC，服务的注册和发现是微服务的必备条件，随之而来的还有服务的负载平衡，熔断（circuit break），等等。
 
 -   配置管理中心：能够集中化管理应用不同环境、不同集群的配置，这也是必备条件。
@@ -165,7 +169,7 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 -   分布式调试：系统调试会变得非常困难，distributed tracing 是必备技术手段
 
-微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试，不是发展大方向。
+对应每个点都可以找到相应的具体技术。微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试，不是发展大方向。
 
 Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [云原生应用（Cloud Native App）101](/posts/cncf101/)  
@@ -175,7 +179,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 ## 微服务/分布式的坑
 
-牛 x 的微服务系统：  
+原来微服务是这样的：  
 ![微服务](/images/arch/the-toaster-project-components.jpg)
 
 > `If u can’t build monoliths properly, microservices won’t help.`
@@ -205,7 +209,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 ## 微服务的总结
 
--   微服务不是新鲜事物，核心是分布式系统；
+-   微服务不是新鲜事物，本质是分布式系统；
 -   微服务的系统设计依旧要回答整体上如何统一运作，如何统一响应需求；
 -   DevOps 必须先行；
 -   复杂度加大，开发体验下降，对开发者要求提高；

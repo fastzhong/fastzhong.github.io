@@ -36,7 +36,7 @@ draft = true
 
 ### 刷题方法
 
-极客算法训练营：五遍刷题法（<font color="yellow">五毒神掌</font>）
+极客算法训练营五遍刷题法： 🔥<font color="yellow">五毒神掌</font>🔥
 
 ```md
 -   刷题第一遍
@@ -54,10 +54,6 @@ draft = true
 -   刷题第五遍
     -   面试前一周恢复性训练
 ```
-
-💡 `五遍，五遍，五遍`  
-💡 `不要死磕 AC，看高票“代码”，不是题解`  
-💡 `照我的话做`
 
 ### 刷题策略
 
@@ -82,7 +78,7 @@ draft = true
      ![leetcode algo](/images/algo/leetcode-algo.png)
     ![leetcode top](/images/algo/leetcode-top.png)
 
-> 🔥 无论按照怎样的顺序来刷题，想要灭考官，都需要经历 `题海战术`
+> 无论按照怎样的顺序来刷题，想要灭考官，都需要经历 🔥`题海战术`🔥
 
 ### 刷题利器
 
@@ -100,18 +96,23 @@ draft = true
 
 #### 分类参考
 
--   🗂 头 250 道重点题
--   🗂[花花酱 LeetCode Problem List 题目列表](https://zxi.mytechroad.com/blog/leetcode-problem-categories/)
--   🗂 我自己的做题记录
+-   头 250 道重点题
+-   [花花酱 LeetCode Problem List 题目列表](https://zxi.mytechroad.com/blog/leetcode-problem-categories/)
+-   我自己的做题记录
 
 #### 讲解
 
--   💁🏻‍♂️[用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
--   💁🏻‍♂️[cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
--   💁🏻‍♂️[花花酱](https://www.youtube.com/user/xxfflower/playlists) 也是个刷题牛人
--   💁🏻‍♂️[绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解
--   💁🏻‍♂️[basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版
--   💁🏻‍♂️[人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
+💁🏻‍♂️[用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
+
+💁🏻‍♂️[cspiration](https://www.youtube.com/channel/ UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
+
+💁🏻‍♂️[花花酱](https://www.youtube.com/user/xxfflower/playlists) 也是个刷题牛人
+
+💁🏻‍♂️[绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解
+
+💁🏻‍♂️[basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版
+
+💁🏻‍♂️[人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
 
 ### 基本数据结构 & 算法
 

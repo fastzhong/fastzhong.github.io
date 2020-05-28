@@ -1,5 +1,5 @@
 +++
-title = "选坑、入坑经验之谈"
+title = "选坑、入坑、以及面试"
 date = 2020-03-20T07:28:59+08:00
 readingTime = true
 categories = ["职业发展"]
@@ -12,11 +12,11 @@ draft = false
 
 <!--more-->
 
-## 对工作的理解
+## 好工作的理解
 
-找工作最核心的一个问题就是“如何判断一个好的工作”，而答案的关键就是如何让自己受益最大，最重要的是长期成长。
+找工作最核心的一个问题就是“如何判断一个好的工作”，而答案是如何让自己受益最大，关键点是长期成长。
 
-<i class="fas fa-theater-masks"></i>&nbsp;&nbsp;基本顺序是：好老板 → 好薪水 → 公司的商业性质和名气 → 职位的性质和前景
+<i class="fas fa-theater-masks"></i>&nbsp;&nbsp;基本顺序是：好老板 → 好薪水 → 好公司 → 好职位
 
 ### 好老板
 
@@ -26,9 +26,9 @@ draft = false
 
 ### 好薪水
 
-所谓好的工作，市面上是少之有少的，真正“好”的机会都是老板自己找人或者工作自己找上门的（你够 NB）。工作基本就是一份生活收入，其它谈情怀，前景什么的，都是浮云，薪水给的高的才是道理 - Facebook，Google，Microsoft， 等给出的都是业界顶级薪水。薪水的高就是工作和你价值最本质的直接体现。
+所谓好的工作，市面上是少之有少的，真正“好”的机会都是老板自己找人或者工作自己找上门的（你够 NB）。99%的工作都是招来“干活”的，所以谈情怀，理想什么的，都是浮云，薪水给的高的才是硬道理 - Facebook，Google，Microsoft， 等给出的都是业界顶级薪水，薪水高就是好工作的直接体现。
 
-### 公司和前景
+### 好公司和职位
 
 > 了解这个工作的性质 - 它所处的行业，发展的方向，公司的优势，商业模式，公司的产品，和技术。
 
@@ -79,7 +79,7 @@ draft = false
 
 -   为什么换工作换得这么勤快？离开的各种原因要讲得正正当当，参照上一个问题，可以变着法子讲，尽量 focus 在客观不可抗拒因素，而且是自身范围，例如公司总体很好，但是刚好老板看自己不顺眼（换了新老板、奖赏不分明等原因）；所在团队文化的问题（内斗）；小公司碰到财务问题；现有技术条件碰到瓶颈而自己想要在某些领域发展；等等，强调改变人和环境是很困难的，也不是自身职责范围，但我自己可以选择啊；另外非常期待能长期待下去的，但还没有找到。
 
--   自身有啥缺点？两种策略，一种是把特点包装成缺点，例如关注技术过多，产品，设计方面，没有多加关注；二是自己还比较弱的方面 （但千万别和应召职位冲突），例如技术工种的通常表达技巧、与人周旋，管理方面的经验比较差，还不会去考虑等等，总之就是不痛不痒的地方胡诌一下。
+-   自身有啥缺点？两种策略，一种是把特点包装成缺点，远期目标包装成近期缺陷，例如关注技术过多，产品，设计方面，缺少关注；二是自己还比较弱的方面 （但千万别和应召职位冲突），例如程序员通常表达技巧、与人周旋，管理，领导方面的经验比较差，缺少锻炼等等，总之就是不痛不痒的地方胡诌一下。
 
 -   能接受加班吗？目前或以前已经经受过加班的考验，家常便饭，顺便问一下公司的加班情况，自己顺便掂量一下是不是好公司。
 
@@ -149,30 +149,52 @@ draft = false
     what makes you think this company will be successful? What do you like most working in this company?
 ```
 
-## 算法编程面试
+## 技术面试
+
+### 算法编程面试
 
 > `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
 
-我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
+我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。算法编程的准备也是需要比较久的一段时间：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 I：指南](/posts/interview-algo-i)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构 & 算法](/posts/interview-algo-ii)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 + 总结](/posts/interview-algo-iii/)
 
-## 系统设计面试
+### 系统设计面试
 
-系统设计没有难定量定性，范围较广，越有经验越占优。🗓 准备一下还是可以互掐一番的：
+系统设计没有难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
 
-## Java 面试福利
+### Java 面试福利
 
-🆓 收集了些面试题，也可当作知识复习之用：
+🆓 收集了些非常好的知识点汇总和面试题：
 
--   [2020 最新 Java 面试题及答案 v3.0](/download/2020最新Java面试题及答案v3.0.pdf)
--   [JavaGuide 面试突击版.v2](/download/JavaGuide面试突击版.v2.pdf)
--   [Java 面试汇总(Java 专栏)](</download/Java面试汇总(Java专栏).pdf>)
--   [Java 研发军团整理《Java 面试题手册》V1.0 版](/download/Java研发军团整理《Java面试题手册》V1.0版.pdf)
+-   [2020 最新 Java 面试题及答案 v3.0](https://drive.google.com/file/d/1V9saB-DqR_5zNKVno8ALPjxff2xflepz/view?usp=sharing)
+-   [JavaGuide 面试突击版.v2](https://drive.google.com/file/d/1qNk21sihrCe64eyJXwChDBok6lux42zD/view?usp=sharing)
+-   [Java 面试汇总(Java 专栏)](https://drive.google.com/file/d/1_-ihuS_QwaMs4M7ZZJ8Ar4e5VA4s3lpy/view?usp=sharing)
+-   [Java 研发军团整理《Java 面试题手册》V1.0 版](https://drive.google.com/file/d/1iXPMqzZTR3OYzxN8RrVuvZfCMFPTg2o9/view?usp=sharing)
+
+### Python 面试福利
+
+🗓TBD 收集了些面试题：
+
+### DevOps 面试福利
+
+🗓TBD 收集了些面试题：
+
+### 云计算面试福利
+
+🗓TBD 收集了些面试题：
+
+### 大数据面试福利
+
+🗓TBD 收集了些面试题：
+
+### 数据科学/机器学习面试福利
+
+🗓TBD 收集了些面试题：
 
 ---
 

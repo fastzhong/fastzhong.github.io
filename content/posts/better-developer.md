@@ -40,7 +40,7 @@ draft = true
 
 > learn from the best
 
-向最好的人学习，在计算机每个子领域都有最好的人教你，慕课网，极客时间，Youtube，Coursera，Edx 有最好的教程和分享，Github 有开源，Manning，Oreilly，Addision，MK，有最好的书，这个年代和 20，30 年前比，真的没有理由学不会，学不好。
+向最好的人学习，在计算机每个子领域都有最好的人教你，慕课网，极客时间，Youtube，有最好的教程和分享，Github 有开源，Manning，Oreilly，Addision，MK，有最好的书，这个年代和 20，30 年前比，真的没有理由学不会，学不好。
 
 > stick on the principals and good practices
 
