@@ -5,7 +5,6 @@ readingTime = true
 categories = ["编程"]
 tags = ["python"]
 toc = true
-draft = true
 +++
 
 Python 近两三年伴随着机器学习变得很火，其实这家伙比 Java 年头还早。
@@ -167,6 +166,8 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 ![Python environment](/images/python101/python-environment.png)
 
 💡 包管理或者依赖管理是 Python 比较弱的一个方面，这里就不仔细讨论各种 [历史方案](https://packetpushers.net/setting-up-a-python-environment-where-to-develop/) (想了解各种工具的自行 Google)。
+
+关于Python的Scripts，Modules，Packages和Libraries，我在另一篇博文里解释。
 
 ## Python setup for Year 2020
 
@@ -457,3 +458,7 @@ Jupyter：🗓TBD
 ## Python 项目最佳实践模板
 
 🗓TBD
+
+---
+
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 还没有开始写代码前，就要知道一堆东西。

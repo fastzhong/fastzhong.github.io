@@ -3,7 +3,7 @@ title = "算法编程面试 I：指南"
 date = 2010-07-01T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
-tags = ["leetcode"]
+tags = ["面试指南系列", "leetcode"]
 toc = true
 draft = true
 +++
@@ -62,11 +62,11 @@ draft = true
 💡 题目太多了，还是要有策略的：先刷热门题，前两百多道都是经典题，可以举一反三，例如， 先刷热题 HOT 100，再刷精选 TOP 面试题，之后刷其他的题。（在 [https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/) 页面的右侧可选不同的热门题。）
 
 ```md
-1. 初期：熟悉掌握各种基本算法结构，按难度分类，做简单题，广度优先，直接看答案，学最优解，补基础
+1. 前期：先熟悉掌握基本算法结构，算法面试课先补基础，配合做做简单题
 
-2. 中期：熟悉各种类别题目解题思路，按类别分类/tag，广度优先，同一类型强化，背经典题，模版，建立思维体系
+2. 初中期：熟悉各种类别解题思路，按类别分类/tag 刷题，同一类型强化，开始直接看答案，学最优解，背经典题，模版，建立思维体系
 
-3. 后期：做新题，总结老题，一题多解，多题同解，按类别分类，深度优先
+3. 后期：做新题，总结老题，一题多解，多题同解，补缺补漏，深度优先
 
 4. 面试前：做面经，别纠结，按公司分类，因公司而异
 ```
@@ -96,15 +96,17 @@ draft = true
 
 #### 分类参考
 
--   头 250 道重点题
--   [花花酱 LeetCode Problem List 题目列表](https://zxi.mytechroad.com/blog/leetcode-problem-categories/)
--   我自己的做题记录
+🗓
+
+-   重点题
+-   按 tag 划分
+-   按公司面试常考划分
 
 #### 讲解
 
 💁🏻‍♂️[用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
 
-💁🏻‍♂️[cspiration](https://www.youtube.com/channel/ UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
+💁🏻‍♂️[cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
 
 💁🏻‍♂️[花花酱](https://www.youtube.com/user/xxfflower/playlists) 也是个刷题牛人
 
@@ -137,4 +139,4 @@ draft = true
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程技术，开拓思维，非常有好处的 ⏤ 其实，很多高手好像也在“悄悄”的刷。刷题毕竟是针对面试的，还是要回到长期的学习并学以致用应中。
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 最后，如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程功底，开拓思维，非常有好处的 ⏤ 其实，很多高手好像也在“悄悄”的刷。刷题毕竟是针对面试的，刷题是打基础，最好是学以致用，挑战真正的困难。

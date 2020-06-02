@@ -3,7 +3,7 @@ title = "选坑、入坑、以及面试"
 date = 2020-03-20T07:28:59+08:00
 readingTime = true
 categories = ["职业发展"]
-tags = []
+tags = ["面试指南系列"]
 toc = true
 draft = false
 +++
@@ -45,7 +45,7 @@ draft = false
 ### 面试前的准备
 
 -   了解公司：公司的 CEO 和管理层，商业运作模式和策略，产品竞争力，同行，财务状况，名声，过去几年的表现（上市公司通过股票市场），近期的大新闻
--   了解老板/面试官：资历，技术/非技术背景，所带的团队和业务，猎头反馈&
+-   了解老板/面试官：资历，技术/非技术背景，所带的团队和业务，猎头反馈
 -   了解职位：技术/非技术要求，领域发展前景，薪水范畴，个人喜好
 
 <i class="fas fa-tasks"></i>&nbsp;&nbsp;相关网站：[Linkedin](https://www.linkedin.com)，[Glassdoor](https://www.glassdoor.com)，[Comparably](https://www.comparably.com)，[Crunchbase](https://www.crunchbase.com)，[Yahoo Finance](https://finance.yahoo.com)
@@ -71,11 +71,11 @@ draft = false
 
 通常都是些傻 B 问题，没错。但对于这类问题态度要诚恳，表达、用词、铺垫很重要，事先要有所准备，点到为止。一般如果碰到过多纠缠这样的问题，我对面试官、职位、和公司的印象分大减。
 
--   为什么要换工作？一般我都是三选一来回答：
+-   为什么要换工作？一般我都是三选一来回答（不要讲原来工作不好，薪水低等等，虽然是都是套路）：
 
     -   为了更好的薪水：没啥不正常的，工作就是冲着 💰 去的，大胆说出你要大幅涨薪的想法，自己知道自己的市场价值
-    -   为了更好的发展：目前工作完全胜任，但觉得自己能力可以有更大的发挥，接受更大的挑战
-    -   为了更好的机会：猎头找上门，大力推荐，那就来看看吧
+    -   为了更好的发展空间：目前工作完全胜任，但觉得自己能力可以有更大的发挥，接受更大的挑战
+    -   试一试更好的机会：猎头找上门，大力推荐，那就来看看吧
 
 -   为什么换工作换得这么勤快？离开的各种原因要讲得正正当当，参照上一个问题，可以变着法子讲，尽量 focus 在客观不可抗拒因素，而且是自身范围，例如公司总体很好，但是刚好老板看自己不顺眼（换了新老板、奖赏不分明等原因）；所在团队文化的问题（内斗）；小公司碰到财务问题；现有技术条件碰到瓶颈而自己想要在某些领域发展；等等，强调改变人和环境是很困难的，也不是自身职责范围，但我自己可以选择啊；另外非常期待能长期待下去的，但还没有找到。
 
@@ -163,38 +163,38 @@ draft = false
 
 ### 系统设计面试
 
-系统设计没有难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
+系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
 
-### Java 面试福利
+### Java 面试
 
-🆓 收集了些非常好的知识点汇总和面试题：
+福利：收集了些非常好的知识点汇总和面试题
 
 -   [2020 最新 Java 面试题及答案 v3.0](https://drive.google.com/file/d/1V9saB-DqR_5zNKVno8ALPjxff2xflepz/view?usp=sharing)
 -   [JavaGuide 面试突击版.v2](https://drive.google.com/file/d/1qNk21sihrCe64eyJXwChDBok6lux42zD/view?usp=sharing)
 -   [Java 面试汇总(Java 专栏)](https://drive.google.com/file/d/1_-ihuS_QwaMs4M7ZZJ8Ar4e5VA4s3lpy/view?usp=sharing)
 -   [Java 研发军团整理《Java 面试题手册》V1.0 版](https://drive.google.com/file/d/1iXPMqzZTR3OYzxN8RrVuvZfCMFPTg2o9/view?usp=sharing)
 
-### Python 面试福利
+### Python 面试
 
-🗓TBD 收集了些面试题：
+🗓 福利：收集了些非常好的知识点汇总和面试题
 
-### DevOps 面试福利
+### DevOps 面试
 
-🗓TBD 收集了些面试题：
+🗓 福利：收集了些非常好的知识点汇总和面试题
 
-### 云计算面试福利
+### 云计算面试
 
-🗓TBD 收集了些面试题：
+🗓 福利：收集了些非常好的知识点汇总和面试题
 
-### 大数据面试福利
+### 大数据面试
 
-🗓TBD 收集了些面试题：
+🗓 福利：收集了些非常好的知识点汇总和面试题
 
-### 数据科学/机器学习面试福利
+### 数据科学/机器学习面试
 
-🗓TBD 收集了些面试题：
+🗓 福利：收集了些非常好的知识点汇总和面试题
 
 ---
 

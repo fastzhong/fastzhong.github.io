@@ -2,16 +2,24 @@
 title = "系统设计面试的准备"
 date = 2020-05-23T13:08:47+08:00
 readingTime = true
-categories = ["系统设计 & 架构"]
-tags = []
-toc = false
+categories = ["职业发展"]
+tags = ["面试指南系列"]
+toc = true
 +++
+
+系统设计的关键点在于知识面广 + 考虑全面，这需要经验做支撑，但通过多学习案例、套路是可以弥补的
 
 <!--more-->
 
-> [`Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.`](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+## 学习资料
+
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
 
 除了拿来面试，也是学习架构的大宝藏。
+
+## 经典案例
 
 突击 or 有架构经验的话，我觉得只要认真研读经典设计问题即可：
 
@@ -26,11 +34,26 @@ toc = false
 | <font color="honeydew">通过分类特性设计 Amazon 的销售排名</font>                    |    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/sales_rank/README.md)    |
 | <font color="honeydew">在 AWS 上设计一个百万用户级别的系统</font>                   |   [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md)    |
 
-技术点参考：[云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)
+## 答题策略
+
+九章总结的 4S 分析法：
+
+```md
+-   Scenario 场景：需要设计哪些功能，到什么程度？
+-   Service 服务：将大系统拆分为小服务
+-   Storage 存储：数据如何存储与访问
+-   Scale 升级：解决缺陷，处理可能遇到的问题
+```
+
+## 技术点参考
+
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)
 ![分布式系统设计知识图谱](/images/arch/techniques.png)
 
-番外：
+展开的话范围相当的广，只能平时积累，逐个突破。
+
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 番外：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [我理解的架构 & 架构师（兼谈微服务）](/posts/arch101)
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[淘宝服务端高并发分布式架构演进之路](/posts/taobao/)，其实是互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[淘宝服务端高并发分布式架构演进之路](/posts/taobao/) ⏤ 其实是互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。

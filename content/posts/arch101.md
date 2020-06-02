@@ -171,16 +171,11 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 对应每个点都可以找到相应的具体技术。微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试，不是发展大方向。
 
-Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [云原生应用（Cloud Native App）101](/posts/cncf101/)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [服务网格（Service Mesh ）101](/posts/service-mesh/)
+Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [服务网格（Service Mesh ）101](/posts/service-mesh/)
 
 🗓 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
 
 ## 微服务/分布式的坑
-
-原来微服务是这样的：  
-![微服务](/images/arch/the-toaster-project-components.jpg)
 
 > `If u can’t build monoliths properly, microservices won’t help.`
 
@@ -205,7 +200,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
     -   传输数据的成本为零
     -   整个网络是同构的
 
-谷歌认为测试必须在生产环境才算是真正的测试。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，设计文档，是每一个好系统的特征。
+谷歌认为测试必须在生产环境才算是真正的测试，我本人不是太热衷于 mocked 测试，而觉得 contract 更重要，e2e 应该由 CI 来承担。强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了辅助手段，简洁的分层，接口设计，编码质量，设计文档，是每一个好系统的特征。
 
 ## 微服务的总结
 
