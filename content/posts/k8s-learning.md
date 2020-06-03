@@ -5,6 +5,7 @@ readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
 toc = true
+draft = true
 +++
 
 <!--more-->
