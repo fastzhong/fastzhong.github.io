@@ -107,10 +107,7 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 
 -   语言五花八门，就像练武功，搞艺术，同一流派还有各种门户，这有契机和因缘，登顶的路从来不只一条，不喜欢 Python，没有关系，别勉强，做别的选择 - Ruby，C++，Haskell，Elang，等。少林寺的当然说少林武功天下第一，合不合自己的胃口，去了少林才知道你是不是武当的料。
 
-和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，b 站，youtube，免费/付费，网上可以自行查找：
-
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [8 FREE Tutorials and Websites to Learn Python Programming in 2020](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [10 Best Python Courses Online](https://hackr.io/blog/best-python-courses)
+和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，b 站，youtube，免费/付费，网上可以自行查找。
 
 ## Python 解释器
 
