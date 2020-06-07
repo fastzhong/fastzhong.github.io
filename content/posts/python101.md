@@ -11,6 +11,8 @@ Python 近两三年伴随着机器学习变得很火，其实 🐍 比 ☕️ �
 
 <!--more-->
 
+![Python学习路线 2020](/images/python101/python-roadmap-2020.png)
+
 ## Why Python
 
 Python 的编程哲学
