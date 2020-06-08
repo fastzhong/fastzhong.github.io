@@ -7,7 +7,7 @@ tags = []
 toc = true
 +++
 
-简单明了的分布式入门读物
+Distributed systems theory for the distributed systems engineer 简单明了的分布式入门读物
 
 <!--more-->
 

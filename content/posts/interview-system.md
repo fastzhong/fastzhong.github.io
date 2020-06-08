@@ -23,16 +23,18 @@ toc = true
 
 突击 or 有架构经验的话，我觉得只要认真研读经典设计问题即可：
 
-| 问题                                                                                |                                          <i class="fas fa-external-link-alt"></i>                                          |
-| :---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------: |
-| <font color="honeydew">设计 Pastebin.com (或者 Bit.ly)</font>                       | [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README-zh-Hans.md) |
-| <font color="honeydew">设计 Twitter 时间线和搜索 (或者 Facebook feed 和搜索)</font> |     [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/twitter/README.md)      |
-| <font color="honeydew">设计一个网页爬虫</font>                                      |   [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/web_crawler/README.md)    |
-| <font color="honeydew">设计 Mint.com</font>                                         |       [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/mint/README.md)       |
-| <font color="honeydew">为一个社交网络设计数据结构</font>                            |   [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/social_graph/README.md)   |
-| <font color="honeydew">为搜索引擎设计一个 key-value 储存</font>                     |   [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/query_cache/README.md)    |
-| <font color="honeydew">通过分类特性设计 Amazon 的销售排名</font>                    |    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/sales_rank/README.md)    |
-| <font color="honeydew">在 AWS 上设计一个百万用户级别的系统</font>                   |   [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md)    |
+| 问题                                                                                |                                                                                                           <i class="fas fa-external-link-alt"></i>                                                                                                           |
+| :---------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <font color="honeydew">设计 Pastebin.com (或者 Bit.ly)</font>                       | [解答 1](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README-zh-Hans.md) <br/> [解答 2](https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR?affiliate_id=5073518643380224) |
+| <font color="honeydew">设计 Twitter 时间线和搜索 (或者 Facebook feed 和搜索)</font> |                                                                      [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/twitter/README.md)                                                                       |
+| <font color="honeydew">设计一个网页爬虫</font>                                      |                                                                    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/web_crawler/README.md)                                                                     |
+| <font color="honeydew">设计一个图片分享网站 Instantgram</font>                      |                                                                                  [解答](https://www.educative.io/courses/grokking-the-system-design-interview/m2yDVZnQ8lG)                                                                                   |
+| <font color="honeydew">设计 Mint.com</font>                                         |                                                                        [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/mint/README.md)                                                                        |
+| <font color="honeydew">为一个交易平台设计限价订单（limited order book）</font>      |                                                                    [解答](https://javarevisited.blogspot.com/2017/03/2-practical-data-structure-algorithm-interview-questions-java.html)                                                                     |
+| <font color="honeydew">为一个社交网络设计数据结构</font>                            |                                                                    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/social_graph/README.md)                                                                    |
+| <font color="honeydew">为搜索引擎设计一个 key-value 储存</font>                     |                                                                    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/query_cache/README.md)                                                                     |
+| <font color="honeydew">通过分类特性设计 Amazon 的销售排名</font>                    |                                                                     [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/sales_rank/README.md)                                                                     |
+| <font color="honeydew">在 AWS 上设计一个百万用户级别的系统</font>                   |                                                                    [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md)                                                                     |
 
 ## 答题策略
 
@@ -40,9 +42,27 @@ toc = true
 
 ```md
 -   Scenario 场景：需要设计哪些功能，到什么程度？
+    -   who will use
+    -   how many will use
+    -   usage pattern
+    -   use case not covered
+    -   estimated throughput
+    -   estimated latency
 -   Service 服务：将大系统拆分为小服务
+    -   api for read/write scenarios
+    -   schema
 -   Storage 存储：数据如何存储与访问
+    -   data size
+    -   read/write ratio
+    -   read/write traffic
+    -   rdbms/nosql
 -   Scale 升级：解决缺陷，处理可能遇到的问题
+    -   scaling the algorithm
+    -   scaling the individual component
+    -   memory cache
+    -   DNS, CDN, reverse proxy, load balancer, ...
+    -   async: message queue, back pressure, time & order, ...
+    -   communiction: tcp, udp, rest, rpc, ...
 ```
 
 ## 技术点参考
