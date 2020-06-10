@@ -99,16 +99,56 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 ![Ansible 执行](/images/ansible/ansible-parallel-task-execution.gif)
 
-其内部的结构如下：
-![Ansible 结构](/images/ansible/ansible-internal.png)
-
-两幅图中包含了 Ansible 的基本概念/术语：
+图中包含了 Ansible 的基本概念/术语：
 
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
 <font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在，可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
-编写 inventory 也是个技巧，下面实战模版中会详解。
+编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
+
+```yaml
+localhost ansible_connection=local
+myapp-db1 ansible_ssh_host=172.16.0.62
+myapp-db2 ansible_ssh_host=172.16.0.63
+myapp-app1 ansible_ssh_host=172.16.0.60
+myapp-app2 ansible_ssh_host=172.16.0.61
+myapp-web1 ansible_ssh_host=172.16.0.64
+myapp-web2 ansible_ssh_host=172.16.0.66
+
+[dev:children]
+myapp-dbs
+myapp-apps
+myapp-webs
+
+[myapp-dbs]
+myapp-db1
+myapp-db2
+
+[myapp-apps]
+myapp-app1
+myapp-app2
+
+[myapp-webs]
+myapp-web1
+myapp-web2
+
+[dev:vars]
+ansible_ssh_user=ansible
+ansible_ssh_private_key_file="/home/ansible/.ssh/id_rsa"
+```
+
+> myapp-db1 ansible_ssh_host=172.16.0.62
+
+定义了 myapp-db1 这台机器 host，ansible_ssh_host 是系统变量名，用来定义此台机器的 IP 地址（其实是隶属于 myapp-db1 的一个 key），自己可以加入自定义的变量。
+
+> [dev:children]
+
+children 这个关键字说明 dev 的成员 myapp-dbs 和 myapp-apps 不是单个 host，而是一个组，[myapp-dbs]和[myapp-apps]则分别定义了他们的组成员
+
+> [dev:vars]
+
+vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（dev 的通用变量），ansible_ssh_user 和 ansible_ssh_private_key_file 也都是系统变量名。
 
 ✦ [task & module](https://ansible-tran.readthedocs.io/en/latest/docs/modules.html)
 
@@ -118,62 +158,74 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 <font color="yellow">playbook</font> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
 
-编写 playbook 是使用 Ansible 最主要的工作，一些核心元素：
+编写 playbook 是使用 Ansible 最主要的工作，定义了一系列的 tasks，每一段包含下面的一些核心元素：
 
-| 名称       | 含义                                                                           |
-| ---------- | ------------------------------------------------------------------------------ |
-| Hosts      | 执行的远程主机列表                                                             |
-| Tasks      | 任务集，即调用模块完成的某操作                                                 |
-| Varniables | 变量，内置变量或自定义变量在 playbook 中调用                                   |
-| Templates  | 模板，即使用模板语法的文件，比如配置文件等                                     |
-| Handlers   | 处理器，和 notity 结合使用，由特定条件触发的操作，满足条件方才执行，否则不执行 |
-| tags       | 标签，指定某条任务执行，用于选择运行 playbook 中的部分代码                     |
-| Roles      | 角色                                                                           |
+| 名称                | 含义                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| name                | 任务组名称或描述                                                                                 |
+| hosts               | 目标机器                                                                                         |
+| become，become_user | 指定登录执行任务的用户名，目标机器和执行任务的用户可能不同，例如执行某些任务需要 root 权限       |
+| tags                | 任务标签，可用于选择选择性执行                                                                   |
+| Tasks               | 任务集，一组具体操作，可以调用某个或多个任务模块(task module)、某个或多个角色（task role）来完成 |
+| Varniables          | 变量，内置变量或自定义变量在 playbook 中调用                                                     |
+| Templates           | 模板，即使用模板语法的文件，比如配置文件等                                                       |
+| Handlers            | 处理器，和 notity 结合使用，由特定条件触发的操作，满足条件方才执行，否则不执行                   |
+| Roles               | 角色，可以重复调用                                                                               |
+
+一个例子：
+
+```yaml
+#!/usr/bin/env ansible-playbook
+# provision-dbs.yml
+
+- name: set fact-related variables (always run)
+  hosts:
+      - myapp-dbs
+  gather_facts: true
+  tags: always
+  tasks:
+      - include: vars.yml
+
+- name: db server common
+  hosts:
+      - myapp-dbs
+  become: true
+  roles:
+      - { role: server-common, tags: ["common"] }
+
+- name: install & config mongodb
+  hosts:
+      - myapp-db1
+  become: true
+  roles:
+      - { role: mongodb, tags: ["mongodb"] }
+
+- name: install & config mysql
+  hosts:
+      - myapp-db2
+  become: true
+  roles:
+      - { role: mysql, tags: ["mysql"] }
+```
 
 ✦ [role](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
 
-<font color="yellow">role</font>，有定义好的变量、固定输入和一组 playbook 组成，类似你自己已经开发好的一个程序，完成固定的功能，可以重复使用。你也可以直接使用社区里别人开发和分享的 role，例如安装并配置 mysql。社区里包含大量的 role，基本上你想做的事情都有人实现了，或者把 source code 拷下来，自己稍微修改（顺便学习如何编写自己的 role）。
+<font color="yellow">role</font>由几部分组成：
+
+-   defaults: 定义该 role 用到默认变量，该 role 运行时自动加入这里定义的变量，但其定义的变量优先级别最低，若已在其他地方定义，可被覆盖
+-   vars: 该 role 运行时自动加入这里定义的变量，通常可把需要传入的变量定义在这里，vars 和 defaults 很类似，通常把必须用到变量的放在 defaults 里，可变的放在 vars 里，例如 tasks 里针对不同的 OS，版本用到的变量，需要到的时候可以引入，include_vars 可自动在此目录中寻找变量文件（相对路径）
+-   files：存放各种文件，该 role 需要执行相关 file tasks 时，file module 可自动在此目录中寻找文件（相对路径）
+-   templates：该 role 需要执行 template task 时，可自动在此目录中寻找 template 文件（相对路径），template 这个 task 专门用来修改配置文件
+-   tasks：该 role 需要执行的 tasks，类似 playbook，include 可在此目录中寻找 tasks 文件（相对路径）
+-   handlers：定义该 role 需要的回调 task，在 tasks 里可以调用
+
+role 类似你自己已经开发好的一个程序，完成固定的功能，可以重复使用。你也可以直接使用社区里别人开发和分享的 role。社区里包含大量的 role，基本上你想做的事情都有人实现了，或者把 source code 拷下来，自己稍微修改，顺便学习如何编写自己的 role：[一个安装和配置 mysql 的 role](https://github.com/geerlingguy/ansible-role-mysql)。
 
 在运行时，Ansbile 把 playbook 结合 inventory 和 module/roles 编译成 Python 程序，managed node 通过 SSH 将其发送至目标机器，然后在目标机器上执行。 Ansible 把目标机器看成是一个状态机，每做一个 task，状态会发生改变，通过若干 task 后，目标机器就从原始状态达到你想要的状态，实现“状态变化管理”。如果目标机器已经处于目标状态中，该 task 就不会被执行。每一步变化是“等幂”的 - 可重复，可验证。
 
+![Ansible 结构](/images/ansible/ansible-internal.png)
+
 task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
-
-## 基本操作
-
-### 安装
-
-Ansible 只安装在 management node 上，安装 Ansible 通过 Linux 上各种包安装工具如 RedHat 的 yum，Suse 的 zypper，Mac 的 brew 等，很容易搞定），如果 offline 安装，手动安装所需要的 rpm。由于 Ansible 是 Python 编写的，所以也可以用 pip 来安装。具体参见（[官方安装文档](http://docs.ansible.com/ansible/intro_installation.html)）。
-
-Ansible 的目标机器可以是 Linux 或 Windows，但目前 management node 必须是 Linux，虽然有各种 hack，但强烈不建议 Windows 作为 management node。
-
-### 设置
-
-Ansible 的设置文件可以按顺序下面找到：
-
-```md
-1.  \$ANSIBLE_CONFIG
-2.  ./ansible.cfg
-3.  ~/.ansible.cfg
-4.  /etc/ansible/ansible.cfg
-```
-
-⚠️ 他们不会一起生效或者相互覆盖，遇到第一个设置文件就停止。下面是 ansible.cfg 例子：
-
-```yaml
-[defaults]
-forks = 5
-host_key_checking = False
-gathering  = smart
-roles_path = /usr/local/repository/ansible/roles
-
-[priviledge_escalation]
-become_method = sudo
-
-[ssh_connection]
-ssh_args = -o ForwardAgent=yes
-scp_if_ssh = True
-pipelining = True
-```
 
 ## 项目实战
 
@@ -226,13 +278,242 @@ roles/
     fooapp/               # ""
 ```
 
-当然此模版有瑕疵，重点如下：
-
-### 重点
+当然此模版有瑕疵，看下面的重点。
 
 ### 四部曲
 
-## 技巧
+如何编写和组织 inventory，role，playbook 是 Ansible 自动化实施的主要工作内容。我总结了这个四部曲的套路：
+
+![Ansible Steps](/images/ansible/ansible-steps.png)
+
+3，4 由 Ansible 完成，所以通常我会有两个对应 playbook ⏤ sys.yml 和 site.yml：
+
+```yaml
+#!/usr/bin/env ansible-playbook
+# sys.yml
+
+- name: display environment name
+  hosts: localhost
+  tags: always
+  tasks:
+      - debug:
+            msg: "MyApp environment >>> {{ app_env }}"
+
+- name: display environment name
+  hosts: localhost
+  tags: always
+  tasks:
+      - debug:
+            msg: "MyApp OS >>> {{ ansible_os_family }}"
+
+- include: sys-dbs.yml
+
+- include: sys-apps.yml
+
+- include: sys-webs.yml
+```
+
+```yaml
+#!/usr/bin/env ansible-playbook
+# site.yml
+
+- name: display environment name
+  hosts: localhost
+  tags: always
+  tasks:
+      - debug:
+            msg: "MyApp environment >>> {{ app_env }}"
+
+- name: display environment name
+  hosts: localhost
+  tags: always
+  tasks:
+      - debug:
+            msg: "MyApp OS >>> {{ ansible_os_family }}"
+
+- include: site-cots.yml
+
+- include: site-apps.yml
+
+- include: site-misc.yml
+```
+
+### 重点：变量 vars
+
+运维的复杂性和灵活性由变量 vars 来体现的，Ansible 的 var 可在多处定义，并有 [优先顺序](http://docs.ansible.com/ansible/playbooks_variables.html)。不过不用那么复杂，关键是搞清楚变量应用的范围：
+
+-   <font color="yellow">全局变量</font> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
+
+-   <font color="yellow">环境变量</font> env_xxx/group_vars/all/xxx：项目开发中通常有多个环境 xxx：local, dev, stag, uat, prod，有些变量随环境改变而改变，但相当于该环境下的全局变量，除了 inventory/机器变量外，其它的变量例子如 host file, resource_dir，repo_url，等等。
+
+💬 Ansible 没有提出全局变量和环境变量的使用和区别，只有 <font color="yellow">机器变量</font>（group_vars & host_vars），Ansible Best Practices 里把它们当做了全局变量，但结构上是支持的，也就是每个环境下都可以分别有 inventory 和 group_vars & host_vars，而 all 就是默认的机器组，所以 env_xxx/group_vars/all/下所有的变量文件都会被识别为机器全局变量，而且 all 的机器变量引用时不需要前缀指定，特定的 group_vars & host_vars 变量 xxx 必须指明是哪个 group {{ groups["dbs"].xxx }} 或 host{{ hostvars["db1"].xxx }}，“groups”和“hostvars”是 Ansible 内置变量。为了支持全局变量（各个环境都使用），可以通过 file link 的方法让每个 env_xxx/group_vars/all/main 指向同一个文件，上图中的 env_dev/group_vars/all/main 指向 vars/main。
+
+-   <font color="yellow">支持多 OS，多基础设施的变量</font>：这种变量主要是支撑产品级的软件项目，通常是动态的，通过任务执行来设定，例如上面的 dbservers.yml 里引用的 vars.yml:
+
+```yaml
+- name: define os family (suse)
+  set_fact:
+      os_family: "suse"
+  when: ansible_os_family == "SuSe"
+
+- name: define os family (redhat)
+  set_fact:
+      os_family: "redhat"
+  when: ansible_os_family == "RedHat"
+
+- name: define os family (debian)
+  set_fact:
+      os_family: "debian"
+  when: ansible_os_family == "Debian"
+
+- name: check os_family
+  fail:
+      msg: "ERROR - can not detect supported os_family"
+  when: os_family is not defined
+```
+
+变量 os_family 在以后的 tasks 和 roles 中都可能用到。
+
+-   <font color="yellow">role 变量</font>：这些变量应用范畴只是该 role，是传统意义上各软件 component 的参数变量，在 role 里定义和使用，但 playbook 调用时可以进行指定或覆盖默认值，例如一个 Tomcat 的 war 部署时传入 war_name：
+
+```yaml
+- name: deploy my app1
+  hosts:
+      - myapp-apps
+  become: true
+  become_user: "{{ app_user }}"
+  roles:
+      - { role: tomcat-deploy, war_name: "app1", tags: ["app1"] }
+```
+
+-   <font color="yellow">Ansible 流程和控制变量</font>：上面的变量主要用来支持配置的，还有一些属于控制或者辅助控制 Ansible 流程的，这些通过 Ansible 提供的功能来指定，例如从命令行输入：
+
+```yaml
+- name: create app user name & password
+  hosts: all
+  become: true
+  become_user: root
+  vars_prompt:
+	- name: app_user prompt: "app user name： "
+	- name: app_password prompt: "app password： "
+	- name: app_group prompt: "app group： "
+  user:
+    name: "{{ app_user }}"
+    password: "{{ app_password }}"
+    group: "{{ app_group }}"
+    append: yes
+    generate_ssh_key: yes
+    shell: /bin/bash
+    home: "/home/{{ app_user }}"
+    createhome: yes
+    state: present
+```
+
+流程控制变量的例子见下面。
+
+-   <font color="yellow">Ansible 默认/内置变量</font>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
+
+### 重点：标签 tags
+
+在调试和部署的时候，有些任务需要重复多次的，而 playbook 包含从头到尾全部的操作，所以需要指定特定的任务（过滤掉其它的），这时候标签 tags 发挥作用。Ansible 命令行支持两种标签指定方式：
+
+-   -t or --tags
+-   --skip-tags
+
+怎么打标签关键是看需要做什么样的动作，例如 provision-dbs.yml 里：
+
+```yaml
+- name: db server common
+  hosts:
+      - myapp-dbs
+  become: true
+  roles:
+      - { role: server-common, tags: ["common"] }
+```
+
+如果指定标签 common，就可以执行所有 common 的任务。而在 common 这个 role 的 tasks 里：
+
+```yaml
+- include: repo.yml
+  tags: repo
+
+- include: hostfile.yml
+  tags: hostfile
+
+- include: misc.yml
+```
+
+如果我在命令行里指定标签 hostfile，这样就能执行部分特定的 common 任务。通过不同标签的组合也可以完成一定的任务，例如用于升级系统的 tomcat：
+
+```yaml
+>
+    play appservers.yml -t tomcat,app1
+```
+
+标签 tag 最终是落在每一个 task 上的（透过 playbook，role），但直接给每个 task 打标签就很麻烦，为保持 role 的可移植，我基本不在 role 里打标签。我遇到了 playbook 的 include 打上标签，但不起作用（Ansible bug or defect?）。
+
+有的时候 tags 还是不好用，例如 mysql 里要不要做 clustering，这时可以通过变量来控制，参考下面的 “有条件执行”。
+
+## 基本操作和技巧
+
+### 安装
+
+Ansible 只安装在 management node 上，安装 Ansible 通过 Linux 上各种包安装工具如 RedHat 的 yum，Suse 的 zypper，Mac 的 brew 等，很容易搞定），如果 offline 安装，手动安装所需要的 rpm。由于 Ansible 是 Python 编写的，所以也可以用 pip 来安装。具体参见（[官方安装文档](http://docs.ansible.com/ansible/intro_installation.html)）。
+
+Ansible 的目标机器可以是 Linux 或 Windows，但目前 management node 必须是 Linux，虽然有各种 hack，但强烈不建议 Windows 作为 management node。
+
+### 设置
+
+Ansible 的设置文件可以按顺序下面找到：
+
+```md
+1.  \$ANSIBLE_CONFIG
+2.  ./ansible.cfg
+3.  ~/.ansible.cfg
+4.  /etc/ansible/ansible.cfg
+```
+
+⚠️ 他们不会一起生效或者相互覆盖，遇到第一个设置文件就停止。下面是 ansible.cfg 例子：
+
+```yaml
+[defaults]
+forks = 5
+host_key_checking = False
+gathering  = smart
+roles_path = /usr/local/repository/ansible/roles
+
+[priviledge_escalation]
+become_method = sudo
+
+[ssh_connection]
+ssh_args = -o ForwardAgent=yes
+scp_if_ssh = True
+pipelining = True
+```
+
+### 执行
+
+Ansible 的运行有两种主要模式，一种是 playbook 模式，另一种是随机模式。
+
+playbook 例子，一个命令把整个系统搞起：
+
+```bash
+> ansible-play site.yml
+```
+
+随机例子 1，执行某个命令行"service status-all"：
+
+```bash
+> ansible db1 -a 'service --status-all' -u ansible -b
+```
+
+随机例子 2，执行某个 task module(shell)，通过 -a 输入该 task module 附加参数，效果和上面一样：
+
+```bash
+> ansible db1 -m shell -a 'service --status-all' -u ansible
+```
+
+当然 playbook 是主要模式。
 
 ### gathering facts
 
@@ -245,7 +526,7 @@ fact_caching_connection = /app/myapp/deployment
 fact_caching_timeout = 86400
 ```
 
-可以收集机器信息，并放入缓存，大大加快每次执行的速度
+可以收集机器信息，并放入缓存，大大加快每次执行的速度。
 
 ### 过滤 host
 
@@ -256,7 +537,7 @@ fact_caching_timeout = 86400
 -   Wildcard： web\*.app.com
 -   Regx： (~web[0-9]+)
 
-通过-t 和-l 就能指定在<i class="fa fa-quote-left" aria-hidden="true"></i>**某个目标机器**<i class="fa fa-quote-right" aria-hidden="true"></i>做<i class="fa fa-quote-left" aria-hidden="true"></i>**某个动作**<i class="fa fa-quote-right" aria-hidden="true"></i>，例如只在 db1 这台机器上执行 mysql：
+通过-t 和-l 就能指定在 {某个目标机器} 做 {某个动作}，例如只在 db1 这台机器上执行 mysql：
 
 ```bash
 > play dbservers.yml -t mysql -l db1
@@ -266,7 +547,7 @@ fact_caching_timeout = 86400
 
 通过 key 免去登录密码输入，有几种选项：
 
--   一个 key 登录所有机器，通过默认的 key 实现，在 ansible.cfg 文件里的[defaults]定义:
+-   一个 key 登录所有机器，通过默认的 key 实现，在 ansible.cfg 文件里的 defaults 定义:
 
 ```yaml
 private_key_file=/etc/ansible/keys/access.pem
@@ -331,7 +612,7 @@ _register_, _when_, _changed_when_, _failed_when_ 例子：
         when: (includes is not defined) or (item.name in includes)
 ```
 
-Ansible 通过『with_items』『with_dict』等达到循环的目的，上面的例子还加入命令行动态变量 includes 来控制指定的 image：
+Ansible 通过 with_items、with_dict 等达到循环的目的，上面的例子还加入命令行动态变量 includes 来控制指定的 image：
 
 ```bash
 # play docker-build.yml -e "includes=[service1, service2]"
@@ -361,7 +642,7 @@ item.0 和 item.1 对应循环体的循环变量。
 
 ### ansible-vault 存储敏感信息
 
-密码等属于敏感信息，可以把包含敏感信息的文件通过『ansible-vault』加密，加密后的文件看起来就像乱码而非明文，例如：
+密码等属于敏感信息，可以把包含敏感信息的文件通过 <font color="white">ansible-vault</font> 加密，加密后的文件看起来就像乱码而非明文，例如：
 
 ```bash
 > cat password.txt
@@ -386,7 +667,7 @@ Usage: ansible-vault [create|decrypt|edit|encrypt|encrypt_string|rekey|view] [--
 $ ansible-playbook site.yml --ask-vault-pass
 ```
 
-或者创建一个.vault_pass 的文件，把密码放进去，让 ansible 自动去读取：
+或者创建一个.vault_pass 的文件，把密码放进去，让 Ansible 自动去读取：
 
 ```bash
 $ echo "my_vault_password" > .vault_pass
@@ -399,7 +680,7 @@ $ ansible-playbook site.yml --vault-password-file=.vault_pass
 $ echo '.vault_pass' >> .gitignore
 ```
 
-由于 ansible 只能支持整个文件加密，所以如果把变量分成要加密的，不要加密的，就会破坏变量本事的结构，导致可读性变差，例如：
+由于 Ansible 只能支持整个文件加密，所以如果把变量分成要加密的，不要加密的，就会破坏变量本事的结构，导致可读性变差，例如：
 
 ```bash
 $ cat group_vars/database/vars
@@ -412,7 +693,7 @@ mysql_user: fred
 mysql_password: this_is_my_password
 ```
 
-想要对 mysql_password 加密的话，要吗对整个文件加密，要吗把 mysql_password 移出到另一加密文件，但这都不是我们想要的，技巧是创建另一变量，通过引入来解决：
+想要对 mysql_password 加密的话，要么对整个文件加密，要么把 mysql_password 移出到另一加密文件，但这都不是我们想要的，技巧是创建另一变量，通过引入来解决：
 
 ```bash
 $ cat group_vars/database/vars
@@ -427,7 +708,7 @@ $ ansible-vault view group_vars/database/vault
 vault_mysql_password: this_is_my_password
 ```
 
-## debug
+### debug
 
 通过环境变量：
 
@@ -444,7 +725,7 @@ $ export ANSIBLE_STRATEGY=debug
       -
 ```
 
-当该任务出错时，Ansible 暂停执行，调用 debugger，这时可以任意调整变量：
+当该任务出错时，Ansible 暂停执行，调用 debugger，这时可以查看或调整变量：
 
 ```bash
 (debug) task.args
@@ -452,34 +733,34 @@ $ export ANSIBLE_STRATEGY=debug
 
 详细文档：[https://docs.ansible.com/ansible/playbooks_debugger.html](https://docs.ansible.com/ansible/playbooks_debugger.html)
 
-另一个常用的方法时[debug module](https://docs.ansible.com/ansible/debug_module.html)，拿来输出信息：
+另一个常用的方法时 [debug module](https://docs.ansible.com/ansible/debug_module.html)，拿来输出信息：
 
 ```yaml
 - name: display environment name
   hosts: localhost
   tasks:
     - debug:
-        msg: "environment :::> {{ app_env }}"
+        msg: "environment >>> {{ app_env }}"
         verbosity：3
 
 - name: display OS name
   hosts: localhost
   tasks:
     - debug:
-        msg: "OS :::> {{ ansible_os_family }}"
+        msg: "OS >>> {{ ansible_os_family }}"
         verbosity：3
 ```
 
-注意 verbosity，Ansible 命令行用 -v，-vv, -vvv, -vvvv 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
+注意 verbosity，Ansible 命令行用 <font color="yellow">-v，-vv, -vvv, -vvvv</font> 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
 
-## 几个运行技巧
+### 其它运行技巧
 
-把 ansible-playbook 匿名成 play，下面是几个有用的选项：
+把 ansible -playbook 匿名成 play，下面是几个有用的选项：
 
 ```md
--   play site.yml _--list-tasks_ ：列出所有的 tasks
--   play site.yml _--list-tags_ ：列出所有的 tags
--   play site.yml _--syntax-check_：做语法检查
--   play site.yml _--check_ ：“虚假”运行，可告知那些 tasks 会产生改变，如果带上 -D or --diff，如果相关 module 支持，如 template，会显示前后改变的具体内容
--   play site.yml _--step_ ：“单步”执行
+-   play site.yml --list-tasks：列出所有的 tasks
+-   play site.yml --list-tags：列出所有的 tags
+-   play site.yml --syntax-check：做语法检查
+-   play site.yml --check ：“虚假”运行，可告知那些 tasks 会产生改变，如果带上 -D or --diff，如果相关 module 支持，如 template，会显示前后改变的具体内容
+-   play site.yml --step：“单步”执行
 ```
