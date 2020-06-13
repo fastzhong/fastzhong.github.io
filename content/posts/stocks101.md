@@ -1,5 +1,5 @@
 +++
-title = "股票入门"
+title = "股票入门 - 基础了解"
 date = 2020-06-07T07:28:59+08:00
 readingTime = true
 categories = ["金融 & 投资"]
@@ -7,9 +7,11 @@ tags = ["股票"]
 toc = true
 +++
 
-小白上手，基础的基础，先掠过分析
+小白上手，先把基础性了解一下
 
 <!--more-->
+
+![good-bye](/images/stock/good-bye.webp)
 
 ## Golden Rules
 
@@ -21,22 +23,23 @@ toc = true
 
 ## 新手入门
 
-### 极速入门
+### 极简入门
 
-完全小白，看完这四支短片 🎬：
+完全小白，看完这几支短片 🎬：
 
 -   [什麼是股票？| Spark Liang 股票投資](https://www.youtube.com/watch?v=x6fnlyEo4pY)
 -   [投資股票到底怎麼賺錢？ | Spark Liang 股票投資](https://www.youtube.com/watch?v=JTPpPksLiY4)
 -   [怎樣買賣上市的股票？實際操作新手投資指南 | Spark Liang 股票投資](https://www.youtube.com/watch?v=kezQApKN1Lk)
 -   [零經驗新手想要開始投資股票都可以做到的 4 個步驟 | Spark Liang 股票投資](https://www.youtube.com/watch?v=FwQ5d5-lgLA)
+-   [新手該怎麽投資股票? 3 步驟 100%學會投資策略 | Spark Liang 股票投資](https://www.youtube.com/watch?v=OfjW4FrUBO4)
+-   [到底什麽是投资和投機？投資新手需要懂的事 l sparkliang 股票投資](https://www.youtube.com/watch?v=0hCgBnBJvho)
+-
 
-### 入门第一本参考书
-
-📖 [给投资新手的极简股票课](https://drive.google.com/file/d/1OC0qAxy2Vejy3ifbdWcJ_Tvaa34yOpA7/view?usp=sharing)
+这个马来西亚的 Spark Liang 讲得真的是清晰易懂，对入门小白很有帮助，推荐他的 [股票系列](https://www.youtube.com/playlist?list=PLge7qz6fjCvc8tnhM0Z09C-24BI0DAN6H)
 
 ### HOLD LE 交易课
 
-一入侯门深似海，好在 Hold Le 无私的奉献了一场超级简单且落地的小白入门课 ⏤ [`HOLD LE 交易课`](https://www.holdle.com/courses) 👍🏻，强烈推荐，读了之后再去学其它更加技术和专业的课，课程解答的问题：
+一入侯门深似海，好在 Hold Le 无私的奉献了一场系统性的落地入门课 ⏤ [`HOLD LE 交易课`](https://www.holdle.com/courses) 👍🏻，强烈推荐，读了之后再去学其它更加技术和专业的课，课程解答的问题：
 
 #### 投资交易的几个误区
 
@@ -142,19 +145,31 @@ toc = true
 -   6.04 - 心理战术：耐心（三）
 ```
 
-### 60 分钟免费课程
+## YouTube 实战“干货”
 
-[超績投資客 J Law](https://www.jlawstock.com/)：⚠️ 这是广东话，系统性讲解“实战”，讲得相当不错，澄清许多的疑点：
+YouTube 上有不少“含金量”极高的股票分析，和其它事情一样，开始先向他人学习，我关注的几个：
 
--   你不需要选中倍升股票，而是控制 `风险：回报 = 2:1`
--   最佳的买入点不是股价最低点，而是 `低风险买入点`
--   会买是功夫，会卖是真功夫，卖出时机应该是 `2-3x风险/评价回报率`
+-   [超績投資客 J Law](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw)
 
-J Law 在 [YouTube](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw) 上有不少影片。
+    ⚠️ 这是广东话，讲解贴近“实战”，讲得相当不错，澄清许多的疑点，[其网站](https://www.jlawstock.com/) 有个 60 分钟免费的入门介绍：
+
+    -   你不需要选中倍升股票，而是控制 `风险：回报 = 2:1`
+    -   最佳的买入点不是股价最低点，而是 `低风险买入点`
+    -   会买是功夫，会卖是真功夫，卖出时机应该是 `2-3x风险/评价回报率`
+
+    总结了 [18 个股票买卖赢家守则](https://drive.google.com/file/d/1gupeudsMDN2e4yI3kQMOZK2n6UXZ-Ce_/view?usp=sharing)
+
+-   [老汤美股财经](https://www.youtube.com/channel/UCeTEWFsNC3eeUsn9hvsDALQ)
+
+-   [小楠 Curtis 的投資成長空間](https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw)
+
+-   [贝拉聊财金](https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg)
+
+还有科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，业余读读，非常有趣。
 
 ## 常用投资工具
 
--   [yahoo 财经](https://hk.finance.yahoo.com/) & [investing.com](https://investing.com)：股价、财务报表、PE、负债现金、市值
+-   [yahoo 财经](https://hk.finance.yahoo.com/) & [英为财经](https://cn.investing.com/)：股价、财务报表、PE、负债现金、市值
 -   公司年度财报（10-K）和季度财报
 -   [富途牛牛](https://www.futunn.com/?lang=zh-CN)
 -   [雪球](https://xueqiu.com/)

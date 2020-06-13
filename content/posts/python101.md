@@ -460,4 +460,9 @@ Jupyter：🗓TBD
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 还没有开始写代码前，就要知道一堆东西。
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 总结：
+
+-   选择 Python3
+-   为每个项目建立 virtual env
+-   VS Code 或 PyCharm 作为 IDE
+-   学习 Pythonic code
