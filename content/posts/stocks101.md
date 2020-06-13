@@ -165,6 +165,8 @@ YouTube 上有不少“含金量”极高的股票分析，和其它事情一样
 
 -   [贝拉聊财金](https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg)
 
+-   [贝奇说股](https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA)
+
 还有科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，业余读读，非常有趣。
 
 ## 常用投资工具
