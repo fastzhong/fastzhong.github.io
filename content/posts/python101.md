@@ -295,6 +295,7 @@ $ pyenv version
 _指定当前 shell 使用的 Python 版本_：
 
 ```bash
+$ pyenv global 2.7.14
 $ pyenv shell 3.6.2
 ```
 
@@ -465,4 +466,4 @@ Jupyter：🗓TBD
 -   选择 Python3
 -   为每个项目建立 virtual env
 -   VS Code 或 PyCharm 作为 IDE
--   学习 Pythonic code
+-   学习 Pythonic/PEP8

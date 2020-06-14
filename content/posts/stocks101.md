@@ -167,11 +167,11 @@ YouTube 上有不少“含金量”极高的股票分析，和其它事情一样
 
 -   [贝奇说股](https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA)
 
-还有科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，业余读读，非常有趣。
+还有科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。
 
 ## 常用投资工具
 
 -   [yahoo 财经](https://hk.finance.yahoo.com/) & [英为财经](https://cn.investing.com/)：股价、财务报表、PE、负债现金、市值
--   公司年度财报（10-K）和季度财报
 -   [富途牛牛](https://www.futunn.com/?lang=zh-CN)
 -   [雪球](https://xueqiu.com/)
+-   公司年度财报（10-K）和季度财报

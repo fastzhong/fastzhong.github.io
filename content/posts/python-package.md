@@ -1,5 +1,5 @@
 +++
-title = "Python的Scripts，Modules，Packages和Libraries"
+title = "Python的 Scripts，Modules，Packages 和 Libraries"
 date = 2020-04-01T01:08:47+08:00
 readingTime = true
 categories = ["编程"]
