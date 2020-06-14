@@ -117,4 +117,4 @@ OpenJDK 64-Bit Server VM AdoptOpenJDK (build 14.0.1+7, mixed mode, sharing)
 </plugin>
 ```
 
-"enable-preview" 开关才能使用 JDK14 中“非”默认的新特性。
+加入"enable-preview" 才能开启 JDK14 中“非”默认的新特性。
