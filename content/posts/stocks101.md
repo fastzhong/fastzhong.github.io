@@ -33,9 +33,8 @@ toc = true
 -   [零經驗新手想要開始投資股票都可以做到的 4 個步驟 | Spark Liang 股票投資](https://www.youtube.com/watch?v=FwQ5d5-lgLA)
 -   [新手該怎麽投資股票? 3 步驟 100%學會投資策略 | Spark Liang 股票投資](https://www.youtube.com/watch?v=OfjW4FrUBO4)
 -   [到底什麽是投资和投機？投資新手需要懂的事 l sparkliang 股票投資](https://www.youtube.com/watch?v=0hCgBnBJvho)
--
 
-这个马来西亚的 Spark Liang 讲得真的是清晰易懂，对入门小白很有帮助，推荐他的 [股票系列](https://www.youtube.com/playlist?list=PLge7qz6fjCvc8tnhM0Z09C-24BI0DAN6H)
+这个马来西亚的 Spark Liang 小哥讲得真的是清晰易懂，对入门小白很有帮助，推荐他的 [股票系列](https://www.youtube.com/playlist?list=PLge7qz6fjCvc8tnhM0Z09C-24BI0DAN6H)，在学习股票前已经看他的各种视频一段时间了，都很好。
 
 ### HOLD LE 交易课
 
@@ -147,11 +146,15 @@ toc = true
 
 ## YouTube 实战“干货”
 
-YouTube 上有不少“含金量”极高的股票分析，和其它事情一样，开始先向他人学习，我关注的几个：
+YouTube 上有不少“含金量”极高的股票分析，作者都是实战派。和其它事情一样，开始先向他人学习，我关注的几个：
+
+-   [老汤美股财经](https://www.youtube.com/channel/UCeTEWFsNC3eeUsn9hvsDALQ)
+
+-   [小楠 Curtis 的投資成長空間](https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw)
 
 -   [超績投資客 J Law](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw)
 
-    ⚠️ 这是广东话，讲解贴近“实战”，讲得相当不错，澄清许多的疑点，[其网站](https://www.jlawstock.com/) 有个 60 分钟免费的入门介绍：
+    ⚠️ 这是广东话，讲解贴近“实战”，澄清许多的疑点，[其网站](https://www.jlawstock.com/) 有个 60 分钟免费的入门介绍：
 
     -   你不需要选中倍升股票，而是控制 `风险：回报 = 2:1`
     -   最佳的买入点不是股价最低点，而是 `低风险买入点`
@@ -159,15 +162,9 @@ YouTube 上有不少“含金量”极高的股票分析，和其它事情一样
 
     总结了 [18 个股票买卖赢家守则](https://drive.google.com/file/d/1gupeudsMDN2e4yI3kQMOZK2n6UXZ-Ce_/view?usp=sharing)
 
--   [老汤美股财经](https://www.youtube.com/channel/UCeTEWFsNC3eeUsn9hvsDALQ)
-
--   [小楠 Curtis 的投資成長空間](https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw)
-
 -   [贝拉聊财金](https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg)
 
 -   [贝奇说股](https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA)
-
-还有科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。
 
 ## 常用投资工具
 
@@ -175,3 +172,7 @@ YouTube 上有不少“含金量”极高的股票分析，和其它事情一样
 -   [富途牛牛](https://www.futunn.com/?lang=zh-CN)
 -   [雪球](https://xueqiu.com/)
 -   公司年度财报（10-K）和季度财报
+
+## 加餐
+
+科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。

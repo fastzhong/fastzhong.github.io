@@ -185,4 +185,24 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 
 ## 在线练习
 
-[实操](https://www.markdowntutorial.com/)
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[操练一把](https://www.markdowntutorial.com/)
+
+## 工具
+
+-   [VS Code + markdown](https://marketplace.visualstudio.com/search?term=markdown&target=VSCode&category=All%20categories&sortBy=Relevance)  
+     让 VS Code 支持 markdown，目前在用
+
+-   [hugo](https://gohugo.io/)  
+    静态网站生成器，支持 markdown 来编写 blog，目前在用
+
+-   [Typera ](https://typora.io/)  
+    markdown 编辑器，把 markdown 编辑态和展示态融为一体，所写即所见
+
+-   [tableconvert](https://tableconvert.com/)  
+    表格转换工具
+
+-   [markmap-lib](https://markmap.js.org/repl/)  
+    markdown 转 mindmap
+
+-   [docify](- [hugo](https://gohugo.io/)  
+    用 markdown 来写开发文档

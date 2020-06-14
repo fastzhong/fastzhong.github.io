@@ -32,16 +32,16 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
 
 -   **自动化框架**（automation framework）：注意不只是 automation，这里其实包含了几重意思
     -   Ansible 是用 Python 实现的，可以干几乎任何编程语言能干的事情，所以是可编程的自动化框架，实现自动化的扩展和重用，Python 是一种超级”胶水“语言，贴近自然语言，运维二次开发非常容易；
-    -   ssh instead of agent：ssh，Python 在 Linux 几乎所有的版本上自带，所以 Ansible 的使用依赖几乎为 0（唯一问题是诞生之初不考虑 Windows，最近才支持）
-    -   Ansible 没有像 Chef、Puppet 那样复杂，二次，三次，四次抽象的概念和架构，有运维知识，1，2 小时基本就可上手，Ansible 贴近 shell/Linux 原生系统，一条 Ansible 命令影响成百上千台机器，任何复杂系统的配置包装一下就可以融入 Ansible，简单粗暴，但非常灵活，对于运维这种千奇百怪的脏活、累活，超级耐操；
     -   Ansible 使用上采用类似 SQL“声明式”的 命令（yaml），而不是一大段具体的自动化动作细节，关注点在“What”上而不是“How”，这是自动化层面的抽象，有别于脚本，使用者也不必纠缠于五花八门的命令行用法细节；
+    -   ssh instead of agent：ssh，Python 在 Linux 几乎所有的版本上自带，所以 Ansible 的使用依赖几乎为 0（唯一问题是诞生之初不考虑 Windows，最近才支持）
+    -   Ansible 没有像 Chef、Puppet 那样复杂，二次，三次，四次抽象的概念和架构，有运维知识，1，2 小时基本就可上手，Ansible 贴近 shell/Linux 原生系统，一条 Ansible 命令影响成百上千台机器，任何复杂系统的配置包装一下就可以融入 Ansible，简单粗暴，但非常灵活，对于运维这种千奇百怪的脏活、累活，超级耐操； -
     -   编排自动化的动作（orchestration：把几个事情串在一起执行像交响乐演奏需要各种乐器的一起配合），这样才能完成用户特定的复杂事情，这就比脚本和脚本库高一个档次；
 
 在 IT 界，重复发明轮子的事多了去，Ansible 也属于此，但和老牌的 Chef、Puppet 相比，优势在于易用、好用、耐用。
 
 ## YAML 标记语言
 
-Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，原本是用来做 template（Java 里比较出名的是 Velocity，Freemaker，Thymeleaf），现在广泛采纳用来写配置文件。YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yaml。
+Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，原本是用来做 template（Java 里比较出名的是 Velocity，Freemaker，Thymeleaf），现在广泛采纳用来写配置文件。YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
 
 语法注意：
 
@@ -158,7 +158,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 <font color="yellow">playbook</font> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
 
-编写 playbook 是使用 Ansible 最主要的工作，定义了一系列的 tasks，每一段包含下面的一些核心元素：
+编写 playbook 是使用 Ansible 的主要工作，playbook 里定义了一系列的 tasks，每一段包含下面的一些核心元素：
 
 | 名称                | 含义                                                                                             |
 | ------------------- | ------------------------------------------------------------------------------------------------ |
@@ -757,10 +757,8 @@ $ export ANSIBLE_STRATEGY=debug
 
 把 ansible -playbook 匿名成 play，下面是几个有用的选项：
 
-```md
 -   play site.yml --list-tasks：列出所有的 tasks
 -   play site.yml --list-tags：列出所有的 tags
 -   play site.yml --syntax-check：做语法检查
 -   play site.yml --check ：“虚假”运行，可告知那些 tasks 会产生改变，如果带上 -D or --diff，如果相关 module 支持，如 template，会显示前后改变的具体内容
 -   play site.yml --step：“单步”执行
-```
