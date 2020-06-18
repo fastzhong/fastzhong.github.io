@@ -1,5 +1,5 @@
 +++
-title = "股票入门 - 基础了解"
+title = "股票入门 - 基础"
 date = 2020-06-07T07:28:59+08:00
 readingTime = true
 categories = ["金融 & 投资"]
@@ -38,7 +38,7 @@ toc = true
 
 ### HOLD LE 交易课
 
-一入侯门深似海，好在 Hold Le 无私的奉献了一场系统性的落地入门课 ⏤ [`HOLD LE 交易课`](https://www.holdle.com/courses) 👍🏻，强烈推荐，读了之后再去学其它更加技术和专业的课，课程解答的问题：
+Hold Le 无私的奉献了一场系统性的落地入门课 ⏤ [`HOLD LE 交易课`](https://www.holdle.com/courses) 👍🏻，强烈推荐，读了之后再去学其它更加技术和专业的课，课程解答的问题：
 
 #### 投资交易的几个误区
 
