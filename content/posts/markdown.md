@@ -2,7 +2,7 @@
 title = "5 分钟学会 Markdown"
 date = 2018-04-15T19:04:41+08:00
 categories = ["工具"]
-tags = []
+tags = ["markdown"]
 toc = true
 +++
 
@@ -204,5 +204,5 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 -   [markmap-lib](https://markmap.js.org/repl/)  
     markdown 转 mindmap
 
--   [docify](- [hugo](https://gohugo.io/)  
+-   [docify](https://gohugo.io/)  
     用 markdown 来写开发文档
