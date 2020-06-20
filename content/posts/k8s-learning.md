@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 学习资源"
-date = 2010-05-28T13:08:47+08:00
+date = 2010-03-03T13:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]

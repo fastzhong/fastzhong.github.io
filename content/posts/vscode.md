@@ -1,6 +1,6 @@
 +++
 title = "VS Code 功夫"
-date = 2010-10-04T13:08:47+08:00
+date = 2010-01-01T13:08:47+08:00
 readingTime = true
 categories = ["工具"]
 tags = ["功夫系列", "vs code"]
@@ -23,8 +23,8 @@ draft = true
 ### 字体
 
 ```json
-"editor.fontFamily": "'Fira Code iScript', 'Hack Nerd Font', Consolas, 'Courier Prime'",
-"editor.fontLigatures": true,
+"editor.fontFamily": "'Jetbrains Mono', 'Hack Nerd Font', 'Fira Code'",
+    "editor.fontLigatures": true,
 "editor.fontSize": 16,
 ```
 

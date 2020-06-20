@@ -5,6 +5,7 @@ readingTime = true
 categories = ["编程"]
 tags = ["python"]
 toc = true
+draft = true
 +++
 
 Python 由于比较草根，概念不是那么正规，好在经过二十多年的发展开始稳定下来，这里澄清学习 Python 开发前一些最基本的概念。

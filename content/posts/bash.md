@@ -1,6 +1,6 @@
 +++
 title = "Linux Shell 编程技巧（bash）"
-date = 2010-11-01T13:08:47+08:00
+date = 2010-01-01T13:08:47+08:00
 readingTime = true
 categories = ["DevOps"]
 tags = ["shell"]

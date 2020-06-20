@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes The Hard Way"
-date = 2010-08-05T13:08:47+08:00
+date = 2010-03-02T13:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]

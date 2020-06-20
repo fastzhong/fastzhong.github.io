@@ -1,5 +1,5 @@
 +++
-title = "股票入门 - 基础"
+title = "股票新手成长 - 基础入门"
 date = 2020-06-07T07:28:59+08:00
 readingTime = true
 categories = ["金融 & 投资"]
