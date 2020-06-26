@@ -50,7 +50,10 @@ Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种�
 -   缩进时不允许使用 Tab 键，只允许使用空格
 -   缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
 -   序列（数组）里配置项通过 <font color="yellow">-</font> 来代表
+-   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="yellow">[]</font> 来表示
 -   Map 里键值用 <font color="yellow">:</font> 来分隔
+-   注释用 <font color="yellow">#</font>
+-   动态值用 <font color="yellow">{{}}</font> 来表示
 
 下面是个例子（Ansible 的 playbook）：
 
@@ -103,7 +106,7 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
-<font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在，可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
+<font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
 编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
 

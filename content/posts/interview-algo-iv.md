@@ -1,18 +1,16 @@
 +++
-title = "算法学习书籍及资料"
+title = "算法编程面试 IV：书籍和资源"
 date = 2020-01-04T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
-tags = []
+tags = ["面试指南系列"]
 toc = true
 draft = true
 +++
 
-前面有针对面试，这篇是算法学习的书籍和资料。
+一些参考书，估计大部分吃土
 
 <!--more-->
-
-书都放到了 Google Drive。
 
 ## 入门类
 
@@ -41,7 +39,7 @@ draft = true
 -   [《算法设计手册》](https://drive.google.com/open?id=1Uzbet5ZLFdsHgf_JgZCFVNTLUK14luDG)
     ![算法设计手册](/images/algo/book-algo.design.manual.png)
 
--   [《算法》](https://drive.google.com/open?id=1W-exFc6LrWeYh2pDEuwWSuKwa5t9EIBy) 一本大部头，算法领域经典的参考书，还提供了详细的 Java 代码，，结合课程看：🎬[算法，第一部分](https://zh.coursera.org/learn/algorithms-part1) & [算法，第二部分](https://zh.coursera.org/learn/algorithms-part2)  
+-   [《算法》](https://drive.google.com/open?id=1W-exFc6LrWeYh2pDEuwWSuKwa5t9EIBy) 一本大部头，算法领域经典的参考书，还提供了详细的 Java 代码，，结合 Coursear 课程看：🎬[算法，第一部分](https://zh.coursera.org/learn/algorithms-part1) & [算法，第二部分](https://zh.coursera.org/learn/algorithms-part2)  
     ![算法](/images/algo/book-algo.png)
 
 -   [《算法导论》](https://drive.google.com/open?id=1F7Jv_5c_g2p81mRHNo8Iu-TGrJrkOkcq) 另一本算法领域经典，大部头，而且有数学证明 😱，估计只能拿来镇宅辟邪。  
@@ -49,13 +47,26 @@ draft = true
 
 ## 编程语言相关
 
+🗓
+
 -   C++
 -   Go
 -   Java
 -   Javasript
 -   Python
 
-### 算法可视化资源
+## 算法面试、竞赛
+
+-   [算法竞赛进阶指南]()  
+    ![算法竞赛进阶指南](/images/algo/book-sfjsjjzn.png)
+
+-   [剑指 Offer（第 2 版）](https://drive.google.com/open?id=118MNIjDQGf-jAL8GOP5YSO1PPeZebBlQ)  
+    ![剑指 Offer](/images/algo/book-jian.zhi.offer.png)
+
+-   [程序员代码面试指南：IT 名企算法与数据结构题目最优解（第 2 版）](https://drive.google.com/open?id=1Vnsqij9A0SnJ2ZNlMQrf5sVvw1_OsSxJ)  
+    ![程序员代码面试指南](/images/algo/book-zuo.cheng.yun.png)
+
+## 算法可视化
 
 > To see is to believe.
 

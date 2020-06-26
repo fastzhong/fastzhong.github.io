@@ -94,11 +94,7 @@ draft = true
 
 ### 题目分类和题解
 
-🗓
-
--   重点题
--   按 tag 划分
--   按公司面试常考划分
+🗓 这是我自己选的几个刷题路径
 
 ### 题目讲解
 
@@ -117,19 +113,6 @@ draft = true
 ### 解题套路 + 总结
 
 自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 + 总结](/posts/interview-algo-iii/)
-
-## 参考书
-
-📚 基本上应该是用不上的，没有那么多时间了，有空玩玩吧：
-
--   [算法竞赛进阶指南]()  
-    ![算法竞赛进阶指南](/images/algo/book-sfjsjjzn.png)
-
--   [剑指 Offer（第 2 版）⏬](https://drive.google.com/open?id=118MNIjDQGf-jAL8GOP5YSO1PPeZebBlQ)  
-    ![剑指 Offer](/images/algo/book-jian.zhi.offer.png)
-
--   [程序员代码面试指南：IT 名企算法与数据结构题目最优解（第 2 版）⏬](https://drive.google.com/open?id=1Vnsqij9A0SnJ2ZNlMQrf5sVvw1_OsSxJ)  
-    ![程序员代码面试指南](/images/algo/book-zuo.cheng.yun.png)
 
 ---
 
