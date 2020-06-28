@@ -55,7 +55,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 这是个*斜体字 italic*
 ```
 
-🤗 *斜体字 italic*
+🤗 _斜体字 italic_
 
 ### 删除线 strikethrought
 
@@ -198,13 +198,15 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 ### 脚注
 
 ```text
-这个技术[^Kubernetes]非常NB，你确定不想玩玩嘛
-*[kubernetes]: 云上的操作系统
+你可以使用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛
+[^1]: Markdown 一种简易的纯文本标记语言
+[^k]: 云上的操作系统
 ```
 
 🤗
-这个技术[^kubernetes]非常 NB，你确定不想玩玩嘛  
-\*[kubernetes]: 云上的操作系统
+你可以使用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛  
+[^1]: Markdown 一种简易的纯文本标记语言
+[^k]: 云上的操作系统
 
 ## 扩展
 
@@ -212,7 +214,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 
 ### 代码块
 
-```后面接语言种类 - txt，xml，html，markdown，c，c++，java，python，bash，等等。
+\`\`\`后面接语言种类 - txt，xml，html，markdown，c，c++，java，python，bash，等等。
 
 ````text
 ```c
@@ -244,7 +246,7 @@ void main(){
 
 🤗 <u>下划线</u>
 
-不支持字体颜色：
+也不支持字体颜色：
 
 ```html
 <font color="yellow">黄色字体</font>
@@ -262,20 +264,21 @@ Typora 支持简单的 Markdown 画图，但至今我还没有看到比较好的
 
 ## 工具
 
--   [VS Code + markdown](https://marketplace.visualstudio.com/search?term=markdown&target=VSCode&category=All%20categories&sortBy=Relevance)  
-     让 VS Code 支持 markdown，目前在用
+-   [VS Code + markdown](https://marketplace.visualstudio.com/search?term=markdown&target=VSCode&category=All%20categories&sortBy=Relevance)
+    让 VS Code 支持 markdown，目前在用
 
--   [Typora ](https://typora.io/)  
+-   [Typora ](https://typora.io/)
     markdown 编辑神器，把 markdown 编辑态和展示态融为一体，所写即所见
 
--   [hugo](https://gohugo.io/)  
+-   [hugo](https://gohugo.io/)
     静态网站生成器，支持 markdown 来编写 blog，目前在用
 
--   [tableconvert](https://tableconvert.com/)  
+-   [tableconvert](https://tableconvert.com/)
     表格转换工具
 
--   [markmap-lib](https://markmap.js.org/repl/)  
+-   [markmap-lib](https://markmap.js.org/repl/)
     markdown 转 mindmap
 
--   [docify](https://gohugo.io/)  
+-   [docify](https://gohugo.io/)
     用 markdown 来写开发文档
+

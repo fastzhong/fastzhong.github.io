@@ -39,7 +39,7 @@ draft = true
 -   [《算法设计手册》](https://drive.google.com/open?id=1Uzbet5ZLFdsHgf_JgZCFVNTLUK14luDG)
     ![算法设计手册](/images/algo/book-algo.design.manual.png)
 
--   [《算法》](https://drive.google.com/open?id=1W-exFc6LrWeYh2pDEuwWSuKwa5t9EIBy) 一本大部头，算法领域经典的参考书，还提供了详细的 Java 代码，，结合 Coursear 课程看：🎬[算法，第一部分](https://zh.coursera.org/learn/algorithms-part1) & [算法，第二部分](https://zh.coursera.org/learn/algorithms-part2)  
+-   [《算法》](https://drive.google.com/open?id=1W-exFc6LrWeYh2pDEuwWSuKwa5t9EIBy) 一本大部头，算法领域经典的参考书，还提供了详细的 Java 代码，，结合 Coursear 课程看：🎬[算法，第一部分](https://zh.coursera.org/learn/algorithms-part1) & [算法，第二部分](https://zh.coursera.org/learn/algorithms-part2)，MIT 的算法课程 [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/)，[Advanced Data Structures](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)也推荐  
     ![算法](/images/algo/book-algo.png)
 
 -   [《算法导论》](https://drive.google.com/open?id=1F7Jv_5c_g2p81mRHNo8Iu-TGrJrkOkcq) 另一本算法领域经典，大部头，而且有数学证明 😱，估计只能拿来镇宅辟邪。  

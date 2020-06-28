@@ -1,5 +1,5 @@
 +++
-title = "算法编程面试 III：解题套路、模版、总结"
+title = "算法编程面试 III：Leetcode 解题套路、模版、总结"
 date = 2020-01-03T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
@@ -11,12 +11,6 @@ draft = true
 好好刷题，准备吊打面试官
 
 <!--more-->
-
-> 如何精通一个领域：
->
-> -   Chunk it up 切碎知识点
-> -   Deliberate practicing 刻意练习
-> -   Feedback 获得反馈
 
 ## 15 种算法套路
 
