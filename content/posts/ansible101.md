@@ -41,7 +41,7 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
 
 ## YAML 标记语言
 
-Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，原本是用来做 template（Java 里比较出名的是 Velocity，Freemaker，Thymeleaf），现在广泛采纳用来写配置文件。YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
+Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，现在广泛采纳用来写配置 template，和 Json、XML 类似。YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
 
 语法注意：
 
@@ -53,7 +53,9 @@ Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种�
 -   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="yellow">[]</font> 来表示
 -   Map 里键值用 <font color="yellow">:</font> 来分隔
 -   注释用 <font color="yellow">#</font>
--   动态值用 <font color="yellow">{{}}</font> 来表示
+-   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="yellow">\</font> 表达，如换行 \n
+-   通过 \$xxx 来引用环境变量
+-   动态值用 <font color="yellow">{{}}</font> （placeholder）来表示
 
 下面是个例子（Ansible 的 playbook）：
 
@@ -92,8 +94,6 @@ Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种�
             state: restarted
 ```
 
-YAML 和 Json 类似，都是社区野蛮生长，然后被广泛使用，简单好用的东西。
-
 ⚠️ Ansible 由于历史原因，其使用的 YAML 根据版本和所谓的 YAML 有细微差别。
 
 ## 工作原理和基本概念
@@ -106,7 +106,7 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
-<font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
+<font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
 编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
 

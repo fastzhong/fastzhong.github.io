@@ -7,7 +7,7 @@ description = "fastzhong.com"
 <a href="https://sg.linkedin.com/in/zhonglun" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i></a>
 
-感谢生活在这互联的时代，让我认识，学习，经历许多有趣的人和事，“入土级”老司机，欢迎正常性骚扰 🙋🏼‍♂️
+“入土级”老司机，欢迎正常性骚扰 🙋🏼‍♂️
 
 > Live passionately, even if it kills you, because something is going to kill you anyway.
 >

@@ -193,7 +193,7 @@ String result = new ObjectMapper()
 
 ```
 
-#### @JsonIdentityInfo，@JsonManagedReference，@JsonBackReference
+#### @JsonIdentityInfo @JsonManagedReference @JsonBackReference
 
 如果两个对象互相引用，序列化/反序列化时，`@JsonIdentityInfo` 可以避免陷入无限递归调用：
 

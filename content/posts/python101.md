@@ -467,3 +467,4 @@ Jupyter：🗓TBD
 -   为每个项目建立 virtual env
 -   VS Code 或 PyCharm 作为 IDE
 -   学习 Pythonic/PEP8
+-   📌 [Pythong3 in One Pic](http://coodict.github.io/python3-in-one-pic/)

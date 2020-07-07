@@ -67,7 +67,6 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 
 🤗 ~~加一条删除线 strikethrought~~
 
-M^2
 
 ### 引用块
 
@@ -279,6 +278,5 @@ Typora 支持简单的 Markdown 画图，但至今我还没有看到比较好的
 -   [markmap-lib](https://markmap.js.org/repl/)
     markdown 转 mindmap
 
--   [docify](https://gohugo.io/)
-    用 markdown 来写开发文档
-
+-   [mdnice](https://mdnice.com/)
+    在线 markdown 编辑，可以选择主题，直接对接微信公众号等

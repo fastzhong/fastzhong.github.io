@@ -49,7 +49,7 @@ adoptopenjdk12-openj9-jre-large          adoptopenjdk14-openj9-large
 [I] ➜ brew cask install adoptopenjdk14
 ```
 
-4. Mac 的 JDK 标准安装目录在“”，也是 brew 采纳的安装目录，看看安装后本机上的所有版本：
+4. Mac 的 JDK 标准安装目录在“/Library/Java/JavaVirtualMachines”，也是 brew 采纳的安装目录，看看安装后本机上的所有版本：
 
 ```bash
 [I] ➜ /usr/libexec/java_home -V

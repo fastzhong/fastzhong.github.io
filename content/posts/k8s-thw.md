@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes The Hard Way"
-date = 2010-03-02T13:08:47+08:00
+date = 2019-01-03T13:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -8,9 +8,11 @@ toc = true
 draft = true
 +++
 
-The Hard Way（THW）⏤ 徒手方式
+上篇介绍 minikube 快速安装方式，这篇介绍 The Hard Way（THW）⏤ 徒手方式
 
 <!--more-->
+
+其实 1、2 年前，Kubernetes 的安装还是一个有挑战性的工作，现在技术越来越成熟了。
 
 ## 安装方式简介
 
@@ -51,14 +53,16 @@ The Hard Way（THW）⏤ 徒手方式
     -   安装工具，介于徒手和安装软件之间，可以简化操作
     -   不完全成熟，有些操作还无法无缝完成
 
--   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论
+- Sealos 
+  - https://github.com/fanux/sealos
+  - https://juejin.im/post/5da44a765188251b643eb5e9
+
+-   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论（尝试的话参考：[kubespray – 12 Steps for Installing a Production Ready Kubernetes Cluster](https://jhooq.com/kubespray-12-steps-for-installing-a-production-ready-kubernetes-cluster/)）
+
+-   The Hard Way：完全徒手，不借助任何工具或者 script，完全环保
 
 -   k8s 商业软件，如 Openshift，CloudFoundry，Rancher，这些都是以 k8s 为基础的商业集成软件，内含 k8s 的安装和定制方案，非原生，相当重型，面向企业级应用，这里也不展开讨论
 
--   THW：完全徒手，不借助任何工具或者 script
+各种安装请参考[Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，自建主要是为了学习的，所以决定走一趟 The Hard Way（THW）。THW 项目最早来自 k8s 大名人
 
-自建主要是为了学习的，所以决定采用 The Hard Way（THW），完全环保手动方式。THW项目最早来自k8s大名人 
-
-
-
-## THW 
+## THW

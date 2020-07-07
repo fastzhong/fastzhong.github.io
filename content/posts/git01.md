@@ -1,6 +1,6 @@
 +++
 title = "Git 功夫 - 图解Git"
-date = 2020-02-01T13:08:47+08:00
+date = 2019-02-01T13:08:47+08:00
 readingTime = true
 categories = ["DevOps"]
 tags = ["功夫系列", "git"]

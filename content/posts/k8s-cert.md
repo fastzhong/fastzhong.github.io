@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes CKA & CKAD"
-date = 2010-03-04T13:08:47+08:00
+date = 2019-01-04T13:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
