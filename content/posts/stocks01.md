@@ -152,19 +152,15 @@ YouTube 上有不少“含金量”极高的股票分析，作者都是实战派
 
 -   [小楠 Curtis 的投資成長空間](https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw)
 
--   [超績投資客 J Law](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw)
-
-    ⚠️ 这是广东话，讲解贴近“实战”，澄清许多的疑点，[其网站](https://www.jlawstock.com/) 有个 60 分钟免费的入门介绍：
-
-    -   你不需要选中倍升股票，而是控制 `风险：回报 = 2:1`
-    -   最佳的买入点不是股价最低点，而是 `低风险买入点`
-    -   会买是功夫，会卖是真功夫，卖出时机应该是 `2-3x风险/评价回报率`
-
-    总结了 [18 个股票买卖赢家守则](https://drive.google.com/file/d/1gupeudsMDN2e4yI3kQMOZK2n6UXZ-Ce_/view?usp=sharing)
-
 -   [贝拉聊财金](https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg)
 
 -   [贝奇说股](https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA)
+
+-   [从猩猩到人类](https://www.youtube.com/channel/UCXhMTp5euuU7f827_nLKKhQ)
+
+-   [美投讲美股](https://www.youtube.com/channel/UCBUH38E0ngqvmTqdchWunwQ)
+
+-   [超績投資客 J Law](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw)
 
 ## 常用投资工具
 
@@ -173,6 +169,6 @@ YouTube 上有不少“含金量”极高的股票分析，作者都是实战派
 -   [雪球](https://xueqiu.com/)
 -   公司年度财报（10-K）和季度财报
 
-## 加餐
+---
 
-科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。
+加餐：科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。

@@ -11,7 +11,7 @@ description = "fastzhong.com"
 
 > Live passionately, even if it kills you, because something is going to kill you anyway.
 >
-> 对待生命你不妨大胆冒险一点，因为好歹你要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。  
+> 对待生命你不妨大胆冒险一点，因为好歹你要失去它。  
 > —— 尼采
 
 [369sys.com](https://369sys.com)  

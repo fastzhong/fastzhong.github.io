@@ -13,9 +13,9 @@ Python 近两三年伴随着机器学习变得很火，其实 🐍 比 ☕️ �
 
 ![Python学习路线 2020](/images/python101/python-roadmap-2020.png)
 
-## Why Python
+## 最人类化的编程语言
 
-Python 的编程哲学
+Why Python，请看 Python 的编程哲学
 
 ```python
 >>> import this
@@ -467,4 +467,4 @@ Jupyter：🗓TBD
 -   为每个项目建立 virtual env
 -   VS Code 或 PyCharm 作为 IDE
 -   学习 Pythonic/PEP8
--   📌 [Pythong3 in One Pic](http://coodict.github.io/python3-in-one-pic/)
+-   📌 [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)
