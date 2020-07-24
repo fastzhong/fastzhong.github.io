@@ -3,7 +3,7 @@ author = "Alan Zhong"
 description = "fastzhong.com"
 +++
 
-> Live passionately, even if it kills you, because something is going to kill you anyway.
+> Live passionately, even if it kills you, because something is going to kill you anyway.  
 > 对待生命你不妨大胆冒险一点，因为好歹你要失去它。
 >
 > —— 尼采
