@@ -1,6 +1,6 @@
 +++
-title = "Kubernetes 快速上手（minikube & kubectl）"
-date = 2019-01-02T13:08:47+08:00
+title = "Kubernetes 安装 - minikube"
+date = 2019-01-11T13:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -8,7 +8,7 @@ toc = true
 draft = true
 +++
 
-接上篇，本地安装 Kubernetes，minikube 是最简易的方式
+本地安装 Kubernetes，minikube 是最简易的方式
 
 <!--more-->
 
