@@ -27,6 +27,7 @@ href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab
   <input type="checkbox" checked="checked"> 被超过鱿鱼<br>
   <input type="checkbox" checked="checked"> 创业或在创业公司打过工<br>
   <input type="checkbox" checked="checked"> 带领过20++人的开发团队<br>
+  <input type="checkbox" checked="checked"> 有一只可爱的 🐶<br>
   <input type="checkbox" checked="checked"> 会几道拿手菜<br>
   <input type="checkbox" checked="checked"> 各种文化衫<br>
   <input type="checkbox" checked="checked"> 脱发<br>

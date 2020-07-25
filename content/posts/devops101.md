@@ -20,7 +20,7 @@ toc = false
 
 这 5 个 C 的支撑点就是自动化工具，而我理解最好的 DevOps 则是自动化能够覆盖软件生命的全周期，并且做到 **_全程融合_**（支持上下文承接），_**全程反馈**_（如同分布式监控可对各个子系统全程监控，包括人为反馈），已达至 **_全程自动化_**。
 
-![cicd](/images/devops/cicd.png)
+![cicd](/images/devops/devops-tools.png)
 
 各阶段核心系统：
 
@@ -46,6 +46,7 @@ toc = false
 [CNCF Cloud Native Landscape](https://landscape.cncf.io/) 展现了大量的工具支撑：  
 ![CNCF Cloud Native Landscape](/images/cncf/landscape.png)
 
+modern Devops/CICD 挺难的，因为一方面软件运行环境多样化和复杂化，新技术层出不穷，另一方面自动化工具的开发需要时间，而且众口难调
 `全程自动化` 是运维的目标，这里有两个核心概念，一个是自动化，一个是全程，具体体现在（一些老大难的地方）：
 
 -   基础设施全自动化
