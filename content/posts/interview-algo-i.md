@@ -12,13 +12,13 @@ draft = true
 
 <!--more-->
 
-## 基础
+## 基础课程
 
-针对算法面试的数据结构与算法课 🎬 ，都是我看过或正在看的，都是高高手 👍🏻，强烈推荐：
+针对算法面试的数据结构与算法课，都是我看过或正在看的，都是高高手，强烈推荐：
 
--   慕课网 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，我非常喜欢
+-   👍🏻 慕课网 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，我非常喜欢
 
--   极客时间贾超 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
+-   👍🏻 极客时间贾超 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
 
 -   极客时间王争的专栏 [数据结构与算法之美 ](https://time.geekbang.org/column/intro/126)：数据结构与算法学习经验
 
@@ -28,13 +28,14 @@ draft = true
 
 *   [九章算法](https://www.jiuzhang.com/)：很多不同的课 ⏤ 基础班、强化班、高频、动态规划，老师都是大 🐮，学生也有很多博士
 
-以上课程，b 站、油管、网盘全部都有 🆓，不要问自己找。
+以上课程，b 站、油管、网盘全部都有，不要问自己找。
 
-💡 自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基本数据结构 & 算法](/posts/interview-algo-ii/)
+💡 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：数据结构 & 算法](/posts/interview-algo-ii/)
 
 ## 刷题（leetcode）
 
-> 刻意练习，刷题是必须的，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 🔥`题海战术`🔥
+-   刻意练习，刷题是必须的，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
+-   要有可执行方案，`没有行动力就是 𝟬`
 
 ### 刷题方法
 
@@ -63,22 +64,15 @@ draft = true
 
 💡 题目太多了，还是要有策略的：先刷热门题，前两百多道都是经典题，可以举一反三，例如， 先刷热题 HOT 200，再刷精选 TOP 面试题，之后刷其他的题。（在 [https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/) 页面的右侧可选不同的热门题。）
 
-```md
-1. 前期：先熟悉掌握基本算法结构，算法面试课先补基础，配合做做简单题
+-   easy/hard 都不会考，略过，碰到 hard 的就缴枪自认倒霉吧
+-   一些算法是冷门，同样如果万一碰到了就自认倒霉吧
 
-2. 初中期：熟悉各种类别解题思路，按类别分类/tag 刷题，同一类型强化，开始直接看答案，学最优解，背经典题，模版，建立思维体系
+![leetcode algo](/images/algo/leetcode-algo.png)  
+![leetcode top](/images/algo/leetcode-top.png)
 
-3. 后期：做新题，总结老题，一题多解，多题同解，补缺补漏，深度优先
+### 刷题方案 🔥 重点来了 🔥
 
-4. 面试前：做面经，别纠结，按公司分类，因公司而异
-```
-
-短期应试策略 ⏤ 若短期只为应试冲刺的话：
-
--   easy/hard 都不会考，略过，碰到 hard 的就缴枪自认倒霉吧 😓
--   一些算法是冷门，同样如果万一碰到了就自认倒霉吧 😓  
-     ![leetcode algo](/images/algo/leetcode-algo.png)
-    ![leetcode top](/images/algo/leetcode-top.png)
+-   ✅
 
 ### 刷题利器
 
@@ -92,11 +86,9 @@ draft = true
    ![leetcode demo](/images/vscode/leetcode-demo.gif)
 4. 刷
 
-### 题目分类和题解
-
 #### 题解
 
-#### 题目讲解
+#### 视频讲解
 
 💁🏻‍♂️ [用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
 
@@ -110,13 +102,9 @@ draft = true
 
 💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
 
-### 高频面试题讲解
-
-参考题库：
-
 ### 解题套路、模版、总结
 
-💡 自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路、模版、总结](/posts/interview-algo-iii/)
+💡 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模版](/posts/interview-algo-iii/)
 
 ---
 

@@ -49,12 +49,13 @@ Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种�
 -   使用缩进表示层级关系
 -   缩进时不允许使用 Tab 键，只允许使用空格
 -   缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
+-   基本数据类型：支持整型、浮点型、时间戳类型、布尔、字符串等基本数据类型
 -   序列（数组）里配置项通过 <font color="yellow">-</font> 来代表
 -   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="yellow">[]</font> 来表示
 -   Map 里键值用 <font color="yellow">:</font> 来分隔
--   注释用 <font color="yellow">#</font>
--   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="yellow">\</font> 表达，如换行 \n
--   通过 \$xxx 来引用环境变量
+-   注释用 <font color="yellow">#</font>，没有多行注释
+-   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="yellow">\\</font> 表达，如换行 \n
+-   通过 \$xxx 来引用变量
 -   动态值用 <font color="yellow">{{}}</font> （placeholder）来表示
 
 下面是个例子（Ansible 的 playbook）：

@@ -17,7 +17,6 @@ href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab
   <input type="checkbox" checked="checked"> 拥有Mac<br>
   <input type="checkbox" checked="checked"> 拥有一款机械键盘<br>
   <input type="checkbox" checked="checked"> 拥有双肩包<br>
-  <input type="checkbox" checked="checked"> 希望被人问用的是啥主题<br>
   <input type="checkbox" checked="checked"> 熟悉一款纯文本编辑器<br>
   <input type="checkbox" checked="checked"> 发布过开源软件或向开源软件做个贡献<br>
   <input type="checkbox" checked="checked"> 读过开源软件的源码<br>
@@ -30,7 +29,7 @@ href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab
   <input type="checkbox" checked="checked"> 有一只可爱的 🐶<br>
   <input type="checkbox" checked="checked"> 会几道拿手菜<br>
   <input type="checkbox" checked="checked"> 各种文化衫<br>
-  <input type="checkbox" checked="checked"> 脱发<br>
+  <input type="checkbox" checked="checked"> 脱发 😂<br>
 </form>
 
 相关网站：

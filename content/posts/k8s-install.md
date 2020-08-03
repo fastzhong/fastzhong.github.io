@@ -34,33 +34,33 @@ draft = true
     -   安装和卸载没有其它方案容易
     -   目前只支持单节点的 k8s 集群
 
--   Microk8s
+-   Kind（Kubernetes in Docker）
 
-    -   原生 Linux 集成，不需要额外的 vm （只支持 Linux）
-    -   非常轻巧，适合本地开发者
-
--   kind（Kubernetes in Docker）
-
-    -   如其名，把整个 k8s 打包在 Docker 里面
+    -   如其名，把整个 k8s 打包在 Docker 里面(本地需要先安装 Docker)
     -   主要用于集成测试（官方用于 k8s 版本发布），未必适合开发者
 
--   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论（尝试的话参考：
+-   Microk8s/K3s
+
+    -   原生 Linux 集成，不需要额外的 vm （只支持 Linux）
+    -   资源消耗最小，非常轻巧，速度最快，适合本地开发者
+
+*   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论（尝试的话参考：
 
     -   [kubespray – 12 Steps for Installing a Production Ready Kubernetes Cluster](https://jhooq.com/kubespray-12-steps-for-installing-a-production-ready-kubernetes-cluster/)）
     -   [使用 kubespray 搭建生产级高可用集群](https://www.bboy.app/2020/07/20/%E4%BD%BF%E7%94%A8kubespray%E6%90%AD%E5%BB%BA%E7%94%9F%E4%BA%A7%E7%BA%A7%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4/)
 
--   kubeadm
+*   kubeadm
 
     -   安装工具，介于徒手和安装软件之间，可以简化操作
     -   不完全成熟，有些操作还无法无缝完成
 
--   Sealos
+*   Sealos
 
     -   https://github.com/fanux/sealos
     -   https://juejin.im/post/5da44a765188251b643eb5e9
 
--   The Hard Way：完全徒手，不借助任何工具或者 script，完全环保
+*   The Hard Way：完全徒手，不借助任何工具或者 script，完全环保
 
--   k8s 商业软件，如 Openshift，CloudFoundry，Rancher，这些都是以 k8s 为基础的商业集成软件，内含 k8s 的安装和定制方案，非原生，相当重型，面向企业级应用，这里也不展开讨论
+*   k8s 商业软件，如 Openshift，CloudFoundry，Rancher，这些都是以 k8s 为基础的商业集成软件，内含 k8s 的安装和定制方案，非原生，相当重型，面向企业级应用，这里也不展开讨论
 
 各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，自建主要是为了学习的，所以决定走一趟 The Hard Way（THW）。THW 项目最早来自 k8s 大名人

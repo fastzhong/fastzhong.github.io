@@ -1,5 +1,5 @@
 +++
-title = "算法编程面试 II：基本数据结构 & 算法"
+title = "算法编程面试 II：基础数据结构 & 算法"
 date = 2020-01-02T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
