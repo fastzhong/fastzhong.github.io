@@ -153,7 +153,7 @@ draft = false
 
 ## 技术面试
 
-### 算法编程面试
+### 算法编程
 
 > `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
 
@@ -163,20 +163,26 @@ draft = false
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：基础数据结构 & 算法](/posts/interview-algo-ii)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：Leetcode 解题套路、模版、总结](/posts/interview-algo-iii/)
 
-### 系统设计面试
-
-系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
-
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
-
 ### Java 面试
 
 福利：收集了些非常好的知识点汇总和面试题
 
 -   [2020 最新 Java 面试题及答案 v3.0](https://drive.google.com/file/d/1V9saB-DqR_5zNKVno8ALPjxff2xflepz/view?usp=sharing)
--   [JavaGuide 面试突击版.v2](https://drive.google.com/file/d/1qNk21sihrCe64eyJXwChDBok6lux42zD/view?usp=sharing)
+-   [JavaGuide 面试突击版.v3](https://drive.google.com/file/d/1qNk21sihrCe64eyJXwChDBok6lux42zD/view?usp=sharing)
 -   [Java 面试汇总(Java 专栏)](https://drive.google.com/file/d/1_-ihuS_QwaMs4M7ZZJ8Ar4e5VA4s3lpy/view?usp=sharing)
 -   [Java 研发军团整理《Java 面试题手册》V1.0 版](https://drive.google.com/file/d/1iXPMqzZTR3OYzxN8RrVuvZfCMFPTg2o9/view?usp=sharing)
+
+系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Java 学习提高路线 for 2020](/posts/java2020)
+
+### 前端/全栈面试
+
+🗓 福利：收集了些非常好的知识点汇总和面试题
+
+### 系统设计面试
+
+系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
+
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
 
 ### Python 面试
 

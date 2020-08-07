@@ -160,15 +160,6 @@ YouTube 上有不少“含金量”极高的股票分析，作者都是实战派
 
 -   [美投讲美股](https://www.youtube.com/channel/UCBUH38E0ngqvmTqdchWunwQ)
 
--   [超績投資客 J Law](https://www.youtube.com/channel/UCHOLdIRhuGvY6EcpmDno3Iw)
-
-## 常用投资工具
-
--   [yahoo 财经](https://hk.finance.yahoo.com/) & [英为财经](https://cn.investing.com/)：股价、财务报表、PE、负债现金、市值
--   [富途牛牛](https://www.futunn.com/?lang=zh-CN)
--   [雪球](https://xueqiu.com/)
--   公司年度财报（10-K）和季度财报
-
 ---
 
 加餐：科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。
