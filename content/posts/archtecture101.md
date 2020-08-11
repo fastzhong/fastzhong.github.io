@@ -210,7 +210,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
-> `作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy）`
+> `作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy），办法就是 KISS`
 
 ![complexity](/images/arch/complexity.jpg)
 
