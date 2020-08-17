@@ -166,8 +166,6 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 
 💡 包管理或者依赖管理是 Python 比较弱的一个方面，这里就不仔细讨论各种 [历史方案](https://packetpushers.net/setting-up-a-python-environment-where-to-develop/) (想了解各种工具的自行 Google)。
 
-关于 Python 的 Scripts，Modules，Packages 和 Libraries，我在另一篇博文里解释。
-
 ## Python setup for Year 2020
 
 这个是很多人忽略，或者困恼初学者的地方。学习一门技术，起手架很重要，你需要上手的正确姿势（最佳实践），原因在于电脑和其它工程技术一样，随着日新月异的发展变得不再是 1+1 那么简单。
@@ -453,7 +451,41 @@ Pycharm：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [PyCharm �
 
 VS Code：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [VS Code 功夫](/posts/vscode/)
 
-Jupyter：🗓TBD
+```python
+# add.py
+def add(a, b):
+  return a+b
+
+result = add(1,2)
+print(result)
+```
+
+```python
+# add.py
+
+def add(a, b):
+  return a+b
+
+result = add(1,2)
+print(result)
+```
+
+```python
+#!/usr/bin/env python3
+# add.py
+
+def add(a, b):
+  return a+b
+
+result = add(1,2)
+print(result)
+```
+
+两个文件其实都差不多：
+
+-   第一个倾向于称之 module，没有执行什么，主要是可以被别的 python 文件引入并调用；
+-   第二个倾向于称之 script，主要是独立执行，有输出；
+-   第三个进一步把 python 文件变为像 bash script 那样可直接执行；
 
 ## Python 项目最佳实践模板
 
@@ -461,10 +493,10 @@ Jupyter：🗓TBD
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 总结：
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
--   选择 Python3
--   为每个项目建立 virtual env
--   VS Code 或 PyCharm 作为 IDE
--   学习 Pythonic/PEP8
--   📌 [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)
+> -   选择 Python3
+> -   为每个项目建立 virtual env
+> -   VS Code 或 PyCharm 作为 IDE
+> -   学习 Pythonic/PEP8
+> -   📌 [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)

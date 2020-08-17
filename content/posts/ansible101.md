@@ -11,13 +11,13 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
 
 <!--more-->
 
-💬 很多人会告诉你自动化工具（automation）不是 DevOps，但他们没有告诉你什么是 DevOps 的核心，如果你把自动化（automation）从他们的表述中除去，你看看 DevOps 还是什么呢。Ansible 从核心上讲，就是一个可编程的 automation 框架，通过各种扩展，完成自动化的各式各样任务，如创建用户，安装软件，等。
+💬 很多人会告诉你自动化工具（automation）不是 DevOps，但他们没有告诉你什么是 DevOps 的核心，如果你把自动化（automation）从他们的表述中除去，你看看 DevOps 还是什么呢。Ansible 从核心上讲，就是一个可编程的 automation 框架，通过各种扩展，完成各式各样任务，如创建用户，安装软件，等。
 
 ## Why Ansible
 
 做 IT 的的都知道，除了设计，写代码，离不开装机器，装软件，装系统，原始的办法是手动安装和配置，但对于一个大型项目、产品或系统:
 
--   需要装很多次(1000+)
+-   需要装很多次（1000+）
 -   需要在很多机器上装（1000+）
 -   需要在不同的环境和不同的 OS 上装
 -   需要为不同的客户定制安装
@@ -214,7 +214,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 ✦ [role](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
 
-<font color="yellow">role</font>由几部分组成：
+<font color="yellow">role</font> 由几部分组成：
 
 -   defaults: 定义该 role 用到默认变量，该 role 运行时自动加入这里定义的变量，但其定义的变量优先级别最低，若已在其他地方定义，可被覆盖
 -   vars: 该 role 运行时自动加入这里定义的变量，通常可把需要传入的变量定义在这里，vars 和 defaults 很类似，通常把必须用到变量的放在 defaults 里，可变的放在 vars 里，例如 tasks 里针对不同的 OS，版本用到的变量，需要到的时候可以引入，include_vars 可自动在此目录中寻找变量文件（相对路径）
@@ -229,7 +229,7 @@ role 类似你自己已经开发好的一个程序，完成固定的功能，可
 
 ![Ansible 结构](/images/ansible/ansible-internal.png)
 
-task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
+> task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
 
 ## 项目实战
 

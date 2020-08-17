@@ -1,5 +1,5 @@
 +++
-title = "算法编程面试 III：Leetcode 解题套路、模版、总结"
+title = "算法编程面试 III：Leetcode 套路 & 模版"
 date = 2020-01-03T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
