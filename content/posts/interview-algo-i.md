@@ -14,7 +14,7 @@ draft = true
 
 ## 课程
 
-针对算法面试的数据结构与算法课，都是我看过或正在看的，都是高高手，强烈推荐：
+针对算法面试的数据结构与算法课，大部分我看过，都是高高手，强烈推荐：
 
 -   👍🏻 慕课网 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，我非常推荐
 
@@ -26,23 +26,38 @@ draft = true
 
 -   拉勾苏勇 [300 分钟搞定数据结构与算法 ](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=3#/content) ：刷题面试重点提示，数据结构与算法重点复习
 
-*   [九章算法](https://www.jiuzhang.com/)：很多不同的课 ⏤ 基础班、强化班、高频、动态规划，老师都是大 🐮，学生也有很多博士
+-   [九章算法](https://www.jiuzhang.com/)：很多不同的课 ⏤ 基础班、强化班、高频、动态规划，老师都是大 🐮，学生也有很多博士
 
 以上课程，b 站、油管、网盘全部都有，不要问自己找。
 
 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：数据结构 & 算法](/posts/interview-algo-ii/)
 
+正在看的英文课程：
+
+-   [AlgoExpert](https://www.algoexpert.io/)
+
+-   [CoderPro](https://www.techseries.dev/coderpro)
+
+-   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
+
 ## 刷题利器
 
-[VS Code 的 leetcode 插件](https://github.com/jdneo/vscode-leetcode/blob/master/docs/README_zh-CN.md)
+### [VS Code leetcode 插件](https://github.com/jdneo/vscode-leetcode/blob/master/docs/README_zh-CN.md)
 
 1. 唤出 leetcode  
    ![leetcode](/images/vscode/leetcode.png)
-2. 先 Switch Endpoint 选“中” or “美”，两边 leetcode 不同  
+2. 先 Switch Endpoint 选“中国” or “US”，两边 leetcode 不同  
    ![leetcode endpoint](/images/vscode/leetcode-endpoint.png)
-3. 接下来点击最右边导航条上 leetcode 标签
+3. Sign in：⚠️ 注意 leetcode US 已经不能支持账号 Sign in，必须通过 cookie（从 Chrome 浏览器中 login，然后把完整的 cookie 拷贝过来）
+   ![leetcode cookie](/images/vscode/leetcode-cookie.png)
+4. 接下来点击最右边导航条上 leetcode 标签
    ![leetcode demo](/images/vscode/leetcode-demo.gif)
-4. 开刷
+5. 开刷
+   ![leetcode submit](/images/vscode/leetcode-submit.png)
+
+### [Chrome leetcode 插件]()
+
+🗓TBD
 
 ## 刷题策略
 
@@ -79,7 +94,7 @@ draft = true
 
 有不少，以下是比较出名的：
 
-💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 也是个刷题牛人
+💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 刷题牛人
 
 💁🏻‍♂️ [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解
 
@@ -87,32 +102,42 @@ draft = true
 
 💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
 
-💁🏻‍♂️ [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道，已创业专业教人刷题
+💁🏻‍♂️ [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 刷题牛人，刷了 3000 道
 
 ## 题解
 
-🗓 TBD
-
--   [用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation) 不佩服不行
+-   [用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
 
 ## 刷题路径
 
-🔥 重点来了 🔥 小伙伴们已经提供现成的，可以照着刷：
+🔥 重点来了 🔥 小伙伴们已经有现成的，可以照着刷（都是按着同一类刷）：
 
-🗓 TBD
+-   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
 
-## 解题套路 & 模版
+-   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
 
-🗓 TBD
+-   [JavaScript & LeetCode The Interview Bootcamp](https://kaeducation.com/)
 
-💡 我自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模版](/posts/interview-algo-iii/)
+-   [Python & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+
+以上是基础，然后可以逐步扩大题量，例如：
+
+-   [LeetCode-book：LeetCode 1~400 题总结 + 专题知识点&题型总结（Java、Python、C++）](https://github.com/huxiaoman7/leetcodebook)
+
+-   [Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解](https://books.halfrost.com/leetcode/)
+
+同时熟练套路 & 模板，见下。
+
+## 解题套路 & 模板
+
+💡 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模板](/posts/interview-algo-iii/)
 
 ---
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
 > -   刷题之前先把数据结构和基本算法过一遍，把基础打牢
-> -   刷题没有捷径，只有策略和积累，刻意练习，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
-> -   只刷题还不够，还要回顾总结，掌握套路 & 模版
+> -   刷题没有捷径，只有策略和积累，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
+> -   只刷题还不够，一定要回顾总结，掌握套路 & 模板
 
-如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，对提高编程功底，开拓思维，非常有好处的 ⏤ 其实，很多高手好像也在“悄悄”的刷。刷题毕竟是针对面试的，最好能学以致用，挑战真正的困难。
+如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 ⏤ 其实，很多高手好像也在“悄悄”的刷。
