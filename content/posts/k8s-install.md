@@ -13,7 +13,7 @@ toc = false
 
 有几种方式来练手：
 
--   直接使用别人提供的 sandbox，如 [latacoda](https://katacoda.com/)、[play with k8s](https://training.play-with-kubernetes.com/kubernetes-workshop/) 等
+-   直接使用别人提供的 sandbox，如 [katacoda](https://katacoda.com/)、[play with k8s](https://training.play-with-kubernetes.com/kubernetes-workshop/) 等
 -   直接使用云端 k8s 服务，三大云提供商 - AWS，GPE，Azure 都有
 -   云端自建，只用虚机等基础设施
 -   本地自建
@@ -52,8 +52,7 @@ toc = false
 
     -   https://juejin.im/post/5da44a765188251b643eb5e9
 
-*   [The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)  
-    徒手制造，最早来自 k8s 大名人 kelseyhightower，生产级别（多节点的）k8s 集群的安装最为复杂
+*   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way) - 徒手制造，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
 
 *   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论，尝试的话参考：
 
