@@ -1,6 +1,6 @@
 +++
 title = "算法编程面试 III：Leetcode 套路 & 模板"
-date = 2020-01-03T13:08:47+08:00
+date = 2020-08-31T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
 tags = ["面试指南系列", "leetcode"]
@@ -8,7 +8,7 @@ toc = true
 draft = true
 +++
 
-好好刷题，准备吊打面试官
+解题有捷径，只要勤思考
 
 <!--more-->
 

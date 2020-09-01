@@ -1,6 +1,6 @@
 +++
 title = "算法编程面试 II：数据结构 & 算法"
-date = 2020-01-02T13:08:47+08:00
+date = 2020-08-31T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
 tags = ["面试指南系列", "leetcode"]
@@ -8,7 +8,7 @@ toc = true
 draft = true
 +++
 
-“非常”基础，“非常”重要
+打好解题基础
 
 <!--more-->
 

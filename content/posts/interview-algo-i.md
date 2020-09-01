@@ -1,6 +1,6 @@
 +++
 title = "算法编程面试 I：Leetcode 刷题指南"
-date = 2020-01-01T13:08:47+08:00
+date = 2020-08-31T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
 tags = ["面试指南系列", "leetcode"]
@@ -32,14 +32,6 @@ draft = true
 
 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：数据结构 & 算法](/posts/interview-algo-ii/)
 
-正在看的英文课程：
-
--   [AlgoExpert](https://www.algoexpert.io/)
-
--   [CoderPro](https://www.techseries.dev/coderpro)
-
--   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
-
 ## 刷题利器
 
 ### [VS Code leetcode 插件](https://github.com/jdneo/vscode-leetcode/blob/master/docs/README_zh-CN.md)
@@ -49,20 +41,21 @@ draft = true
 2. 先 Switch Endpoint 选“中国” or “US”，两边 leetcode 不同  
    ![leetcode endpoint](/images/vscode/leetcode-endpoint.png)
 3. Sign in：⚠️ 注意 leetcode US 已经不能支持账号 Sign in，必须通过 cookie（从 Chrome 浏览器中 login，然后把完整的 cookie 拷贝过来）
+   ![leetcode cookie](/images/vscode/leetcode-cookie.webp)
    ![leetcode cookie](/images/vscode/leetcode-cookie.png)
 4. 接下来点击最右边导航条上 leetcode 标签
    ![leetcode demo](/images/vscode/leetcode-demo.gif)
 5. 开刷
    ![leetcode submit](/images/vscode/leetcode-submit.png)
 
-### [Chrome leetcode 插件]()
+### Chrome leetcode 插件
 
-🗓TBD
+(尚未公开)
 
 ## 刷题策略
 
 -   题目太多了，还是要有策略的：先刷热门题，前两百多道都是经典题，按着标签刷可以举一反三，例如， 先刷热题 HOT 200，再刷精选 TOP 面试题，之后刷其他的题。（在 [https://leetcode-cn.com/problemset/all/](https://leetcode-cn.com/problemset/all/) 页面的右侧可选不同的热门题。）
--   easy/hard 都不会考，略过，碰到 hard 的就缴枪自认倒霉吧
+-   easy/hard 一般不会考，碰到 hard 的就缴枪自认倒霉吧
 -   一些算法是冷门，同样如果万一碰到了就自认倒霉吧
 
 ![leetcode tag](/images/algo/leetcode-tag.webp)
@@ -94,31 +87,27 @@ draft = true
 
 有不少，以下是比较出名的：
 
-💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 刷题牛人
-
-💁🏻‍♂️ [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解
-
-💁🏻‍♂️ [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版
-
-💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
-
+💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 刷题牛人  
+💁🏻‍♂️ [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解  
+💁🏻‍♂️ [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版  
+💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版  
 💁🏻‍♂️ [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 刷题牛人，刷了 3000 道
-
-## 题解
-
--   [用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
 
 ## 刷题路径
 
-🔥 重点来了 🔥 小伙伴们已经有现成的，可以照着刷（都是按着同一类刷）：
+🔥 重点来了，已经有现成的，适合小白上手，可以照着刷（都是按着同一类刷）：
 
 -   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
-
 -   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
+-   [小浩算法：目前共完成 140+ 道高频面试算法题目，全部采用漫画图解的方式](https://www.geekxh.com/)
+-   [作者先后面试了近三十多家互联网公司（Java）](https://github.com/yuanguangxin/LeetCode)
+-   [算法珠玑：一个最精简的题库，150 道左右](https://github.com/soulmachine/algorithm-essentials)
 
--   [JavaScript & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+下面是英文的：
 
--   [Python & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+-   [KAeducation：JavaScript & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+-   [KAeducation：Python & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+-   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
 
 以上是基础，然后可以逐步扩大题量，例如：
 
@@ -130,9 +119,17 @@ draft = true
 
 ## 解题套路 & 模板
 
-💡 总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模板](/posts/interview-algo-iii/)
+-   [labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
+-   [五分钟学算法：用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
+-   [力扣加加](https://leetcode-solution.cn/)
+-   [AlgoWiki 力扣刷题模板](https://ojeveryday.github.io/AlgoWiki/#/)
+-   [帅地](https://github.com/iamshuaidi/algo-basic)
+
+自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模板](/posts/interview-algo-iii/)
 
 ---
+
+💡 如果有编程经验的，用什么语言刷题一点都不重要，因为语言层面只用到最最基本的东西（int，string，array，if/else，for/while 等），难点还是在解题思路上。
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
@@ -140,4 +137,4 @@ draft = true
 > -   刷题没有捷径，只有策略和积累，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
 > -   只刷题还不够，一定要回顾总结，掌握套路 & 模板
 
-如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 ⏤ 其实，很多高手好像也在“悄悄”的刷。
+如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 ⏤ 听说，很多高手也在“悄悄”的刷。

@@ -8,7 +8,7 @@ toc = true
 draft = false
 +++
 
-想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是我这样的小人物 `被面&面了无数次` 后的小总结。
+想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是小人物 `被面&面了无数次` 后的小总结。
 
 <!--more-->
 
@@ -20,9 +20,9 @@ draft = false
 
 -   好领导（working under a good leader）
 -   有趣的工作（interesting work）
--   非常高的报酬（highly paid）
+-   高的报酬（highly paid）
 
-三者兼有基本是在做梦，只能权衡。
+三者兼有基本是在做梦，只能权衡。现在的趋势是竞争越来越激烈啦。
 
 ## 简历
 
@@ -145,32 +145,21 @@ draft = false
 
 > `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
 
-我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。算法编程的准备也是需要比较久的一段时间：
+我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（至少 2、3 个月的时间）：
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 I：Leetcode 刷题指南](/posts/interview-algo-i)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：数据结构 & 算法](/posts/interview-algo-ii)  
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：Leetcode 解题套路 & 模版](/posts/interview-algo-iii/)
 
-### Java 面试
+### Java
 
-福利：收集了些非常好的知识点汇总和面试题
-
--   [2020 最新 Java 面试题及答案 v3.0](https://drive.google.com/file/d/1V9saB-DqR_5zNKVno8ALPjxff2xflepz/view?usp=sharing)
--   [JavaGuide·面试突击版.v3](https://drive.google.com/file/d/1qNk21sihrCe64eyJXwChDBok6lux42zD/view?usp=sharing)
--   [Java 面试汇总(Java 专栏)](https://drive.google.com/file/d/1_-ihuS_QwaMs4M7ZZJ8Ar4e5VA4s3lpy/view?usp=sharing)
--   [Java 研发军团整理《Java 面试题手册》V1.0 版](https://drive.google.com/file/d/1iXPMqzZTR3OYzxN8RrVuvZfCMFPTg2o9/view?usp=sharing)
+福利：收集了些非常好的知识点汇总和面试题 [链接](https://github.com/fastzhong/interview/tree/master/Java)
 
 系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Java 学习提高路线 for 2020](/posts/java2020)
 
-### 系统设计面试
+### 系统设计
 
-系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：
-
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
-
-### 资源
-
-福利：收集了些非常好的知识点汇总和面试题
+系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [系统设计面试准备](/posts/interview-system)
 
 ---
 
