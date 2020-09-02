@@ -293,9 +293,10 @@ Docker 创建和运行容器的大致流程：
 
 🐳 容器就是受隔离和资源限制的进程，镜像就是其静态文件，VM 可以做到物理或 OS 级别的隔离，但容器共享 OS，是进程级别的隔离。Docker 提供了容器打包，运行，管理等一系列工具。
 
-㊫ 进一步的了解 CGroup，参考 [Docker 背后的内核知识——cgroups 资源限制](https://www.infoq.cn/article/docker-kernel-knowledge-cgroups-resource-isolation/)  
-㊫ 更详细的了解容器底层，参考 [Cgroups, namespaces, and beyond: what are containers made from?](https://www.youtube.com/watch?v=sK5i-N34im8)  
-㊫ 关于 AutoFS，可通过直观的例子来理解：[DOCKER 基础技术：AUFS](https://coolshell.cn/articles/17061.html)  
-㊫ 关于 OverlayFS：[深入理解 overlayfs（一）：初识](https://blog.csdn.net/luckyapple1028/article/details/77916194) [深入理解 overlayfs（二）：使用与原理分析](https://blog.csdn.net/luckyapple1028/article/details/78075358)  
-㊫ 关于容器 runtime 更多技术的细节，参考 [Ian Lewis container-runtime-series](https://www.ianlewis.org/en/tag/container-runtime-series)  
+㊫ [Docker 背后的内核知识——cgroups 资源限制](https://www.infoq.cn/article/docker-kernel-knowledge-cgroups-resource-isolation/)  
+㊫ [Cgroups, namespaces, and beyond: what are containers made from?](https://www.youtube.com/watch?v=sK5i-N34im8)  
+㊫ [DOCKER 基础技术：AUFS](https://coolshell.cn/articles/17061.html)  
+㊫ [深入理解 overlayfs（一）：初识](https://blog.csdn.net/luckyapple1028/article/details/77916194)  
+㊫ [深入理解 overlayfs（二）：使用与原理分析](https://blog.csdn.net/luckyapple1028/article/details/78075358)  
+㊫ 关于容器 runtime，参考 [Ian Lewis container-runtime-series](https://www.ianlewis.org/en/tag/container-runtime-series)  
 ㊫ 在线动手学习 Docker：[Play with Docker](https://www.docker.com/play-with-docker) 以及 [Katacoda](https://katacoda.com/courses/container-runtimes)
