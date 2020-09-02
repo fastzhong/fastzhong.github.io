@@ -50,7 +50,7 @@ toc = false
 
 *   [Sealos](https://github.com/fanux/sealos)
 
-    -   https://juejin.im/post/5da44a765188251b643eb5e9
+    -   [使用 Sealos 在 3 分钟内快速部署一个生产级别的 Kubernetes 高可用集群](https://juejin.im/post/5da44a765188251b643eb5e9)
 
 *   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way) - 徒手制造，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
 
