@@ -39,49 +39,49 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 ![容器历史](/images/docker/container-history.png)
 
--   `Chroot Jail`  
+-   <font color="orange">Chroot Jail</font>  
     Chroot Jail 应该是第一种容器化技术，90 年代的系统管理员一定对 chroot 不陌生，为了安全，Apache Web 服务器都进行 chroot 配置。
 
     ![chroot](/images/docker/chroot.gif)
 
--   `Linux`  
+-   <font color="orange">Linux</font>  
     1991 年 Linus Torvalds 在 PC 上开发了 Linux 内核。
 
--   `FreeBSD Jail`  
+-   <font color="orange">FreeBSD Jail</font>  
     FreeBSD OS 第一次将 chroot 引入操作系统，实现不单是文件而且是进程级别的隔离。
 
--   `Linux VServer`  
+-   <font color="orange">Linux VServer</font>  
     比 chroot 进一步，Linux VServer 在系统级别实现虚拟化，同一个内核，却可以运行多个不同的 Linux distributions。
 
--   `Solaris Container`  
+-   <font color="orange">Solaris Container</font>  
     实现 Solaris 版本的 Liunx VServer
 
--   `OpenVZ`  
+-   <font color="orange">OpenVZ</font>  
     类似 Liunx VServer 和 Solaris Container，但 Linux VServer 和 OpenVZ 都需要对 kernel 打补丁才能支持容器的创建。
 
--   `CGroups`  
+-   <font color="orange">CGroups</font>  
     Google 开发的技术，实现对进程进行资源的控制（CPU、内存、磁盘 I/O、网络，等），CGroups 进入 Linux Kernel。
 
--   `LXC`  
+-   <font color="orange">LXC</font>  
     和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="orange">L</font>inu<font color="orange">X</font> <font color="orange">C</font>ontainer）包装了内核原生的 CGroup ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等），实现操作系统层次上的资源的虚拟化。CloudFoundry 在 2013 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
 
     ![lxc](/images/docker/lxc.png)
 
--   `Apache Mesos`  
+-   <font color="orange">Apache Mesos</font>  
     2009 年 UC Berkeley RAD 实验室开发的分布式系统运行平台。
 
--   `Docker`  
+-   <font color="orange">Docker</font>  
     2013 年，基于 LXC 的 Docker 出世：
 
     ![docker](/images/docker/docker.png)
 
--   `LMCTFY`  
+-   <font color="orange">LMCTFY</font>  
     Google 开源了自己的容器运行技术栈 LMCTFY（Let me contain that for you），同时和 Docker 合作，把其相关的概念和抽象移植到 libcontainer。
 
--   `rkt`  
+-   <font color="orange">rkt</font>  
     CoreOS 发布和 Docker 类似的 Rocket。
 
--   `Kubernetes`  
+-   <font color="orange">Kubernetes</font>  
     Google 开源生产级别的容器集群运维管理平台（脱胎于 Google 内部 Borg 系统）。
 
 Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的技术，但又有两个共同点，都是为了：  
@@ -148,7 +148,15 @@ Linux 内核通过『namespace』提供了资源隔离的功能，各种 namespa
 | UTS     | CLONE_NEWUTS    | Hostname and NIS domain name                                                                       |
 | CGroup  | CLONE_NEWCGROUP | Cgroup root directory                                                                              |
 
-当我们运行一个 Docker 容器时，就是通过 clone 系统调用产生一个带 namespace 的进程（clone 是支持 namepspace 参数的）：
+当我们运行一个 Docker 容器时，就是通过 clone 系统调用产生一个带 namespace 的进程（参数 flags 表示使用哪些 CLONE\_\* 标志位）：
+
+```c
+// System call
+int clone(int (*child_func)(void *), void *child_stack, int flags, void *arg);
+
+// Docker source code to create a container process
+int pid = clone(main_function, stack_size, CLONE_NEWPID | SIGCHLD, NULL);
+```
 
 ![docker run 1](/images/docker/docker-space1.png)
 
