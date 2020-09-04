@@ -43,3 +43,7 @@ DevOps/CICD 做得好挺难的，因为一方面软件运行环境多样化和�
 ![微服务 Devops Pipeline](/images/devops/devops-pipeline.jpg)
 
 准备以此打造一个满足中小型团队的现代化流水线原型。
+
+[Production Readiness Checklist](https://www.gruntwork.io/devops-checklist/)
+
+![Production Readiness Checklist](/images/devops/checklist.png)
