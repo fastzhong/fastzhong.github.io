@@ -233,6 +233,3 @@ cat /etc/fstab
 echo " ****** We are done !!! ********"
 ```
 
-```
-
-```

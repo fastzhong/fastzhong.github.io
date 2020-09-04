@@ -129,9 +129,7 @@ draft = true
 
 ---
 
-💡 如果有编程经验的，用什么语言刷题一点都不重要，因为语言层面只用到最最基本的东西（int，string，array，if/else，for/while 等），难点还是在解题思路上。
-
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：如果有编程经验的，用什么语言刷题一点都不重要，因为语言层面只用到最最基本的东西（int，string，array，if/else，for/while 等），难点还是在解题思路上
 
 > -   刷题之前先把数据结构和基本算法过一遍，把基础打牢
 > -   刷题没有捷径，只有策略和积累，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`

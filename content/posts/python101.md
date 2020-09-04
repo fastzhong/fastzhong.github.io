@@ -495,8 +495,8 @@ print(result)
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
-> -   选择 Python3
-> -   为每个项目建立 virtual env
-> -   VS Code 或 PyCharm 作为 IDE
-> -   学习 Pythonic/PEP8
-> -   📌 [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)
+-   选择 Python3
+-   为每个项目建立 virtual env
+-   VS Code 或 PyCharm 作为 IDE
+-   学习 Pythonic/PEP8
+-   （大图） [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)

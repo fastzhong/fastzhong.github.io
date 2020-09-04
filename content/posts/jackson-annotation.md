@@ -869,4 +869,4 @@ public void whenDisablingAllAnnotations()
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 如果上面的注解不能满足，任何时候可以在 class 和字段级别 定制 `Serializer` & `Deserializer` 来达到精细控制序列化/反序列化的目的。
+💡 如果上面的注解不能满足，任何时候可以在 class 和字段级别 定制 `Serializer` & `Deserializer` 来达到精细控制序列化/反序列化的目的。
