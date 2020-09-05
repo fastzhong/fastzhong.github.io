@@ -186,7 +186,7 @@ lrwxrwxrwx 1 cizixs cizixs 0 12月 21 15:36 uts -> uts:[4026531838]
 
 ![namespace mount](/images/docker/namespace-mount.png)
 
--   容器的 Net namespace 情况如下：容器进程仍需和外界连续，这时需要额外建立 Virtual Network，不同的厂商有不同的技术路线，例如[Docker 的实现](https://github.com/moby/libnetwork/blob/master/docs/design.md)（容器间通信是个重点，但这里就不展开）
+-   容器的 Net namespace 情况如下：容器进程仍需和外界连续，这时需要额外建立 Virtual Network，不同的厂商有不同的技术路线，例如[Docker 的实现](https://github.com/moby/libnetwork/blob/master/docs/design.md)（容器间通信是个重点，但具体技术细节这里就不展开）
 
 ![namespace net](/images/docker/namespace-net.png)
 
@@ -224,19 +224,45 @@ CGroups 的特点是：
 
 ### rootfs
 
-Linux 万事皆为 file，在容器内，也应该看到完全独立的文件系统，而且不会受到宿主机以及其他容器的影响。这个独立的文件系统，就叫做容器镜像（对整个文件系统的镜像），或者叫 rootfs. rootfs 中包含了一个操作系统所需要的文件，配置和目录，但并不包含系统内核。 因为在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。这也就意味着，所有的容器都会共享宿主机上操作系统的内核。
+Linux 万事皆为 file，或者叫 rootfs. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录，例如：
 
-在镜像内，打包的不仅仅是应用，还有所需要的依赖（系统文件），都被封装在一起。这就解决了无论是在哪，应用都可以很好的运行的原因。
+-   init 进程的应用程序必须运行在根文件系统上；
+-   根文件系统提供了根目录“/”；
+-   linux 挂载分区时所依赖的信息存放于根文件系统/etc/fstab 这个文件中；
+-   shell 命令程序必须运行在根文件系统上，譬如 ls、cd 等命令；
 
-不光这样，rootfs 还解决了可重用性的问题，想象这个场景，你通过 rootfs 打包了一个包含 java 环境的 centos 镜像，别人需要在容器内跑一个 apache 的服务，那么他是否需要从头开始搭建 centos 环境呢？Docker 镜像的设计中， 在解决这个问题时，引入了一个叫层的概念（AUTOFS、OverlayFS 等），每次针对 rootfs 的修改，都只保存增量的内容，而不是 fork 一个新镜像。
+在容器内，也应该看到完全独立的 rootfs，而且不会受到宿主机以及其他容器的影响。这个针对容器 rootfs，就叫做容器镜像（对整个根目录文件系统的镜像），所有的容器都会共享宿主机上操作系统的内核。在镜像内，打包的不仅仅是应用，还有所需要的依赖，都被封装在一起。这就解决了无论是在哪，应用都可以很好的运行的原因。
 
-UnionFS（Union File System）2004 年由纽约州立大学石溪分校开发，它可以把多个目录(也叫分支)内容联合挂载到同一个目录下，而目录的物理位置是分开的。Docker 支持的 UnionFS 包括 OverlayFS，AUFS，devicemapper，vfs 以及 btrfs 等，Docker 在 Linux3.18 之后版本基本默认用 OverlayFS2。启动容器的时候 Docker 把镜像/UnionFS 挂载到一个目录，作为容器的根文件系统。
+不光这样，rootfs 还解决了可重用性的问题，想象这个场景，你通过 rootfs 打包了一个包含 java 环境的 centOS 镜像（java 应用），别人需要在容器内跑一个 apache 服务器，那么他是否需要为 apache 从头开始搭建 centOS 环境呢？Docker 镜像的设计中， 在解决这个问题时，引入了一个叫层的概念（通过 AUTOFS、OverlayFS 等文件系统技术来支持），如其名，OverlayFS 可以把不同的文件，一层一层的叠加在一起，如果有重复的文件（看作被修过的文件），后面的层覆盖前面的：每次针对 rootfs 的修改，都只保存增量的内容，这样不同的镜像之间相同的层只需一份（例如 java 应用和 apache 服务底层的 centOS），创造性的解决了镜像的制作，共享，存储，打包，传送等问题，否则整个 rootfs 相对 java 应用庞大不少。
+
+镜像另一个采用到的技术就是 UnionFS（Union File System），2004 年由纽约州立大学石溪分校开发，它可以把多个目录(也叫分支)内容联合挂载到同一个目录下，而目录的物理位置是分开的。Docker 支持的 UnionFS 包括 OverlayFS，AUFS，devicemapper，vfs 以及 btrfs 等，Docker 在 Linux3.18 之后版本基本默认用 OverlayFS2。启动容器的时候 Docker 把镜像/UnionFS 挂载到一个目录，作为容器的根文件系统。
+
+-   不同的文件源（层）  
+    ![overlay](/images/docker/overlay1.png)
+
+-   依次进行 merge  
+    ![overlay](/images/docker/overlay2.png)
+
+-   最终的镜像（mount 在/tmp/overlay 下）  
+    ![overlay](/images/docker/overlay3.png)
 
 关于 AUFS，OvelayFS，具体的文件结构，参考底部的链接。
 
+容器镜像技术是 Docker 公司的重大贡献，Docker 镜像的制作是通过 Docker File 完成：
+
+```bash
+FROM ubuntu:14.04
+ADD run.sh /
+VOLUME /data
+CMD ["./run.sh"]
+......
+```
+
+![docker image](/images/docker/docker-image.png)
+
 ## Docker
 
-首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Registry，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK，其实是 Sun JDK，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
+首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Registry，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而名声鹊起起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK，其实是 Sun JDK，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
 
 Docker 的核心架构（2019）：
 
@@ -264,6 +290,8 @@ Docker 创建和运行容器的大致流程：
 上述流程在 containerd 框架下的直观视图：
 
 ![docker flow](/images/docker/docker-flow.png)
+
+理清底层的概念原理后，具体的 Docker 使用，参考底部的链接。
 
 ## 容器革命
 
@@ -295,7 +323,7 @@ Docker 创建和运行容器的大致流程：
 
 > Identical environment is crucial for delivering high quality software
 
-开发高质量少 BUG 的软件的关键问题在于 - 如何确保开发与生产环境的一致性。传统做法是建立开发、调试、生产环境，在软件复杂化的情况下，整个团队如果共享单一开发环境非常不高效。同时要支持多版本，多环境，多配置的情况下，这变成了一个 O(n^2) 的问题，传统的做法根本行不通。所以容器不只是一个新的软件打包方式，还是一项让我们开发高质量软件的重要技术。
+开发高质量少 BUG 的软件的关键问题在于 - 如何确保开发与生产环境的一致性。传统做法是建立开发、调试、生产环境，在软件复杂化的情况下，整个团队如果共享单一开发环境非常不高效。同时要支持多版本，多环境，多配置的情况下，这变成了一个 O(n^2) 的问题，传统的做法根本 o 行不通。所以容器不只是一个新的软件打包方式，还是一项让我们开发高质量软件的重要技术。
 
 ---
 
