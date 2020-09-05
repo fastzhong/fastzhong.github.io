@@ -1,18 +1,16 @@
 +++
 title = "Kubernetes 安装 - minikube"
-date = 2019-01-11T13:08:47+08:00
+date = 2020-08-30T03:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
-toc = true
+toc = false
 draft = true
 +++
 
 本地安装 Kubernetes，minikube 是最简易的方式
 
 <!--more-->
-
-参考官方文档：[安装 minikube](https://kubernetes.io/zh/docs/tasks/tools/install-minikube/)
 
 ## 安装 minikube
 

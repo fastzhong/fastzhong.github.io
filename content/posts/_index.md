@@ -1,7 +1,7 @@
 +++
 aliases = ["post","blog"]
 title = ""
-author = "Alan Zhong"
+author = "Alan"
 readingTime = true
 toc = true
 draft = false

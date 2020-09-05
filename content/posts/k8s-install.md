@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装方式简介"
-date = 2020-08-30T13:08:47+08:00
+date = 2020-08-30T02:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -61,4 +61,4 @@ toc = false
 
 *   k8s 商业软件，如 Openshift，CloudFoundry，Rancher，这些都是以 k8s 为基础的商业集成软件，内含 k8s 的安装和定制方案，非原生，相当重型，面向企业级应用，这里也不展开讨论
 
-各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，自建主要是为了学习的，有时间的话可以尝试 THW。
+各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，自建主要是为了学习的，有时间的话必须尝试 THW。

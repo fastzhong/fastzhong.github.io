@@ -1,5 +1,5 @@
 +++
-author = "Alan Zhong"
+author = "Alan"
 description = "fastzhong.com"
 +++
 

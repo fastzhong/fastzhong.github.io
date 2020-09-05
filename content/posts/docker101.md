@@ -1,5 +1,5 @@
 +++
-title = "Docker/容器介绍（2020.9更新）"
+title = "Docker/容器 101（2020.9更新）"
 date = 2017-05-01T07:28:59+08:00
 readingTime = true
 categories = ["云 & 云原生"]
@@ -224,7 +224,7 @@ CGroups 的特点是：
 
 ### rootfs
 
-Linux 万事皆为 file，或者叫 rootfs. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录，例如：
+Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录，例如：
 
 -   init 进程的应用程序必须运行在根文件系统上；
 -   根文件系统提供了根目录“/”；
@@ -235,7 +235,7 @@ Linux 万事皆为 file，或者叫 rootfs. rootfs 不仅具有普通文件系�
 
 不光这样，rootfs 还解决了可重用性的问题，想象这个场景，你通过 rootfs 打包了一个包含 java 环境的 centOS 镜像（java 应用），别人需要在容器内跑一个 apache 服务器，那么他是否需要为 apache 从头开始搭建 centOS 环境呢？Docker 镜像的设计中， 在解决这个问题时，引入了一个叫层的概念（通过 AUTOFS、OverlayFS 等文件系统技术来支持），如其名，OverlayFS 可以把不同的文件，一层一层的叠加在一起，如果有重复的文件（看作被修过的文件），后面的层覆盖前面的：每次针对 rootfs 的修改，都只保存增量的内容，这样不同的镜像之间相同的层只需一份（例如 java 应用和 apache 服务底层的 centOS），创造性的解决了镜像的制作，共享，存储，打包，传送等问题，否则整个 rootfs 相对 java 应用庞大不少。
 
-镜像另一个采用到的技术就是 UnionFS（Union File System），2004 年由纽约州立大学石溪分校开发，它可以把多个目录(也叫分支)内容联合挂载到同一个目录下，而目录的物理位置是分开的。Docker 支持的 UnionFS 包括 OverlayFS，AUFS，devicemapper，vfs 以及 btrfs 等，Docker 在 Linux3.18 之后版本基本默认用 OverlayFS2。启动容器的时候 Docker 把镜像/UnionFS 挂载到一个目录，作为容器的根文件系统。
+镜像另一个采用到的技术就是 UnionFS（Union File System），2004 年由纽约州立大学石溪分校开发，它可以把多个目录(也叫分支)内容联合挂载到同一个目录下，而目录的物理位置是分开的。Docker 支持的 UnionFS 包括 OverlayFS，AUFS，devicemapper，vfs 以及 btrfs 等，Docker 在 Linux3.18 之后版本基本默认用 OverlayFS2。启动容器的时候 Docker 把镜像挂载到一个目录，作为容器的根文件系统。
 
 -   不同的文件源（层）  
     ![overlay](/images/docker/overlay1.png)
