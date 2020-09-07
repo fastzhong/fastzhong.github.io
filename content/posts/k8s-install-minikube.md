@@ -118,14 +118,12 @@ service/hello-minikube exposed
 
 7. 安装 Lens
 
-除了 K8s 自带的 dashboard，Lens 是其中一个第三方提供的图形管理工具，非常漂亮：
+除了 K8s 自带的 dashboard，Lens 是其中一个第三方提供的图形管理工具，[下载安装](https://k8slens.dev/)，非常漂亮：
 
-7.1 [下载安装](https://k8slens.dev/)
+-   运行，点 ➕，加入 minikube（new）cluster：  
+    ![cluster settings](/images/k8s/lens-settings.png)
 
-7.2 运行，点 ➕，加入 minikube（new）cluster
+-   去 Settings，features 里选 metrics：  
+    ![cluster metrics](/images/k8s/lens-features.png)
 
-7.3 去 Settings，features 里选 metrics
-
-![cluster settings](/images/k8s/lens-settings.png)
-![cluster metrics](/images/k8s/lens-features.png)
 ![lens](/images/k8s/lens.png)
