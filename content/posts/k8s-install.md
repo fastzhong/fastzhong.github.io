@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装方式简介"
-date = 2020-08-30T02:08:47+08:00
+date = 2020-09-02T02:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -31,12 +31,14 @@ toc = false
     -   目前最成熟的方案，支持不同平台和版本（Win，Mac，Linux），但需要 vm
     -   配置自由度高
     -   安装和卸载没有其它方案容易
-    -   目前只支持单节点的 k8s 集群
+    -   目前只支持单节点 master 的 k8s 集群
+    -   [Kubernetes 安装 - minikube](/posts/k8s-install-minikube)
 
 *   [kubeadm](https://k8smeetup.github.io/docs/setup/independent/create-cluster-kubeadm/)
 
     -   安装工具，介于徒手和安装软件之间，可以简化操作
     -   不完全成熟，有些操作还无法无缝完成
+    -   [使用 kubeadm 快速部署一个 Kubernetes 集群（v1.18）](http://blog.ctnrs.com/post/k8s-kubeadm-install/)
 
 -   [Kind（Kubernetes in Docker）](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
@@ -52,7 +54,10 @@ toc = false
 
     -   [使用 Sealos 在 3 分钟内快速部署一个生产级别的 Kubernetes 高可用集群](https://juejin.im/post/5da44a765188251b643eb5e9)
 
-*   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way) - 徒手制造，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
+*   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+
+    -   纯手工，不依赖任何工具或 script，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
+    -   [Kubernetes 安装 - The Hard Way](/posts/k8s-install-thw)
 
 *   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论，尝试的话参考：
 

@@ -98,10 +98,11 @@ draft = true
 🔥 重点来了，已经有现成的，适合小白上手，可以照着刷（都是按着同一类刷）：
 
 -   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
--   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
+-   [100 天摆脱算法小白](https://github.com/geekxh/Algorithm-100-Days)
 -   [小浩算法：目前共完成 140+ 道高频面试算法题目，全部采用漫画图解的方式](https://www.geekxh.com/)
--   [作者先后面试了近三十多家互联网公司（Java）](https://github.com/yuanguangxin/LeetCode)
+-   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
 -   [算法珠玑：一个最精简的题库，150 道左右](https://github.com/soulmachine/algorithm-essentials)
+-   [作者先后面试了近三十多家互联网公司（Java）](https://github.com/yuanguangxin/LeetCode)
 
 下面是英文的：
 
@@ -112,7 +113,6 @@ draft = true
 以上是基础，然后可以逐步扩大题量，例如：
 
 -   [LeetCode-book：LeetCode 1~400 题总结 + 专题知识点&题型总结（Java、Python、C++）](https://github.com/huxiaoman7/leetcodebook)
-
 -   [Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解](https://books.halfrost.com/leetcode/)
 
 同时熟练套路 & 模板，见下。

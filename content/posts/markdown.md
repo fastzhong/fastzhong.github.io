@@ -11,7 +11,7 @@ Markdown 和 Json 一样，超级简单，却超级好用
 
 <!--more-->
 
-![markdown](/images/vscode/markdown.png)
+![markdown](/images/md/cheatsheet-md.png)
 
 Markdown 就是一种轻量级的标记语言（Lightweight Markup Language），用人话说就是，普通的文本加上简单的排版或格式化语法（特殊标记），和 HTML，RTF 类似，只是 Markdown 的语法非常简单。Markdown 编写工具很多，在线的也有，很多编程开发工具都支持。需要知道，Markdown 语法没有标准，取决于 Markdown 渲染引擎，各个系统略微有差异。VS Code 和 IntelliJ 都支持 Markdown，特别推荐专门的可视化编辑器 [Typora](https://typora.io/)。Markdown 文本需要通过转换器变成 HTML 便可以在浏览器里显示，这就是支持 Markdown 的静态博客生成器和 CMS 的原理。
 
@@ -66,7 +66,6 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ```
 
 🤗 ~~加一条删除线 strikethrought~~
-
 
 ### 引用块
 

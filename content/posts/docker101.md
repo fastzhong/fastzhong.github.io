@@ -92,6 +92,11 @@ Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的�
 
 ![hyper-v](/images/docker/hyper-v.png)
 
+```md
+-   Type1: VMware vSphere, KVM, Microsoft Hyper-V
+-   Type2: Oracle VM VirtualBox, VMware Workstation Pro/VMware Fusion
+```
+
 “Process Virtual Machine”又称为“Application Virtual Machine”，如我们通常熟知的 JVM。
 
 有了大致的背景，接下来要解析容器的核心技术，了解后也很容易知道容器“感觉”好像是 VM，其实和 VM 是完全不同的。
@@ -224,12 +229,16 @@ CGroups 的特点是：
 
 ### rootfs
 
-Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录，例如：
+Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录：
 
--   init 进程的应用程序必须运行在根文件系统上；
+![linux file system](/images/linux/cheatsheet-linux-fs.jpeg)
+
+```md
 -   根文件系统提供了根目录“/”；
+-   init 进程的应用程序必须运行在根文件系统上；
 -   linux 挂载分区时所依赖的信息存放于根文件系统/etc/fstab 这个文件中；
 -   shell 命令程序必须运行在根文件系统上，譬如 ls、cd 等命令；
+```
 
 在容器内，也应该看到完全独立的 rootfs，而且不会受到宿主机以及其他容器的影响。这个针对容器 rootfs，就叫做容器镜像（对整个根目录文件系统的镜像），所有的容器都会共享宿主机上操作系统的内核。在镜像内，打包的不仅仅是应用，还有所需要的依赖，都被封装在一起。这就解决了无论是在哪，应用都可以很好的运行的原因。
 
@@ -262,13 +271,19 @@ CMD ["./run.sh"]
 
 ## Docker
 
-首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Registry，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而名声鹊起起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK，其实是 Sun JDK，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
+首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Hub，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而名声鹊起起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK，其实是 Sun JDK，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
 
 Docker 的核心架构（2019）：
 
-![docker 2019](/images/docker/architecture_2019.svg)
+![docker architecture](/images/docker/docker-architecture.svg)
+
+-   <font color="yellow">Docker daemeon</font>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求
+-   <font color="yellow">Docker client</font>：接收 docker 命令并发送至 Docker daemon
+-   <font color="yellow">Docker registries</font>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)
 
 Docker 创建和运行容器的大致流程：
+
+![docker 2019](/images/docker/architecture_2019.svg)
 
 ```cmd
 1. dockerd 接收到post请求：Container Create
