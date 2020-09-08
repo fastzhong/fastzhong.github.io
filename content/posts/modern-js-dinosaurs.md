@@ -61,7 +61,7 @@ moment().startOf("day").fromNow(); // 20 hours ago
 
 调用前提是我们必须把 moment.js 搞到我们的网站上来，从 moment.js 的[网页](http://momentjs.com/)上可以看到下面的信息：
 
-![0](/images/modern-js/0.png)
+![0](/images/modern-js/0.png#center)
 
 从安装的方法（右上部分）看到安装 moment.js 包含好几个动作，让我们先忽略之，我们直接下载 moment.js ，放到我们的网站服务器上，并在 index.html 里包含它：
 
@@ -152,7 +152,7 @@ $ npm install moment --save
 
 npm 帮我们解决了下载和更新，但坏处是我们得在 node_modules 目录里找到包的位置并手工加入到 index.html 里，下面我们看看能不能把这后面这一步也自动完成呢。
 
-![1](/images/modern-js/1.png)
+![1](/images/modern-js/1.png#center)
 
 ## Webpack：模块捆绑器
 
@@ -160,7 +160,7 @@ npm 帮我们解决了下载和更新，但坏处是我们得在 node_modules �
 
 在 2009 年，开启了一个名为 CommonJS 的项目，为了在浏览器之外实现这个目标。CommonJS 很大一部分是对 Javascript 的模块 module 给出规范，以便 Javascript 最终可以像其它编程语言那样可以在不同的文件之间 import 或 export，而非通过全局变量。而采用 CommonJS 最著名的就是 node.js ：
 
-![2](/images/modern-js/2.png)
+![2](/images/modern-js/2.png#center)
 
 如前所说 node.js 其实是个 Javascript 服务器，下面是早期在 node.js 里如何使用模块的例子，和上面的区别是在 Javascript 代码里直接载入：
 
@@ -249,7 +249,7 @@ $ ./node_modules/.bin/webpack
 
 到现在为止的一切看起来没有做很多事情，但整个开发流程而言顺畅不少，增加一个 Javascript 库，只需增加一条 require 语句而非在 HTML 里增加一条 script，同时捆绑成一个 Javascript 文件，浏览器的载入也比较快。我们现在只在整个开发流程中增加了一个构建步骤，但构建过程里其实我们可以做更多の事，让我们一起继续见证 Javascript 的牛 x 或者说奇葩。
 
-![3](/images/modern-js/3.png)
+![3](/images/modern-js/3.png#center)
 
 ## babel：转译代码
 
@@ -445,4 +445,4 @@ $ npm run server
 
 现今的 Javascript 开发是比较让人沮丧的，因为其一直以很快的速度变化着。虽然很多时候看起来在重复发明轮子，但 Javascript 的快速演化还是帮助其不断推出创新技术，例如 hot reloading，real-time linting，time-travel debugging。成为程序猿还是一个很令人激动的事情，我希望本文能在你成为开发人员的路途上带来指示性帮助。
 
-![4](/images/modern-js/4.png)
+![4](/images/modern-js/4.png#center)

@@ -17,7 +17,7 @@ draft = false
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 原文：[Modern CSS Explained For Dinosaurs](https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525)
 
-![0](/images/modern-css/0.png)
+![0](/images/modern-css/0.png#center)
 
 _对于 web 开发人员，CSS 被认为是其中一个最容易也是最难学习的语言_。上手肯定是比较容易的 - 你可以定义 CSS 的属性和其对应的值，让后把它们应用到某些 HTML 元素，然后，没有然后啦。但是，在一个大型的项目中，当你想把一大坨 CSS 代码组织好，一切就会变得纠缠不清和十分复杂。当你想通过 CSS 只改变一个页面中的某个元素的样式，结果任何一行 CSS 的变动往往也会导致其它页面、其它元素的样式发生意想不到的改变。
 
@@ -58,7 +58,7 @@ CSS 样式具有复杂的内在继承性，为了对付这种复杂性，各种�
 
 目前我们的 HTML 中没有使用 classes 或 ids，只用了 HTML 的 tags。在完全没有 CSS 样式的情况下，这个网页看起来是这样的（[在线演示版](https://codepen.io/peterxjang/pen/oEbERP?editors=1100)）：
 
-![1](/images/modern-css/1.png)
+![1](/images/modern-css/1.png#center)
 
 一点问题都没有，只是不好看，让我们加入 CSS 首先来改变字体，下面是 index.css：
 
@@ -128,7 +128,7 @@ h6 {
 
 上面的这段 CSS 主要是改变字体样式（字体的大小，行高，等等），还有文本颜色和居中显示。当然你得学习 CSS 才知道如何给这些 CSS 属性取适当的值（上面的样式来自[sakura.css](https://github.com/oxalorg/sakura)）。好在上面的 CSS 不至于复杂到读不懂。加入上面的 CSS 后，页面看起来变成这样（[在线演示版](https://codepen.io/peterxjang/pen/jZWzEV?editors=1100)）：
 
-![2](/images/modern-css/2.png)
+![2](/images/modern-css/2.png#center)
 
 看起来不一样吧 - 这就是 CSS 的作用，简单地把样式加入到一个文件里，不需要编程，也不需要复杂的逻辑。不幸的是，当我们想控制的不只是字体和颜色的样式时，事情开始会变得焦头烂额。
 
@@ -170,7 +170,7 @@ aside {
 
 现在这个网页看起来像这样（[在线演示版](https://codepen.io/peterxjang/pen/vdLROM?editors=1100)）：
 
-![3](/images/modern-css/3.png)
+![3](/images/modern-css/3.png#center)
 
 好，我们现在可以开始使用 CSS 控制网页内容的布局了。我们将按出现的时间顺序介绍三种不同的布局方法，从经典的 `float` 布局开始。
 
@@ -225,7 +225,7 @@ footer {
 
 看上面的 CSS 代码，你会发现不少 CSS“黑”技巧（margin 是负值，clear：both，宽度 width 是硬算出来的，等等，A List Apart 的有篇文章很好的解释了这些“黑”技巧的细节和原因）。下面是效果（[在线演示版](https://codepen.io/peterxjang/pen/VQeXYg?editors=1100)）：
 
-![4](/images/modern-css/4.png)
+![4](/images/modern-css/4.png#center)
 
 看起来还不错，但你会注意到 3 栏的高度是不一致的，而且页面也没有和屏幕等高。这个问题来源至 float - float 只能定位到左边或右边，但无法得知被定位区域内容的高度。这个问题好多年都没有比较直接的解决办法，直到好多年后 `flexbox` 布局的出现。
 
@@ -294,7 +294,7 @@ aside {
 
 这下比 float 布局紧凑多了。flexbox 的属性和值初看有点让人困惑，但我们不用像 float 布局那样需要搞出一些“负”边距的事情 - 这是巨大的改进，下面是效果（[在线演示版](https://codepen.io/peterxjang/pen/xYZWGz?editors=1100)）：
 
-![5](/images/modern-css/5.png)
+![5](/images/modern-css/5.png#center)
 
 三栏都齐高而且充满了整个页面，看起来挺完美了，不过该布局方法有一些小缺陷。一个是浏览器支持，目前只有较新的浏览器支持 flexbox，旧的则不行。当然，浏览器厂商正在更尽力地停止对旧浏览器的支持，让网页设计者们有比较一致的开发体验。另一个是我们得加入这段 `<div class="container">`，最好的办法应该 - 理想情况下，任何的 CSS 布局不应该改变任何原有 HTML 文本。
 
@@ -345,13 +345,13 @@ footer {
 
 有一个比较令人困惑的是 `{% label primary@grid-column %}` 属性，它定义了开始/结束栏。令人困惑是因为这个例子里，总共 3 栏，但数字却是从 1 到 4，看了下面这张图就比较容易理解了（[在线演示版](https://codepen.io/peterxjang/pen/vdLROM?editors=1100)）：
 
-![6](/images/modern-css/6.png)
+![6](/images/modern-css/6.png#center)
 
 第一栏从 1 开始到 2 结束，第二栏是 2 到 3，第三栏是 3 到 4。而头部（header）是 1 到 4，横跨整个页面，nav 只是 1 到 2，横跨第一栏，等等。
 
 一旦你习惯于 grid 的语法，它很显然就是你想表达页面布局的最佳方法。唯一的困难是浏览器支持，不过如上所述，近年来已有巨大进步。说 CSS grid 是第一个真正为页面布局设计的 CSS 工具一点都不为过。以往网页设计者对于创造性的网页布局设计却不得不保守（想得到却不能做），因为之前种种 CSS 工具非常脆弱，而且还需要各种“黑”技巧以及打补丁的做法。现在因为 CSS grid 到来，以前从未可能实现过的、创造性的网页布局设计，很有可能会来上一大波，这实在让人兴奋。
 
-![7](/images/modern-css/7.png)
+![7](/images/modern-css/7.png#center)
 
 ## 使用 CSS 预处理器
 
@@ -494,7 +494,7 @@ h6 {
 
 值得指出的是关于 CSS 后处理器是有些争议的。有些人抱怨术语太令人费解 - 有些说它们应该都叫 CSS 预处理器，有些则主张简单点就叫 CSS 处理器，等等。有些人认为，CSS 后处理器可以完全取代预处理器，有些则认为两者应该共处。不过有一点是清楚的，如果你有兴趣研究到底能把 CSS 发挥到什么程度，你应该学习一把如何使用 CSS 后处理器。
 
-![8](/images/modern-css/8.png)
+![8](/images/modern-css/8.png#center)
 
 ## 编写可维护 CSS 的方法
 

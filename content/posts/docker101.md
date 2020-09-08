@@ -15,21 +15,21 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 做项目或产品的程序猿们肯定没少见过下面的这种文档，从更改记录中可以看到完成一个文档的艰辛。更要命的是一个文档通常只对应一个版本，一个平台，一种环境，一种配置。
 
-![The Problem1](/images/docker/TheProblem1.jpg)
+![problem](/images/docker/TheProblem1.jpg#center)
 
-![The Problem2](/images/docker/TheProblem2.jpg)
+![problem](/images/docker/TheProblem2.jpg#center)
 
 在现代化和大规模的软件作业里，文档的问题是显而易见的，维护文档更是苦不堪言。特别是做大型软件产品：
 
-![The Problem3](/images/docker/TheProblem3.jpg)
+![problem](/images/docker/TheProblem3.jpg#center)
 
 文档的问题其实反应了背后的工程问题 - 软件的安装和配置，还好有自动化运维工具（[Ansible 快速上手到项目最佳实战](/posts/ansible101/)）：
 
-![ansible](/images/docker/ansible.jpg)
+![ansible](/images/docker/ansible.jpg#center)
 
 但如何应对现代软件开发中多环境的问题：
 
-![challenge](/images/docker/challenges.jpg)
+![challenges](/images/docker/challenges.jpg#center)
 
 所以这些工具并没有从根本上解决软件的安装和配置的复杂性，只不过将过程自动化而已，而容器技术从底层将之改观。
 
@@ -37,12 +37,14 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 由于容器和很多技术相关，所以先理清一下：
 
-![容器历史](/images/docker/container-history.png)
+<div align=center>  <!-- 可选的项：right，left，center -->
+	<img src="/images/docker/container-history.png" alt="容器历史">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
 
 -   <font color="yellow">Chroot Jail</font>  
     Chroot Jail 应该是第一种容器化技术，90 年代的系统管理员一定对 chroot 不陌生，为了安全，Apache Web 服务器都进行 chroot 配置。
 
-    ![chroot](/images/docker/chroot.gif)
+    ![chroot](/images/docker/chroot.gif#center)
 
 -   <font color="yellow">Linux</font>  
     1991 年 Linus Torvalds 在 PC 上开发了 Linux 内核。
@@ -65,7 +67,7 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 -   <font color="yellow">LXC</font>  
     和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="yellow">L</font>inu<font color="yellow">X</font> <font color="yellow">C</font>ontainer）包装了内核原生的 CGroup ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等），实现操作系统层次上的资源的虚拟化。CloudFoundry 在 2013 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
 
-    ![lxc](/images/docker/lxc.png)
+    ![lxc](/images/docker/lxc.png#center)
 
 -   <font color="yellow">Apache Mesos</font>  
     2009 年 UC Berkeley RAD 实验室开发的分布式系统运行平台。
@@ -73,7 +75,7 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 -   <font color="yellow">Docker</font>  
     2013 年，基于 LXC 的 Docker 出世：
 
-    ![docker](/images/docker/docker.png)
+    ![docker](/images/docker/docker.png#center)
 
 -   <font color="yellow">LMCTFY</font>  
     Google 开源了自己的容器运行技术栈 LMCTFY（Let me contain that for you），同时和 Docker 合作，把其相关的概念和抽象移植到 libcontainer。
@@ -90,7 +92,7 @@ Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的�
 
 <font color="yellow">VM（Virtual Machine）</font>一般指在实体机器上创建的虚拟机器，VM 又分为 “System Virtual Machine” 和 “Process Virtual Machine”。对于 Guest OS 而言，VM 就像是一台真实的机器，而 Hypervisor 是关键技术，用来处理 VM 的 CPU，内存，网络等，Hypervisor 又分为 Type1 & 2：
 
-![hyper-v](/images/docker/hyper-v.png)
+![hyper-v](/images/docker/hyper-v.png#center)
 
 ```md
 -   Type1: VMware vSphere, KVM, Microsoft Hyper-V
@@ -115,11 +117,11 @@ Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的�
 
 ### Kernel Space & System Calls
 
-![kernel space](/images/docker/kernel-space.png)
+![kernel space](/images/docker/kernel-space.png#center)
 
 Linux 把内存空间划分为 Kernel & User Space （系统空间和用户空间），我们的程序都是放在用户空间里，但所有的计算，储存，通讯最终都是通过调用底层的 Kernel 来完成的，而用户和系统空间的交互需要通过一系列系统调用『System Call』。划分的一个重要目的就是对 资源进行保护：
 
-![rings](/images/docker/rings.png)
+![rings](/images/docker/rings.png#center)
 
 下面是一个 C 的例子给文件申请内存空间，它必须通过系统调用来完成
 
@@ -129,15 +131,17 @@ tmp_buf = mmap(file, len); # mmap here is from a C library
 
 调用过程如下：
 
-![mmap](/images/docker/mmap.jpg)
+<div align=center>  <!-- 可选的项：right，left，center -->
+	<img src="/images/docker/mmap.jpg" alt="mmap">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
+</div>
 
 一个程序运行的大致流程是，父进程通过系统调用 让内核产生新的进程，内核保留父程序的上下文，准备初始化子进程的上下文，切换至子进程，操作权这时交到了子进程，子进程的逻辑开始真正运行，逻辑运行结束后，会向父进程发信号，内核回收子进程资源，操作权回到父进程，父进程继续执行接下去的逻辑。举个例子，当在 bash 里运行 ls 的时候，bash 的 process id 假设为 10，该 process 通过 fork()产生出一个新的 process，id 为 11，process 11 通过 execve()把当前的程序/bin/bash unload，接着 load 入/bin/ls，当 ls 运行结束后，process 11 通过系统调用 exit()通知 process 11 的结束状态（status code），内核这时通过 wait()唤醒终止运行的 process 10，process 10 收到 process 11 的 status code 并继续运行：
 
-![process](/images/docker/process.jpg)
+![process](/images/docker/process.jpg#center)
 
 Linux 有几个特殊的进程，pid 为 0 的 idle 进程被成为上帝进程，其创建 pid 为 1 的 /sbin/init 进程和 pid 为 2 的 kthreadd 进程，前者负责执行内核的一部分初始化工作和系统配置，也会创建一些类似 getty 的注册进程，而后者负责管理和调度其他的内核进程：
 
-![process 0，1，2](/images/docker/process0.png)
+![process 0，1，2](/images/docker/process0.png#center)
 
 ### namespaces
 
@@ -163,11 +167,11 @@ int clone(int (*child_func)(void *), void *child_stack, int flags, void *arg);
 int pid = clone(main_function, stack_size, CLONE_NEWPID | SIGCHLD, NULL);
 ```
 
-![docker run 1](/images/docker/docker-space1.png)
+![docker run 1](/images/docker/docker-space1.png#center)
 
 内核可以通过 namespace 隔离不同的进程：
 
-![docker run 2](/images/docker/docker-space2.png)
+![docker run 2](/images/docker/docker-space2.png#center)
 
 我们可以查找进程 pid=100 对应的 namespace，例如：
 
@@ -185,15 +189,15 @@ lrwxrwxrwx 1 cizixs cizixs 0 12月 21 15:36 uts -> uts:[4026531838]
 
 -   容器的 PID namespace 情况如下：父进程是可以看到容器进程（子进程）的 pid（8，9，10）但容器进程只能看到自己的 pid（1，2，3）
 
-![namespace pid](/images/docker/namespace-pid.png)
+![namespace pid](/images/docker/namespace-pid.png#center)
 
 -   容器的 Mount namespace 情况如下：和 PID 不同，mount 的隔离有时是我们不想要的，比如系统中插入了新磁盘，虽然每个 namespace 都重新 mount， 这个可以通过 peer group 共享挂载信息
 
-![namespace mount](/images/docker/namespace-mount.png)
+![namespace mount](/images/docker/namespace-mount.png#center)
 
 -   容器的 Net namespace 情况如下：容器进程仍需和外界连续，这时需要额外建立 Virtual Network，不同的厂商有不同的技术路线，例如[Docker 的实现](https://github.com/moby/libnetwork/blob/master/docs/design.md)（容器间通信是个重点，但具体技术细节这里就不展开）
 
-![namespace net](/images/docker/namespace-net.png)
+![namespace net](/images/docker/namespace-net.png#center)
 
 ### CGroup
 
@@ -231,7 +235,7 @@ CGroups 的特点是：
 
 Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录：
 
-![linux file system](/images/linux/cheatsheet-linux-fs.jpeg)
+![linux file system](/images/linux/cheatsheet-linux-fs.jpeg#center)
 
 ```md
 -   根文件系统提供了根目录“/”；
@@ -247,13 +251,13 @@ Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅�
 镜像另一个采用到的技术就是 UnionFS（Union File System），2004 年由纽约州立大学石溪分校开发，它可以把多个目录(也叫分支)内容联合挂载到同一个目录下，而目录的物理位置是分开的。Docker 支持的 UnionFS 包括 OverlayFS，AUFS，devicemapper，vfs 以及 btrfs 等，Docker 在 Linux3.18 之后版本基本默认用 OverlayFS2。启动容器的时候 Docker 把镜像挂载到一个目录，作为容器的根文件系统。
 
 -   不同的文件源（层）  
-    ![overlay](/images/docker/overlay1.png)
+    ![overlay](/images/docker/overlay1.png#center)
 
 -   依次进行 merge  
-    ![overlay](/images/docker/overlay2.png)
+    ![overlay](/images/docker/overlay2.png#center)
 
 -   最终的镜像（mount 在/tmp/overlay 下）  
-    ![overlay](/images/docker/overlay3.png)
+    ![overlay](/images/docker/overlay3.png#center)
 
 关于 AUFS，OvelayFS，具体的文件结构，参考底部的链接。
 
@@ -267,7 +271,7 @@ CMD ["./run.sh"]
 ......
 ```
 
-![docker image](/images/docker/docker-image.png)
+![docker image](/images/docker/docker-image.png#center)
 
 ## Docker
 
@@ -275,7 +279,7 @@ CMD ["./run.sh"]
 
 Docker 的核心架构（2019）：
 
-![docker architecture](/images/docker/docker-architecture.svg)
+![docker architecture](/images/docker/docker-architecture.svg#center)
 
 -   <font color="yellow">Docker daemeon</font>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求
 -   <font color="yellow">Docker client</font>：接收 docker 命令并发送至 Docker daemon
@@ -283,7 +287,7 @@ Docker 的核心架构（2019）：
 
 Docker 创建和运行容器的大致流程：
 
-![docker 2019](/images/docker/architecture_2019.svg)
+![docker 2019](/images/docker/architecture_2019.svg#center)
 
 ```cmd
 1. dockerd 接收到post请求：Container Create
@@ -304,7 +308,7 @@ Docker 创建和运行容器的大致流程：
 
 上述流程在 containerd 框架下的直观视图：
 
-![docker flow](/images/docker/docker-flow.png)
+![docker flow](/images/docker/docker-flow.png#center)
 
 理清底层的概念原理后，具体的 Docker 使用，参考底部的链接。
 

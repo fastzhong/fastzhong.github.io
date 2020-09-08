@@ -15,7 +15,7 @@ serverless what, why, how
 
 Serverless 就是让开发近最大可能的关注在代码上，而不是 infra，代码以 **function** 为基本单元进行部署和运行:
 
-![more code, less infra](/images/serverless/more-code-less-infra.gif)
+![more code, less infra](/images/serverless/more-code-less-infra.gif#center)
 
 简单讲 Serverless 就是：
 
@@ -24,7 +24,7 @@ Serverless 就是让开发近最大可能的关注在代码上，而不是 infra
 Serverless 和数据库的存储过程很像，把存储过程搬到了云端，由数据库触发事件变成云端触发事件，由数据库支持变成云平台支持，简洁直接，但能发挥的功效依赖所属平台的支持。
 
 FaaS 具体和 IaaS，PaaS 的比较如下：
-![FaaS](/images/serverless/fass.jpg)
+![FaaS](/images/serverless/fass.jpg#center)
 
 ## Serverless 的特点
 
@@ -64,7 +64,7 @@ FaaS 具体和 IaaS，PaaS 的比较如下：
 -   异步/事件模式：响应来自某个服务的事件，如 S3
 -   基于数据流：数据流来自数据库，如 Amazon DynamoDB，或者数据流中心，如 Amazon Kinesis
 
-![execution model](/images/serverless/execution-models.png)
+![execution model](/images/serverless/execution-models.png#center)
 
 ## Serverless 的托管平台
 
@@ -96,7 +96,7 @@ FaaS 具体和 IaaS，PaaS 的比较如下：
 
 CNCF serverless 框架一览：
 
-![CNCF serverless](/images/cncf/serverless.png)
+![CNCF serverless](/images/cncf/serverless.png#center)
 
 对比如下：
 

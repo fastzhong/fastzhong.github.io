@@ -101,7 +101,7 @@ Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种�
 
 Ansible 从一个管理节点（management node）上通过 ssh 发送命令（Python 程序）到各个机器上执行，基本执行原理可以用下面这张图概述：
 
-![Ansible 执行](/images/ansible/ansible-parallel-task-execution.gif)
+![Ansible 执行](/images/ansible/ansible-parallel-task-execution.gif#center)
 
 图中包含了 Ansible 的基本概念/术语：
 
@@ -227,7 +227,7 @@ role 类似你自己已经开发好的一个程序，完成固定的功能，可
 
 在运行时，Ansbile 把 playbook 结合 inventory 和 module/roles 编译成 Python 程序，managed node 通过 SSH 将其发送至目标机器，然后在目标机器上执行。 Ansible 把目标机器看成是一个状态机，每做一个 task，状态会发生改变，通过若干 task 后，目标机器就从原始状态达到你想要的状态，实现“状态变化管理”。如果目标机器已经处于目标状态中，该 task 就不会被执行。每一步变化是“等幂”的 - 可重复，可验证。
 
-![Ansible 结构](/images/ansible/ansible-internal.png)
+![Ansible 结构](/images/ansible/ansible-internal.png#center)
 
 > task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
 
@@ -288,7 +288,7 @@ roles/
 
 如何编写和组织 inventory，role，playbook 是 Ansible 自动化实施的主要工作内容。我总结了这个四部曲的套路：
 
-![Ansible Steps](/images/ansible/ansible-steps.png)
+![Ansible Steps](/images/ansible/ansible-steps.png#center)
 
 3，4 由 Ansible 完成，所以通常我会有两个对应 playbook ⏤ sys.yml 和 site.yml：
 

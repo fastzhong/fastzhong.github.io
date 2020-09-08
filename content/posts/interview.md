@@ -51,7 +51,8 @@ draft = false
     - <font color="yellow">T</font>（Task）你是如何明确你的任务的；
     - <font color="yellow">A</font>（Action）针对这样的情况分析，你采用了什么行动方式；
     - <font color="yellow">R</font>（Result）结果怎样，在这样的情况下你学习到了什么。
-      ![STAR](/images/interview/star.png)
+
+![STAR](/images/interview/star.png#center)
 
 5. _<font color="yellow">压力练习</font>_：面试的时候难免紧张，可能会严重影响发挥，通过平时多找机会参与交流分享，或找人做压力面试来改善
 6. _<font color="yellow">表达练习</font>_：表达能力非常影响在面试中的表现，能否简练地将答案告诉面试官，可以通过给自己讲解的方式刻意练习
