@@ -1,10 +1,11 @@
 +++
 title = "Kubernetes 安装 - minikube"
-date = 2020-09-03T03:08:47+08:00
+date = 2020-09-04T03:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
 toc = false
+draft = true
 +++
 
 本地安装 Kubernetes，minikube 是最简易的方式
@@ -72,9 +73,33 @@ Basic Commands:
 
 ```bash
 /Volumes/MySpace/k8slab
-[I] ➜ minikube start --vm-driver=virtualbox --v=7 --alsologtostderr memory=16384 --cpus=2
+[I] ➜ minikube config set vm-driver virtualbox
+❗  These changes will take effect upon a minikube delete and then a minikube start
 
-/Volumes/MySpace/k8slab took 2m 6s
+/Volumes/MySpace/k8slab
+[I] ➜ minikube config set cpus 2
+❗  These changes will take effect upon a minikube delete and then a minikube start
+
+/Volumes/MySpace/k8slab
+[I] ➜ minikube config set memory 8192
+❗  These changes will take effect upon a minikube delete and then a minikube start
+
+/Volumes/MySpace/k8slab
+[I] ➜ minikube config set disk-size 10g
+❗  These changes will take effect upon a minikube delete and then a minikube start
+
+/Volumes/MySpace/k8slab
+[I] ➜ minikube start
+😄  minikube v1.13.0 on Darwin 10.15.6
+✨  Using the virtualbox driver based on user configuration
+👍  Starting control plane node minikube in cluster minikube
+🔥  Creating virtualbox VM (CPUs=2, Memory=8192MB, Disk=10240MB) ...
+🐳  Preparing Kubernetes v1.19.0 on Docker 19.03.12 ...
+🔎  Verifying Kubernetes components...
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" by default
+
+/Volumes/MySpace/k8slab
 [I] ➜ minikube status
 minikube
 type: Control Plane
@@ -84,21 +109,25 @@ apiserver: Running
 kubeconfig: Configured
 
 /Volumes/MySpace/k8slab
-[I] ➜ kubectl get nodes
-NAME       STATUS   ROLES    AGE    VERSION
-minikube   Ready    master   3m2s   v1.19.0
+[I] ➜ k get nodes
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   48s   v1.19.0
+
+[I] ➜ kubectl get svc
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   38m
 
 /Volumes/MySpace/k8slab
-[I] ➜ kubectl version
+[I] ➜ k version
 Client Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.0", GitCommit:"e19964183377d0ec2052d1f1fa930c4d7575bd50", GitTreeState:"clean", BuildDate:"2020-08-26T21:54:15Z", GoVersion:"go1.15", Compiler:"gc", Platform:"darwin/amd64"}
-Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.0", GitCommit:"e19964183377d0ec2052d1f1fa930c4d7575bd50", GitTreeState:"clean", BuildDate:"2020-08-26T14:23:04Z", GoVersion:"go1.15", Compiler:"gc", Platform:"linux/amd /0.1s
+Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.0", GitCommit:"e19964183377d0ec2052d1f1fa930c4d7575bd50", GitTreeState:"clean", BuildDate:"2020-08-26T14:23:04Z", GoVersion:"go1.15", Compiler:"gc", Platform:"linux/a /0.1s
 ```
 
 K8s server 和 client 版本都是 v1.19.0
 
 6. 部署 app
 
-部署一个 hello-minikube 应用，然后打开 K8s 的管理 dashboard：
+部署一个 hello-minikube 应用，然后打开 K8s 的管理面板：
 
 ```bash
 /Volumes/MySpace/k8slab
@@ -118,14 +147,16 @@ service/hello-minikube exposed
 🎉  Opening http://127.0.0.1:59659/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
 ```
 
-7. 安装 Lens
+最后可以 minikube stop 和 delete 来停止和删除集群。
 
-除了 K8s 自带的 dashboard，Lens 是其中一个第三方提供的图形管理工具，[下载安装](https://k8slens.dev/)，非常漂亮：
+```md
+/Volumes/MySpace/k8slab took 2s
+[I] ➜ minikube stop
+✋ Stopping node "minikube" ...
+🛑 1 nodes stopped.
 
--   运行，点 ➕，加入 minikube（new）cluster：  
-    ![cluster settings](/images/k8s/lens-settings.png)
-
--   去 Settings，features 里选 metrics：  
-    ![cluster metrics](/images/k8s/lens-features.png)
-
-![lens](/images/k8s/lens.png)
+/Volumes/MySpace/k8slab took 12s
+[I] ➜ minikube delete
+🔥 Deleting "minikube" in virtualbox ...
+💀 Removed all traces of the "minikube" cluster.
+```

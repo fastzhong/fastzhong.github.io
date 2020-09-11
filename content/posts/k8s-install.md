@@ -1,10 +1,11 @@
 +++
 title = "Kubernetes 安装方式简介"
-date = 2020-09-02T02:08:47+08:00
+date = 2020-09-03T02:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
 toc = false
+draft = true
 +++
 
 其实 3、4 年前，安装 Kubernetes 还是一个很有挑战性的工作，现在技术越来越成熟了，手段也越来越丰富。
@@ -32,13 +33,11 @@ toc = false
     -   配置自由度高
     -   安装和卸载没有其它方案容易
     -   目前只支持单节点 master 的 k8s 集群
-    -   [Kubernetes 安装 - minikube](/posts/k8s-install-minikube)
 
 *   [kubeadm](https://k8smeetup.github.io/docs/setup/independent/create-cluster-kubeadm/)
 
     -   安装工具，介于徒手和安装软件之间，可以简化操作
     -   不完全成熟，有些操作还无法无缝完成
-    -   [使用 kubeadm 快速部署一个 Kubernetes 集群（v1.18）](http://blog.ctnrs.com/post/k8s-kubeadm-install/)
 
 -   [Kind（Kubernetes in Docker）](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
@@ -53,11 +52,12 @@ toc = false
 *   [Sealos](https://github.com/fanux/sealos)
 
     -   [使用 Sealos 在 3 分钟内快速部署一个生产级别的 Kubernetes 高可用集群](https://juejin.im/post/5da44a765188251b643eb5e9)
+    -   [kubernetes 高可用部署工具：sealos](https://fuckcloudnative.io/posts/sealos/#ixzz6XXVHPCIv)
 
 *   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
     -   纯手工，不依赖任何工具或 script，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
-    -   [Kubernetes 安装 - The Hard Way](/posts/k8s-install-thw)
+    -   自建主要是为了学习的，有时间的话必须尝试 THW
 
 *   借助自动化工具，如 Ansible，Chef，Terraform，等等衍生出来的安装方案，配置和安装的方式自由度高，如 [kubespray](https://github.com/kubernetes-sigs/kubespray)，这里也不展开讨论，尝试的话参考：
 
@@ -66,4 +66,10 @@ toc = false
 
 *   k8s 商业软件，如 Openshift，CloudFoundry，Rancher，这些都是以 k8s 为基础的商业集成软件，内含 k8s 的安装和定制方案，非原生，相当重型，面向企业级应用，这里也不展开讨论
 
-各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，自建主要是为了学习的，有时间的话必须尝试 THW。
+---
+
+各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，我自己的尝试：
+
+-   [Kubernetes 安装 - minikube](/posts/k8s-install-minikube)
+-   [Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
+-   [Kubernetes 安装 - The Hard Way](/posts/k8s-install-thw)

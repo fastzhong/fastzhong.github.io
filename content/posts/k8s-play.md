@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 实操（Mac）"
-date = 2020-09-05T05:08:47+08:00
+date = 2020-09-08T05:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]

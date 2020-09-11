@@ -48,9 +48,10 @@ draft = true
 5. 开刷
    ![leetcode submit](/images/vscode/leetcode-submit.png)
 
-### Chrome leetcode 插件
+### 力扣刷题插件
 
-(尚未公开)
+[链接](https://mp.weixin.qq.com/s/3hvFH2Ry1hoJoUe5plEElg)
+
 
 ## 刷题策略
 
@@ -122,8 +123,8 @@ draft = true
 -   [labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
 -   [五分钟学算法：用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
 -   [力扣加加](https://leetcode-solution.cn/)
--   [AlgoWiki 力扣刷题模板](https://ojeveryday.github.io/AlgoWiki/#/)
 -   [帅地](https://github.com/iamshuaidi/algo-basic)
+-   [AlgoWiki 力扣刷题模板](https://ojeveryday.github.io/AlgoWiki/#/)
 
 自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模板](/posts/interview-algo-iii/)
 
