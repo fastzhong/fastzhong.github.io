@@ -8,6 +8,7 @@ toc = false
 draft = true
 +++
 
+<!--more-->
 
 7. 安装 Lens
 

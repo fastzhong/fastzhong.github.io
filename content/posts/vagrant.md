@@ -272,7 +272,7 @@ end
 | Internal Network | <span style="color:green">✚</span> | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  |
 | Host-only        | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  |
 
-### NAT（default）
+#### NAT（default）
 
 ![virtualbox nat](/images/vm/vb-nat.png#center)
 
@@ -294,7 +294,7 @@ end
 -   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
 ```
 
-### NAT Network
+#### NAT Network
 
 ![virtualbox nat network](/images/vm/vb-nat-network.png#center)
 
@@ -315,7 +315,7 @@ end
 -   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
 ```
 
-### Bridged Adapter
+#### Bridged Adapter
 
 ![virtualbox bridge](/images/vm/vb-bridge.png#center)
 
@@ -334,7 +334,7 @@ end
 -   通常公司网络都采用 DHCP，所以有可能无法指定虚拟机的 IP，或者违反公司的网络安全策略
 ```
 
-### Internal Network
+#### Internal Network
 
 ![virtualbox internal](/images/vm/vb-internal.png#center)
 
@@ -353,7 +353,7 @@ end
 -   和外界完全隔离
 ```
 
-### Host-only
+#### Host-only
 
 ![virtualbox host](/images/vm/vb-host.png#center)
 
@@ -393,7 +393,7 @@ vagrant 定义/支持三种网络模式：
 config.vm.network "public_network"
 ```
 
-此时，vm 在宿主机所在的 LAN 中等价于一台物理机器，最好在 DHCP 里通过 mac 绑定为 VM 保留一个固定的 dhcp 地址，这样 VM 无论何时启动都会获取到相同的 IP 地址，这时VM暴露出来，开发和调试将会很顺利很简单。
+此时，vm 在宿主机所在的 LAN 中等价于一台物理机器，最好在 DHCP 里通过 mac 绑定为 VM 保留一个固定的 dhcp 地址，这样 VM 无论何时启动都会获取到相同的 IP 地址，这时 VM 暴露出来，开发和调试将会很顺利很简单。
 
 #### 内网 + Internet（混合模式）
 
