@@ -5,6 +5,7 @@ readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
 toc = false
+draft = true
 +++
 
 官方集群推荐工具 kubeadm
@@ -17,6 +18,8 @@ toc = false
 [用 kubeadm 搭建 k8s 高可用（apt 版）](https://cloudnative365.github.io/keynotes_L4_architect_1_HA_2_k8s_cluster_kubeadm_apt.html)
 
 单节点集群：一个 master 节点；两个 worker 节点
+
+![](/images/kubernetes/single-master.jpg)
 
 | 节点（角色）     | IP                     | 组件                                                              |
 | ---------------- | ---------------------- | ----------------------------------------------------------------- |
