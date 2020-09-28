@@ -1,6 +1,6 @@
 +++
 title = "算法编程面试 I：Leetcode 刷题指南"
-date = 2020-08-31T13:08:47+08:00
+date = 2001-01-01T13:08:47+08:00
 readingTime = true
 categories = ["算法"]
 tags = ["面试指南系列", "leetcode"]
@@ -51,7 +51,6 @@ draft = true
 ### 力扣刷题插件
 
 [链接](https://mp.weixin.qq.com/s/3hvFH2Ry1hoJoUe5plEElg)
-
 
 ## 刷题策略
 
@@ -135,5 +134,7 @@ draft = true
 > -   刷题之前先把数据结构和基本算法过一遍，把基础打牢
 > -   刷题没有捷径，只有策略和积累，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
 > -   只刷题还不够，一定要回顾总结，掌握套路 & 模板
+
+💡 [leetcode 按公司划分](https://github.com/MysteryVaibhav/leetcode_company_wise_questions)
 
 如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 ⏤ 听说，很多高手也在“悄悄”的刷。

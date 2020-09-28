@@ -95,22 +95,6 @@ puts "Hello, World!"
 print "Hello, World!"
 ```
 
-## 如何学习 Python
-
-![how to program](/images/python101/how-to-programming.jpg#center)
-
-Python 是学习编程的首选，没有之一（如果连 Python 都学不会，就不要搞编程了）。 但要如何学习 Python 还真不好回答，即使是大神、大师，下面是大叔的观点：
-
--   别走”正规“路径，那都是"非正常"学习方法：绝大多数教程都是”反“人类的，特别是所谓的”正规“教育，我们从来不需要上完中文教育课程才会用中文。学习语言是个自然而然的事情，而且我们的语言能力从来不是通过正规教育获得的。用学语法，背字典，做题目的方法来学语言，能做到当然相当厉害，不过世上没有几个能做到，而且学习效率、效果奇差无比，学了几个月还纠结于变量，if/else/then，循环，对象，”无趣“得很，跟着高手学，才能体会语言的”美“，递进重复性的学，才能越学越快乐。
-
--   选择问题入手，而不是语言本身：就像你选择了目标，它会带你去慢慢领略路途的各种风光，而不是迷失在森林里。语言首先是工具，是拿来用的不是学的。Python 很多教程都是拿爬虫为例，为什么呢，因为 Python 是在 Google 开始大规模应用的，爬虫要解决的问题比较多，能解决好非常不简单，这样在解决问题的过程中顺带就把语言学会学深了。
-
--   由于 Python 属于“所编即所得”，学习过程相当愉快，如果你有其它语言的编程经验，两三个小时，就能了解基本的语法，一到两天，就能上手，以致于你会对 Python 是不是个玩具语言有疑问。我学 Python 头两三年都有如此想法，到后来，才发现那些所谓的 Java，.Net 企业级大型软件好像牛逼轰轰，质量上其实越大越差，Linux 操作系统核心由一人从无到有，Swift 由一人搞定 LVVM，搭起 Swift，贡献 Clang，技术的核心和人或者说人的思想有关。快速通过基础阶段后可以选择某些方向深入，Python 的强项在于能快速编写处理复杂问题的程序，有很多具体的领域值得深入，如股票分析，机器学习，推荐系统，安全应用，自动化运维等等。
-
--   语言五花八门，就像练武功，搞艺术，同一流派还有各种门户，这有契机和因缘，登顶的路从来不只一条，不喜欢 Python，没有关系，别勉强，做别的选择 - Ruby，C++，Haskell，Elang，等。少林寺的当然说少林武功天下第一，合不合自己的胃口，去了少林才知道你是不是武当的料。
-
-和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，b 站，youtube，免费/付费，网上可以自行查找。
-
 ## Python 解释器
 
 编程语言主要有两类，`解释型` 🆚 `编译型`，来自百度百科的解释：
@@ -172,12 +156,8 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 
 下面直接给出答案：
 
--   `pyenv`: 管理多个 Python 版本
--   `poetry`: Python 虚拟环境和包管理器（看作 pipenv 的超集，而 pipenv 是 pip 的升级版）
--   `PyCharm`：编辑器/IDE
--   `Visual Studio Code`：编辑器/IDE
--   `Jupyter`
--   `容器 & Docker`：这是个降维打击，对开发大型复杂 Python 项目非常有用，有空补充进来
+-   <span style="color:orange">pyenv</span>: 管理多个 Python 版本
+-   <span style="color:orange">poetry</span>: Python 虚拟环境和包管理器合体（看作 pipenv 的超集，而 pipenv 是 pip 的升级版）
 
 还有一个独辟蹊径的方案是：[Anaconda](https://www.anaconda.com/)
 
@@ -350,23 +330,22 @@ virtualenvs.in-project = true
 virtualenvs.path = "{cache-dir}/virtualenvs"  # /Users/xxx/Library/Caches/pypoetry/virtualenvs
 ```
 
-修改 virtualenvs.in-project = false <font color="yellow">→ true</font>
+修改 virtualenvs.in-project = false <font color="orange">→ true</font>，这样运行 poetry install 或者 poetry add 时会自动检查虚拟环境，如果没有就自动创建。当然也可以用 poetry env use 命令来人工创建。
 
 -   poetry 使用
 
-    -   类似 node.js 里的 project.yml，PEP 518 引入的新标准 pyproject.toml 文件管理依赖列表和项目的各种 meta 信息，用来替代 Pipfile、requirements.txt、setup.py、setup.cfg、MANIFEST.in 等等各种配置文件。
+    -   类似 node.js 里的 project.yml，PEP 518 引入的新标准 pyproject.toml 文件管理依赖列表和项目的各种 meta 信息，用来替代 Pipfile、requirements.txt、setup.py、setup.cfg、MANIFEST.in 等等各种配置文件（其它工具使用如 pip/pip-tools，Pipenv）。
     -   依赖分为两种，普通依赖（生产环境）和开发依赖。
-    -   安装某个包，会在 pyproject.toml 文件中默认使用 upper bound 版本限定，比如 Flask^1.1。这被叫做 Caret requirements，比如某个依赖的版本限定是 ^2.9.0，当你执行 poetry update 的时候，它或许会更新到 2.14.0，但不会更新到 3.0.0；假如固定的版本是 ^0.1.11，它可能会更新到 0.1.19，但不会更新到 0.2.0。总之，在更新依赖的时候不会修改最左边非零的数字号版本，这样的默认设定可以确保你在更新依赖的时候不会更新到具有不兼容变动的版本。另外也支持更多依赖版本限定符号。
-    -   不会像 Pipenv 那样随时更新你的锁定依赖版本，锁定依赖存储在 poetry.lock 文件里（这个文件会自动生成）。所以，记得把你的 poetry.lock 文件纳入版本控制。
+    -   安装某个包，会在 <span style="color:orange">pyproject.toml</span> 文件中默认使用 upper bound 版本限定，比如 Flask^1.1。这被叫做 Caret requirements，比如某个依赖的版本限定是 ^2.9.0，当你执行 poetry update 的时候，它或许会更新到 2.14.0，但不会更新到 3.0.0；假如固定的版本是 ^0.1.11，它可能会更新到 0.1.19，但不会更新到 0.2.0。总之，在更新依赖的时候不会修改最左边非零的数字号版本，这样的默认设定可以确保你在更新依赖的时候不会更新到具有不兼容变动的版本。另外也支持更多依赖版本限定符号。
+    -   不会像 Pipenv 那样随时更新你的锁定依赖版本，锁定依赖存储在 <span style="color:orange">poetry.lock</span> 文件里（这个文件会自动生成）。所以，记得把你的 poetry.lock 文件纳入版本控制。
     -   执行 poetry 或 poetry list 命令查看所有可用的命令。
 
 _快速初始化一个新项目_：
 
 ```bash
 [I] ➜ poetry new foo
-Created package foo in foo                                                                                           /0.7s
+Created package foo in foo
 
-~/workspace
 [I] ➜ tree foo
 foo
 ├── README.rst
@@ -378,6 +357,29 @@ foo
     └── test_foo.py
 
 2 directories, 5 files
+
+~/workspace
+[I] ➜ cat foo/pyproject.toml
+───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       │ File: foo/pyproject.toml
+───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1   │ [tool.poetry]
+   2   │ name = "foo"
+   3   │ version = "0.1.0"
+   4   │ description = ""
+   5   │ authors = ["xxx <xxx@gmail.com>"]
+   6   │
+   7   │ [tool.poetry.dependencies]
+   8   │ python = "^3.8"
+   9   │
+  10   │ [tool.poetry.dev-dependencies]
+  11   │ pytest = "^5.2"
+  12   │
+  13   │ [build-system]
+  14   │ requires = ["poetry>=0.12"]
+  15   │ build-backend = "poetry.masonry.api"
+───────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────
+
 ```
 
 _激活虚拟环境_：
@@ -409,7 +411,6 @@ $ poetry add pytest --dev
 ```
 
 _追踪 & 更新包_：
-
 
 ```bash
 $ poetry show
@@ -445,11 +446,9 @@ _卸载包_：
 $ poetry remove package
 ```
 
-### 其它
+## Python 项目最佳实践模板
 
-Pycharm：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [PyCharm 功夫](/posts/pycharm/)
-
-VS Code：参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [VS Code 功夫](/posts/vscode/)
+🗓TBD
 
 ```python
 # add.py
@@ -487,13 +486,31 @@ print(result)
 -   第二个倾向于称之 script，主要是独立执行，有输出；
 -   第三个进一步把 python 文件变为像 bash script 那样可直接执行；
 
-## Python 项目最佳实践模板
+## 如何学习 Python
 
-🗓TBD
+![how to program](/images/python101/how-to-programming.jpg#center)
+
+Python 是学习编程的首选，没有之一（如果连 Python 都学不会，就不要搞编程了）。 但要如何学习 Python 还真不好回答，即使是大神，下面是大叔的观点：
+
+-   别走”正规“路径，那都是"非正常"学习方法：绝大多数教程都是”反“人类的，特别是所谓的”正规“教育，我们从来不需要上完中文教育课程才会用中文。学习语言是个自然而然的事情，而且我们的语言能力从来不是通过正规教育获得的。用学语法，背字典，做题目的方法来学语言，能做到当然相当厉害，不过世上没有几个能做到，而且学习效率、效果奇差无比，学了几个月死于”无趣“。
+
+-   选择问题入手，而不是语言本身：就像你选择了目标，它会带你去慢慢领略路途的各种风光，而不是迷失在森林里。语言首先是工具，是拿来用的不是学的。Python 很多教程都是拿爬虫为例，为什么呢，因为 Python 是在 Google 开始大规模应用的，爬虫要解决的问题比较多，能解决好非常不简单，这样在解决问题的过程中顺带就把语言学会学深了。
+
+-   由于 Python 属于“所编即所得”，学习过程相当愉快，如果你有其它语言的编程经验，两三个小时，就能了解基本的语法，一到两天，就能上手，以致于你会对 Python 是不是个玩具语言有疑问。我学 Python 头两三年都有如此想法，到后来，才发现那些所谓的 Java，.Net 企业级大型软件好像牛逼轰轰，质量上其实越大越差，Linux 操作系统核心由一人从无到有，Swift 由一人搞定 LVVM，搭起 Swift，贡献 Clang，技术的核心和人或者说人的思想有关。快速通过基础阶段后可以选择某些方向深入，Python 的强项在于能快速编写处理复杂问题的程序，有很多具体的领域值得深入，如股票分析，机器学习，推荐系统，安全应用，自动化运维等等。
+
+-   语言五花八门，就像练武功，搞艺术，同一流派还有各种门户，这有契机和因缘，登顶的路从来不只一条，不喜欢 Python，没有关系，别勉强，勇敢的做选择 - Ruby，C++，Haskell，Elang，等。少林寺的当然说少林武功天下第一，去了少林才知道自己是不是武当的料。
+
+和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，推荐：
+
+-   [Programming with Mosh](https://programmingwithmosh.com/) 👉 [Python Tutorial - Python for Beginners \[2020\]](https://www.youtube.com/watch?v=kqtD5dpn9C8)
+-   [Clever Programmer](https://www.cleverprogrammer.com/) 👉 [Python Tutorial for Beginners - Full Course in 11 Hours \[2020\]](https://www.youtube.com/watch?v=4F2m91eKmts)
+-   [freeCodeCamp](https://www.freecodecamp.org/) 👉 [Learn Python - Full Course for Beginners \[Tutorial\]](https://www.youtube.com/watch?v=rfscVS0vtbw)
+-   [freeCodeCamp](https://www.freecodecamp.org/) 👉 [Python for Everybody - Full University Python Course](https://www.youtube.com/watch?v=8DvywoWv6fI)
+-   [freeCodeCamp](https://www.freecodecamp.org/) 👉 [Intermediate Python Programming Course](https://www.youtube.com/watch?v=HGOBQPFzWKo)
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 以上都是些我早自学 Python 前想知道的。小结：
 
 -   选择 Python3
 -   为每个项目建立 virtual env

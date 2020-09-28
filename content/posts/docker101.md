@@ -279,11 +279,17 @@ CMD ["./run.sh"]
 
 Docker 的核心架构（2019）：
 
-![docker architecture](/images/docker/docker-architecture.svg#center)
+![docker architecture](/images/docker/docker-architecture.png#center)
 
--   <font color="yellow">Docker daemeon</font>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求
--   <font color="yellow">Docker client</font>：接收 docker 命令并发送至 Docker daemon
--   <font color="yellow">Docker registries</font>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)
+-   <span style="color: orange">Docker Client</span>：接收 docker 命令并发送至 Docker daemon，可以通过以下三种方式和 Docker daemon 通信：tcp://host:port, unix://path_to_socket, fd://socketfd
+
+-   <span style="color: orange">Docker Daemeon</span>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求，其中的 Engine 是 Docker 架构中的运行引擎，同时也 Docker 运行的核心模块，它扮演 Docker container 存储仓库的角色，并且通过执行 job 的方式来操纵管理这些容器。Job 可以认为是 Docker 架构中 Engine 内部最基本的工作执行单元。，Docker 可以做的每一项工作，都可以抽象为一个 job，其设计与 Unix 进程相仿，比如说：Job 有一个名称，有参数，有环境变量，有标准的输入输出，有错误处理，有返回状态等。
+
+-   <span style="color: orange">Docker Registries</span>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)（公有仓库），私有仓库则需 Docker Registry 软件单独建立如 Harbor，镜像按照[repository]:[tag]来精确定义。
+
+-   <span style="color: orange">graphitedriver</span>，<span style="color: orange">networkdriver</span>，<span style="color: orange">execdriver</span>：驱动模块，通过 driver，Docker 可以实现对不同 Docker 容器执行环境的定制。
+
+-   <span style="color: orange">libcontainer</span>：一个 Go 语言设计实现的库，设计初衷是希望该库可以不依靠任何依赖，直接访问内核中与容器相关的 API，Docker 通过调用 libcontainer，而最终操纵容器的 namespace、cgroups、apparmor、网络设备以及防火墙规则等。
 
 Docker 创建和运行容器的大致流程：
 

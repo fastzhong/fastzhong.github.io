@@ -18,7 +18,7 @@ toc = true
 | vagrant box add <box 名> <box 文件> | 如果缺省 box 文件，将从 vagrant 的网站查询并下载        |
 | vagrant box list                    | 显示本地 box 列表                                       |
 | vagrant box remove                  | 删除相应的 box                                          |
-| vagrant up                          | 关闭当前虚拟机环境                                      |
+| vagrant up                          | 启动当前虚拟机环境                                      |
 | vagrant ssh <hostname>              | 登录虚拟机，也可以指定 hostname                         |
 | vagrant ssh\-config                 | 查看 ssh 登录信息                                       |
 | vagrant status <hostname>           | 获取当前虚拟机的状态，也可以查看指定 hostname           |

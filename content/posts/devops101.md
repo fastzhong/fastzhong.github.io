@@ -44,6 +44,14 @@ DevOps/CICD 做得好挺难的，因为一方面软件运行环境多样化和�
 
 准备以此打造一个满足中小型团队的现代化流水线原型。
 
+DevOps 的东西听起来简单，但做起来不容易：
+
+![统计](/images/devops/tongji.png#center)
+
 [Production Readiness Checklist](https://www.gruntwork.io/devops-checklist/)
 
 ![Production Readiness Checklist](/images/devops/checklist.png#center)
+
+---
+
+> `Even with modern tools and cloud technologies, building production-grade infrastructure and automation pipelines are still very hard as it involves a thousand details.`

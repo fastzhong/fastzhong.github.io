@@ -17,11 +17,6 @@ href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab
   <input type="checkbox" checked="checked"> 拥有Mac<br>
   <input type="checkbox" checked="checked"> 拥有一款机械键盘<br>
   <input type="checkbox" checked="checked"> 熟悉一款纯文本编辑器<br>
-  <input type="checkbox" checked="checked"> 发布过开源软件或向开源软件做个贡献<br>
-  <input type="checkbox" checked="checked"> 读过开源软件的源码(Structs alpha, Tomcat, Lucene, Nutch, Interface21/Spring, Kafka, etc.)<br>
-  <input type="checkbox" checked="checked"> 独立博客<br>
-  <input type="checkbox" checked="checked"> ”鄙视过“屁M<br>
-  <input type="checkbox" checked="checked"> 经常出没于半夜三更<br>
   <input type="checkbox" checked="checked"> 创业或在创业公司打过工<br>
   <input type="checkbox" checked="checked"> 带领过30++人的开发团队<br>
   <input type="checkbox" checked="checked"> 有一只可爱的 🐶<br>
@@ -32,6 +27,6 @@ href="https://github.com/fastzhong" target="_blank" rel="noopener"><i class="fab
 
 相关网站：
 
--   [369sys.com](https://369sys.com)
 -   [352app.com](https://352app.com)
+-   [369sys.com](https://369sys.com)
 -   [viplaunch.sg](https://viplaunch.sg)

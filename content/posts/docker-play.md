@@ -5,10 +5,7 @@ readingTime = true
 categories = ["云 & 云原生"]
 tags = ["docker"]
 toc = true
-draft = true
 +++
-
-纸上得来终觉浅 绝知此事要躬行
 
 <!--more-->
 
@@ -29,6 +26,10 @@ Docker 桌面版的安装比较简单，下载后直接拖拽至 Applications：
 ![docker install](/images/docker/no-container.png)
 
 ## Hello World in Docker
+
+> 1. 运行 “docker run hello-world”
+> 2. Docker client 通知 Docker daemon 运行 hello-world 镜像
+> 3. Docker dameon 下载 hello-world 镜像（默认 latest 版本）
 
 先登录 Docker Hub：  
 ![docker signin](/images/docker/docker-signin.png)
@@ -67,40 +68,33 @@ For more examples and ideas, visit:
 再次打开 Docker Dashboard：  
 ![docker hello-world](/images/docker/hello-world.png)
 
-基本过程：
-
-1. 运行 “docker run hello-world”
-2. Docker client 通知 Docker daemon 运行 hello-world 镜像
-3. Docker dameon 下载 hello-world 镜像（默认 latest 版本）
-4. 从 hello-world 镜像创建容器
-5. 运行 hello-world 容器
-
-## 容器命令
+> 4. 从 hello-world 镜像创建容器
+> 5. 运行 hello-world 容器
 
 ```bash
-// docker create：创建hello-world容器，镜像已经在本地，所以不需要下载，返回容器id
+# docker create：创建hello-world容器，镜像已经在本地，所以不需要下载，返回容器id
 MySpace/k8slab/docker-play took 7s
 [I] ➜ docker create hello-world
 c1f055d2af524458ff3c05291f24a4702074e1173cc07e8eed15fd862d941cee
 
-// docker run：运行hello-world容器
+# docker run：运行hello-world容器
 MySpace/k8slab/docker-play
 [I] ➜ docker start c1f055d2af52
 c1f055d2af52
 
-// docker ps：显示容器进程，全部都已停止，注意容器的名称（NAMES栏）没有指明的话，将会被随机产生
+# docker ps：显示容器进程，全部都已停止，注意容器的名称（NAMES栏）没有指明的话，将会被随机产生
 MySpace/k8slab/docker-play
 [I] ➜ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
 c1f055d2af52        hello-world         "/hello"            24 seconds ago      Exited (0) 9 seconds ago                       hopeful_chatelet
 a80072819373        hello-world         "/hello"            9 minutes ago       Exited (0) 9 minutes ago                       angry_hypatia
 
-// docker rm：删除容器
+# docker rm：删除容器
 MySpace/k8slab/docker-play
 [I] ➜ docker rm a80072819373
 a80072819373
 
-// docker run -it：“交互状态” 下运行python容器，python镜像被下载
+# docker run -it：“交互状态” 下运行python容器，python镜像被下载
 MySpace/k8slab/docker-play
 [I] ➜ docker run -it python
 Unable to find image 'python:latest' locally
@@ -129,7 +123,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 4aa9202113e5        python              "python3"           32 seconds ago      Exited (0) 5 seconds ago                       flamboyant_moser
 c1f055d2af52        hello-world         "/hello"            3 minutes ago       Exited (0) 3 minutes ago                       hopeful_chatelet
 
-// docker run -d：以 “detach” 方式运行 redis，变成 daemon 进程
+# docker run -d：以 “detach” 方式运行 redis，变成 daemon 进程
 MySpace/k8slab/docker-play
 [I] ➜ docker run -d redis
 Unable to find image 'redis:latest' locally
@@ -144,12 +138,12 @@ Digest: sha256:933c6c01829165885ea8468d87f71127b1cb76a711311e6c63708097e92ee3d1
 Status: Downloaded newer image for redis:latest
 25704fb05729b249afa8d68a155c710d28cfbfcf02bd97c09736ed5a1086fbf4
 
-// docker exec：在容器进程里运行命令 redis-cli，ctrl+c 退出，注意 redis 容器进程依旧在
+# docker exec：在容器进程里运行命令 redis-cli，ctrl+c 退出，注意 redis 容器进程依旧在
 MySpace/k8slab/docker-play
 [I] ➜ docker exec -it 25704fb05729 redis-cli
 127.0.0.1:6379>
 
-// docker log：查看容器进程的输出 - stdout
+# docker log：查看容器进程的输出 - stdout
 MySpace/k8slab/docker-play
 [I] ➜ docker logs 25704fb05729
 1:C 06 Sep 2020 12:57:11.264 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -161,7 +155,7 @@ MySpace/k8slab/docker-play
 1:M 06 Sep 2020 12:57:11.265 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 1:M 06 Sep 2020 12:57:11.266 * Ready to accept connections
 
-// redis容器 25704fb05729 的状态依旧是 “Up”
+# redis容器 25704fb05729 的状态依旧是 “Up”
 MySpace/k8slab/docker-play
 [I] ➜ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
@@ -169,7 +163,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 4aa9202113e5        python              "python3"                14 minutes ago      Exited (0) 14 minutes ago                       flamboyant_moser
 c1f055d2af52        hello-world         "/hello"                 17 minutes ago      Exited (0) 17 minutes ago                       hopeful_chatelet
 
-// docker stop：停止容器进程
+# docker stop：停止容器进程
 MySpace/k8slab/docker-play
 [I] ➜ docker stop 25704fb05729
 25704fb05729
@@ -181,7 +175,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 4aa9202113e5        python              "python3"                14 minutes ago      Exited (0) 14 minutes ago                       flamboyant_moser
 c1f055d2af52        hello-world         "/hello"                 17 minutes ago      Exited (0) 17 minutes ago                       hopeful_chatelet
 
-// docker image ls：列出本地的镜像
+# docker image ls：列出本地的镜像
 MySpace/k8slab/docker-play
 [I] ➜ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -189,7 +183,7 @@ redis               latest              41de2cc0b30e        4 days ago          
 python              latest              a7cda474cef4        4 days ago          882MB
 hello-world         latest              bf756fb1ae65        8 months ago        13.3kB
 
-// docker system prune：清除容器等
+# docker system prune：清除容器等
 MySpace/k8slab/docker-play
 [I] ➜ docker system prune
 WARNING! This will remove:
@@ -209,12 +203,14 @@ MySpace/k8slab/docker-play
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-docker container 是一组容器相关命令，docker image 则是一组镜像相关命令，docker network 则是一组网络相关命令，等等，和 docker 部分命令有重复（历史原因，之前设计只有 docker 一个命令），docker 命令细节可以用 docker --help 或者 docker xxx --help 进一步查找
+docker 之前的命令没有分组，随着命令行越来越多，后来才开始分子命令，重要的几个：
 
-## 镜像制作
+-   docker container：管理容器生命周期，如 create，exec，kill，pause，restart，rm，run，start，stop，unpause
+-   docker image：管理镜像，如 build，push，pull，inspect，rm
+-   docker network：管理 docker 网络
+-   docker volume：管理存储
+-   docker service，docker swarm，docker stack：管理单个或多个 service
 
-TBD
+Kubernetes 早已一统容器管理的江湖，这里就略去 docker 这部分的高级功能。
 
-## Docker Compose
 
-TBD

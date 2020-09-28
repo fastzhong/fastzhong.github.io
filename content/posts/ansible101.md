@@ -41,7 +41,37 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
 
 ## YAML 标记语言
 
-Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，现在广泛采纳用来写配置 template，和 Json、XML 类似。YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
+Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，现在广泛采纳用来写配置 template，和 Json、XML 类似。Json 可以说是完全极其抛弃臃肿的 XML，YAML 则是以 Json 的基础，更为简练，同时加入更为丰富的表达，如可以有 comment，比较一下：
+
+```json
+{
+    "spec": {
+        "containers": [
+            {
+                "name": "nginx",
+                "image": "nginx:1.7.9",
+                "ports": [
+                    {
+                        "containerPort": 80
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+```yaml
+# yaml
+spec:
+    containers:
+        - name: nginx
+          image: nginx:1.7.9
+          ports:
+              - containerPort: 80
+```
+
+YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
 
 语法注意：
 

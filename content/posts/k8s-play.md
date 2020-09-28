@@ -1,6 +1,6 @@
 +++
-title = "Kubernetes 实操（Mac）"
-date = 2020-09-08T05:08:47+08:00
+title = "Kubernetes 实操（Mac）- 目录"
+date = 2020-09-12T05:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -12,20 +12,17 @@ draft = true
 
 <!--more-->
 
-前提准备：  
-<i class="fas fa-external-link-alt"></i> &nbsp;&nbsp; [Kubernetes 架构](/posts/k8s101/)  
-<i class="fas fa-external-link-alt"></i> &nbsp;&nbsp; [Kubernetes 安装 - minikube](/posts/k8s101/)
+前提准备：k8s 安装（minikube，kubeadm，或 THW 任何一种都行）  
+<i class="fas fa-external-link-alt"></i> &nbsp;&nbsp; [Kubernetes 安装 - minikube](/posts/k8s-install-minikube/)  
+<i class="fas fa-external-link-alt"></i> &nbsp;&nbsp; [Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm/)  
+<i class="fas fa-external-link-alt"></i> &nbsp;&nbsp; [Kubernetes 安装 - THW](/posts/k8s-install-thw/)
 
-## 准备 VS Code
+接下来的主要步骤：
 
-使用 VS Code 作为编辑器，安装 VS Code 完后， 安装以下扩展插件：
+1. 打包、部署并运行一个 SpringBoot 微服务
+2. 日志系统：Loki
+3. 跟踪系统：Jager
+4. 监控 & 报警：Prometheus + Grafana
+5. 混沌工程：Chaos Mesh
 
--   Kubernetes: Develop, deploy, and debug Kubernetes applications
--   Kubernetes Support: Code snippets of kubernetes for visual studio code
--   YAML: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
--   Non-breaking space highlighter: Visualizes non-breaking space and other odd characters by giving them a red background
-
-
-All associates engaged by the University have to submit a bi-annual declaration (Conflict of Interest) before the commencement of the school term.  If you have not submitted the declaration, kindly do so immediately. 
- 
-Declaration can be made online via Associate Portal> E-services > My Declaration.  For associates who have already done the submission, we thank you for your submission.
+在此基础上可以构建完整的 5C 流程。
