@@ -25,37 +25,37 @@ toc = true
 
 -   系统设计和软件如何编码一样，范围很广，基础理论杂，主要还是来源于实践经验，里面的很多设计决定和哲学相关。所以不仅仅是懂怎么做的，更多是体会为什么要这么设计所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则也非常适用：
 
-    -   <font color="yellow">DRY</font>：Don’t repeat yourself  
+    -   <font color="orange">DRY</font>：Don’t repeat yourself  
         系统设计中你碰到的问题别人都已经碰到过了，向高手学习他们的解题方法。另外，别重复别人的错误，对于设计和架构，不止学技术，懂得来龙去脉非常重要。
 
-    -   <font color="yellow">KISS</font>：Keep it simple, stupid!  
+    -   <font color="orange">KISS</font>：Keep it simple, stupid!  
         我更喜欢解读成 Keep it stupid, so it can be simple（笨方法往往是最好的方法）。
 
-    -   <font color="yellow">Avoid Creating a YAGNI</font>：You aren’t going to need it  
+    -   <font color="orange">Avoid Creating a YAGNI</font>：You aren’t going to need it  
         类似 MVP（Minimum Viable Product）- 极简原则，可造可不造 ⏤ 别造， 可用可不用 ⏤ 别用，不知道怎么做 ⏤ 先研究，这在设计 API 时非常有用，同样可以应用在系统设计上。
 
-    -   <font color="yellow">Abstraction Principle</font>
+    -   <font color="orange">Abstraction Principle</font>
 
-    -   <font color="yellow">Minimize Coupling</font>  
+    -   <font color="orange">Minimize Coupling</font>  
         解耦原则：复杂问题的解决方法来源解耦，解的过程就是深入认识问题的过程 ⏤ 如果代码的力量来源抽象，那么系统的威力就来源于解耦，这是两根大棒，但不要“滥用”（💡 抽象和解耦都是有代价的），得不断提高这方面的能力
 
-    -   <font color="yellow">Separation of Concerns</font>
+    -   <font color="orange">Separation of Concerns</font>
 
-    -   <font color="yellow">Single Responsibility Principle</font>
+    -   <font color="orange">Single Responsibility Principle</font>
 
-    -   <font color="yellow">Maximize Cohesion</font>  
+    -   <font color="orange">Maximize Cohesion</font>  
         像搭积木一样，解决问题和写代码时尽量采用组合或延续的办法而不是从头开始，复用的威力
 
-    -   <font color="yellow">Open/Closed Principle</font>  
+    -   <font color="orange">Open/Closed Principle</font>  
         完整性和灵活性是架构师和优秀程序猿时常考虑的问题，也是 NB 或菜鸟的区别所在
 
-    -   <font color="yellow">Don’t make me think</font>  
+    -   <font color="orange">Don’t make me think</font>  
         把问题讲清楚，问题已经解决一大半了
 
-    -   <font color="yellow">Principle of least astonishment</font>  
+    -   <font color="orange">Principle of least astonishment</font>  
         一切和想的一样，no news is good news
 
-    -   <font color="yellow">Avoid Premature Optimization</font>
+    -   <font color="orange">Avoid Premature Optimization</font>
 
 > `系统设计更多的是艺术而不是科学，优良的系统设计遵循编程的原则和模式`
 
@@ -112,7 +112,7 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 ✦ 入门可参考：[面向分布式系统工程师的分布式系统理论（译）](/posts/distributed101/)
 
 ✦ 通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，可对现代数据密集型系统采用的技术可以有个很好的了解：
-![数据密集型应用系统设计](/images/arch/data-intensive-system.png#center)
+![ 数据密集型应用系统设计](/images/arch/data-intensive-system.png#center)
 此书有八百多个 Reference，所以也可以进一步细读。
 
 题外：系统偏向以命令方式还是数据方式集成是个难点，很多架构师都没有想清楚，导致系统混乱不堪。
@@ -138,17 +138,17 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 我总结微服务有 4 个鲜明特点：
 
--   <font color="yellow">设计解耦（design independently）/商业拆分</font>：这里讲的架构不是技术架构，而是商业逻辑架构，这在大层面上决定了软件如何拆分，这可以应对商业需求在情况下不明确或者比较复杂下，先找出"基本解"。design independently 接下来的好处就是各部分的架构是 **持续可演化性**（continuously evolutionary），而单体架构（monolithic），在商业不明确或比较复杂情况下，特别是创业公司，设计上无法完全确定下来，导致开发迟迟无法开动或完成；同时一个部分的变化会直接引发整体做出变化，这导致两种恶性后果，一是某一部分成为瓶颈拖累整体，另一个是开发后，大家都无法持续改进。例如典型的三层架构，很多表，很多代码都是和自身负责的模块无关；一个小改动整个项目需要重新构建；某个底层库由于各个模块都依赖，到了一定时候，各个模块的视角不同，有的模块想改进这个库或采用完全新的技术，但动不了了，成为技术瓶颈或死结，所谓的 legacy，重构无望，这时候只有等更高层做决定，推倒重来。注意微服务不只是技术拆分，因为，代码技术上是可以做到随意拆分，而企业或商业运作是不能随意拆分的，拆分需要符合体制和流程，微服务的系统最终由人来运作，所以不是所有的项目都适用微服务架构。
+-   <font color="orange">设计解耦（design independently）/商业拆分</font>：这里讲的架构不是技术架构，而是商业逻辑架构，这在大层面上决定了软件如何拆分，这可以应对商业需求在情况下不明确或者比较复杂下，先找出"基本解"。design independently 接下来的好处就是各部分的架构是 **持续可演化性**（continuously evolutionary），而单体架构（monolithic），在商业不明确或比较复杂情况下，特别是创业公司，设计上无法完全确定下来，导致开发迟迟无法开动或完成；同时一个部分的变化会直接引发整体做出变化，这导致两种恶性后果，一是某一部分成为瓶颈拖累整体，另一个是开发后，大家都无法持续改进。例如典型的三层架构，很多表，很多代码都是和自身负责的模块无关；一个小改动整个项目需要重新构建；某个底层库由于各个模块都依赖，到了一定时候，各个模块的视角不同，有的模块想改进这个库或采用完全新的技术，但动不了了，成为技术瓶颈或死结，所谓的 legacy，重构无望，这时候只有等更高层做决定，推倒重来。注意微服务不只是技术拆分，因为，代码技术上是可以做到随意拆分，而企业或商业运作是不能随意拆分的，拆分需要符合体制和流程，微服务的系统最终由人来运作，所以不是所有的项目都适用微服务架构。
 
--   <font color="yellow">技术解耦（implement independently）/多元化技术</font>：要体现微服务的最大威力一定是采用 polyglot，已有的软件解决方案可以直接采纳，管他是 javascript 还是 python 开发的，管他是自己开发还是他人已经提供的，也不管是通过 lib 或者还是 api。传统的 java 或 .net 包头包尾，一种数据库，一个通用数据层，要承担不同的技术考量，结果自然局部非最优解。技术解耦带来了技术革新，例如各种 nosql，而且在不同公司，不同项目中可实现重用，实现快速开发，宏观层面上发挥了最大效益：**“Service Endpoint first instead of APIs”**。所以微服务属于八仙过海各显神通，不再是单一的三层架构，从一层（如 serverless），到 n 层，都是可能的。
+-   <font color="orange">技术解耦（implement independently）/多元化技术</font>：要体现微服务的最大威力一定是采用 polyglot，已有的软件解决方案可以直接采纳，管他是 javascript 还是 python 开发的，管他是自己开发还是他人已经提供的，也不管是通过 lib 或者还是 api。传统的 java 或 .net 包头包尾，一种数据库，一个通用数据层，要承担不同的技术考量，结果自然局部非最优解。技术解耦带来了技术革新，例如各种 nosql，而且在不同公司，不同项目中可实现重用，实现快速开发，宏观层面上发挥了最大效益：**“Service Endpoint first instead of APIs”**。所以微服务属于八仙过海各显神通，不再是单一的三层架构，从一层（如 serverless），到 n 层，都是可能的。
 
--   <font color="yellow">资源解耦（sourcing independently）/游击队战术（coway rule & full stack developers）</font>：标准解释 ✓ 一个 service 团队的规模不超过两个 pizza。小团队才能带来快速灵活技术和快速迭代，“大象能跳舞”是个伪命题。要注意的是游击队战术不是适用所有的企业和商业模式，也不是所有的企业具备游击队的人员结构，所以微服务不是每个企业都适合的。
+-   <font color="orange">资源解耦（sourcing independently）/游击队战术（coway rule & full stack developers）</font>：标准解释 ✓ 一个 service 团队的规模不超过两个 pizza。小团队才能带来快速灵活技术和快速迭代，“大象能跳舞”是个伪命题。要注意的是游击队战术不是适用所有的企业和商业模式，也不是所有的企业具备游击队的人员结构，所以微服务不是每个企业都适合的。
 
--   <font color="yellow">部署&运行解耦（deploy&run independently）/自动化运维（devops）</font>：自动化运维（DevOps）不是微服务特有的，在现有的项目或系统上完全可以实施自动化运维，也可以看到巨大效益，CI/CD 在微服务提出之前已经存在了。但自动化运维是实施微服务的必备技术，拆分和 ployglot 后对自动化运维提出了很高的要求，一堆不同质的东西可以单独部署，升级，同时又要组合在一起无间隙运行。容器技术的出现，对微服务所要求的大规模自动化运维提供了必要的技术基础。
+-   <font color="orange">部署&运行解耦（deploy&run independently）/自动化运维（devops）</font>：自动化运维（DevOps）不是微服务特有的，在现有的项目或系统上完全可以实施自动化运维，也可以看到巨大效益，CI/CD 在微服务提出之前已经存在了。但自动化运维是实施微服务的必备技术，拆分和 ployglot 后对自动化运维提出了很高的要求，一堆不同质的东西可以单独部署，升级，同时又要组合在一起无间隙运行。容器技术的出现，对微服务所要求的大规模自动化运维提供了必要的技术基础。
 
-微服务的技术核心仍就是沿用“模块化”式思路设计整个系统，达到软件的 <font color="yellow">可重用</font> 和 <font color="yellow">可扩展</font> 。纵观开发历史，微服务不是什么新东西，仍旧是代码的拆分和集成，和 component-based 或 SOA 是一致的，只是层面不同，微服务不是针对小型软件或者单个项目层面，因为大部分的软件项目还没有等到解耦，拆分，长期演化成为”硬“需求，项目已经结束或者死掉啦。但反之，不同技术实力的团队，不同的项目，不同的地点，不同的时间，重复开发和实现，微服务解耦特性就能把软件的最大价值发挥出来，否则都是在做 silo application/project。所以微服务在政府，大公司或大型项目中推广和应用才能发挥其威力。一个 legacy 变成几十个 legacy，总体质量反而指数级下降。
+微服务的技术核心仍就是沿用“模块化”式思路设计整个系统，达到软件的 <font color="orange">可重用</font> 和 <font color="orange">可扩展</font> 。纵观开发历史，微服务不是什么新东西，仍旧是代码的拆分和集成，和 component-based 或 SOA 是一致的，只是层面不同，微服务不是针对小型软件或者单个项目层面，因为大部分的软件项目还没有等到解耦，拆分，长期演化成为”硬“需求，项目已经结束或者死掉啦。但反之，不同技术实力的团队，不同的项目，不同的地点，不同的时间，重复开发和实现，微服务解耦特性就能把软件的最大价值发挥出来，否则都是在做 silo application/project。所以微服务在政府，大公司或大型项目中推广和应用才能发挥其威力。一个 legacy 变成几十个 legacy，总体质量反而指数级下降。
 
-另外，微服务还包含了开发团队的架构，运维的架构，这是和以往的纯系统架构概念非常不同的地方，也是实施微服务可能忽略的地方。<font color="yellow">微服务同时锁定了以 service 为导向的开发和运维模式（service oriented development and operation）</font>。微服务一上来大家马上关注拆分，个人认为理念要先搞清楚，自动化运维和团队组织必须先，这是必要条件，同时对现有的单体架构帮助也甚大。对于单体架构的改造我认为首先考虑的应该不是如何完全拆分，而是合并，重用。
+另外，微服务还包含了开发团队的架构，运维的架构，这是和以往的纯系统架构概念非常不同的地方，也是实施微服务可能忽略的地方。<font color="orange">微服务同时锁定了以 service 为导向的开发和运维模式（service oriented development and operation）</font>。微服务一上来大家马上关注拆分，个人认为理念要先搞清楚，自动化运维和团队组织必须先，这是必要条件，同时对现有的单体架构帮助也甚大。对于单体架构的改造我认为首先考虑的应该不是如何完全拆分，而是合并，重用。
 
 > `微服务的本质就是：分布式系统`
 
@@ -156,7 +156,7 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 如果在 IT 界呆得够久，了解分布式一路走来的历程，就会明白“微服务”从技术讲没有什么特殊的新问题，只是技术手段的不断翻新，技术点包括：
 
-![微服务技术栈](/images/microservices/microservices-stack.jpg#center)
+![ 微服务技术栈](/images/microservices/microservices-stack.jpg#center)
 
 在我看来，注册，配置，数据一致性，链路跟踪，是微服务最基础和特有的关键点。
 

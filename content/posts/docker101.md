@@ -33,6 +33,10 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 所以这些工具并没有从根本上解决软件的安装和配置的复杂性，只不过将过程自动化而已，而容器技术从底层将之改观。
 
+先来到开胃菜 - 100 秒内解释什么是 Docker ：
+
+{{< youtube Gjnup-PuquQ >}}
+
 ## 容器发展史 & 背景
 
 由于容器和很多技术相关，所以先理清一下：
@@ -41,56 +45,56 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 	<img src="/images/docker/container-history.png" alt="容器历史">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
 </div>
 
--   <font color="yellow">Chroot Jail</font>  
+-   <font color="orange">Chroot Jail</font>  
     Chroot Jail 应该是第一种容器化技术，90 年代的系统管理员一定对 chroot 不陌生，为了安全，Apache Web 服务器都进行 chroot 配置。
 
     ![chroot](/images/docker/chroot.gif#center)
 
--   <font color="yellow">Linux</font>  
+-   <font color="orange">Linux</font>  
     1991 年 Linus Torvalds 在 PC 上开发了 Linux 内核。
 
--   <font color="yellow">FreeBSD Jail</font>  
+-   <font color="orange">FreeBSD Jail</font>  
     FreeBSD OS 第一次将 chroot 引入操作系统，实现不单是文件而且是进程级别的隔离。
 
--   <font color="yellow">Linux VServer</font>  
+-   <font color="orange">Linux VServer</font>  
     比 chroot 进一步，Linux VServer 在系统级别实现虚拟化，同一个内核，却可以运行多个不同的 Linux distributions。
 
--   <font color="yellow">Solaris Container</font>  
+-   <font color="orange">Solaris Container</font>  
     实现 Solaris 版本的 Liunx VServer
 
--   <font color="yellow">OpenVZ</font>  
+-   <font color="orange">OpenVZ</font>  
     类似 Liunx VServer 和 Solaris Container，但 Linux VServer 和 OpenVZ 都需要对 kernel 打补丁才能支持容器的创建。
 
--   <font color="yellow">CGroups</font>  
+-   <font color="orange">CGroups</font>  
     Google 开发的技术，实现对进程进行资源的控制（CPU、内存、磁盘 I/O、网络，等），CGroups 进入 Linux Kernel。
 
--   <font color="yellow">LXC</font>  
-    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="yellow">L</font>inu<font color="yellow">X</font> <font color="yellow">C</font>ontainer）包装了内核原生的 CGroup ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等），实现操作系统层次上的资源的虚拟化。CloudFoundry 在 2013 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
+-   <font color="orange">LXC</font>  
+    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="orange">L</font>inu<font color="orange">X</font> <font color="orange">C</font>ontainer）包装了内核原生的 CGroup ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等），实现操作系统层次上的资源的虚拟化。CloudFoundry 在 2013 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
 
     ![lxc](/images/docker/lxc.png#center)
 
--   <font color="yellow">Apache Mesos</font>  
+-   <font color="orange">Apache Mesos</font>  
     2009 年 UC Berkeley RAD 实验室开发的分布式系统运行平台。
 
--   <font color="yellow">Docker</font>  
+-   <font color="orange">Docker</font>  
     2013 年，基于 LXC 的 Docker 出世：
 
     ![docker](/images/docker/docker.png#center)
 
--   <font color="yellow">LMCTFY</font>  
+-   <font color="orange">LMCTFY</font>  
     Google 开源了自己的容器运行技术栈 LMCTFY（Let me contain that for you），同时和 Docker 合作，把其相关的概念和抽象移植到 libcontainer。
 
--   <font color="yellow">rkt</font>  
+-   <font color="orange">rkt</font>  
     CoreOS 发布和 Docker 类似的 Rocket。
 
--   <font color="yellow">Kubernetes</font>  
+-   <font color="orange">Kubernetes</font>  
     Google 开源生产级别的容器集群运维管理平台（脱胎于 Google 内部 Borg 系统）。
 
 Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的技术，但又有两个共同点，都是为了：  
 ✅ 资源隔离  
 ✅ 资源控制
 
-<font color="yellow">VM（Virtual Machine）</font>一般指在实体机器上创建的虚拟机器，VM 又分为 “System Virtual Machine” 和 “Process Virtual Machine”。对于 Guest OS 而言，VM 就像是一台真实的机器，而 Hypervisor 是关键技术，用来处理 VM 的 CPU，内存，网络等，Hypervisor 又分为 Type1 & 2：
+<font color="orange">VM（Virtual Machine）</font>一般指在实体机器上创建的虚拟机器，VM 又分为 “System Virtual Machine” 和 “Process Virtual Machine”。对于 Guest OS 而言，VM 就像是一台真实的机器，而 Hypervisor 是关键技术，用来处理 VM 的 CPU，内存，网络等，Hypervisor 又分为 Type1 & 2：
 
 ![hyper-v](/images/docker/hyper-v.png#center)
 
@@ -261,7 +265,7 @@ Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅�
 
 关于 AUFS，OvelayFS，具体的文件结构，参考底部的链接。
 
-容器镜像技术是 Docker 公司的重大贡献，Docker 镜像的制作是通过 Docker File 完成：
+容器镜像技术是 Docker 公司的重大贡献，Docker 镜像的制作是通过 DockerFile 完成：
 
 ```bash
 FROM ubuntu:14.04

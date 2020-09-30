@@ -1,0 +1,22 @@
+
+<style>
+.video-player {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+    }
+
+.video-player iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    }
+</style>
+
+<div class="video-player">
+  <iframe type="text/html" src="https://www.youtube.com/embed/{{ index .Params 0 }}?autoplay=0" allowfullscreen framespacing="0" frameborder="no" border="0">
+  </iframe>
+</div>

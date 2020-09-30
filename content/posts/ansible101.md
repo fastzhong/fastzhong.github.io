@@ -80,13 +80,13 @@ YAML 语法可以表达散列表、标量等数据结构。结构通过空格来
 -   缩进时不允许使用 Tab 键，只允许使用空格
 -   缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
 -   基本数据类型：支持整型、浮点型、时间戳类型、布尔、字符串等基本数据类型
--   序列（数组）里配置项通过 <font color="yellow">-</font> 来代表
--   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="yellow">[]</font> 来表示
--   Map 里键值用 <font color="yellow">:</font> 来分隔
--   注释用 <font color="yellow">#</font>，没有多行注释
--   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="yellow">\\</font> 表达，如换行 \n
+-   序列（数组）里配置项通过 <font color="orange">-</font> 来代表
+-   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="orange">[]</font> 来表示
+-   Map 里键值用 <font color="orange">:</font> 来分隔
+-   注释用 <font color="orange">#</font>，没有多行注释
+-   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="orange">\\</font> 表达，如换行 \n
 -   通过 \$xxx 来引用变量
--   动态值用 <font color="yellow">{{}}</font> （placeholder）来表示
+-   动态值用 <font color="orange">{{}}</font> （placeholder）来表示
 
 下面是个例子（Ansible 的 playbook）：
 
@@ -137,7 +137,7 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
-<font color="yellow">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
+<font color="orange">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
 编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
 
@@ -186,11 +186,11 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 ✦ [task & module](https://ansible-tran.readthedocs.io/en/latest/docs/modules.html)
 
-<font color="yellow">task</font> 就是最小执行单位（类似编程里的方法），<font color="yellow">module/模块</font> 就是提供一组相关的 task（类似编程里的类或者包）。Ansible 提供的 task 接近 2000 个（linux shell 的命令基本都用 Python 实现了），核心模块超过 400 个，运维需要的东西基本都包括了，具体见 [Ansbile Module 文档](http://docs.ansible.com/ansible/modules_by_category.html)。自己也可以通过 Python 扩充任务模块（[编写自己的模块](http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html)），这个也不在本文讨论范畴，现有的模块已经基本够用了。
+<font color="orange">task</font> 就是最小执行单位（类似编程里的方法），<font color="orange">module/模块</font> 就是提供一组相关的 task（类似编程里的类或者包）。Ansible 提供的 task 接近 2000 个（linux shell 的命令基本都用 Python 实现了），核心模块超过 400 个，运维需要的东西基本都包括了，具体见 [Ansbile Module 文档](http://docs.ansible.com/ansible/modules_by_category.html)。自己也可以通过 Python 扩充任务模块（[编写自己的模块](http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html)），这个也不在本文讨论范畴，现有的模块已经基本够用了。
 
 ✦ [playbook](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks.html)
 
-<font color="yellow">playbook</font> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
+<font color="orange">playbook</font> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
 
 编写 playbook 是使用 Ansible 的主要工作，playbook 里定义了一系列的 tasks，每一段包含下面的一些核心元素：
 
@@ -244,7 +244,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 ✦ [role](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
 
-<font color="yellow">role</font> 由几部分组成：
+<font color="orange">role</font> 由几部分组成：
 
 -   defaults: 定义该 role 用到默认变量，该 role 运行时自动加入这里定义的变量，但其定义的变量优先级别最低，若已在其他地方定义，可被覆盖
 -   vars: 该 role 运行时自动加入这里定义的变量，通常可把需要传入的变量定义在这里，vars 和 defaults 很类似，通常把必须用到变量的放在 defaults 里，可变的放在 vars 里，例如 tasks 里针对不同的 OS，版本用到的变量，需要到的时候可以引入，include_vars 可自动在此目录中寻找变量文件（相对路径）
@@ -376,13 +376,13 @@ roles/
 
 运维的复杂性和灵活性由变量 vars 来体现的，Ansible 的 var 可在多处定义，并有 [优先顺序](http://docs.ansible.com/ansible/playbooks_variables.html)。不过不用那么复杂，关键是搞清楚变量应用的范围：
 
--   <font color="yellow">全局变量</font> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
+-   <font color="orange">全局变量</font> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
 
--   <font color="yellow">环境变量</font> env_xxx/group_vars/all/xxx：项目开发中通常有多个环境 xxx：local, dev, stag, uat, prod，有些变量随环境改变而改变，但相当于该环境下的全局变量，除了 inventory/机器变量外，其它的变量例子如 host file, resource_dir，repo_url，等等。
+-   <font color="orange">环境变量</font> env_xxx/group_vars/all/xxx：项目开发中通常有多个环境 xxx：local, dev, stag, uat, prod，有些变量随环境改变而改变，但相当于该环境下的全局变量，除了 inventory/机器变量外，其它的变量例子如 host file, resource_dir，repo_url，等等。
 
-💬 Ansible 没有提出全局变量和环境变量的使用和区别，只有 <font color="yellow">机器变量</font>（group_vars & host_vars），Ansible Best Practices 里把它们当做了全局变量，但结构上是支持的，也就是每个环境下都可以分别有 inventory 和 group_vars & host_vars，而 all 就是默认的机器组，所以 env_xxx/group_vars/all/下所有的变量文件都会被识别为机器全局变量，而且 all 的机器变量引用时不需要前缀指定，特定的 group_vars & host_vars 变量 xxx 必须指明是哪个 group {{ groups["dbs"].xxx }} 或 host{{ hostvars["db1"].xxx }}，“groups”和“hostvars”是 Ansible 内置变量。为了支持全局变量（各个环境都使用），可以通过 file link 的方法让每个 env_xxx/group_vars/all/main 指向同一个文件，上图中的 env_dev/group_vars/all/main 指向 vars/main。
+💬 Ansible 没有提出全局变量和环境变量的使用和区别，只有 <font color="orange">机器变量</font>（group_vars & host_vars），Ansible Best Practices 里把它们当做了全局变量，但结构上是支持的，也就是每个环境下都可以分别有 inventory 和 group_vars & host_vars，而 all 就是默认的机器组，所以 env_xxx/group_vars/all/下所有的变量文件都会被识别为机器全局变量，而且 all 的机器变量引用时不需要前缀指定，特定的 group_vars & host_vars 变量 xxx 必须指明是哪个 group {{ groups["dbs"].xxx }} 或 host{{ hostvars["db1"].xxx }}，“groups”和“hostvars”是 Ansible 内置变量。为了支持全局变量（各个环境都使用），可以通过 file link 的方法让每个 env_xxx/group_vars/all/main 指向同一个文件，上图中的 env_dev/group_vars/all/main 指向 vars/main。
 
--   <font color="yellow">支持多 OS，多基础设施的变量</font>：这种变量主要是支撑产品级的软件项目，通常是动态的，通过任务执行来设定，例如上面的 dbservers.yml 里引用的 vars.yml:
+-   <font color="orange">支持多 OS，多基础设施的变量</font>：这种变量主要是支撑产品级的软件项目，通常是动态的，通过任务执行来设定，例如上面的 dbservers.yml 里引用的 vars.yml:
 
 ```yaml
 - name: define os family (suse)
@@ -408,7 +408,7 @@ roles/
 
 变量 os_family 在以后的 tasks 和 roles 中都可能用到。
 
--   <font color="yellow">role 变量</font>：这些变量应用范畴只是该 role，是传统意义上各软件 component 的参数变量，在 role 里定义和使用，但 playbook 调用时可以进行指定或覆盖默认值，例如一个 Tomcat 的 war 部署时传入 war_name：
+-   <font color="orange">role 变量</font>：这些变量应用范畴只是该 role，是传统意义上各软件 component 的参数变量，在 role 里定义和使用，但 playbook 调用时可以进行指定或覆盖默认值，例如一个 Tomcat 的 war 部署时传入 war_name：
 
 ```yaml
 - name: deploy my app1
@@ -420,7 +420,7 @@ roles/
       - { role: tomcat-deploy, war_name: "app1", tags: ["app1"] }
 ```
 
--   <font color="yellow">Ansible 流程和控制变量</font>：上面的变量主要用来支持配置的，还有一些属于控制或者辅助控制 Ansible 流程的，这些通过 Ansible 提供的功能来指定，例如从命令行输入：
+-   <font color="orange">Ansible 流程和控制变量</font>：上面的变量主要用来支持配置的，还有一些属于控制或者辅助控制 Ansible 流程的，这些通过 Ansible 提供的功能来指定，例如从命令行输入：
 
 ```yaml
 - name: create app user name & password
@@ -445,7 +445,7 @@ roles/
 
 流程控制变量的例子见下面。
 
--   <font color="yellow">Ansible 默认/内置变量</font>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
+-   <font color="orange">Ansible 默认/内置变量</font>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
 
 ### 重点：标签 tags
 
@@ -785,7 +785,7 @@ $ export ANSIBLE_STRATEGY=debug
         verbosity：3
 ```
 
-注意 verbosity，Ansible 命令行用 <font color="yellow">-v，-vv, -vvv, -vvvv</font> 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
+注意 verbosity，Ansible 命令行用 <font color="orange">-v，-vv, -vvv, -vvvv</font> 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
 
 ### 其它运行技巧
 

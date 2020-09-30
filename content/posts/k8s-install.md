@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装方式简介"
-date = 2020-09-06T02:08:47+08:00
+date = 2020-09-12T02:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]

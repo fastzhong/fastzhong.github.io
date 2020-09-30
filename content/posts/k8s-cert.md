@@ -1,6 +1,6 @@
 +++
 title = "CKA & CKAD 2020"
-date = 2020-09-13T06:08:47+08:00
+date = 2020-09-22T06:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -8,7 +8,7 @@ toc = true
 draft = true
 +++
 
-拖了几年，打算在 2020 年末拿下
+拖了好几年，打算在 2020 年末拿下
 
 <!--more-->
 
@@ -40,12 +40,20 @@ draft = true
 在 Exam Sponsor 项下选择“Linux Foundation”，在 Exam 项下选择“CKA”；
 
 ✦ <span style="color: orange">考试形式</span>  
-软件版本 Kubernetes `v1.19`；
-考试时长 2 小时，总共 15-20 道题/任务，总分 100 分，66 分通过，可接受一次重考；  
+软件版本 Kubernetes `v1.19`；  
+CKA 考试时长 2 小时，总共 17 道题/任务，66% 通过，可接受一次重考；  
+CKAD 考试时长 2 小时，总共 道题/任务，66 通过，可接受一次重考；  
 考试是可以使用透明的杯子喝水的（建议放在旁边）；  
 只使用 Chrome 浏览器，不会使用到其他软件，通过浏览器调用摄像头，麦克风，桌面分享等功能；  
-Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；  
-考官交流：与对方聊天全程于右下角窗口打字，对方全程监控，并下达各种指令，对方会要求我们分享摄像头，分享桌面，没事不要乱动，全英文交流，其他时间可以全程输入命令操作即可；
+Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
+
+考官：  
+ 考试可以提前 15 分钟进入考试界面；  
+ 与对方聊天全程于右下角窗口打字，全程监控，并下达各种指令，全程英文消息交流；  
+ 考官会要求我们分享摄像头，分享桌面，没事不要乱动；  
+ 考官会让你出示能确认你身份 ID 的证件；  
+ 考官会让你用摄像头环视房间一周，确认你的考试环境；  
+ 考官会让你用摄像头看你的整个桌面和桌子底下；
 
 ## tips
 
@@ -65,9 +73,11 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 -   考试环境是浏览器里的 terminal，其实就是命令行，所以必须熟悉 Linux/Ubuntu
 -   命令行的编辑器是 vi/vim，所以也必须熟悉基本编辑操作
 -   必须非常熟悉 kubectl
--   熟悉 Kubernetes 文档（concept + task），考试时经常查找，考试时官方允许参考的网页只有三个：https://kubernetes.io/docs/ 及其子域、https://github.com/kubernetes/ 及其子域或 https://kubernetes.io/blog/，我的 bookmark
+-   熟悉 Kubernetes 文档（concept + task），考试时经常查找，考试时官方允许参考的网页只有三个：https://kubernetes.io/docs/ 及其子域、https://github.com/kubernetes/ 及其子域或 https://kubernetes.io/blog/
 -   练习 + 练习 + 练习
 ```
+
+我的 bookmark
 
 💡 命令行 tips：  
 💡 Vim Tips：  
@@ -75,7 +85,7 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 
 ## 课程
 
-付费和免费的课程都很多，[linuxfoundation](https://training.linuxfoundation.org/) 课程去年圣诞有大促销并且免掉了考试费。
+付费和免费的课程都很多，各大厂都推出了 🆓 课程（Google，Microsoft，IBM，DigitalOcean，等等） [linuxfoundation](https://training.linuxfoundation.org/) 课程去年圣诞有大促销并且免掉了考试费。
 
 我看过的一些课程：
 
@@ -84,7 +94,9 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 ㊫ [华为 CloudNativeLives 之深入剖析 Kubernetes 系列课](https://bbs.huaweicloud.com/forum/thread-17415-1-1.html)  
 ㊫ [华为 CloudNativeLives 之 Kubernetes 管理员实训系列课](https://bbs.huaweicloud.com/forum/thread-17416-1-1.html)
 
-特别推荐张磊大牛的两个课程 👉 一个是极客时间，另一个是阿里云，可能不是准备考试或学习具体 Kubernetes 技术最好的教程，但很好兼顾了技术的宽带和深度，对了解 Kubernetes/云原生的来龙去脉大有裨益。
+特别推荐 👉 阿里张磊大牛的两个课程一个是极客时间，另一个是阿里云公开课，可能不是准备考试或学习具体 Kubernetes 技术最好的教程，但很好兼顾了技术的宽带和深度，对了解 Kubernetes/云原生的来龙去脉大有裨益。
+
+📌 [The Kubernetes Learning Resources List - Google Sheets](https://goo.gl/Rywkpd)
 
 ## 练习
 
@@ -94,8 +106,8 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 
 playground，cloud，或本地安装（参考 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Kubernetes 安装方式简介](/posts/k8s-install/)）
 
-### K8s 实操
+### Kubernetes 练习
 
-### CKA 真题
+### CKA 练习
 
-### CKAD 真题
+### CKAD 练习

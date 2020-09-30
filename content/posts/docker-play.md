@@ -205,12 +205,10 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 docker 之前的命令没有分组，随着命令行越来越多，后来才开始分子命令，重要的几个：
 
--   docker container：管理容器生命周期，如 create，exec，kill，pause，restart，rm，run，start，stop，unpause
--   docker image：管理镜像，如 build，push，pull，inspect，rm
--   docker network：管理 docker 网络
--   docker volume：管理存储
--   docker service，docker swarm，docker stack：管理单个或多个 service
+-   <span style="color: orange">docker container</span>：管理容器生命周期，如 create，exec，kill，pause，restart，rm，run，start，stop，unpause
+-   <span style="color: orange">docker image</span>：管理镜像，如 build，push，pull，inspect，rm
+-   <span style="color: orange">docker network</span>：管理 docker 网络
+-   <span style="color: orange">docker volume</span>：管理存储
+-   <span style="color: orange">docker service，docker swarm，docker stack</span>：管理单个或多个 service
 
 Kubernetes 早已一统容器管理的江湖，这里就略去 docker 这部分的高级功能。
-
-

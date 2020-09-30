@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装 - THW"
-date = 2020-09-10T04:08:47+08:00
+date = 2020-09-15T04:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -1227,13 +1227,10 @@ Locality (L) or City
 
 ## 附：Service Account Token
 
-K8s 可以为 pod 指定一个 service account，并为其产生<span style="color:orange">Service Account Token</span>（JWT），然后 pod 中的应用程序就可以用此 token 和 apiserver 通信。service account 证书被用于生成和验证 service account token。该证书的用法和前面介绍的其他证书不同，因为实际上使用的是其公钥和私钥，而并不需要对证书进行验证。下图展示了 kubernetes 中生成、使用和验证 service account token 的过程：
+K8s 可以为 pod 指定一个 service account，并为其产生<span style="color:orange">Service Account Token</span>（JWT），然后 pod 中的应用程序就可以用此 token 和 apiserver 通信（获取集群的信息，甚至对集群进行改动）。ServiceAccount 主要包含了三个内容：namespace、Token 和 CA。namespace 指定了 pod 所在的 namespace，CA 用于验证 apiserver 的证书，token 用作身份验证。它们都通过 mount 的方式保存在 pod 的文件系统中。
+
+service account 证书被用于生成和验证 service account token。该证书的用法和前面介绍的其他证书不同，因为实际上使用的是其公钥和私钥，而并不需要对证书进行验证。下图展示了 kubernetes 中生成、使用和验证 service account token 的过程：
 
 ![service account token](/images/k8s/service-account-token.png#center)
 
 由此可见，Kubernetes 提供了两种客户端认证的方法，控制面组件采用的是客户端数字证书;而在集群中部署的应用则采用了 service account token 的方式。为什么 Kubernetes 不为 service account 也生成一个证书，并采用该证书进行身份认证呢？
-
-sudo -s  
-passwd
-
-sshd
