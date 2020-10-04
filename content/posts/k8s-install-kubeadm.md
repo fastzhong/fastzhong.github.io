@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装 - kubeadm"
-date = 2020-09-14T03:08:47+08:00
+date = 2020-09-13T03:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -13,10 +13,6 @@ toc = true
 
 💡 参考：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
 [官方文档](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/)
-
-kubeadm 创建 Kubernetes 的过程如下：
-
-![kubeadm](/images/k8s/kubeadm-install.jpeg#center)
 
 单节点集群架构如下图：  
 ![k8s cluster](/images/k8s/single-master.jpg#center)
@@ -35,10 +31,6 @@ kubeadm 创建 Kubernetes 的过程如下：
 | k8s\-node1       | 192\.168\.100\.11      | kubelet，kube\-proxy，docker                                          |
 | k8s\-node2       | 192\.168\.100\.12      | kubelet，kube\-proxy，docker                                          |
 | ~~k8s\-lb~~      | ~~192\.168\.100\.100~~ | ~~Nginx, etcd~~                                                       |
-
-kubeadm 可以扩展单节点集群至多节点，这里不尝试，其扩展流程如下：
-
-![kubeadm join](/images/k8s/kubeadm-join.jpeg#center)
 
 ## VM
 
@@ -139,12 +131,14 @@ end
 初始化脚本：
 
 ```bash
-#/bin/sh
+#!/bin/bash
 
 export DEBIAN_FRONTEND=noninteractive
 
-#禁用防火墙启动
+# 禁用防火墙启动
 sudo ufw disable
+sudo iptables -F -t nat && iptables -X -t nat
+sudo iptables -P FORWARD ACCEPT
 
 # 关闭 selinux
 # sudo setenforce 0  # 临时
@@ -164,22 +158,18 @@ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-iptables=1
 net.bridge.bridge-nf-call-ip6tables=1
 vm.swappiness=0
-vm.overcommit_memory=1
-vm.panic_on_oom=0
-fs.inotify.max_user_instances=8192
-fs.inotify.max_user_watches=1048576
-fs.file-max=52706963
-fs.nr_open=52706963
 EOF
 sudo sysctl --system
 ls /proc/sys/net/bridge
 
 # 时间同步
-sudo apt-get -y install ntpdate
-sudo ntpdate time.windows.com
+sudo apt-get -y install chrony
+sudo timedatectl set-timezone Asia/Singapore
+sudo systemctl enable chrony
+sudo systemctl start chrony
 
 ### Install packages to allow apt to use a repository over HTTPS
-sudo apt-get update -y && sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg-agent
+sudo apt-get update -y && sudo apt-get install -y apt-transport-https ca-certificates curl wget software-properties-common gnupg-agent
 
 # 安装 docker
 # Add Docker's official GPG key:
@@ -197,7 +187,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
 
-# 安装 kubeadm, kubectl, kubelet
+# 安装 kubeadm, kubectl, kubelet (k8s二进制时则采用手动安装方式)
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
@@ -208,11 +198,64 @@ sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 sudo systemctl enable kubelet
 
+sudo mkdir -p /opt/k8s/{bin,cfg,ssl,logs}
+
+cat <<EOF | sudo tee /opt/k8s/env.sh
+#!/bin/bash
+
+export ETCDCTL_API=3
+
+# kube-apiserver 的反向代理(nginx)地址端口
+export KUBE_APISERVER="https://192.168.100.11:6443"
+
+# TLS Bootstrapping 使用的 Token，可以使用 head -c 16 /dev/urandom | od -An -t x | tr -d ' ' 生成
+export BOOTSTRAP_TOKEN="c47ffb939f5ca36231d9e3121a252940"
+
+# Pod 网段
+CLUSTER_CIDR="10.10.0.0/16"
+
+# SERVICE网段
+SERVICE_CIDR="10.0.0.0/24"
+
+# Kubernetes 服务 IP (一般是 SERVICE_CIDR 中第一个IP)
+CLUSTER_SERVICE_IP="10.0.0.1"
+
+# 集群 DNS 服务 IP (从 SERVICE_CIDR 中预分配)
+export CLUSTER_SERVICE_DNS_IP="10.0.0.2"
+
+# 集群 DNS 域名（末尾不带点号）
+export CLUSTER_DNS_DOMAIN="cluster.local"
+
+EOF
+sudo chmod a+x /opt/k8s/env.sh
+
 # alias
-alias k="kubectl"
+cat >> ~/.bashrc << EOF
+alias k=kubectl
+alias kc="kubectl config set-context"
+alias kd="kubectl describe"
+alias kx=”kubectl explain”
+# grep: print file name, print line number, recursive, ignore-case
+alias g="grep -Hnri --color"
+
+source <(kubectl completion bash)
+complete -F __start_kubectl k
+export dy="--dry-run=client -o yaml"
+EOF
+
+cat > ~/.vimrc << EOF
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set nu
+EOF
 ```
 
 ## 创建集群
+
+kubeadm 创建 Kubernetes 的过程如下：
+
+![kubeadm](/images/k8s/kubeadm-install.jpeg#center)
 
 -   检查所有节点的网络配置，例如 k8s-worker1：
 
@@ -251,12 +294,12 @@ default via 10.0.2.2 dev enp0s3
 192.168.100.0/24 dev enp0s8  proto kernel  scope link  src 192.168.100.21
 ```
 
--   初始化集群 <span style="color:orange">k8s\-master1：192\.168\.100\.1 </span>
+-   初始化集群 <span style="color:orange">k8s\-master1：192\.168\.100\.11 </span>
 
 ```bash
 kubeadm init \
-    --pod-network-cidr=10.100.0.0/16 \
-    --service-cidr=10.1.0.0/16 \
+    --pod-network-cidr=10.10.0.0/16 \
+    --service-cidr=10.0.0.0/24 \
     --apiserver-advertise-address=192.168.100.11
 ```
 
@@ -321,14 +364,7 @@ NAME          STATUS     ROLES    AGE   VERSION
 k8s-master1   NotReady   master   53m   v1.19.1
 ```
 
-从上面可以看到控制节点的组件  
-<span style="color:orange">
-etcd  
-kube-apiserver  
-kube-controller-manager  
-kube-scheduler  
-</span>
-均采用静态模式部署，其部署清单在主机的/etc/kubernetes/manifests 目录里，kubelet 会自动加载此目录并启动 pod。
+从上面可以看到控制面板的组件：etcd，kube-apiserver，kube-controller-manager，kube-scheduler 以及插件 CoreDNS，均采用静态容器模式部署，其部署清单在主机的/etc/kubernetes/manifests 目录里，kubelet 会自动加载此目录并启动 pod。
 
 k8s-master1 的状态还是 NotReady，因为网络还没有部署，K8s 有 flannel，calico 等网络选项，选择部署 calico 网络。
 
@@ -381,7 +417,11 @@ k8s-worker1   Ready    <none>   82s   v1.19.1
 k8s-worker2   Ready    <none>   46s   v1.19.1
 ```
 
-💡 上面创建的是单节点集群，master 和 worker 都可以通过 kubeadm 加入，这里略过。
+💡 kubeadm 可以扩展单节点集群至多节点，其扩展流程如下：
+
+![kubeadm join](/images/k8s/kubeadm-join.jpeg#center)
+
+这里不尝试。
 
 ## 应用测试
 

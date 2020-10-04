@@ -174,7 +174,7 @@ draft = true
             "value": "#557c9b"
         },
         {
-            "name": "JavaScript Yellow",
+            "name": "JavaScript orange",
             "value": "#f9e64f"
         },
         {
@@ -279,8 +279,6 @@ draft = true
     -   配置 Settings Sync：
     -   上传本地配置：
     -   下载配置：
-
-
 
 ## 常用快捷键
 

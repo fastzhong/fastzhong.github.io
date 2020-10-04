@@ -42,21 +42,21 @@ draft = false
 
 ### 套路
 
-1. _<font color="yellow">个人介绍 </font>_：需要准备 1 分钟和 5 分钟两个版本，包括学习经历、工作经历、项目经历、个人优势、一句话总结，一定要自己背得滚瓜烂熟，张口就来
-2. _<font color="yellow">抽象概念</font>_：当面试官问你是如何理解多线程的时候，你要知道从定义、来源、实现、问题、优化、应用方面系统性地回答
-3. _<font color="yellow">项目强化</font>_：至少与知识点的比例是五五开，所以必须针对简历中的两个以上的项目，形成包括【架构和实现细节】，【正常流程和异常流程的处理】，【难点+坑+复盘优化】三位一体的组合拳
-4. _<font color="yellow">STAR 模型</font>_：针对综合能力方面的考察，如与人交流、沟通，处理客户的能力；文档，报告，进度控制，处理项目的能力；提高团队协作，竞争力的能力；等等，可参考 免费课程 [Grokking the Behavioral Interview](https://www.educative.io/courses/grokking-the-behavioral-interview)
+1. _<font color="orange">个人介绍 </font>_：需要准备 1 分钟和 5 分钟两个版本，包括学习经历、工作经历、项目经历、个人优势、一句话总结，一定要自己背得滚瓜烂熟，张口就来
+2. _<font color="orange">抽象概念</font>_：当面试官问你是如何理解多线程的时候，你要知道从定义、来源、实现、问题、优化、应用方面系统性地回答
+3. _<font color="orange">项目强化</font>_：至少与知识点的比例是五五开，所以必须针对简历中的两个以上的项目，形成包括【架构和实现细节】，【正常流程和异常流程的处理】，【难点+坑+复盘优化】三位一体的组合拳
+4. _<font color="orange">STAR 模型</font>_：针对综合能力方面的考察，如与人交流、沟通，处理客户的能力；文档，报告，进度控制，处理项目的能力；提高团队协作，竞争力的能力；等等，可参考 免费课程 [Grokking the Behavioral Interview](https://www.educative.io/courses/grokking-the-behavioral-interview)
 
-    - <font color="yellow">S</font>（Situation）事情是在什么情况下发生；
-    - <font color="yellow">T</font>（Task）你是如何明确你的任务的；
-    - <font color="yellow">A</font>（Action）针对这样的情况分析，你采用了什么行动方式；
-    - <font color="yellow">R</font>（Result）结果怎样，在这样的情况下你学习到了什么。
+    - <font color="orange">S</font>（Situation）事情是在什么情况下发生；
+    - <font color="orange">T</font>（Task）你是如何明确你的任务的；
+    - <font color="orange">A</font>（Action）针对这样的情况分析，你采用了什么行动方式；
+    - <font color="orange">R</font>（Result）结果怎样，在这样的情况下你学习到了什么。
 
 ![STAR](/images/interview/star.png#center)
 
-5. _<font color="yellow">压力练习</font>_：面试的时候难免紧张，可能会严重影响发挥，通过平时多找机会参与交流分享，或找人做压力面试来改善
-6. _<font color="yellow">表达练习</font>_：表达能力非常影响在面试中的表现，能否简练地将答案告诉面试官，可以通过给自己讲解的方式刻意练习
-7. _<font color="yellow">重点针对</font>_：面试官会针对简历提问，所以请针对简历上写的所有技术点以及个人优势进行重点准备
+5. _<font color="orange">压力练习</font>_：面试的时候难免紧张，可能会严重影响发挥，通过平时多找机会参与交流分享，或找人做压力面试来改善
+6. _<font color="orange">表达练习</font>_：表达能力非常影响在面试中的表现，能否简练地将答案告诉面试官，可以通过给自己讲解的方式刻意练习
+7. _<font color="orange">重点针对</font>_：面试官会针对简历提问，所以请针对简历上写的所有技术点以及个人优势进行重点准备
 
 ### “普遍性难题”
 

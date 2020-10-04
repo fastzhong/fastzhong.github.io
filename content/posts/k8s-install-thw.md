@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装 - THW"
-date = 2020-09-15T04:08:47+08:00
+date = 2020-09-14T04:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
@@ -374,7 +374,7 @@ root@k8s-lb:~# systemctl start nginx
 root@k8s-lb:~# systemctl enable nginx
 ```
 
-## 部署 k8s-master1
+## 部署控制节点 k8s-master1
 
 1. 下载二进制文件并安装
 2. 用自签 CA 生成 apiserver 证书
@@ -489,34 +489,6 @@ EOF
 # 生成apiserver证书和私钥
 root@k8s-master1:~/TLS/k8s# cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes kubernetes-csr.json | cfssljson -bare kubernetes
 root@k8s-master1:~/TLS/k8s# cp *.pem /opt/kubernetes/ssl/
-
-### 使用自签CA签发 admin 证书
-root@k8s-master1:~/TLS/k8s# cat > k8s-admin-csr.json <<EOF
-{
-  "CN": "k8s-admin",
-  "hosts": [],
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "CN",
-      "ST": "Singapore",
-      "L": "Singapore",
-      "O": "system:masters",
-      "OU": "kubernetes"
-    }
-  ]
-}
-EOF
-
-# 生成admin证书和私钥
-root@k8s-master1:~/TLS/k8s# cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes k8s-admin-csr.json | cfssljson -bare k8s-admin
-
-root@k8s-master1:~/TLS/k8s# ls
-root@k8s-master1:~/TLS/k8s# cp *.pem /opt/kubernetes/ssl/
-
 ```
 
 ### 部署 kube-apiserver
@@ -688,7 +660,7 @@ etcd-2               Healthy   {"health":"true"}
 etcd-1               Healthy   {"health":"true"}
 ```
 
-## 部署 k8s-worker1
+## 部署负载节点 k8s-worker1
 
 1. 部署 kubelet
 2. 部署 kube-proxy
@@ -1002,7 +974,7 @@ subjects:
 EOF
 ```
 
-## 增加 k8s-worker2
+## 增加负载节点 k8s-worker2
 
 ```bash
 # 拷贝文件
@@ -1038,7 +1010,7 @@ root@k8s-master1:/opt/kubernetes# kubectl certificate approve node-csr-eGmfYzEEA
 certificatesigningrequest.certificates.k8s.io/node-csr-eGmfYzEEAen63kmzgW8EfOQ9APWaQEzWlsJ8QY-czmo approved
 ```
 
-## 增加 k8s-master2
+## 增加控制节点 k8s-master2
 
 ```bash
 # 拷贝文件
@@ -1065,6 +1037,29 @@ root@k8s-master2:/opt/kubernetes# systemctl enable kube-scheduler
 
 root@k8s-master2:/opt/kubernetes# kubectl get cs,node
 ```
+
+## 部署 CoreDNS
+
+CoreDNS 用于集群内部 Service 名称解析。总体流程是使用 deploy.sh 生成 yaml 并保存成 coredns.yaml 文件并执行 kubectl apply 进行部署：
+
+```
+root@k8s-master1:/opt/coredns# git clone https://github.com/coredns/deployment.git
+root@k8s-master1:/opt/coredns# apt install -y jq
+root@k8s-master1:/opt/coredns# deployment/kubernetes/deploy.sh -i 10.0.0.2 > coredns.yaml
+root@k8s-master1:/opt/coredns#  kubectl apply -f coredns.yaml
+root@k8s-master1:/opt/coredns# kubectl get pods -n kube-system
+NAME                                      READY   STATUS              RESTARTS   AGE
+calico-kube-controllers-c9784d67d-npjhl   0/1     ContainerCreating   0          6d21h
+calico-node-r6s2j                         0/1     CrashLoopBackOff    362        4d1h
+calico-node-xz27d                         0/1     CrashLoopBackOff    613        6d21h
+coredns-7bf4bd64bd-4dsvk                  0/1     ContainerCreating   0          62s
+```
+
+## 部署 Metrics
+
+## 部署 Dashboard
+
+默认 Dashboard 只能集群内部访问，修改 Service 为 NodePort 类型，暴露到外部：
 
 ## 安装和配置 kubectl
 
@@ -1129,9 +1124,17 @@ root@k8s-master1:/opt/kubernetes# kubectl config use-context k8s-thw --kubeconfi
 root@k8s-master1:/opt/kubernetes# mv kubectl.kubeconfig /opt/kubernetes/cfg
 ```
 
-## 部署 Dashboard
+拷贝到 k8s-lb 上使用：
 
-默认 Dashboard 只能集群内部访问，修改 Service 为 NodePort 类型，暴露到外部：
+```bash
+root@k8s-lb:/opt# scp -r root@k8s-master1:/opt/kubernetes /opt
+root@k8s-lb:/opt/kubernetes# cp kubernetes/server/bin/kubectl /usr/bin
+root@k8s-lb:/opt/kubernetes# cp cfg/kubectl.kubeconfig ~/.kube/
+root@k8s-lb:/opt/kubernetes# mv ~/.kube/kubectl.kubeconfig ~/.kube/config
+root@k8s-lb:/opt/kubernetes# kubectl cluster-info
+Kubernetes master is running at https://192.168.100.100:6443
+CoreDNS is running at https://192.168.100.100:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
 
 ## e2e test
 
@@ -1206,16 +1209,25 @@ K8s 各个组件提供的接口中包含了集群的内部信息。如果这些�
 9.  管理员用户通过 kubectl 访问 kube-apiserver 使用的证书，该证书是客户端证书。
 ```
 
-Common name (CN)
-Company (or Organization, O)
-Company division (or Organization Unit, OU)
-Country (C)
-State (S)
-Locality (L) or City
-
 ## 附：TLS Bootstrapping
 
-<span style="color:orange">TLS Bootstrapping 机制</span>：我们需要为每一个负载节点上的 Kubelet 分别生成一个证书，由于负载节点可能很多，手动生成 Kubelet 证书的过程会比较繁琐，apiserver 启用 TLS Bootstrapping 认证机制来自动颁发证书，TLS Bootstraping 工作流程：
+证书包含了以下字段：
+Common name (CN)  
+Company (or Organization, O)  
+Company division (or Organization Unit, OU)  
+Country (C)  
+State (S)  
+Locality (L) or City
+
+X.509 客户端认证：
+
+-   当服务器要确认客户端时，客户端必须提供客户端证书
+-   客户端证书必须是有效 CA 签发的
+-   Kubernetes 的 User 来自证书的 CN 字段，Groups 来自证书的 Organization 字段
+    -   对于 kube-proxy 其 CN/User 必须是系统默认的"system:kube-proxy"
+    -   对于 kubelet 其 Organiation/Group 必须是"system:nodes"而且 CN/User 必须是"system:node:{hostname}"，每个 kubelet 都要有自己的 identity 是因为 Kubernetes 可以使用 Node Authorizer 和 Node Restriction Admission 插件，用来定义和限制 kubelet 读写其所在负载节点上的资源
+
+<span style="color:orange">TLS Bootstrapping 机制</span>既然需要为每一个负载节点上的 Kubelet 分别生成一个证书（system:node:{hostname}），由于负载节点可能很多，手动生成 Kubelet 证书的过程会比较繁琐，apiserver 启用 TLS Bootstrapping 认证机制来自动颁发证书，TLS Bootstraping 工作流程：
 
 ![TLS bootstraping](/images/k8s/bootstrap-token.png#center)
 
@@ -1234,3 +1246,11 @@ service account 证书被用于生成和验证 service account token。该证书
 ![service account token](/images/k8s/service-account-token.png#center)
 
 由此可见，Kubernetes 提供了两种客户端认证的方法，控制面组件采用的是客户端数字证书;而在集群中部署的应用则采用了 service account token 的方式。为什么 Kubernetes 不为 service account 也生成一个证书，并采用该证书进行身份认证呢？
+
+## 附：Ingress
+
+如果要暴露运行在 Kubernetes 里的应用，也需要
+
+-   TLS configured for service exposed using Ingress
+-   define a secret with a certificate and private key, and reference it in ingress resource
+-   kube-lego: auto cert generation using Let's Encrypt

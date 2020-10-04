@@ -33,7 +33,7 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 所以这些工具并没有从根本上解决软件的安装和配置的复杂性，只不过将过程自动化而已，而容器技术从底层将之改观。
 
-先来到开胃菜 - 100 秒内解释什么是 Docker ：
+先来道开胃菜 - 100 秒内解释什么是 Docker ：
 
 {{< youtube Gjnup-PuquQ >}}
 
@@ -151,15 +151,14 @@ Linux 有几个特殊的进程，pid 为 0 的 idle 进程被成为上帝进程�
 
 Linux 内核通过『namespace』提供了资源隔离的功能，各种 namespace 对应于各种资源的抽象数据结构（共 7 种），内核通过这种结构来管理资源，有了 namespace，相当于代码的 package name，每个 process 有自己的资源视角，资源的使用可以单独定制。Linux 目前支持七种资源的 namespace：
 
-| 名称    | 定义            | 隔离的资源                                                                                         |
-| ------- | --------------- | -------------------------------------------------------------------------------------------------- |
-| IPC     | CLONE_NEWIPC    | System V IPC, POSIX message queues                                                                 |
-| Network | CLONE_NEWNET    | network device interfaces, IPv4 and IPv6 protocol stacks, IP routing tables, firewall rules, etc\. |
-| Mount   | CLONE_NEWNS     | Mount points                                                                                       |
-| PID     | CLONE_NEWPID    | Process IDs                                                                                        |
-| User    | CLONE_NEWUSER   | User and group IDs                                                                                 |
-| UTS     | CLONE_NEWUTS    | Hostname and NIS domain name                                                                       |
-| CGroup  | CLONE_NEWCGROUP | Cgroup root directory                                                                              |
+| 名称    | 定义          | 隔离的资源                                                                                                                                                                                                   |
+| ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PID     | CLONE_NEWPID  | Process IDs<br/>隔离不同的用户进程，不同的 namespace 可以有相同的 pid，允许嵌套，方便实现 docker in docker                                                                                                   |
+| IPC     | CLONE_NEWIPC  | System V IPC, POSIX message queues<br/>保证容器间进程交互，信号量、消息队列、以及共享内存的隔离                                                                                                              |
+| Network | CLONE_NEWNET  | network device interfaces, IPv4 and IPv6 protocol stacks, IP routing tables, firewall rules, etc\.<br/>实现网络隔离，每个 net namespace 拥有独立的 network device、IP address、routing table、/proc/net 目录 |
+| UTS     | CLONE_NEWUTS  | Hostname and NIS domain name<br/>允许每个容器用于独立的 hostname 和 domain，使其在网络上可以视为独立节点                                                                                                     |
+| Mount   | CLONE_NEWNS   | Mount points<br/>隔离不同 namespace 的进程所能看到的目录结构，每个 namespace 的容器在/proc/mounts 的信息只包含该 namespace 的 mount point                                                                    |
+| User    | CLONE_NEWUSER | User and group IDs<br/>允许每个容器可以有不同的 user 和 group id                                                                                                                                             |
 
 当我们运行一个 Docker 容器时，就是通过 clone 系统调用产生一个带 namespace 的进程（参数 flags 表示使用哪些 CLONE\_\* 标志位）：
 

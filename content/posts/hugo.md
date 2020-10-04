@@ -12,11 +12,11 @@ toc = false
 
 Wordpress，Blogger，Tumblr，Medium，...，统统不入法眼，程序员喜欢自己干。基本的顺序：
 
--   <font color="yellow">Gandi/Namecheap/GoDaddy</font>：首先得注册和购买私人域名
--   <font color="yellow">GitHub</font>：博客服务器和存放的地方，通过 git 来同步本地和 Github 的内容
--   <font color="yellow">Visual Studio Code/Typora</font>：博客内容编辑器，或者任何其它 markdown 编辑器
--   <font color="yellow">Hugo</font>：博客生成器
--   <font color="yellow">netlify</font>: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务
+-   <font color="orange">Gandi/Namecheap/GoDaddy</font>：首先得注册和购买私人域名
+-   <font color="orange">GitHub</font>：博客服务器和存放的地方，通过 git 来同步本地和 Github 的内容
+-   <font color="orange">Visual Studio Code/Typora</font>：博客内容编辑器，或者任何其它 markdown 编辑器
+-   <font color="orange">Hugo</font>：博客生成器
+-   <font color="orange">netlify</font>: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务
 
 静态博客生成器多如牛毛，各种比较在此：
 

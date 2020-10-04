@@ -64,7 +64,7 @@ draft = true
 
 ## 刷题方法
 
-极客算法训练营五遍刷题法： <font color="yellow">五毒神掌</font>
+极客算法训练营五遍刷题法： <font color="orange">五毒神掌</font>
 
 ```md
 -   刷题第一遍

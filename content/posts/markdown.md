@@ -247,10 +247,10 @@ void main(){
 也不支持字体颜色：
 
 ```html
-<font color="yellow">黄色字体</font>
+<font color="orange">黄色字体</font>
 ```
 
-🤗 <font color="yellow">黄色字体</font>
+🤗 <font color="orange">黄色字体</font>
 
 ### 画图
 
