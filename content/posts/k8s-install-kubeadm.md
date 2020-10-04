@@ -230,11 +230,11 @@ EOF
 sudo chmod a+x /opt/k8s/env.sh
 
 # alias
-cat >> ~/.bashrc << EOF
+cat <<EOF | sudo tee -a /home/vagrant/.bashrc
 alias k=kubectl
 alias kc="kubectl config set-context"
 alias kd="kubectl describe"
-alias kx=”kubectl explain”
+alias kx="kubectl explain"
 # grep: print file name, print line number, recursive, ignore-case
 alias g="grep -Hnri --color"
 
@@ -243,7 +243,7 @@ complete -F __start_kubectl k
 export dy="--dry-run=client -o yaml"
 EOF
 
-cat > ~/.vimrc << EOF
+cat > /home/vagrant/.vimrc << EOF
 set tabstop=2
 set expandtab
 set shiftwidth=2
