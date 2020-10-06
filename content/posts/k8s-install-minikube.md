@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 安装 - minikube"
-date = 2020-09-12T03:08:47+08:00
+date = 2020-10-03T03:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
