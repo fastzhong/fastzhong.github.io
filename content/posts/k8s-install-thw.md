@@ -1249,7 +1249,7 @@ service account 证书被用于生成和验证 service account token。该证书
 
 ## 附：Ingress
 
-如果要暴露运行在 Kubernetes 里的应用，也需要
+如果要暴露运行在 Kubernetes 里的应用，有三种实现方式：
 
 -   TLS configured for service exposed using Ingress
 -   define a secret with a certificate and private key, and reference it in ingress resource

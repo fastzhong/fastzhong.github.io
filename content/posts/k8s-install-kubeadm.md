@@ -403,6 +403,7 @@ k8s-master1 状态变为 Ready
 -   加入工作节点：在所有工作节点上，依照上述提示运行
 
 ```bash
+kubeadm token list
 kubeadm join 192.168.100.11:6443 --token virvoc.4q5v8rqvuriyr3wy \
     --discovery-token-ca-cert-hash sha256:ce0f619cf549bef741ebcb8c94f0d7853ea2c11ef7573542920e18ad56f7bf40
 ```
@@ -444,6 +445,197 @@ service/nginx        NodePort    10.1.132.185   <none>        80:30869/TCP   2m4
 ```
 
 可以看到其位于 k8s-worker2 节点，该节点 IP 为 192.168.100.12，端口暴露为 30869，可以使用浏览器访问该地址。
+
+## 部署 Dashboard
+
+1. 安装
+
+```bash
+vagrant@k8s-master1:~$ k apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.4/aio/deploy/recommended.yaml
+namespace/kubernetes-dashboard created
+serviceaccount/kubernetes-dashboard created
+service/kubernetes-dashboard created
+secret/kubernetes-dashboard-certs created
+secret/kubernetes-dashboard-csrf created
+secret/kubernetes-dashboard-key-holder created
+configmap/kubernetes-dashboard-settings created
+role.rbac.authorization.k8s.io/kubernetes-dashboard created
+clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard created
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+deployment.apps/kubernetes-dashboard created
+service/dashboard-metrics-scraper created
+deployment.apps/dashboard-metrics-scraper created
+
+# dashboard endpoint
+vagrant@k8s-master1:~$ k -n kubernetes-dashboard describe service kubernetes-dashboard
+Name:              kubernetes-dashboard
+Namespace:         kubernetes-dashboard
+Labels:            k8s-app=kubernetes-dashboard
+Annotations:       <none>
+Selector:          k8s-app=kubernetes-dashboard
+Type:              ClusterIP
+IP:                10.0.0.124
+Port:              <unset>  443/TCP
+TargetPort:        8443/TCP
+Endpoints:         10.10.126.1:8443
+Session Affinity:  None
+Events:            <none>
+```
+
+2. NodePort
+
+Endpoints: 10.10.126.1:8443，为了访问，可以采用 port forwarding 或者改为 NodePort，port forwarding 使用下面的命令（访问 k8s-worker2:8000）：
+
+```bash
+vagrant@k8s-master1:/opt/k8s$ k -n kubernetes-dashboard get pods -o wide
+NAME                                         READY   STATUS    RESTARTS   AGE   IP             NODE          NOMINATED NODE   READINESS GATES
+dashboard-metrics-scraper-7b59f7d4df-6f7cl   1/1     Running   0          31m   10.10.194.65   k8s-worker1   <none>           <none>
+kubernetes-dashboard-665f4c5ff-s7729         1/1     Running   0          31m   10.10.126.1    k8s-worker2   <none>           <none>
+
+vagrant@k8s-master1:/opt/k8s$ k -n kubernetes-dashboard port-forwarding kubernetes-dashboard-665f4c5ff-s7729 8000:8443
+```
+
+改为 NodePort 则编辑 kubernetes-dashboard（访问 k8s-worker2:30303）：
+
+```bash
+vagrant@k8s-master1:/opt/k8s$ k -n kubernetes-dashboard edit svc kubernetes-dashboard
+```
+
+改行 30，加入行 23：
+
+```yaml
+19 spec:
+20   clusterIP: 10.0.0.124
+21   externalTrafficPolicy: Cluster
+22   ports:
+23   - nodePort: 30303
+24     port: 443
+25     protocol: TCP
+26     targetPort: 8443
+27   selector:
+28     k8s-app: kubernetes-dashboard
+29   sessionAffinity: None
+30   type: NodePort
+31 status:
+32   loadBalancer: {}
+```
+
+```bash
+vagrant@k8s-master1:~$ k -n kubernetes-dashboard get pod,svc -o wide
+NAME                                             READY   STATUS    RESTARTS   AGE   IP             NODE          NOMINATED NODE   READINESS GATES
+pod/dashboard-metrics-scraper-7b59f7d4df-6f7cl   1/1     Running   0          50m   10.10.194.65   k8s-worker1   <none>           <none>
+pod/kubernetes-dashboard-665f4c5ff-s7729         1/1     Running   0          50m   10.10.126.1    k8s-worker2   <none>           <none>
+
+NAME                                TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE   SELECTOR
+service/dashboard-metrics-scraper   ClusterIP   10.0.0.67    <none>        8000/TCP        50m   k8s-app=dashboard-metrics-scraper
+service/kubernetes-dashboard        NodePort    10.0.0.124   <none>        443:30303/TCP   50m   k8s-app=kubernetes-dashboard
+```
+
+3. cert
+
+Dashboard 的 cert 在 Chrome 出错：
+
+```txt
+NET::ERR_CERT_INVALID
+Subject:
+Issuer:
+Expires on: 6 Oct 2021
+Current date: 6 Oct 2020
+PEM encoded chain:
+......
+```
+
+有几种处理方法，一是手动生成 dashboard 的证书，重新部署；二是修改 Chrome 启动命令（/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors --ignore-urlfetcher-cert-requests &> /dev/null）；三是看到上述页面时，直接敲入神奇的 `thisisunsafe`
+
+4. dashboard-admin
+
+默认的 service account - kubernetes-dashboard 权限不够，需要创建一个：
+
+```bash
+vagrant@k8s-master1:~$ k -n kubernetes-dashboard get sa
+NAME              SECRETS   AGE
+dashboard-admin   1         17m
+default           1         85m
+vagrant@k8s-master1:~$ k create sa dashboard-admin -n kube-system
+serviceaccount/dashboard-admin created
+vagrant@k8s-master1:~$ k create clusterrolebinding dashboard-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-admin
+clusterrolebinding.rbac.authorization.k8s.io/dashboard-admin created
+vagrant@k8s-master1:~$ k describe sa dashboard-admin -n kube-system
+Name:                dashboard-admin
+Namespace:           kube-system
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  <none>
+Mountable secrets:   dashboard-admin-token-5m5lb
+Tokens:              dashboard-admin-token-5m5lb
+Events:              <none>
+# token
+vagrant@k8s-master1:~$ k describe secret dashboard-admin-token-5m5lb -n kube-system
+```
+
+拿到 token 后可以用其登录 Dashboard 页面。
+
+![kubernetes dashboard](/images/k8s/k8s-dashboard1.png#center)  
+![kubernetes dashboard](/images/k8s/k8s-dashboard2.png#center)
+
+## 部署 Metrics-Server
+
+官网已经提示 metric-server 安装要满足 2 个条件：
+
+-   在 master 节点要能访问 metrics server pod ip（kubeadm 部署默认已经满足该条件，二进制部署需注意要在 master 节点也部署 node 组件）
+-   apiserver 启用聚合层支持（kubeadm 默认已经启用，二进制部署需自己启用）
+
+先安装 Helm：
+
+```bash
+vagrant@k8s-lb:/opt/k8s$ curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+vagrant@k8s-lb:/opt/k8s$ sudo apt-get install apt-transport-https --yes
+vagrant@k8s-lb:/opt/k8s$ echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+vagrant@k8s-lb:/opt/k8s$ sudo apt-get update
+vagrant@k8s-lb:/opt/k8s$ sudo apt-get install helm
+vagrant@k8s-lb:/opt/k8s$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+```
+
+Helm 的架构：
+
+![helm](/images/k8s/helm.png#center)
+
+通过 Helm 部署 Metrics-Server：
+
+```bash
+vagrant@k8s-lb:/opt/k8s$ k create namespace kubernetes-metrics
+vagrant@k8s-lb:/opt/k8s$ helm install metrics-server stable/metrics-server --version 2.11.2 --namespace kubernetes-metrics
+NAME: metrics-server
+LAST DEPLOYED: Tue Oct  6 22:07:22 2020
+NAMESPACE: kubernetes-metrics
+STATUS: deployed
+REVISION: 1
+NOTES:
+The metric server has been deployed.
+
+In a few minutes you should be able to list metrics using the following
+command:
+
+  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+vagrant@k8s-lb:/opt/k8s$ k get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+{"kind":"NodeMetricsList","apiVersion":"metrics.k8s.io/v1beta1","metadata":{"selfLink":"/apis/metrics.k8s.io/v1beta1/nodes"},"items":[]}
+
+# 增加两个参数：跳过证书验证和使用node ip通信
+# --kubelet-insecure-tls
+# --kubelet-preferred-address-types=InternalIP
+vagrant@k8s-lb:/opt/k8s$ k -n kubernetes-metrics edit deployment metrics-server
+
+# --enable-aggregator-routing=true
+vagrant@k8s-master1:/etc/kubernetes/manifests$ sudo vi kube-apiserver.yaml
+vagrant@k8s-master1:/etc/kubernetes/manifests$ sudo kubectl apply -f kube-apiserver.yaml
+
+vagrant@k8s-lb:/opt/k8s$ k -n kubernetes-metrics top node
+NAME          CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
+k8s-master1   128m         6%     1228Mi          64%
+k8s-worker1   52m          2%     683Mi           35%
+k8s-worker2   65m          3%     785Mi           41%
+```
 
 ## 删除集群
 

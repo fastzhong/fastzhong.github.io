@@ -14,7 +14,7 @@ toc = false
 有几种方式来练手：
 
 -   直接使用别人提供的 sandbox，如 [katacoda](https://katacoda.com/)、[play with k8s](https://training.play-with-kubernetes.com/kubernetes-workshop/) 等
--   直接使用云端 k8s 服务，三大云提供商 - AWS，GPE，Azure 都有
+-   直接使用云端 Kubernetes hosted infrastructure 或者 Kubernetes as a Service （KaaS），三大云提供商 - AWS，GPE，Azure 都有提供
 -   云端自建，只用虚机等基础设施
 -   本地自建
 
@@ -28,6 +28,7 @@ toc = false
 
 -   [Minikube](https://k8smeetup.github.io/docs/getting-started-guides/minikube/)
 
+    -   适合本地开发人员
     -   目前最成熟的方案，支持不同平台和版本（Win，Mac，Linux），但需要 vm
     -   配置自由度高
     -   安装和卸载没有其它方案容易
