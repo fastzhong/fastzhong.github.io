@@ -232,9 +232,9 @@ sudo chmod a+x /opt/k8s/env.sh
 # alias
 cat <<EOF | sudo tee -a /home/vagrant/.bashrc
 alias k=kubectl
-alias kc="kubectl config set-context"
 alias kd="kubectl describe"
 alias kx="kubectl explain"
+alias ku="kubectl config use-context"
 # grep: print file name, print line number, recursive, ignore-case
 alias g="grep -Hnri --color"
 
