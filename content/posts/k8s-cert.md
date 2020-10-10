@@ -81,6 +81,7 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 
 💡 命令行 tips：
 
+
 ```bash
 sudo -i
 
