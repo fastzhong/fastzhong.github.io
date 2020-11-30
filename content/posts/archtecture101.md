@@ -67,41 +67,77 @@ toc = true
 
 > `系统设计是一个架构师对项目综合理解的体现`
 
+## 系统架构图
+
+软件系统的架构通常需要包含如下四类核心要素：
+元素（elements）：将系统拆分为一组元素 - 模块、组件、结构体、子系统；
+关系（relationships）：不同元素之间的关系 - 交互、依赖 、继承、组合、聚合；
+属性（properties）：每个元素具备的属性 - 名称、职责、接口、实现限制等；
+原理（principles）：为什么这么设计 - 拆分依据、设计原则、决策原因等。
+
+SOLID 原则是一套比较经典且流行的架构原则（主要还是名字起得好）：
+
+单一职责：与 Unix 哲学所倡导的“Do one thing and do it well”不谋而合；
+开闭原则：用新增（扩展）来取代修改（破坏现有封装），这与函数式的 immutable 思想也有异曲同工之妙；
+里式替换：父类能够出现的地方子类一定能够出现，这样它们之间才算是具备继承的“Is-A”关系；
+接口隔离：不要让一个类依赖另一个类中用不到的接口，简单说就是最小化组件之间的接口依赖和耦合；
+依赖反转：依赖抽象类与接口，而不是具体实现；让低层次模块依赖高层次模块的稳定抽象，实现解耦。
+此外，我们做架构设计时也会尽量遵循如下一些原则（与上述 SOLID 原则在本质上也是相通的）：
+
+正交性：架构同一层次拆分出的各组件之间，应该尽量保持正交，即彼此职责独立，边界清晰，没有重叠；
+高内聚：同一组件内部应该是高度内聚的（cohesive），像是一个不可分割的整体（否则就应该拆开）；
+低耦合：不同组件之间应该尽量减少耦合（coupling），既降低相互的变化影响，也能增强组件可复用性；
+隔离变化：许多架构原则与模式的本质都是在隔离变化 —— 将预期可能变化的部分都隔离到一块，减少发生变化时受影响（需要修改代码、重新测试或产生故障隐患）的其他稳定部分。
+
+所以，“4+1”到底是指什么？让我们来 Wiki 一下：“4+1”是一种视图模型（view model），可以通过多种共存的视图描述软件密集型系统的架构。这些视图基于不同项目干系人（利益相关者）的视点（viewpoint），例如：终端用户、开发者、系统工程师和项目经理。“4+1”由 4 种基础视图和一些经过挑选的用例或场景（即额外的“+1”视图）组成，各自的具体含义如下：
+
+逻辑视图（Logical view）：描述系统为终端用户提供的功能，一般会通过UML中的类图和状态图来表示；
+
+过程视图（Process view）：描述系统的动态行为，包括流程和交互等，一般会通过 UML 中的时序图、活动图和通讯图来表示；
+
+开发视图（Development view）：从程序员的视角来阐述系统，也被称为“实现视图”，一般会通过 UML 中的组件图和包图来表示；
+
+物理视图（Physical view）：从系统工程师的角度来描述系统，包括系统组件的物理拓扑、各组件之间的物理连接，也被称为“部署视图”，一般会通过 UML 中的部署图来表示；
+
+场景（Scenarios）：通过一小组用例或场景来描述架构，包括系统中各种对象和进程之间的交互时序，也被称为“用例视图”。这些场景会被用于识别架构元素（architectural elements）以及阐述和验证整个架构设计，也可以被作为架构原型的测试起
+
+
+
 ## 主要的架构模式
 
-✦ _客户端-服务器模式_  
+✦ `客户端-服务器模式`  
 最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
 ![client-server](/images/arch/client-server.jpeg#center)
 
-✦ _分层模式_  
+✦ `分层模式`  
 著名代表就是三层架构，随着 Internet 的发展，后端变得复杂，主从模式分离出表示层（也称 UI 层）、应用层（也称服务层）、数据层；后来还发展出 middleware，中台等共享基础架构层。  
 ![3-tier](/images/arch/3-tier.jpg#center)
 
-✦ _模型-视图-控制器模式（MVC）_  
+✦ `模型-视图-控制器模式（MVC）`  
 解决应用层复杂的数据处理变化及数据展示关系，MVC 有多个变型，从后端 MVC 到前端 MVC。  
 ![mvc](/images/arch/mvc.jpg#center)
 
-✦ _主从模式_  
+✦ `_主从模式_`  
 这是由于高可用要求，这种模式由两部分组成，multicster 和 slaves，slave 通常作为 master 的备胎。  
 ![master-slave](/images/arch/master-slave.png#center)
 
-✦ _Broker 模式_  
+✦ `Broker 模式`  
 这是数量级的关系，单台机器已无法胜任，要求在多台机器上同时执行，需要一个中间代理人，由代理模组件管理如何发布处理到具体的处理节点上。  
 ![broker](/images/arch/broker.png#center)
 
-✦ _事件总线模式_  
+✦ `事件总线模式`  
 系统越来越复杂和庞大，需要解耦，有了总线，各组件可以拆分出来。有了事件总线，也就意为着采用事件监听和事件响应模式。  
 ![EBS](/images/arch/EBS.jpg#center)
 
-✦ _Workflow/Pipeline 流水线模式_  
+✦ `Workflow/Pipeline 流水线模式`  
 这个常见于系统集成和数据处理，Spring Integration、Mule 都是采用该模式。  
 ![pipeline](/images/arch/pipeline.png#center)
 
-✦ 单体 🆚 微服务模式  
+✦ `单体 🆚 微服务模式`  
 近来流行的微服务模式
 ![microservice](/images/arch/microservice.png#center)
 
-✦ Sidecar (边车)模式  
+✦ `Sidecar (边车)模式`  
 Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
 ![sidecar](/images/arch/sidecar.png#center)
 
@@ -167,6 +203,8 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 🗓 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
 
 ## 微服务/分布式的坑
+
+The three basic patterns are (1) decompensation – when the system exhausts its capacity to adapt as disturbances / challenges cascade; (2) working at cross-purposes – when roles exhibit behaviour that is locally adaptive but globally mal-adaptive; and (3) getting stuck in outdated behaviours – when the system over-relies on past successes
 
 代码和工程的质量仍是灵魂，拆分和集成并不意味着可重用，可扩展就是必然。
 

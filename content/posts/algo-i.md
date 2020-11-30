@@ -14,17 +14,13 @@ draft = true
 
 ## 课程
 
-针对算法面试的数据结构与算法课，大部分我看过，都是高高手，强烈推荐：
+针对算法面试的数据结构与算法课，大部分我看过，都是高高手，强烈推荐 👍🏻 ：
 
--   👍🏻 慕课网 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，我非常推荐
+-   慕课网《[liuyubobobo 的算法课 ](https://www.imooc.com/t/108955)》 ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，非常推荐
 
--   👍🏻 极客时间贾超 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
+-   极客时间《贾超[70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343)》 ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
 
--   极客时间王争的专栏 [数据结构与算法之美 ](https://time.geekbang.org/column/intro/126)：数据结构与算法学习经验
-
--   拉勾公瑾 [重学数据结构与算法](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=185#/content)：数据结构与算法学习经验
-
--   拉勾苏勇 [300 分钟搞定数据结构与算法 ](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=3#/content) ：刷题面试重点提示，数据结构与算法重点复习
+-   极客时间《王争的专栏 [数据结构与算法之美 ](https://time.geekbang.org/column/intro/126)》：数据结构与算法学习经验
 
 -   [九章算法](https://www.jiuzhang.com/)：很多不同的课 ⏤ 基础班、强化班、高频、动态规划，老师都是大 🐮，学生也有很多博士
 
@@ -64,7 +60,7 @@ draft = true
 
 ## 刷题方法
 
-极客算法训练营五遍刷题法： <font color="orange">五毒神掌</font>
+极客算法训练营 <font color="orange">五遍刷题法/五毒神掌</font>：
 
 ```md
 -   刷题第一遍
@@ -83,31 +79,27 @@ draft = true
     -   面试前一周恢复性训练
 ```
 
-## 视频讲解
 
-有不少，以下是比较出名的：
-
-💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 刷题牛人  
-💁🏻‍♂️ [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解  
-💁🏻‍♂️ [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版  
-💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版  
-💁🏻‍♂️ [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 刷题牛人，刷了 3000 道
 
 ## 刷题路径
 
-🔥 重点来了，已经有现成的，适合小白上手，可以照着刷（都是按着同一类刷）：
+🔥🔥🔥 重点来了，已经有现成的，适合小白上手，可以照着刷（都是按着同一类刷）
+
+中文：
 
 -   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
--   [100 天摆脱算法小白](https://github.com/geekxh/Algorithm-100-Days)
+-   [小浩 100 天摆脱算法小白](https://github.com/geekxh/Algorithm-100-Days)
 -   [小浩算法：目前共完成 140+ 道高频面试算法题目，全部采用漫画图解的方式](https://www.geekxh.com/)
 -   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
 -   [算法珠玑：一个最精简的题库，150 道左右](https://github.com/soulmachine/algorithm-essentials)
 -   [作者先后面试了近三十多家互联网公司（Java）](https://github.com/yuanguangxin/LeetCode)
 
-下面是英文的：
+英文：
 
--   [KAeducation：JavaScript & LeetCode The Interview Bootcamp](https://kaeducation.com/)
--   [KAeducation：Python & LeetCode The Interview Bootcamp](https://kaeducation.com/)
+-   [Master the Coding Interview: Big Tech (FAANG) Interviews](https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep)
+-   [KAeducation：JavaScript & LeetCode The Interview Bootcamp](https://kaeducation.com/)（50 道）
+-   [KAeducation：Python & LeetCode The Interview Bootcamp](https://kaeducation.com/)（50 道）
+-   [AlgoExpert](https://www.algoexpert.io/product)（100 道）
 -   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
 
 以上是基础，然后可以逐步扩大题量，例如：
@@ -120,12 +112,21 @@ draft = true
 ## 解题套路 & 模板
 
 -   [labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
--   [五分钟学算法：用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
+
 -   [力扣加加](https://leetcode-solution.cn/)
 -   [帅地](https://github.com/iamshuaidi/algo-basic)
 -   [AlgoWiki 力扣刷题模板](https://ojeveryday.github.io/AlgoWiki/#/)
 
-自己总结了一篇 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：解题套路 & 模板](/posts/interview-algo-iii/)
+## 题解
+
+有不少，以下是比较出名的：
+
+💁🏻‍♂️ [花花酱](https://www.youtube.com/user/xxfflower/playlists) 超级刷题牛人  
+💁🏻‍♂️ [绵羊教授 CodeSheep](https://www.youtube.com/playlist?list=PLgkTb_uYkq5f6mI52NZv68QTb6Ui7omWX) 中英文讲解  
+💁🏻‍♂️ [cspiration](https://www.youtube.com/channel/UCTWuRL33U8xBPqk3LehXjFw/playlists) 超级刷题牛人，刷了 3000 道  
+💁🏻‍♂️ [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4) Java 版  
+💁🏻‍♂️ [人人都能看得懂的 Leetcode 刷题教程合集](https://www.bilibili.com/video/BV1wA411b7qZ) Javascript 版
+💁🏻‍♂️ [五分钟学算法：用动画的形式呈现解 LeetCode 题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
 
 ---
 
@@ -138,3 +139,4 @@ draft = true
 💡 [leetcode 按公司划分](https://github.com/MysteryVaibhav/leetcode_company_wise_questions)
 
 如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 ⏤ 听说，很多高手也在“悄悄”的刷。
+
