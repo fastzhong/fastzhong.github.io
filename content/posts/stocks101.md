@@ -41,15 +41,7 @@ toc = true
 
 YouTube 上有不少“含金量”极高的股票分析，我关注的几个：
 
--   [老汤美股财经](https://www.youtube.com/channel/UCeTEWFsNC3eeUsn9hvsDALQ)
-
--   [小楠 Curtis 的投資成長空間](https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw)
-
 -   [贝拉聊财金](https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg)
-
--   [阳光财经](https://www.youtube.com/channel/UC2I5em6UyBpQiO-8ZW0nV3w)
-
--   [贝奇说股](https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA)
 
 -   [超哥理财](https://www.youtube.com/channel/UCi9I7RM9-0V7zDXuwU-CVTg)
 
