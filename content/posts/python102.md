@@ -42,7 +42,7 @@ print("Hello, world!")
 
 ## Python 基本语法
 
-[Python101 notebook](/resources/python101.ipynb)
+[㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
 
 ### Data Type
 
