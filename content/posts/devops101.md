@@ -6,7 +6,7 @@ tags = []
 toc = false
 +++
 
-别扯了，DevOps 的核心就是自动化 - `全程自动化`
+别扯了，DevOps 的核心就是自动化，而且最好能做到 `全程自动化`
 
 <!--more-->
 
@@ -48,7 +48,7 @@ DevOps 的东西听起来简单，但做起来不容易：
 
 ![统计](/images/devops/tongji.png#center)
 
-[Production Readiness Checklist](https://www.gruntwork.io/devops-checklist/)
+[🔥 Production Readiness Checklist 🔥](https://www.gruntwork.io/devops-checklist/)
 
 ![Production Readiness Checklist](/images/devops/checklist.png#center)
 

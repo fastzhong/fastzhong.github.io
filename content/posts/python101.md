@@ -446,46 +446,6 @@ _卸载包_：
 $ poetry remove package
 ```
 
-## Python 项目最佳实践模板
-
-🗓TBD
-
-```python
-# add.py
-def add(a, b):
-  return a+b
-
-result = add(1,2)
-print(result)
-```
-
-```python
-# add.py
-
-def add(a, b):
-  return a+b
-
-result = add(1,2)
-print(result)
-```
-
-```python
-#!/usr/bin/env python3
-# add.py
-
-def add(a, b):
-  return a+b
-
-result = add(1,2)
-print(result)
-```
-
-两个文件其实都差不多：
-
--   第一个倾向于称之 module，没有执行什么，主要是可以被别的 python 文件引入并调用；
--   第二个倾向于称之 script，主要是独立执行，有输出；
--   第三个进一步把 python 文件变为像 bash script 那样可直接执行；
-
 ## 如何学习 Python
 
 ![how to program](/images/python101/how-to-programming.jpg#center)
