@@ -476,4 +476,3 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 -   为每个项目建立 virtual env
 -   VS Code 或 PyCharm 作为 IDE
 -   学习 Pythonic/PEP8
--   （大图） [Python3 in One Pic](http://coodict.github.io/python3-in-one-pic/)
