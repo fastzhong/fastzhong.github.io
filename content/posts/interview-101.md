@@ -148,13 +148,13 @@ draft = false
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（至少 2、3 个月的时间）：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;TBD
 
 ### Java
 
 福利：收集了些非常好的知识点汇总和面试题 [链接](https://github.com/fastzhong/interview/tree/master/Java)
 
-系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
+系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;TBD
 
 ### 系统设计
 
