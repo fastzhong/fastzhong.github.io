@@ -1,5 +1,5 @@
 +++
-title = "选坑、入坑、以及面试"
+title = "面试101"
 date = 2020-03-20T07:28:59+08:00
 readingTime = true
 categories = ["职业发展"]
@@ -148,15 +148,13 @@ draft = false
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（至少 2、3 个月的时间）：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 I：Leetcode 刷题指南](/posts/interview-algo-i)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 II：数据结构 & 算法](/posts/interview-algo-ii)  
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [算法编程面试 III：Leetcode 解题套路 & 模版](/posts/interview-algo-iii/)
+<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
 
 ### Java
 
 福利：收集了些非常好的知识点汇总和面试题 [链接](https://github.com/fastzhong/interview/tree/master/Java)
 
-系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Java 学习提高路线 for 2020](/posts/java2020)
+系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
 
 ### 系统设计
 
