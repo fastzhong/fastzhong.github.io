@@ -21,6 +21,7 @@ Python 基本语法，有编程经验的可以瞬间上手
 3. 创建一个独立的虚拟环境并激活它， 例如 mth251：
 
 ```
+[I] ➜ mkdir mth251 && cd mth251
 [I] ➜ conda create -m mth251 python=3.8.5
 ```
 
