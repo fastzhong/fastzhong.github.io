@@ -11,6 +11,8 @@ Python 基本语法，有编程经验的可以瞬间上手
 
 <!--more-->
 
+<i class="fas fa-external-link-alt"></i> 参考：[Python 101](/posts/python101)
+
 ## 安装 Anaconda
 
 1. 下载并安装 Anaconda: https://www.anaconda.com/products/individual
@@ -98,6 +100,11 @@ local vs. global
 # add1.py
 def add(a, b):
   return a+b
+```
+
+```python
+# app.py
+import add from add1
 
 result = add(1,2)
 print(result)
@@ -130,7 +137,7 @@ if __name__=="__main__":
 
 三个文件其实都差不多：
 
--   第一个倾向于称之模块 module，没有执行什么，主要是可以被别的 python 文件引入并调用；
+-   第一个倾向于称之模块 module，定义或声明，没有执行什么，可以被别的 python 文件作为模块引入并调用（import）；
 -   第二个倾向于称之脚本 script，主要是可以独立执行，\_\_main\_\_是主函数入口，输出如下：
 
 ```bash
