@@ -11,7 +11,7 @@ Python 近两三年伴随着机器学习变得很火，其实 🐍 比 ☕️ �
 
 <!--more-->
 
-![Python学习路线 2020](/images/python101/python-roadmap-2020.png#center)
+![Python学习路线 2020](/images/python/python-roadmap-2020.png#center)
 
 ## 最人类化的编程语言
 
@@ -115,11 +115,11 @@ print "Hello, World!"
 
 Python 的实现方式和 Java 类似，想兼顾两者优势，Python 语言的默认解释器（从官方下载的 Python）是 C 实现的 ⏤ `CPython`（直接叫 Python），CPython 把 Python 程序编译成 bytecode（称为中间代码），然后 bytecode 可运行在 CPython 的虚拟机上。
 
-![Python env](/images/python101/CPython.png#center)
+![Python env](/images/python/CPython.png#center)
 
 Python 除了 CPython，还有多种实现 - [Jython](http://www.jython.org/archive/21/docs/whatis.html)、[IronPython](http://ironpython.net/)、[Cython](http://cython.org/)，[Numba/Anaconda](http://numba.pydata.org/)等，针对不同的虚拟机：
 
-![Python implementations](/images/python101/python-implementations.png#center)
+![Python implementations](/images/python/python-implementations.png#center)
 
 不同的解释器是为了方便和其它技术集成，例如默认的 CPython，可以方便地用 C 为 Python 写扩展 [Cython](http://cython.org/)，增加代码执行速度，而 JPython 则可以让 Python 程序里直接调用 JVM 里的 Java Class。
 
@@ -131,11 +131,11 @@ Python 除了 CPython，还有多种实现 - [Jython](http://www.jython.org/arch
 4. 再次碰到同样的 bytecode 时，直接调用已经缓存的机器代码；
 
 偷拿个 JVM 上的 JIT 示意图:  
-![JVM JIT](/images/python101/JIT.png#center)
+![JVM JIT](/images/python/JIT.png#center)
 
 JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的程序如 C/C++。PyPy 采用了同样的技术：
 
-![PyPy JIT](/images/python101/PyPy.png#center)
+![PyPy JIT](/images/python/PyPy.png#center)
 
 1. PyPy 的解释器是用 RPython 编写的，RPython 类似 Python，相当于 Python 的子集，而且是*强*类型
 2. RPython 被编译成了的各种目标机器代码，默认的编译器实现是针对 C 的，但和 CPython 编译器比较，加入了 JIT，除了 C，理论上同样也可以有针对其它平台如 JVM 的实现
@@ -146,7 +146,7 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 
 软件开发像搭积木，除了语言本身，更重要的是依赖于各种第三方提供的模块，库，包（各种语言使用的名称不太相同）。做开发的都知道版本和兼容是个通用的大问题，大家都在不同的开发语言上，不停的尝试不同的方法。Python 有两个主流版本 2.x & 3.x 互相不兼容（Python 由于一开始就不是大厂工业化支持，当初属于 Python 之父探索性研究，向后兼容性一直比较不好，快速发展和保证兼容是矛盾的，各有利弊）。Python 3 在 2008 年就出现了，只是近一两才成为首选，但是仍然有众多的包是针对 Python 2 的（这也是 Python 3 这么长时间无法流行起来的原因）。有的时候主版本相同，次版本不同（例如 3.1 & 3.2），细微差别也会导致兼容性问题。除了语言本身，模块和库也有版本兼容性问题，不兼容的模块和库是不能直接拿来用的，想象一下，你机器上同时有两个项目 A 和 B，A 是用 Python 2 开发的，而 B 是用 Python 3 开发的，怎么办？如果 B 依赖于一个第三方的包，版本是 1.0，C 依赖同一个包，但要求版本是 2.0（依赖冲突）。另外还有同一个包可能被依赖多次（层级依赖）。开发人员直接就要面对这个现实而头疼的问题，几十个包不同的版本如何放在同一台机器上，多份拷贝，怎么管理，如何进行升级？嘿嘿，问题不是新的，方法也是不止一种的，这又产生了多一层的混乱：
 
-![Python environment](/images/python101/python-environment.png#center)
+![Python environment](/images/python/python-environment.png#center)
 
 💡 包管理或者依赖管理是 Python 比较弱的一个方面，这里就不仔细讨论各种 [历史方案](https://packetpushers.net/setting-up-a-python-environment-where-to-develop/) (想了解各种工具的自行 Google)。
 
@@ -448,7 +448,7 @@ $ poetry remove package
 
 ## 如何学习 Python
 
-![how to program](/images/python101/how-to-programming.jpg#center)
+![how to program](/images/python/how-to-programming.jpg#center)
 
 Python 是学习编程的首选，没有之一（如果连 Python 都学不会，就不要搞编程了）。 但要如何学习 Python 还真不好回答，即使是大神，下面是大叔的观点：
 

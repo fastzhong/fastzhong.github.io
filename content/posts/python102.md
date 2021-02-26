@@ -17,16 +17,16 @@ Python 基本语法，有编程经验的可以瞬间上手
 
 1. 下载并安装 Anaconda: https://www.anaconda.com/products/individual
 2. 运行 Anaconda Navigator
-   ![Anaconda Navigator](/images/python101/anaconda-navigator.png#center)
+   ![Anaconda Navigator](/images/python/anaconda-navigator.png#center)
 3. 创建一个独立的虚拟环境并激活它， 例如 mth251：
 
 ```
-[I] ➜ mkdir mth251 && cd mth251
+[I] ➜ mkdir workspace/suss/MTH251 && cd workspace/suss/MTH251
 [I] ➜ conda create -m mth251 python=3.8.5
 ```
 
 4. 切换到 mth251，然后安装 jupyter notebook：
-   ![jupyter notebook](/images/python101/jupyter-notebook.png#center)
+   ![jupyter notebook](/images/python/jupyter-notebook.png#center)
 5. 激活 mth251，然后启动 jupyter notebook
 
 ```bash
@@ -47,53 +47,9 @@ print("Hello, world!")
 
 [㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
 
-### Data Type
+![Python3](/images/python/Python3.png#center)
 
--   numbers: integer, float, complex
--   string: “” ‘’ \
--   byte
--   boolean
--   operators, casting
--   list: [], indexing, slicing, len, append, insert, pop, push
--   tuple: (), immutable list
--   set: {}, not repeatable
--   dict: {}, key-value pairs
--   None
--   dynamic data type
-
-### Variable
-
-local vs. global
-
-### Syntax & code block
-
--   import
--   comments: #, “”” ”””
--   indention
-
-### flow control
-
--   for
--   while
--   break/continue
--   if elif else
-
-### function
-
--   def f()：
--   arguments
-
-### Object-Orient Program
-
--   class ClassA & instance
--   \_\_int\_\_ & self
--   encapsulation: attributes & methods
--   inheritance: class ChildClass(Parent)
--   Child can override Parent
--   polymorphism: same interface, different implementation
--   everything is OO
-
-### Python 程序
+## Python 程序
 
 有几种形式：
 
