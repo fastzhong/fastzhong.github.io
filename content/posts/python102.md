@@ -110,3 +110,5 @@ if __name__=="__main__":
 3
 7
 ```
+
+有了以上知识基本上可以开始编程，其它一些非常有用的高级功能，如 lambda，itertools， decorator

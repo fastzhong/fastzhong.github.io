@@ -1,5 +1,5 @@
 +++
-title = "系统设计面试的准备"
+title = "系统设计面试指南"
 date = 2020-05-23T13:08:47+08:00
 readingTime = true
 categories = ["职业发展"]
