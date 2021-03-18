@@ -7,9 +7,15 @@ tags = ["microservices"]
 toc = true
 +++
 
-软件开发是以最终产品为导向的，所以本质上我倾向把自己当作工程师，软件产品的制造者和拥有者，而非单纯的架构师或者程序员（比较杂 🤔）
+一个好的架构师离不开三个核心东西：技术，人，问题
 
 <!--more-->
+
+## 不同的架构师
+
+![mvc](/images/arch/types-of-technology-architects.png#center)
+
+软件开发是以最终产品为导向的，所以本质上我倾向把自己当作软件工程师或者系统架构师，软件产品的制造者和拥有者。下面的内容比较杂 🤔。
 
 ## 我理解的架构和架构师
 
@@ -65,14 +71,14 @@ toc = true
 
 -   通常程序员只是一个人在编码，向组长负责。而架构师需要面对不同的 staleholder，带领一大群人编码完成项目。 一个优秀的架构师对系统设计考虑的问题必须非常全面，内部的，外部的，看得到的，看不到的，现在的，将来的，例如新技术的成熟度，实施该模块团队的技术储备，用户体验，项目的资金和时限，承受风险的能力，等等。需求是软件开发的原动力，商业、客户、技术都是在变化的，而一个系统的开发大都需要 2，3 年，所以架构师必须对需求有一定深度的理解和前瞻性，能够引领和超越客户、领导的提出需求，这些都影响架构的选型，扩展，冗余以及性能设计。越复杂的系统和商业需求越是考验一个架构师。高大上的系统还会区分出专门的商业架构，系统架构，基础设施架构，数据架构，安全架构等等，我本身的理解是系统架构师的认识要达到和商业架构师同一个层面，而优秀的架构师往往是两者合一。
 
-> `系统设计是一个架构师对项目综合理解的体现`
+> `系统设计是一个架构师对技术，人，问题综合理解的体现`
 
 ## 系统架构图
 
-软件系统的架构通常需要包含如下四类核心要素：
-元素（elements）：将系统拆分为一组元素 - 模块、组件、结构体、子系统；
-关系（relationships）：不同元素之间的关系 - 交互、依赖 、继承、组合、聚合；
-属性（properties）：每个元素具备的属性 - 名称、职责、接口、实现限制等；
+软件系统的架构通常需要包含如下四类核心要素：  
+元素（elements）：将系统拆分为一组元素 - 模块、组件、结构体、子系统；  
+关系（relationships）：不同元素之间的关系 - 交互、依赖 、继承、组合、聚合；  
+属性（properties）：每个元素具备的属性 - 名称、职责、接口、实现限制等；  
 原理（principles）：为什么这么设计 - 拆分依据、设计原则、决策原因等。
 
 `SOLID` 原则是一套比较经典且流行的架构原则（主要还是名字起得好）：
@@ -198,8 +204,6 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 🗓 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
 
 ## 微服务/分布式的坑
-
-The three basic patterns are (1) decompensation – when the system exhausts its capacity to adapt as disturbances / challenges cascade; (2) working at cross-purposes – when roles exhibit behaviour that is locally adaptive but globally mal-adaptive; and (3) getting stuck in outdated behaviours – when the system over-relies on past successes
 
 代码和工程的质量仍是灵魂，拆分和集成并不意味着可重用/可扩展就是必然。
 
