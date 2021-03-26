@@ -16,6 +16,10 @@ draft = true
 
 如果没学过或者学了忘记的，可以参考以下课程，大部分我看过，都是高手，强烈推荐：
 
+-   [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer（英文）](https://www.youtube.com/watch?v=RBSGKlAvoiM)：数据结构基础课程，前 Google 员工和 ACM 顶级高手，讲得很好。
+
+-   [Data Structures - Computer Science Course for Beginners（英文）](https://www.youtube.com/watch?v=zg9ih6SVACc)：Course created by Steven from NullPointer Exception，学习最常见的 12 种数据结构。
+
 -   慕课网 [liuyubobobo 的算法课 ](https://www.imooc.com/t/108955) ：有好几个课程，从数据结构，到算法面试，到算法应用，讲得非常接地气，可以补补基础，非常推荐
 
 -   极客时间贾超 [70 天的算法训练营 ](https://u.geekbang.org/subject/algorithm/1000343) ：网上非常出名的课程，知识点覆盖全面，系统性讲解 ⏤ 如何练，怎们练，正在跟着一遍下来
@@ -24,11 +28,7 @@ draft = true
 
 -   [九章算法](https://www.jiuzhang.com/)：很多不同的课 ⏤ 基础班、强化班、高频、动态规划，老师都是大 🐮，学生也有很多博士
 
--   [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer](https://www.youtube.com/watch?v=RBSGKlAvoiM)
-
--   [Data Structures - Computer Science Course for Beginners](https://www.youtube.com/watch?v=zg9ih6SVACc)：Course created by Steven from NullPointer Exception，学习最常见的 12 种数据结构。
-
-以上课程，b 站、油管、网盘全部都有免费，自行寻找。
+以上课程，b 站、油管、网盘全部都有免费 🆓，自行寻找。
 
 MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构与算法的公开课，虽然很好，但学习时间较长，不走学术和研究路线的话不建议采用。
 
@@ -38,7 +38,7 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 ### 策略 1：突击策略
 
--   前两百多道都是经典题，按着标签刷可以举一反三，例如， 先刷热题 HOT 200，再刷精选 TOP 面试题，之后刷其他的题。
+-   前两百多道都是经典题，先刷热题 HOT 100 ～ 200，再刷精选 TOP 面试题，之后刷其他的题。
 -   easy/hard 一般不会考，碰到 hard 的就缴枪自认倒霉吧
 -   一些算法是冷门，同样如果万一碰到了就自认倒霉吧
 
@@ -78,11 +78,11 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
     -   面试前一周恢复性训练
 ```
 
-## 202 精华题/刷题列表 💡
+## 202 🔥 精华题/刷题列表
 
 -   [图灵星球：LeetCode 精华题目列表【刷题规划系列】](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 
-> 星友们好呀~ 我是以诺，一位 Cal Poly Pomona 的在读研究生。我爱编程，爱科技，也是个爱沉浸在科幻世界里的白日梦患者哈哈 :P [刷题方法论](https://turingplanet.org/2020/09/20/leetcode_how_to/)
+> 星友们好呀~ 我是以诺，一位 Cal Poly Pomona 的在读研究生。我爱编程，爱科技，也是个爱沉浸在科幻世界里的白日梦患者哈哈 :P [`刷题方法论`](https://turingplanet.org/2020/09/20/leetcode_how_to/)
 
 -   [LeetCode 刷题攻略：配思维导图，100+经典算法题目刷题顺序、经典算法模板、共 40w 字的详细图解，以及难点视频题解。按照刷题攻略上的顺序来刷题，让你在算法学习上不再迷茫](https://github.com/youngyangyang04/leetcode-master)
 
@@ -112,11 +112,13 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 -   [人人都能看的懂：左神--左程云 2021 版【LeetCode 算法面试刷题教程】](https://www.bilibili.com/video/BV1854y1Y7qX)
 
-## 203 套路 & 模版 💡
+## 203 🔥 套路 & 模版
 
 -   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
 
 -   [AlgoWiki 力扣刷题模板](https://ojeveryday.github.io/AlgoWiki/#/)
+
+-   [九章算法 - 令狐冲的算法小抄](https://github.com/ninechapter-algorithm/linghu-algorithm-templete)
 
 -   [labuladong 的算法小抄](https://labuladong.gitbook.io/algo/)
 
@@ -145,11 +147,14 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 ### 英文讲解（课程）
 
+：需要花钱购买
+
 -   [Zero to Master Master the Coding Interview: Big Tech (FAANG) Interviews](https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep)
--   [Back to Back SWE](https://backtobackswe.com/) （130 道）
 -   [AlgoExpert](https://www.algoexpert.io/product)（100 道）
+-   [Back to Back SWE](https://backtobackswe.com/) （130 道）
 -   [InterviewPro](https://www.algoexpert.io/product)（100 道）
 -   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
+-   [Interview Cake](https://www.interviewcake.com/)
 
 ## 刷题利器
 
@@ -172,6 +177,8 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 [链接](https://mp.weixin.qq.com/s/3hvFH2Ry1hoJoUe5plEElg)
 
 ---
+
+除了 leetcode，练手的地方还有[InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/),
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 

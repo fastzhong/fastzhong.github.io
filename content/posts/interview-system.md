@@ -13,11 +13,25 @@ toc = true
 
 ## 学习资料
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+-   GitHub 上的资料 - 除了拿来面试，也是学习架构的大宝藏：
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
+    -   <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 
-除了拿来面试，也是学习架构的大宝藏。
+    -   <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
+
+-   油管：
+
+    -   [Coding and System Design Interview Questions](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)
+
+    -   [Tech Dummies Narendra L](https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists)
+
+    -   [System design interview questions](https://www.youtube.com/playlist?list=PLrmLmBdmIlps7GJJWW9I7N0P0rB0C3eY2)
+
+-   付费课程：
+
+    -   [Educative](https://www.educative.io/path/scalability-system-design)
+
+    -   [SystemsExpert](https://www.algoexpert.io/systems/product)
 
 ## 经典案例
 

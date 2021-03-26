@@ -45,7 +45,7 @@ print("Hello, world!")
 
 ## Python 基本语法
 
-[㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
+结合代码 [㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
 
 ![Python3](/images/python/Python3.png#center)
 
