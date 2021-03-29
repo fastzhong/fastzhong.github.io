@@ -7,7 +7,7 @@ tags = ["microservices"]
 toc = true
 +++
 
-一个好的架构师离不开三个核心东西：技术，人，问题
+一个好的架构师离不开三个核心东西：技术，人，问题 🤔
 
 <!--more-->
 
@@ -15,19 +15,19 @@ toc = true
 
 ![mvc](/images/arch/types-of-technology-architects.png#center)
 
-软件开发是以最终产品为导向的，所以本质上我倾向把自己当作软件工程师或者系统架构师，软件产品的制造者和拥有者。下面的内容比较杂 🤔。
+💬 软件开发是以最终产品为导向的，所以本质上我倾向把自己当作软件工程师或者系统架构师，软件产品的制造者和拥有者。下面的内容比较杂。
 
 ## 我理解的架构和架构师
 
 从事商业性的系统开发超过二十年了，经手的 mission critical 系统最少也有十几，二十个，对自己最擅长的方面做个总结。
 
+-   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习、思考、实践 ⏤ 学习好的系统设计，思考后面的思想，实际中应用和解决问题，是提高水平的唯一方法。
+
+> `复杂系统的设计是需要有具体核心技术做支撑`
+
 -   架构 architecture 来源于建筑行业，架构就是 blueprint 实施蓝图。软件架构的实质还是软件，也就是代码 ⏤ 架构师自己如何编码，只是没有全部亲自写出来。对于复杂系统，架构应该是系统设计之上更高级的抽象，我认为的架构，系统设计，代码应该是同源的，划分代码，组织代码，运行代码，支撑代码，等等，都是以代码为核心。
 
 > `所谓架构和系统设计，其本质都是代码设计，也就是架构师给出的代码结构，脱离代码的架构都是耍流氓`
-
--   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习、思考、实践 ⏤ 学习好的系统设计，思考后面的思想，实际中应用和解决问题，是提高水平的唯一方法。
-
-> `复杂系统的设计是需要有具体软件技术做支撑，架构师必须持续不断的学习和应用各种前沿技术`
 
 -   系统设计和软件如何编码一样，范围很广，基础理论杂，主要还是来源于实践经验，里面的很多设计决定和哲学相关。所以不仅仅是懂怎么做的，更多是体会为什么要这么设计所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则也非常适用：
 
@@ -106,39 +106,39 @@ toc = true
 
 ## 主要的架构模式
 
-✦ `客户端-服务器模式`  
+✦ <font color="orange">客户端-服务器模式</font>  
 最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
 ![client-server](/images/arch/client-server.jpeg#center)
 
-✦ `分层模式`  
+✦ <font color="orange">分层模式</font>  
 著名代表就是三层架构，随着 Internet 的发展，后端变得复杂，主从模式分离出表示层（也称 UI 层）、应用层（也称服务层）、数据层；后来还发展出 middleware，中台等共享基础架构层。  
 ![3-tier](/images/arch/3-tier.jpg#center)
 
-✦ `模型-视图-控制器模式（MVC）`  
+✦ <font color="orange">模型-视图-控制器模式（MVC）</font>  
 解决应用层复杂的数据处理变化及数据展示关系，MVC 有多个变型，从后端 MVC 到前端 MVC。  
 ![mvc](/images/arch/mvc.jpg#center)
 
-✦ `主从模式`  
+✦ <font color="orange">主从模式</font>  
 这是由于高可用要求，这种模式由两部分组成，multicster 和 slaves，slave 通常作为 master 的备胎。  
 ![master-slave](/images/arch/master-slave.png#center)
 
-✦ `Broker 模式`  
+✦ <font color="orange">Broker 模式</font>  
 这是数量级的关系，单台机器已无法胜任，要求在多台机器上同时执行，需要一个中间代理人，由代理模组件管理如何发布处理到具体的处理节点上。  
 ![broker](/images/arch/broker.png#center)
 
-✦ `事件总线模式`  
+✦ <font color="orange">事件总线模式</font>  
 系统越来越复杂和庞大，需要解耦，有了总线，各组件可以拆分出来。有了事件总线，也就意为着采用事件监听和事件响应模式。  
 ![EBS](/images/arch/EBS.jpg#center)
 
-✦ `Workflow/Pipeline 流水线模式`  
+✦ <font color="orange">Workflow/Pipeline 流水线模式</font>  
 这个常见于系统集成和数据处理，Spring Integration、Mule 都是采用该模式。  
 ![pipeline](/images/arch/pipeline.png#center)
 
-✦ `单体 🆚 微服务模式`  
+✦ <font color="orange">单体 🆚 微服务模式</font>  
 近来流行的微服务模式
 ![microservice](/images/arch/microservice.png#center)
 
-✦ `Sidecar (边车)模式`  
+✦ <font color="orange">Sidecar (边车)模式</font>  
 Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
 ![sidecar](/images/arch/sidecar.png#center)
 
@@ -153,8 +153,6 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 此书有八百多个 Reference，所以也可以进一步细读。
 
 题外：系统偏向以命令方式还是数据方式集成是个难点，很多架构师都没有想清楚，导致系统混乱不堪。
-
-✦ [云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)涵盖了大多数的技术点，可以以此为导向深挖。
 
 ✦ 名校开的分布式系统设计课，数据库系统课，等等，以及所列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
 
@@ -199,9 +197,9 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 对应每个点都可以找到相应的具体技术，微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试（对比以前的 Corba，DCOM，J2EE，Web Services），不是发展大方向。
 
-Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [服务网格（Service Mesh ）FAQ](/posts/service-mesh-faq/)
+Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：<i class="fas fa-external-link-alt"></i>&nbsp; [服务网格（Service Mesh ）FAQ](/posts/service-mesh-faq/)
 
-🗓 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
+💬 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
 
 ## 微服务/分布式的坑
 

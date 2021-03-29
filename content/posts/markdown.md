@@ -13,7 +13,7 @@ Markdown 和 Json 一样，超级简单，却超级好用
 
 ![markdown](/images/md/cheatsheet-md.png)
 
-Markdown 就是一种轻量级的标记语言（Lightweight Markup Language），用人话说就是，普通的文本加上简单的排版或格式化语法（特殊标记），和 HTML，RTF 类似，只是 Markdown 的语法非常简单。Markdown 编写工具很多，在线的也有，很多编程开发工具都支持。需要知道，Markdown 语法没有标准，取决于 Markdown 渲染引擎，各个系统略微有差异。VS Code 和 IntelliJ 都支持 Markdown，特别推荐专门的可视化编辑器 [Typora](https://typora.io/)。Markdown 文本需要通过转换器变成 HTML 便可以在浏览器里显示，这就是支持 Markdown 的静态博客生成器和 CMS 的原理。
+Markdown 就是一种轻量级的标记语言（Lightweight Markup Language），用人话说就是，普通的文本加上简单的排版或格式化语法（特殊标记），和 HTML，RTF 类似，只是 Markdown 的语法非常简单。Markdown 编写工具很多，在线的也有，很多编程开发工具都支持。需要知道，Markdown 语法没有标准，取决于 Markdown 渲染引擎，各个系统略微有差异。VS Code 和 IntelliJ 都支持 Markdown，喜欢可视化编辑器的话推荐 [Typora](https://typora.io/)。Markdown 文本需要通过转换器变成 HTML 便可以在浏览器里显示，这就是支持 Markdown 的静态博客生成器和 CMS 的原理。
 
 ## Markdown 语法
 
@@ -35,7 +35,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ###### 标题 5 Heading 5
 ```
 
-👐 👐 👐 效果就不演示了
+💬 效果就不演示了
 
 ### 黑体字 strong
 
@@ -45,7 +45,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 这是个**黑体字 strong**
 ```
 
-👐 👐 👐 **黑体字 strong**
+效果：<font color="orange">**黑体字 strong**</font>
 
 ### 斜体字 italic
 
@@ -55,7 +55,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 这是个*斜体字 italic*
 ```
 
-👐 👐 👐 _斜体字 italic_
+效果：<font color="orange"> _斜体字 italic_</font>
 
 ### 删除线 strikethrought
 
@@ -65,7 +65,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ~~加一条删除线 strikethrought~~
 ```
 
-👐 👐 👐 ~~加一条删除线 strikethrought~~
+效果：<font color="orange">~~加一条删除线 strikethrought~~</font>
 
 ### 引用块
 
@@ -73,9 +73,11 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 > 道可，道非，常道
 ```
 
-👐 👐 👐
+效果：<font color="orange">
 
 > 道可，道非，常道
+
+</font>
 
 ### 无序列表 unordered list
 
@@ -92,7 +94,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
     -   广州
 ```
 
-👐 👐 👐
+效果： <font color="orange">
 
 -   美国
 -   俄罗斯
@@ -102,6 +104,8 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
     -   北京
     -   上海
     -   广州
+
+</font>
 
 ### 有序列表 ordered list
 
@@ -117,7 +121,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 6. 亿
 ```
 
-👐 👐 👐
+效果： <font color="orange">
 
 1. 个
 2. 十
@@ -129,13 +133,15 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
     3. 千万
 6. 亿
 
+</font>
+
 ### 链接 link
 
 ```markdown
 [点击就去 Google](https://www.google.com)
 ```
 
-👐 👐 👐 [点击就去 Google](https://www.google.com)
+效果：[点击就去 Google](https://www.google.com)
 
 ### 图片 image
 
@@ -143,7 +149,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
 ```
 
-👐 👐 👐 ![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
+效果：![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
 
 ### 表格 table
 
@@ -157,13 +163,15 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 |   3    | 王二 |  40  |
 ```
 
-👐 👐 👐
+效果：<font color="orange">
 
 | 职工号 | 姓名 | 年龄 |
 | :----- | :--- | :--: |
 | 1      | 张三 |  20  |
 | 2      | 李四 |  30  |
 | 3      | 王二 |  40  |
+
+</font>
 
 表格支持还是比较不方便的，可采用在线表格转换工具：[tableconvert](https://tableconvert.com/)
 
@@ -176,10 +184,12 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 这个不是\*\*黑体字\*\*
 ```
 
-👐 👐 👐
+效果：<font color="orange">
 
 这个不是\# 标题  
 这个不是\*\*黑体字\*\*
+
+</font>
 
 ### 分割线
 
@@ -189,7 +199,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 ---
 ```
 
-👐 👐 👐
+效果：
 
 ---
 
@@ -201,7 +211,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 [^k]: 云上的操作系统
 ```
 
-👐 👐 👐 用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛  
+效果：用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛  
 [^1]: Markdown 一种简易的纯文本标记语言
 [^k]: 云上的操作系统
 
@@ -222,7 +232,7 @@ printf("Hello world!\n");
 ```
 ````
 
-👐 👐 👐
+效果：
 
 ```c
 # include <stdio.h>
@@ -241,7 +251,7 @@ void main(){
 <u>下划线</u>
 ```
 
-👐 👐 👐 <u>下划线</u>
+效果：<font color="orange"><u>下划线</u></font>
 
 也不支持字体颜色：
 
@@ -249,7 +259,7 @@ void main(){
 <font color="orange">绿色字体</font>
 ```
 
-👐 👐 👐   <font color="green">绿色字体</font>
+效果：<font color="green">绿色字体</font>
 
 ### 画图
 

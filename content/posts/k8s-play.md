@@ -8,8 +8,6 @@ toc = false
 draft = true
 +++
 
-纸上得来终觉浅 绝知此事要躬行
-
 <!--more-->
 
 前提准备：k8s 安装（minikube，kubeadm，或 THW 任何一种都行）  

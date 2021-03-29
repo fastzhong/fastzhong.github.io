@@ -86,7 +86,7 @@ toc = true
 
 展开的话范围相当的广，只能平时积累，逐个突破。
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 番外：
+---
 
 <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [我理解的架构 & 架构师（兼谈微服务）](/posts/arch101)
 

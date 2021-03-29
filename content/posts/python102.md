@@ -11,7 +11,7 @@ Python 基本语法，有编程经验的可以瞬间上手
 
 <!--more-->
 
-<i class="fas fa-external-link-alt"></i> 参考：[Python 101](/posts/python101)
+参考：<i class="fas fa-external-link-alt"></i> [Python 101](/posts/python101)
 
 ## 安装 Anaconda
 

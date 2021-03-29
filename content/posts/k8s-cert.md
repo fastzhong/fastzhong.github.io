@@ -1,5 +1,5 @@
 +++
-title = "CKA & CKAD 2020"
+title = "CKA & CKAD"
 date = 2002-10-30T06:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
@@ -80,7 +80,6 @@ Chrome 只能开两个 tab：一个考试，一个 Kubernetes docs 网站；
 我的 bookmark
 
 💡 命令行 tips：
-
 
 ```bash
 sudo -i

@@ -11,7 +11,7 @@ toc = true
 
 <!--more-->
 
-💡 参考：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;
+参考：<i class="fas fa-external-link-alt"></i>&nbsp;
 [官方文档](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/)
 
 单节点集群架构如下图：  
