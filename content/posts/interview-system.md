@@ -19,12 +19,6 @@ toc = true
 
     -   <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
 
--   油管：
-
-    -   [Coding and System Design Interview Questions](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)
-
-    -   [System design interview questions](https://www.youtube.com/playlist?list=PLrmLmBdmIlps7GJJWW9I7N0P0rB0C3eY2)
-
 -   付费课程：
 
     -   [Educative](https://www.educative.io/path/scalability-system-design)
