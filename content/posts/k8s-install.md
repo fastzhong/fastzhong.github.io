@@ -91,8 +91,14 @@ toc = false
 
 ---
 
-各种安装请参考 [Kubernetes Provisioning](https://www.youtube.com/playlist?list=PL34sAs7_26wODP4j6owN-36Vg-KbACgkT)，我自己的尝试：
+我自己的尝试：
 
 -   [Kubernetes 安装 - minikube](/posts/k8s-install-minikube)
 -   [Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
 -   [Kubernetes 安装 - The Hard Way](/posts/k8s-install-thw)
+
+各大 ☁️ 厂商上通过 Terraform 安装：
+
+-   [Provisioning Kubernetes clusters on AWS with Terraform and EKS](https://learnk8s.io/terraform-eks)
+-   [Getting started with Terraform and Kubernetes on Azure AKS](https://learnk8s.io/terraform-aks)
+-   [Provisioning Kubernetes clusters on GCP with Terraform and GKE](https://learnk8s.io/terraform-gke)
