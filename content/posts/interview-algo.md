@@ -53,7 +53,9 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 ![leetcode learn](/images/algo/leetcode-learn.png)
 
-中文的资料更多：[https://leetcode-cn.com/leetbook/](https://leetcode-cn.com/leetbook/)
+leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https://leetcode-cn.com/leetbook/)
+
+![leetcode-cn](/images/algo/leetcode-cn.png)
 
 2. 针对每个 topic 强化刷题，包括套路和特定类型的问题：Leetcode -> Problems -> Tags 选择 topics，参考下面的“精华题/刷题列表”
 
@@ -84,49 +86,32 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 -   [图灵星球：LeetCode 精华题目列表【刷题规划系列】](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 
-```md
-星友们好呀~ 我是以诺，一位 Cal Poly Pomona 的在读研究生。我爱编程，爱科技，也是个爱沉浸在科幻世界里的白日梦患者哈哈 :P
-刷题方法论：https://turingplanet.org/2020/09/20/leetcode_how_to/
-```
+> 星友们好呀~ 我是以诺，一位 Cal Poly Pomona 的在读研究生。我爱编程，爱科技，也是个爱沉浸在科幻世界里的白日梦患者哈哈 :P  
+> [刷题方法论](https://turingplanet.org/2020/09/20/leetcode_how_to/)
 
 -   [LeetCode 刷题攻略：配思维导图，100+经典算法题目刷题顺序、经典算法模板、共 40w 字的详细图解，以及难点视频题解。按照刷题攻略上的顺序来刷题，让你在算法学习上不再迷茫](https://github.com/youngyangyang04/leetcode-master)
 
-```md
-大家好，我是程序员 Carl，哈工大师兄，ACM 校赛、黑龙江省赛、东北四省赛金牌、亚洲区域赛铜牌获得者，先后在腾讯和百度从事后端技术研发，CSDN 博客专家。  
-对算法和 C++后端技术有一定的见解，利用工作之余重新刷 leetcode。
-```
+> 大家好，我是程序员 Carl，哈工大师兄，ACM 校赛、黑龙江省赛、东北四省赛金牌、亚洲区域赛铜牌获得者，先后在腾讯和百度从事后端技术研发，CSDN 博客专家。 对算法和 C++后端技术有一定的见解，利用工作之余重新刷 leetcode。
 
 -   [算法模板（Go）：算法模板，最科学的刷题方式，最快速的刷题路径，一个月从入门到 offer，你值得拥有](https://greyireland.gitbook.io/algorithm-pattern/)
 
-```md
-此项目是自己找工作时，从 0 开始刷 LeetCode 的心得记录，通过各种刷题文章、专栏、视频等总结了一套自己的刷题模板。  
-这个模板主要是介绍了一些通用的刷题模板，以及一些常见问题，如到底要刷多少题，按什么顺序来刷题，如何提高刷题效率等。
-```
+> 此项目是自己找工作时，从 0 开始刷 LeetCode 的心得记录，通过各种刷题文章、专栏、视频等总结了一套自己的刷题模板。这个模板主要是介绍了一些通用的刷题模板，以及一些常见问题，如到底要刷多少题，按什么顺序来刷题，如何提高刷题效率等。
 
 -   [小浩算法：目前共完成 140+ 道高频面试算法题目，全部采用漫画图解的方式](https://www.geekxh.com/)
 
-```md
-小浩算法是我在疫情期间完成的一部图解算法题典！  
-目前共完成 140+ 道高频面试算法题目，总计 40w 字，全部采用漫画图解的方式，简单易懂。拥有近 10w 读者！
-```
+> 小浩算法是我在疫情期间完成的一部图解算法题典！目前共完成 140+ 道高频面试算法题目，总计 40w 字，全部采用漫画图解的方式，简单易懂。拥有近 10w 读者！
 
 -   [算法珠玑：一个最精简的题库，150 道左右](https://github.com/soulmachine/algorithm-essentials)
 
-```md
-举一反三，以少胜多，告别题海战术 @灵魂机器
-```
+> 举一反三，以少胜多，告别题海战术 @灵魂机器
 
 -   [算法·进阶石（algorithm-stone）—— 进击的每一步！（C++）](https://github.com/acm-clan/algorithm-stone)
 
-```md
-本项目是公众号《ACM 算法日常》整理的一个算法学习路线图。
-```
+> 本项目是公众号《ACM 算法日常》整理的一个算法学习路线图。
 
 -   [CS-Notes](http://www.cyc2018.xyz/%E7%AE%97%E6%B3%95/Leetcode%20%E9%A2%98%E8%A7%A3/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.html)
 
-```md
-本文从 Leetcode 中精选大概 200 左右的题目，去除了某些繁杂但是没有多少算法思想的题目，同时保留了面试中经常被问到的经典题目。
-```
+> 本文从 Leetcode 中精选大概 200 左右的题目，去除了某些繁杂但是没有多少算法思想的题目，同时保留了面试中经常被问到的经典题目。
 
 ## 203 套路 & 模版 🔥
 
@@ -147,27 +132,44 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 ### 各路大神作业
 
 -   Java/Go/C++: [LeetCode-book：LeetCode 1~400 题总结 + 专题知识点&题型总结](https://github.com/huxiaoman7/leetcodebook)
--   Java: [作者先后面试了近三十多家互联网公司（Java）](https://github.com/yuanguangxin/LeetCode)
+-   Java: [作者先后面试了近三十多家互联网公司](https://github.com/yuanguangxin/LeetCode)
 -   Go: [Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解](https://books.halfrost.com/leetcode/)
--   Javascrip/Python：[91 天学算法-Leetcode 图解题解集合](https://github.com/suukii/91-days-algorithm)
 -   C: [LeetCode in pure C](https://github.com/begeekmyfriend/leetcode)
--   [力扣加加 - 努力做西湖区最好的算法题解](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
+-   Javascrip/Python：[力扣加加 - 努力做西湖区最好的算法题解](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
+-   Java：[Cspiration 1-300](https://github.com/JojoYang666/Leetcode-1-300) [301 - 600](https://github.com/JojoYang666/Leetcode-301-600)
 
-### 中文讲解（油管）
+### 中文讲解
 
--   💁🏻‍♂️ [花花酱 LeetCode 视频讲解](https://docs.google.com/spreadsheets/d/1HV-iKgYJL4DpSOX1M-HcYG1cmz5CQxoduLOdEoTnIXo/edit#gid=0) 及其网站：[https://zxi.mytechroad.com/blog/](https://zxi.mytechroad.com/blog/)
--   💁🏻‍♂️ [basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4)（Java 版）
--   💁🏻‍♂️ [LeetCode - AlgoCasts 讲解](https://www.youtube.com/playlist?list=PLIUC4_Q-00WdRvpPsVPWrCQcKX9NKdQvo)
--   💁🏻‍♂️ [古城算法](https://www.youtube.com/c/%E5%8F%A4%E5%9F%8E%E7%AE%97%E6%B3%95/featured)
--   💁🏻‍♂️ [FuFu LeetCode](https://www.youtube.com/channel/UCCMpGENpr93ENbfdinP3QeQ/playlists)
+-   💁🏻‍♂️ 花花酱  
+    [油管：花花酱 LeetCode 视频讲解](https://docs.google.com/spreadsheets/d/1HV-iKgYJL4DpSOX1M-HcYG1cmz5CQxoduLOdEoTnIXo/edit#gid=0)  
+     [B 站：花花酱 LeetCode](https://space.bilibili.com/9880352)  
+     网站：[https://zxi.mytechroad.com/blog/](https://zxi.mytechroad.com/blog/)
 
-### 英文讲解（课程）
+    > 花花酱讲解 LeetCode 题目已经很多年了，一直更新，属于老字号。他针对不同题型开辟了各种算法专题，涵盖了 LeetCode 上很广泛的各类题型，比较适合刚刚入门的同学进行系统性分块学习。而且花花酱更新频率比较高，平时的 contest 也会参加，会分享一些解题思路。
 
-：需要花钱购买
+-   💁🏻‍♂️ 篮子王  
+    [油管：basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4)（Java 版）
+    [B 站：basketwangCoding](https://space.bilibili.com/108657656)
+
+    > 篮子王可能是油管上最好的中文视频讲解:P。篮子王不更新了，不过上传的解题视频中，已经覆盖了很多高频题。
+
+-   💁🏻‍♂️ [油管：FuFu LeetCode](https://www.youtube.com/channel/UCCMpGENpr93ENbfdinP3QeQ/playlists)
+
+-   💁🏻‍♂️ [油管：古城算法](https://www.youtube.com/c/%E5%8F%A4%E5%9F%8E%E7%AE%97%E6%B3%95/featured)
+
+-   💁🏻‍♂️ 爱学习的饲养员  
+    [手把手带你刷 Leetcode 力扣｜各个击破数据结构和算法](https://www.bilibili.com/video/BV1sy4y1q79M)  
+    [Leetcode 力扣必备算法知识和练习题｜手画图解版](https://www.bilibili.com/video/BV1xt4y1e7q4)  
+    [Leetcode 力扣 1-300 题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1xa411A76q)  
+    [Leetcode 力扣 301+题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1eK4y1j7fT)
+
+### 英文讲解（课程）🔥
+
+非常好，但需要花钱购买 🤑 🤑 🤑
 
 -   [Zero to Master Master the Coding Interview: Big Tech (FAANG) Interviews](https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep)
--   [AlgoExpert](https://www.algoexpert.io/product)（100 道）
 -   [Back to Back SWE](https://backtobackswe.com/) （130 道）
+-   [AlgoExpert](https://www.algoexpert.io/product)（100 道）
 -   [InterviewPro](https://www.algoexpert.io/product)（100 道）
 -   [Online Bootcamp for Coding Interviews](https://interviewcamp.io/)
 -   [Interview Cake](https://www.interviewcake.com/)
@@ -194,7 +196,7 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 ---
 
-leetcode 是最好的，辅助的地方还有[InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，等等。
+leetcode 是最好的，觉得不够的话 😅 还有 [InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，等等。
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
@@ -203,4 +205,4 @@ leetcode 是最好的，辅助的地方还有[InterviewBit](https://www.intervie
 > -   刷题没有捷径，只有策略和积累，无论按照怎样的顺序、策略来刷题，想要灭考官，都需要经历 `题海战术`
 > -   只刷题还不够，一定要回顾总结，掌握套路 & 模板
 
-如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维 🤫 听说，很多高手也在“悄悄”的刷。
+如果你不想做 CRUD 的程序员，但每天写的东西就是在屎山上堆屎，刷题就是另一个路径，是一种刻意训练，提高编程功底，开拓思维，听说，很多高手也在“悄悄”的刷。
