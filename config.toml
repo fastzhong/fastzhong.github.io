@@ -1,7 +1,7 @@
 baseURL = "https://www.fastzhong.com"
-title = "老火靓汤"
+title = "茶 ☕️ 咖啡"
 theme = "hugo-notepadium"
-copyright = "©2020 fastzhong.com"
+copyright = "© fastzhong.com"
 
 defaultContentLanguage = "zh"
 # Enable Disqus
