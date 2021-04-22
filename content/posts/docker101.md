@@ -45,50 +45,51 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 	<img src="/images/docker/container-history.png" alt="容器历史">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
 </div>
 
--   <font color="orange">Chroot Jail</font>  
+-   <font color="orange">1979：Chroot Jail</font>  
     Chroot Jail 应该是第一种容器化技术，90 年代的系统管理员一定对 chroot 不陌生，为了安全，Apache Web 服务器都进行 chroot 配置。
 
     ![chroot](/images/docker/chroot.gif#center)
 
--   <font color="orange">Linux</font>  
+-   <font color="orange">1991：Linux</font>  
     1991 年 Linus Torvalds 在 PC 上开发了 Linux 内核。
 
--   <font color="orange">FreeBSD Jail</font>  
-    FreeBSD OS 第一次将 chroot 引入操作系统，实现不单是文件而且是进程级别的隔离。
+-   <font color="orange">2000：FreeBSD Jail</font>  
+    2000 年末，FreeBSD OS 第一次将 chroot 引入操作系统，实现不单是文件而且是进程级别的隔离，并且可以分配不同的 IP 地址。
 
--   <font color="orange">Linux VServer</font>  
+-   <font color="orange">2001：Linux VServer</font>  
     比 chroot 进一步，Linux VServer 在系统级别实现虚拟化，同一个内核，却可以运行多个不同的 Linux distributions。
 
--   <font color="orange">Solaris Container</font>  
+-   <font color="orange">2004：Solaris Container</font>  
     实现 Solaris 版本的 Liunx VServer
 
--   <font color="orange">OpenVZ</font>  
-    类似 Liunx VServer 和 Solaris Container，但 Linux VServer 和 OpenVZ 都需要对 kernel 打补丁才能支持容器的创建。
+-   <font color="orange">2005：OpenVZ</font>  
+    新的 Linux Kernel 直接支持虚拟化，而 Linux VServer 和 OpenVZ 都需要对 kernel 打补丁才能支持容器的创建。
 
--   <font color="orange">CGroups</font>  
-    Google 开发的技术，实现对进程进行资源的控制（CPU、内存、磁盘 I/O、网络，等），CGroups 进入 Linux Kernel。
+-   <font color="orange">2006-2007：Process Container/CGroups</font>  
+    2006 年 Google 开发的技术，实现对进程进行资源的控制（CPU、内存、磁盘 I/O、网络，等），一年后 Process Container 更名为 cgroups，cgroups 最后融入了 Linux Kernel 2.6.24。
 
--   <font color="orange">LXC</font>  
-    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="orange">L</font>inu<font color="orange">X</font> <font color="orange">C</font>ontainer）包装了内核原生的 CGroup ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等），实现操作系统层次上的资源的虚拟化。CloudFoundry 在 2013 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
+-   <font color="orange">2008：LXC</font>  
+    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="orange">L</font>inu<font color="orange">X</font> <font color="orange">C</font>ontainer）包装了内核原生的 CGroups ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等）。LXC 是第一个功能较完整的容器管理器。CloudFoundry 在 2011 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
 
     ![lxc](/images/docker/lxc.png#center)
 
--   <font color="orange">Apache Mesos</font>  
+-   <font color="orange">2009：Apache Mesos</font>  
     2009 年 UC Berkeley RAD 实验室开发的分布式系统运行平台。
 
--   <font color="orange">Docker</font>  
+-   <font color="orange">2013：Docker</font>  
     2013 年，基于 LXC 的 Docker 出世：
 
     ![docker](/images/docker/docker.png#center)
 
--   <font color="orange">LMCTFY</font>  
+    后来 LXC 被 libcontainer 替换。
+
+-   <font color="orange">2013：LMCTFY</font>  
     Google 开源了自己的容器运行技术栈 LMCTFY（Let me contain that for you），同时和 Docker 合作，把其相关的概念和抽象移植到 libcontainer。
 
--   <font color="orange">rkt</font>  
     CoreOS 发布和 Docker 类似的 Rocket。
 
--   <font color="orange">Kubernetes</font>  
-    Google 开源生产级别的容器集群运维管理平台（脱胎于 Google 内部 Borg 系统）。
+-   <font color="orange">2016 ~ ：CNCF & Kubernetes</font>  
+    容器生态圈逐渐兴旺，CNCF 2016 年接收了 Kubernetes - Google 开源生产级别的容器集群运维管理平台（脱胎于 Google 内部 Borg 系统）。
 
 Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的技术，但又有两个共同点，都是为了：  
 ✅ 资源隔离  
@@ -160,7 +161,57 @@ Linux 内核通过『namespace』提供了资源隔离的功能，各种 namespa
 | Mount   | CLONE_NEWNS   | Mount points<br/>隔离不同 namespace 的进程所能看到的目录结构，每个 namespace 的容器在/proc/mounts 的信息只包含该 namespace 的 mount point                                                                    |
 | User    | CLONE_NEWUSER | User and group IDs<br/>允许每个容器可以有不同的 user 和 group id                                                                                                                                             |
 
-当我们运行一个 Docker 容器时，就是通过 clone 系统调用产生一个带 namespace 的进程（参数 flags 表示使用哪些 CLONE\_\* 标志位）：
+当我们运行一个 Docker 容器时，Docker 都会通过下面的方法设置进程间的隔离 Spec：
+
+```go
+func (daemon *Daemon) createSpec(c *container.Container) (*specs.Spec, error) {
+	s := oci.DefaultSpec()
+
+	// ...
+	if err := setNamespaces(daemon, &s, c); err != nil {
+		return nil, fmt.Errorf("linux spec namespaces: %v", err)
+	}
+
+	return &s, nil
+}
+```
+
+这个 Spec 不仅包含 PID 命名空间，还有 IPC，Network，等等：
+
+```go
+func setNamespaces(daemon *Daemon, s *specs.Spec, c *container.Container) error {
+	// user
+	// network
+	// ipc
+	// uts
+
+	// pid
+	if c.HostConfig.PidMode.IsContainer() {
+		ns := specs.LinuxNamespace{Type: "pid"}
+		pc, err := daemon.getPidContainer(c)
+		if err != nil {
+			return err
+		}
+		ns.Path = fmt.Sprintf("/proc/%d/ns/pid", pc.State.GetPID())
+		setNamespace(s, ns)
+	} else if c.HostConfig.PidMode.IsHost() {
+		oci.RemoveNamespace(s, specs.LinuxNamespaceType("pid"))
+	} else {
+		ns := specs.LinuxNamespace{Type: "pid"}
+		setNamespace(s, ns)
+	}
+
+	return nil
+}
+```
+
+所有的 Spec 设置最后作为创建新容器的入参：
+
+```go
+daemon.containerd.Create(context.Background(), container.ID, spec, createOptions)
+```
+
+而容器的创建最后通过 clone 系统调用产生一个带 namespace 的进程（参数 flags 表示使用哪些 CLONE\_\* 标志位）：
 
 ```c
 // System call
@@ -198,15 +249,15 @@ lrwxrwxrwx 1 cizixs cizixs 0 12月 21 15:36 uts -> uts:[4026531838]
 
 ![namespace mount](/images/docker/namespace-mount.png#center)
 
--   容器的 Net namespace 情况如下：容器进程仍需和外界连续，这时需要额外建立 Virtual Network，不同的厂商有不同的技术路线，例如[Docker 的实现](https://github.com/moby/libnetwork/blob/master/docs/design.md)（容器间通信是个重点，但具体技术细节这里就不展开）
+-   容器的 Net namespace 情况如下：容器进程仍需和外界连续，这时需要额外建立 Virtual Network，不同的厂商有不同的技术路线，例如 [Docker 的实现](https://github.com/moby/libnetwork/blob/master/docs/design.md)：
 
 ![namespace net](/images/docker/namespace-net.png#center)
+
+网络和容器间通信是个重点，内容复杂，具体技术细节这里就不展开。
 
 ### CGroup
 
 容器进程共同占用了宿主机器的物理资源，所以有了隔离，还需要有资源限制，而 Linux 通过 CGroup 来定义资源大小并按 CGroup 来分配资源给进程。
-
-✦ CGroup namespace 是 Linux4.6 以后才支持的新 namespace。没有 CGroup namespace 前，容器中一旦挂载 CGroup，便可以修改整全局的 CGroup 配置。有了 CGroup namespace 后，每个 namespace 中的进程都有自己的 CGroup 文件系统视图，增强了安全性，同时也让容器迁移更加方便。
 
 CGroups 的特点是：
 
@@ -232,6 +283,46 @@ CGroups 的特点是：
 -   使用命令行工具，比如 libcgroup 包提供的 cgcreate、cgexec、cgclassify 命令
 -   使用 rules engine daemon 提供的配置文件
 -   当然，systemd、lxc、docker 这些封装了 CGroup 的软件也能让你通过它们定义的接口控制 CGroup 的内容
+```
+
+Group namespace 是 Linux4.6 以后才支持的新 namespace。没有 CGroup namespace 前，容器中一旦挂载 CGroup，便可以修改整全局的 CGroup 配置。有了 CGroup namespace 后，每个 namespace 中的进程都有自己的 CGroup 文件系统视图，增强了安全性，同时也让容器迁移更加方便。每一个 CGroup 都是一组被相同的标准和参数限制的进程，不同的 CGroup 之间是有层级关系的，也就是说它们之间可以从父类继承一些用于限制资源使用的标准和参数。
+
+如果我们想要创建一个新的 cgroup 只需要在想要分配或者限制资源的子系统下面创建一个新的文件夹，然后这个文件夹下就会自动出现很多的内容，如果你在 Linux 上安装了 Docker，你就会发现所有子系统的目录下都有一个名为 docker 的文件夹：
+
+```bash
+$ ls cpu
+cgroup.clone_children
+...
+cpu.stat
+docker
+notify_on_release
+release_agent
+tasks
+
+$ ls cpu/docker/
+9c3057f1291b53fd54a3d12023d2644efe6a7db6ddf330436ae73ac92d401cf1
+cgroup.clone_children
+...
+cpu.stat
+notify_on_release
+release_agent
+tasks
+```
+
+9c3057xxx 其实就是我们运行的一个 Docker 容器，启动这个容器时，Docker 会为这个容器创建一个与容器标识符相同的 CGroups，在当前的主机上 CGroups 就会有以下的层级关系：
+
+![cgoups](/images/docker/cgroups-docker.png#center)
+
+如果系统管理员想要控制 Docker 某个容器的资源使用率就可以在 docker 这个父控制组下面找到对应的子控制组并且改变它们对应文件的内容，当然我们也可以直接在程序运行时就使用参数，让 Docker 进程去改变相应文件中的内容：
+
+```bash
+$ docker run -it -d --cpu-quota=50000 busybox
+53861305258ecdd7f5d2a3240af694aec9adb91cd4c7e210b757f71153cdd274
+$ cd 53861305258ecdd7f5d2a3240af694aec9adb91cd4c7e210b757f71153cdd274/
+$ ls
+cgroup.clone_children  cgroup.event_control  cgroup.procs  cpu.cfs_period_us  cpu.cfs_quota_us  cpu.shares  cpu.stat  notify_on_release  tasks
+$ cat cpu.cfs_quota_us
+50000
 ```
 
 ### rootfs
