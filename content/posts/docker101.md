@@ -369,7 +369,7 @@ CMD ["./run.sh"]
 
 ## Docker
 
-首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Hub，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而名声鹊起起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK，其实是 Sun JDK，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
+首先要明确一点，Docker 指的不是一个东西，它可能是：Docker CLI，Docker File，Docker Daemon，Docker Engine，Docker Hub，等等，从开源项目，变成产品名称，后来直接变成公司名称，由于容器因 Docker 而名声鹊起起，很多时候变成了容器的代名词 - 容器就像 Java，Docker 就像 JDK/J2EE，其实是 Sun JDK/J2EE，Java 实现还有 IBM JDK，Open JDK，等。Docker 的核心就是实现容器的构建与运行，但随之膨胀，加入了各种东西，加上各路人马的争夺，技术和各种术语非常混乱，Docker 的内部实现前后经历了很大变动，从 LXC 转到 runc。runc 就是一个命令行工具，直接调用内核/libcontainer 创建和运行一个容器进程，相当于一个轻量化的容器 runtime。runc 由 Docker 贡献给社区，目的是实现容器 runtime 的标准化。
 
 Docker 的核心架构（2019）：
 
@@ -381,7 +381,11 @@ Docker 的核心架构（2019）：
 
 -   <span style="color: orange">Docker Registries</span>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)（公有仓库），私有仓库则需 Docker Registry 软件单独建立如 Harbor，镜像按照[repository]:[tag]来精确定义。
 
--   <span style="color: orange">graphitedriver</span>，<span style="color: orange">networkdriver</span>，<span style="color: orange">execdriver</span>：驱动模块，通过 driver，Docker 可以实现对不同 Docker 容器执行环境的定制。
+-   <span style="color: orange">Graph</span>：Docker 的内部数据库，存储每个容器镜像（通过下载或 Dockerfile 构建）的信息：镜像元数据，大小，rootfs，以及节点之间的关联。
+
+![graph](/images/docker/docker-graph.png#center)
+
+-   <span style="color: orange">graphitedriver</span>，<span style="color: orange">networkdriver</span>，<span style="color: orange">execdriver</span>：驱动模块，通过 driver，Docker 可以实现对不同 Docker 容器执行环境的定制 - Graphdriver 主要用于完成容器镜像的管理，包括存储与获取；Networkdriver 的用途是完成 Docker 容器网络环境的配置；Execdriver 作为 Docker 容器的执行驱动，负责创建容器运行命名空间、容器资源使用的统计与限制、容器内部进程的真正运行。
 
 -   <span style="color: orange">libcontainer</span>：一个 Go 语言设计实现的库，设计初衷是希望该库可以不依靠任何依赖，直接访问内核中与容器相关的 API，Docker 通过调用 libcontainer，而最终操纵容器的 namespace、cgroups、apparmor、网络设备以及防火墙规则等。
 
