@@ -45,6 +45,12 @@ toc = true
 | <font color="honeydew">API Rate Limiter</font>                                 |      [解答](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/web_crawler/README.md)       |                                                                                                                       [Gaurav Sen](https://www.youtube.com/watch?v=xrizarXJgC8)                                                                                                                       |                                                                [educative](https://www.educative.io/courses/grokking-the-system-design-interview/3jYKmrVAPGQ)                                                                 |
 | <font color="honeydew">为一个交易平台设计限价订单（limited order book）</font> |      [解答](https://javarevisited.blogspot.com/2017/03/2-practical-data-structure-algorithm-interview-questions-java.html)       |                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                               |
 
+## 答题技巧
+
+-   和面试官多沟通，给出任何细节前多问，沟通能力也是系统设计的考察点
+-   由于系统设计可以多种多样，先确立一个简单解，以此为基础进行扩展
+-   进行扩展时，一方面要了解需求，一方面要提出如此设计的原因和所做的 trade off
+
 ## 答题策略
 
 九章总结的 4S 分析法：
