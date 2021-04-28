@@ -196,7 +196,7 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 ---
 
-leetcode 是最好的，觉得还吃不饱的话 😅 还有 [InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，[TopCoder](https://www.topcoder.com/challenges/?pageIndex=1)，[HackerRank](https://www.hackerrank.com/domains)，等等。
+leetcode 是最好的，觉得还吃不饱的话 😅 还有 [InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，[TopCoder](https://www.topcoder.com/challenges/?pageIndex=1)，[HackerRank](https://www.hackerrank.com/domains)，[《挑战程序设计竞赛》](https://github.com/guanhui07/studyFiles/blob/master/%E7%AE%97%E6%B3%95/%E6%8C%91%E6%88%98%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B(%E7%AC%AC2%E7%89%88).pdf)，[《算法竞赛进阶指南》](https://github.com/lydrainbowcat/tedukuri)等等。
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
