@@ -106,19 +106,19 @@ toc = true
 
 ## 主要的架构模式
 
-✦ <font color="orange">客户端-服务器模式</font>  
+✦ <font color="orange">客户端-服务器模式（client-server）</font>  
 最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
-![client-server](/images/arch/client-server.jpeg#center)
+![client-server](/images/arch/client-server.png#center)
 
-✦ <font color="orange">分层模式</font>  
+✦ <font color="orange">分层模式（layered design）</font>  
 著名代表就是三层架构，随着 Internet 的发展，后端变得复杂，主从模式分离出表示层（也称 UI 层）、应用层（也称服务层）、数据层；后来还发展出 middleware，中台等共享基础架构层。  
 ![3-tier](/images/arch/3-tier.jpg#center)
 
 ✦ <font color="orange">模型-视图-控制器模式（MVC）</font>  
 解决应用层复杂的数据处理变化及数据展示关系，MVC 有多个变型，从后端 MVC 到前端 MVC。  
-![mvc](/images/arch/mvc.jpg#center)
+![mvc](/images/arch/mvc.png#center)
 
-✦ <font color="orange">主从模式</font>  
+✦ <font color="orange">主从模式（master-slave）</font>  
 这是由于高可用要求，这种模式由两部分组成，multicster 和 slaves，slave 通常作为 master 的备胎。  
 ![master-slave](/images/arch/master-slave.png#center)
 
@@ -126,23 +126,26 @@ toc = true
 这是数量级的关系，单台机器已无法胜任，要求在多台机器上同时执行，需要一个中间代理人，由代理模组件管理如何发布处理到具体的处理节点上。  
 ![broker](/images/arch/broker.png#center)
 
-✦ <font color="orange">事件总线模式</font>  
+✦ <font color="orange">事件总线模式（enterprise bus）</font>  
 系统越来越复杂和庞大，需要解耦，有了总线，各组件可以拆分出来。有了事件总线，也就意为着采用事件监听和事件响应模式。  
 ![EBS](/images/arch/EBS.jpg#center)
 
-✦ <font color="orange">Workflow/Pipeline 流水线模式</font>  
+✦ <font color="orange">流水线模式（workflow/pipeline）</font>  
 这个常见于系统集成和数据处理，Spring Integration、Mule 都是采用该模式。  
 ![pipeline](/images/arch/pipeline.png#center)
 
-✦ <font color="orange">单体 🆚 微服务模式</font>  
+✦ <font color="orange">单体 🆚 微服务模式（monolith vs microservices）</font>  
 近来流行的微服务模式
 ![microservice](/images/arch/microservice.png#center)
 
-✦ <font color="orange">Sidecar (边车)模式</font>  
+✦ <font color="orange">边车模式（sidecar）</font>  
 Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
 ![sidecar](/images/arch/sidecar.png#center)
 
-以上的架构都不新鲜，好坏关键还在于具体应用的技术以及对系统的理解和实践上。更多的参考微软文档：[Application design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
+以上的架构都不新鲜，好坏关键还在于具体应用的技术以及对系统的理解和实践上。更多的参考：
+
+-   [微软文档：Application design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
+-   [solution-architecture-patterns](https://chanakaudaya.github.io/solution-architecture-patterns/)
 
 ## 分布式系统的学习
 
