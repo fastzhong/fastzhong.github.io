@@ -14,7 +14,7 @@ draft = true
 
 ## 101 数据结构与算法课程
 
-如果没学过或者学了忘记的，可以参考以下课程，大部分我看过，都是高手，强烈推荐：
+如果没学过或者学了忘记的，可以参考以下课程（前五个我看过），都是高手，强烈推荐：
 
 -   [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer（英文）](https://www.youtube.com/watch?v=RBSGKlAvoiM)：数据结构基础课程，前 Google 员工和 ACM 顶级高手，讲得很好。
 
@@ -47,7 +47,9 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 ![leetcode algo](/images/algo/leetcode-algo.png)  
 ![leetcode top](/images/algo/leetcode-top.png)
 
-### 策略 B：循序渐进 👍🏻
+### 策略 B：循序渐进
+
+👍🏻 👍🏻 👍🏻
 
 1. 基础：Leetcode -> Explore -> Learn 针对各个数据结构和算法的分类学习 + 练习:
 
@@ -82,7 +84,9 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
     -   面试前一周恢复性训练
 ```
 
-## 202 精华题/刷题列表 👍🏻
+## 202 精华题/刷题列表
+
+👍🏻 👍🏻 👍🏻
 
 -   [图灵星球：LeetCode 精华题目列表【刷题规划系列】](https://turingplanet.org/2020/09/18/leetcode_planning_list/)
 
@@ -113,7 +117,9 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 > 本文从 Leetcode 中精选大概 200 左右的题目，去除了某些繁杂但是没有多少算法思想的题目，同时保留了面试中经常被问到的经典题目。
 
-## 203 套路 & 模版 👍🏻
+## 203 套路 & 模版
+
+👍🏻 👍🏻 👍🏻
 
 -   [turningplanet LeetCode 刷题系列 (Java)](https://turingplanet.org/leetcode%E5%88%B7%E9%A2%98%E7%B3%BB%E5%88%97/)
 
@@ -137,6 +143,7 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 -   C: [LeetCode in pure C](https://github.com/begeekmyfriend/leetcode)
 -   Javascrip/Python：[力扣加加 - 努力做西湖区最好的算法题解](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
 -   Java：[Cspiration 1-300](https://github.com/JojoYang666/Leetcode-1-300) [301 - 600](https://github.com/JojoYang666/Leetcode-301-600)
+-   各种算法的实现（几乎涵盖所有的编程语言）：[TheAlgorithms](https://the-algorithms.com/)
 
 ### 中文讲解
 
@@ -163,9 +170,9 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
     [Leetcode 力扣 1-300 题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1xa411A76q)  
     [Leetcode 力扣 301+题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1eK4y1j7fT)
 
-### 英文讲解（课程）👍🏻
+### 英文讲解（课程）
 
-非常好，但需要花钱购买 🤑 🤑 🤑
+👍🏻 👍🏻 👍🏻 非常好但需要花钱购买 🤑 🤑 🤑
 
 -   [Zero to Master Master the Coding Interview: Big Tech (FAANG) Interviews](https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep)
 -   [Back to Back SWE](https://backtobackswe.com/) （130 道）
@@ -196,7 +203,7 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 ---
 
-leetcode 是最好的，觉得还吃不饱的话 😅 还有 [InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，[TopCoder](https://www.topcoder.com/challenges/?pageIndex=1)，[HackerRank](https://www.hackerrank.com/domains)，[《挑战程序设计竞赛》](https://github.com/guanhui07/studyFiles/blob/master/%E7%AE%97%E6%B3%95/%E6%8C%91%E6%88%98%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B(%E7%AC%AC2%E7%89%88).pdf)，[《算法竞赛进阶指南》](https://github.com/lydrainbowcat/tedukuri)等等。
+leetcode 是最好的，觉得还吃不饱的话 😅 还有 [InterviewBit](https://www.interviewbit.com/)，[GG](https://www.geeksforgeeks.org/)，[Google's Coding Competitions](https://codingcompetitions.withgoogle.com/)，[TopCoder](https://www.topcoder.com/challenges/?pageIndex=1)，[HackerRank](https://www.hackerrank.com/domains)，[《挑战程序设计竞赛》](<https://github.com/guanhui07/studyFiles/blob/master/%E7%AE%97%E6%B3%95/%E6%8C%91%E6%88%98%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B(%E7%AC%AC2%E7%89%88).pdf>)，[《算法竞赛进阶指南》](https://github.com/lydrainbowcat/tedukuri)等等。
 
 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结：
 
