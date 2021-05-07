@@ -75,7 +75,7 @@ toc = false
 
 ## [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
-    -   纯手工，不依赖任何工具或 script，最早来自 k8s 大名人 kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
+    -   纯手工，不依赖任何工具或 script，最早来自 k8s 大名人 Kelseyhightower，最灵活也最底层，以生产级别（多节点的）k8s 集群的安装最为复杂
     -   自建主要是为了学习的，有时间的话必须尝试 THW
 
 ## 自动化工具

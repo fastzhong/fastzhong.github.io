@@ -45,7 +45,7 @@ print("Hello, world!")
 
 ## Python 基本语法
 
-结合代码 [㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
+结合代码看一目了然 [㊫ Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
 
 ![Python3](/images/python/Python3.png#center)
 
@@ -111,4 +111,4 @@ if __name__=="__main__":
 7
 ```
 
-有了以上知识基本上可以开始编程，其它一些非常有用的高级功能，如 lambda，itertools， decorator
+有了以上知识基本上可以开始编程，其它一些非常有用的高级功能，如 lambda，itertools， decorator 等等以后做博客。
