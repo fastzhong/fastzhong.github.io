@@ -223,12 +223,13 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
     -   可读性下降、出错性上升：异步调用促使程序的碎片化，增加了流程处理和错误处理的复杂度，降低了程序可读性，响应速度，以及数据处理效率；
     -   性能下降：基于 Json 的 REST 还是序列/反序列 RPC 调用增加了数据的正确性和完整性判断，同时调用链急剧加长；
     -   并发问题：由此而导致奇怪问题次数大增，如网包或 message 丢失，同时 debug 变得比较困难的
+    -   对于关键的商业系统，如何确保消息的 exactly-once
 
 -   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个版本；
 
 -   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎 💩 变成 一坨一坨的屎 💩💩💩；
 
--   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加确定 <font color="orange">数据和系统正确性</font> 的难度 ⏤ distributed state/multiple data versions，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font> ⏤ [Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)，经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font> ⏤ [Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)，经典的分布式设计或编码 8 种错误假设：
 
     -   网络是稳定的
     -   网络传输的延迟是零

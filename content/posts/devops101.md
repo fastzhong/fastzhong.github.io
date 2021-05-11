@@ -10,13 +10,19 @@ toc = false
 
 <!--more-->
 
-很多人谈论 CICD，其实是这 5 个基本点：
+很多人谈论 CI/CD 或者 DevOps，其实是这 5 个基本点：
 
--   Continuous Integration
--   Continuous Testing
--   Continuous Delivery
--   Continuous Deployment
--   Continuous Monitoring
+-   <font color="orange">Continuous Integration</font>
+-   <font color="orange">Continuous Testing</font>
+-   <font color="orange">Continuous Delivery</font>
+-   <font color="orange">Continuous Deployment</font>
+-   <font color="orange">Continuous Monitoring</font>
+
+Continuous Integration 就是组装和打包最终软件产品。
+
+Continuous Delivery 和 Continuous Deployment 类似，区别在于 Deployment 是自动部署到生产环境，Delivery 在 Deployment 之前需要经过人为的确认/批准，所以技术上讲两者是一样的。
+
+Continuous Testing 不是一个单独的 process，它总是包含在 CI/CD 中。
 
 这 5 个 C 的支撑点就是自动化工具：
 
