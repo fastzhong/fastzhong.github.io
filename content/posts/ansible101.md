@@ -34,7 +34,7 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
     -   Ansible 是用 Python 实现的，可以干几乎任何编程语言能干的事情，所以是可编程的自动化框架，实现自动化的扩展和重用，Python 是一种超级”胶水“语言，贴近自然语言，运维二次开发非常容易；
     -   Ansible 使用上采用类似 SQL“声明式”的 命令（yaml），而不是一大段具体的自动化动作细节，关注点在“What”上而不是“How”，这是自动化层面的抽象，有别于脚本，使用者也不必纠缠于五花八门的命令行用法细节；
     -   ssh instead of agent：ssh，Python 在 Linux 几乎所有的版本上自带，所以 Ansible 的使用依赖几乎为 0（唯一问题是诞生之初不考虑 Windows，最近才支持）;
-    -   Ansible 没有像 Chef、Puppet 那样复杂，二次，三次，四次抽象的概念和架构，有运维知识，1，2 小时基本就可上手，Ansible 贴近 shell/Linux 原生系统，一条 Ansible 命令影响成百上千台机器，任何复杂系统的配置包装一下就可以融入 Ansible，简单粗暴，但非常灵活，对于运维这种千奇百怪的脏活、累活，超级耐操； 
+    -   Ansible 没有像 Chef、Puppet 那样复杂，二次，三次，四次抽象的概念和架构，有运维知识，1，2 小时基本就可上手，Ansible 贴近 shell/Linux 原生系统，一条 Ansible 命令影响成百上千台机器，任何复杂系统的配置包装一下就可以融入 Ansible，简单粗暴，但非常灵活，对于运维这种千奇百怪的脏活、累活，超级耐操；
     -   编排自动化的动作（orchestration：把几个事情串在一起执行像交响乐演奏需要各种乐器的一起配合），这样才能完成用户特定的复杂事情，这就比脚本和脚本库高一个档次；
 
 在 IT 界，重复发明轮子的事多了去，Ansible 也属于此，但和老牌的 Chef、Puppet 相比，优势在于易用、好用、耐用。
@@ -43,35 +43,9 @@ Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
 
 Ansible 的主要工作都是通过编写 YAML 文件完成的。YAML，一种标记语言，Python 社区发明的，现在广泛采纳用来写配置 template，和 Json、XML 类似。Json 可以说是完全极其抛弃臃肿的 XML，YAML 则是以 Json 的基础，更为简练，同时加入更为丰富的表达，如可以有 comment，比较一下：
 
-```json
-{
-    "spec": {
-        "containers": [
-            {
-                "name": "nginx",
-                "image": "nginx:1.7.9",
-                "ports": [
-                    {
-                        "containerPort": 80
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
+![yaml](/images/ansible/yaml.png#center)
 
-```yaml
-# yaml
-spec:
-    containers:
-        - name: nginx
-          image: nginx:1.7.9
-          ports:
-              - containerPort: 80
-```
-
-YAML 语法可以表达散列表、标量等数据结构。结构通过空格来展示，YAML 文件扩展名为 yml 或 yaml。
+YAML 语法以健值对为基础，可以表达散列表、标量等数据结构，结构通过空格和新的一行来展示，文件扩展名为 yml 或 yaml。YAML 简单直观，非常容易理解。
 
 语法注意：
 
@@ -79,13 +53,15 @@ YAML 语法可以表达散列表、标量等数据结构。结构通过空格来
 -   使用缩进表示层级关系
 -   缩进时不允许使用 Tab 键，只允许使用空格
 -   缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
--   基本数据类型：支持整型、浮点型、时间戳类型、布尔、字符串等基本数据类型
+-   基本数据类型：支持整型、浮点型、时间戳类型、布尔（true/false，yes/no）、字符串等基本数据类型
 -   序列（数组）里配置项通过 <font color="orange">-</font> 来代表
--   序列（数组）是 Primary（字符串，数值，布尔）可以用 <font color="orange">[]</font> 来表示
--   Map 里键值用 <font color="orange">:</font> 来分隔
+-   序列（数组）的元素是 Primary（字符串，数值，布尔）可以用 <font color="orange">[]</font> 来表示
+-   多个健值对可构造成复杂结构（Object），如上图所示的 microservices 数组元素
+-   键值用 <font color="orange">:</font> 来分隔
 -   注释用 <font color="orange">#</font>，没有多行注释
 -   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="orange">\\</font> 表达，如换行 \n
--   通过 \$xxx 来引用变量
+-   多行字符串用 <font color="orange">｜</font> 打头
+-   通过 \$xxx 来引用环境变量
 -   动态值用 <font color="orange">{{}}</font> （placeholder）来表示
 
 下面是个例子（Ansible 的 playbook）：
@@ -135,9 +111,13 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 图中包含了 Ansible 的基本概念/术语：
 
+-   <font color="orange">Ansible Inventory</font>：定义目标机器，程序在哪里执行
+-   <font color="orange">Ansible Modules</font>： Ansible 自带或自己扩展的程序，运行后达到一定的作用/目的
+-   <font color="orange">Ansible Playbook</font>：指示如何执行 Modules，把 Inventory 和 Modules 连接在一起
+
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
-<font color="orange">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
+<font color="orange">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为机器变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
 编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
 
