@@ -1,5 +1,5 @@
 +++
-title = "Python 102 in 2021"
+title = "Python 102 in 2021（基本语法）"
 date = 2021-02-18T01:08:47+08:00
 readingTime = true
 categories = ["编程"]

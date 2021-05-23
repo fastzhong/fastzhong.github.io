@@ -1,5 +1,5 @@
 +++
-title = "Python 101 in 2020"
+title = "Python 101 in 2020（简介） "
 date = 2020-04-01T01:08:47+08:00
 readingTime = true
 categories = ["编程"]

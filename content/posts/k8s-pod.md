@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes Pod"
-date = 2002-10-06T06:08:47+08:00
+date = 2010-10-06T06:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]

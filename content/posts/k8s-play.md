@@ -1,6 +1,6 @@
 +++
 title = "Kubernetes 实操（Mac）- 目录"
-date = 2002-10-09T05:08:47+08:00
+date = 2010-10-09T05:08:47+08:00
 readingTime = true
 categories = ["云 & 云原生"]
 tags = ["kubernetes"]
