@@ -59,6 +59,8 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 ![leetcode-cn](/images/algo/leetcode-cn.png)
 
+算法基础好的或者学校刚毕业的可以跳过这部分，直接刷题。
+
 2. 针对每个 topic 强化刷题，包括套路和特定类型的问题：Leetcode -> Problems -> Tags 选择 topics，参考下面的“精华题/刷题列表”
 
 3. 面试前针对某个具体公司刷题：Leetcode -> Problems -> Tags 选择公司
@@ -147,16 +149,18 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 ### 中文讲解
 
--   💁🏻‍♂️ 花花酱  
-    [油管：花花酱 LeetCode 视频讲解](https://docs.google.com/spreadsheets/d/1HV-iKgYJL4DpSOX1M-HcYG1cmz5CQxoduLOdEoTnIXo/edit#gid=0)  
-     [B 站：花花酱 LeetCode](https://space.bilibili.com/9880352)  
-     网站：[https://zxi.mytechroad.com/blog/](https://zxi.mytechroad.com/blog/)
+-   💁🏻‍♂️ 花花酱
+
+    -   油管：[花花酱 LeetCode 视频讲解](https://docs.google.com/spreadsheets/d/1HV-iKgYJL4DpSOX1M-HcYG1cmz5CQxoduLOdEoTnIXo/edit#gid=0)
+    -   B 站：[花花酱 LeetCode](https://space.bilibili.com/9880352)
+    -   网站：[https://zxi.mytechroad.com/blog/](https://zxi.mytechroad.com/blog/)
 
     > 花花酱讲解 LeetCode 题目已经很多年了，一直更新，属于老字号。他针对不同题型开辟了各种算法专题，涵盖了 LeetCode 上很广泛的各类题型，比较适合刚刚入门的同学进行系统性分块学习。而且花花酱更新频率比较高，平时的 contest 也会参加，会分享一些解题思路。
 
--   💁🏻‍♂️ 篮子王  
-    [油管：basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4)（Java 版）
-    [B 站：basketwangCoding](https://space.bilibili.com/108657656)
+-   💁🏻‍♂️ 篮子王
+
+    -   油管：[basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4)（Java 版）
+    -   B 站：[basketwangCoding](https://space.bilibili.com/108657656)
 
     > 篮子王可能是油管上最好的中文视频讲解:P。篮子王不更新了，不过上传的解题视频中，已经覆盖了很多高频题。
 
@@ -164,11 +168,11 @@ leetcode 中文站的资料就更多：[https://leetcode-cn.com/leetbook/](https
 
 -   💁🏻‍♂️ [油管：古城算法](https://www.youtube.com/c/%E5%8F%A4%E5%9F%8E%E7%AE%97%E6%B3%95/featured)
 
--   💁🏻‍♂️ 爱学习的饲养员  
-    [手把手带你刷 Leetcode 力扣｜各个击破数据结构和算法](https://www.bilibili.com/video/BV1sy4y1q79M)  
-    [Leetcode 力扣必备算法知识和练习题｜手画图解版](https://www.bilibili.com/video/BV1xt4y1e7q4)  
-    [Leetcode 力扣 1-300 题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1xa411A76q)  
-    [Leetcode 力扣 301+题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1eK4y1j7fT)
+-   💁🏻‍♂️ 爱学习的饲养员
+    -   B 站：[手把手带你刷 Leetcode 力扣｜各个击破数据结构和算法](https://www.bilibili.com/video/BV1sy4y1q79M)
+    -   B 站：[Leetcode 力扣必备算法知识和练习题｜手画图解版](https://www.bilibili.com/video/BV1xt4y1e7q4)
+    -   B 站：[Leetcode 力扣 1-300 题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1xa411A76q)
+    -   B 站：[Leetcode 力扣 301+题视频讲解合集｜手画图解版+代码](https://www.bilibili.com/video/BV1eK4y1j7fT)
 
 ### 英文讲解（课程）
 
