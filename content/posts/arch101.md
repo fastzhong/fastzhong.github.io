@@ -206,7 +206,7 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 对应每个点都可以找到相应的具体技术，微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试（对比以前的 Corba，DCOM，J2EE，Web Services），不是发展大方向。
 
-Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考：<i class="fas fa-external-link-alt"></i>&nbsp; [服务网格（Service Mesh ）FAQ](/posts/service-mesh-faq/)
+Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考： [<i class="fas fa-external-link-alt"></i>&nbsp; 服务网格（Service Mesh ）101](/posts/service-mesh-101/)
 
 💬 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
 
@@ -227,9 +227,9 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 -   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个版本；
 
--   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎 💩 变成 一坨一坨的屎 💩💩💩；
+-   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎变成 一坨一坨的屎 💩💩💩；
 
--   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font> ⏤ [Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)，经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font>（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
 
     -   网络是稳定的
     -   网络传输的延迟是零
@@ -253,7 +253,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 -   复杂系统不易，复杂系统的微服务实施必须谨慎，相当谨慎；
 -   以云原生为基础架构的微服务是技术发展的方向；
 
-99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
+99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[📃 How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
 > `作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy），我的办法就是 KISS`
 

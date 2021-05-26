@@ -11,9 +11,10 @@ toc = false
 
 <!--more-->
 
-参考：  
-<i class="fas fa-external-link-alt"></i>&nbsp; [安装并配置 kubectl](https://kubernetes.io/zh/docs/tasks/tools/install-kubectl/)  
-<i class="fas fa-external-link-alt"></i>&nbsp; [Kubernetes 安装 - minikube](https://kubernetes.io/zh/docs/tasks/tools/install-minikube/)
+参考：
+
+-   [<i class="fas fa-external-link-alt"></i>&nbsp;安装并配置 kubectl](https://kubernetes.io/zh/docs/tasks/tools/install-kubectl/)
+-   [<i class="fas fa-external-link-alt"></i>&nbsp;Kubernetes 安装 - minikube](https://kubernetes.io/zh/docs/tasks/tools/install-minikube/)
 
 1. 检查您的 macOS 是否支持虚拟化技术，请运行下面的命令：
 

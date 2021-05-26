@@ -13,10 +13,10 @@ toc = false
 
 有几种方式来练手：
 
--   直接使用别人提供的 sandbox，如 [katacoda](https://katacoda.com/)、[play with k8s](https://training.play-with-kubernetes.com/kubernetes-workshop/) 等
--   直接使用云端 Kubernetes hosted infrastructure 或者 Kubernetes as a Service （KaaS），三大云提供商 - AWS，GPE，Azure 都有提供
--   云端自建，只用虚机等基础设施
--   本地自建
+1.  直接使用别人提供的 sandbox，如 [katacoda](https://katacoda.com/)、[play with k8s](https://training.play-with-kubernetes.com/kubernetes-workshop/) 等
+2.  直接使用云端 Kubernetes hosted infrastructure 或者 Kubernetes as a Service （KaaS），三大云提供商 - AWS，GPE，Azure 都有提供
+3.  云端自建，只用虚机等基础设施
+4.  本地自建
 
 前两种无需安装，自建方法也有好多，常见的：
 
@@ -29,6 +29,8 @@ toc = false
 -   [The Hard Way（THW）](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 -   自动化工具，如 Ansible，Chef，Terraform
 -   商业软件，如 Openshift，CloudFoundry，Rancher
+
+下面是对这些工具的简单介绍：
 
 ## [Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
 

@@ -15,15 +15,15 @@ toc = true
 
 -   GitHub 上的资料 - 除了拿来面试，也是学习架构的大宝藏：
 
-    -   <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+    -   [<i class="fas fa-external-link-alt"></i>&nbsp; Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 
-    -   <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
+    -   [<i class="fas fa-external-link-alt"></i>&nbsp; System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
 
 -   课程：
 
-    -   [Educative: Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design)
+    -   [Educative: Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design)（付费）
 
-    -   [AlgoExpert: SystemsExpert](https://www.algoexpert.io/systems/product)
+    -   [AlgoExpert: SystemsExpert](https://www.algoexpert.io/systems/product)（付费）
 
     -   [Interview Daemon: System Design (Real World Examples)](https://interviewdaemon.com/courses/design-real-world-examples/) 🆓
 
@@ -84,13 +84,13 @@ toc = true
 
 ## 技术点参考
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)
+[<i class="fas fa-external-link-alt"></i>&nbsp; 云原生时代|分布式系统设计知识图谱（内含 22 个知识点）](https://yq.aliyun.com/articles/719353)
 ![分布式系统设计知识图谱](/images/arch/techniques.png)
 
 展开的话范围相当的广，只能平时积累，逐个突破。
 
 ---
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [我理解的架构 & 架构师（兼谈微服务）](/posts/arch101)
+[<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 我理解的架构 & 架构师（兼谈微服务）](/posts/arch101)
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[淘宝服务端高并发分布式架构演进之路](/posts/taobao/) ⏤ 其实是互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。
+[<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 淘宝服务端高并发分布式架构演进之路](/posts/taobao/) ⏤ 互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。

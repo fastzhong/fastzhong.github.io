@@ -8,7 +8,7 @@ toc = true
 draft = false
 +++
 
-想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是小人物 `被面&面了无数次` 后的小总结。
+想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是小人物“被面&面了无数次”后的小总结。
 
 <!--more-->
 
@@ -59,7 +59,7 @@ draft = false
 6. _<font color="orange">表达练习</font>_：表达能力非常影响在面试中的表现，能否简练地将答案告诉面试官，可以通过给自己讲解的方式刻意练习
 7. _<font color="orange">重点针对</font>_：面试官会针对简历提问，所以请针对简历上写的所有技术点以及个人优势进行重点准备
 
-### “普遍性难题”
+### “普遍性”难题
 
 通常都是些傻 B 问题，没错。但对于这类问题态度要诚恳，表达、用词、铺垫很重要，事先要有所准备，不要陷入负面信息上，点到为止。一般如果碰到过多纠缠这样的问题，我对面试官、职位、和公司的印象分大减。
 
@@ -149,18 +149,18 @@ draft = false
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 
-⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：<i class="fas fa-external-link-alt"></i>&nbsp; [算法编程面试指南](/posts/interview-algo)
+⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：[<i class="fas fa-external-link-alt"></i>&nbsp; 算法编程面试指南](/posts/interview-algo)
 
 ### Java
 
-福利：收集了些非常好的知识点汇总和面试题 [链接](https://github.com/fastzhong/interview/tree/master/Java)
+福利：收集了些非常好的知识点汇总和面试题 [㊮ 链接](https://github.com/fastzhong/interview/tree/master/Java)
 
-系统学习，成效才会卓著：<i class="fas fa-external-link-alt"></i>&nbsp;TBD
+系统学习，成效才会卓著：[<i class="fas fa-external-link-alt"></i>&nbsp; TBD]()
 
 ### 系统设计
 
-系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：<i class="fas fa-external-link-alt"></i>&nbsp; [系统设计面试指南](/posts/interview-system)
+系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：[<i class="fas fa-external-link-alt"></i>&nbsp; 系统设计面试指南](/posts/interview-system)
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结: 找工作一般不是一个快速、顺利的过程，发挥有时好有时不好，不是每个公司都适合你，你也不是喜欢每一家公司。一个公司找人和一个人找公司，后者其实所付出的风险和代价要大得多，所以随着经历，需要逐渐把被工作选换作选工作来思考和处理。
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 小结： 找工作一般不是一个快速、顺利的过程，发挥有时好有时不好，不是每个公司都适合你，你也不是喜欢每一家公司。一个公司找人和一个人找公司，后者其实所付出的风险和代价要大得多，所以随着经历，需要逐渐把被工作选换作选工作来思考和处理。

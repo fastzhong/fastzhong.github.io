@@ -9,11 +9,13 @@ toc = true
 
 <!--more-->
 
-💡 前提准备：<i class="fas fa-external-link-alt"></i>&nbsp; [Docker/容器介绍（2020.9 更新）](/posts/docker101/)
+💡 前提准备：[<i class="fas fa-external-link-alt"></i>&nbsp; Docker/容器介绍（2020.9 更新）](/posts/docker101/)
 
 ![docker cheatsheet](/images/docker/cheatsheet-docker.png)
 
 ## Docker Desktop 安装
+
+安装 Docker 本地运行环境，直接采用 Docker Desktop。
 
 Docker 桌面版的安装比较简单，下载后直接拖拽至 Applications：
 
@@ -26,6 +28,8 @@ Docker 桌面版的安装比较简单，下载后直接拖拽至 Applications：
 ![docker install](/images/docker/no-container.png)
 
 ## Hello World in Docker
+
+在 Docker 里运行单个容器：
 
 > 1. 运行 “docker run hello-world”
 > 2. Docker client 通知 Docker daemon 运行 hello-world 镜像
@@ -203,12 +207,18 @@ MySpace/k8slab/docker-play
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-docker 之前的命令没有分组，随着命令行越来越多，后来才开始分子命令，重要的几个：
+## Application in Docker
 
--   <span style="color: orange">docker container</span>：管理容器生命周期，如 create，exec，kill，pause，restart，rm，run，start，stop，unpause
--   <span style="color: orange">docker image</span>：管理镜像，如 build，push，pull，inspect，rm
--   <span style="color: orange">docker network</span>：管理 docker 网络
--   <span style="color: orange">docker volume</span>：管理存储
--   <span style="color: orange">docker service，docker swarm，docker stack</span>：管理单个或多个 service
+在 Docker 里运行多个容器，并把他们组织在一起形成完整的一个应用（container -> service -> stack）。
 
 Kubernetes 早已一统容器管理的江湖，这里就略去 docker 这部分的高级功能。
+
+## Docker 命令
+
+docker 之前的命令没有分组（虽然依旧可用），随着命令行越来越多，后来才开始分子命令，重要的几个：
+
+-   [docker container](https://docs.docker.com/engine/reference/commandline/container/)：管理容器生命周期，如 create，exec，kill，pause，restart，rm，run，start，stop，unpause
+-   [docker image](https://docs.docker.com/engine/reference/commandline/image/)：管理镜像，如 build，push，pull，inspect，rm
+-   [docker network](https://docs.docker.com/engine/reference/commandline/network/)：管理 docker 网络
+-   [docker volume](https://docs.docker.com/storage/volumes/)：管理存储
+-   [docker service](https://docs.docker.com/engine/reference/commandline/service/)，[docker swarm](https://docs.docker.com/engine/reference/commandline/swarm/)，[docker stack](https://docs.docker.com/engine/reference/commandline/stack/)：管理单个或多个 service

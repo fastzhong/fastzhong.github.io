@@ -15,7 +15,7 @@ draft = false
 
 ---
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 原文：[Modern JavaScript Explained For Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
+原文：[<i class="fas fa-external-link-alt"></i>&nbsp; Modern JavaScript Explained For Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
 
 如果你不是从 Javascritp 最开始一路跟下来，学习 Javascript 是件多么苦难的事你肯定不清楚。Javascript 的生态发展和变化之快，之大，让人搞不懂这些五花八门的工具到底想干啥，想解决什么莫名其妙的问题。我自己从 1998 年开始学习编程但直到 2014 年才开始学习 Javascript。在那时，我记得我看到 Browserfy 上有这么一段：
 

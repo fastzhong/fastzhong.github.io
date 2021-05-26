@@ -7,7 +7,7 @@ tags = ["kubernetes"]
 toc = true
 +++
 
-亲手撸一遍
+亲手撸一遍 💪
 
 <!--more-->
 
@@ -67,7 +67,7 @@ Kubernetes 中使用到的 CA 和证书：
 
 ## VM
 
-和 kubeadm 的一样：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
+和 kubeadm 的一样：[<i class="fas fa-external-link-alt"></i>&nbsp; Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
 
 ```bash
 [I] ➜ vagrant status
@@ -1137,6 +1137,8 @@ CoreDNS is running at https://192.168.100.100:6443/api/v1/namespaces/kube-system
 ```
 
 ## e2e test
+
+[此处省略 xxx 字......]
 
 ## 附：Kubernetes 中使用到的 CA 和证书
 

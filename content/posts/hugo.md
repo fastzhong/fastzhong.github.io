@@ -18,9 +18,9 @@ Wordpress，Blogger，Tumblr，Medium，...，统统不入法眼，程序员喜�
 -   <font color="orange">Hugo</font>：博客生成器
 -   <font color="orange">netlify</font>: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务
 
-静态博客生成器多如牛毛，各种比较在此：
+静态博客生成器多如牛毛（出名的如 Jekyll，Gatsby，Hexo），各种比较在此：
 
--   [http://staticgen.com/](https://www.staticgen.com/)
--   [https://staticsitegenerators.net/](https://staticsitegenerators.net/)
+-   [staticgen.com](https://www.staticgen.com/)
+-   [staticsitegenerators.net](https://staticsitegenerators.net/)
 
-<i class="fas fa-external-link-alt"></i>&nbsp;[**常用在线工具**](https://tool.lu/)
+[<i class="fas fa-external-link-alt"></i>&nbsp; 常用在线工具](https://tool.lu/)

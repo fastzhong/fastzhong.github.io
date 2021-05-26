@@ -15,7 +15,7 @@ draft = false
 
 ---
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 原文：[Modern CSS Explained For Dinosaurs](https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525)
+原文：[<i class="fas fa-external-link-alt"></i>&nbsp; Modern CSS Explained For Dinosaurs](https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525)
 
 ![0](/images/modern-css/0.png#center)
 

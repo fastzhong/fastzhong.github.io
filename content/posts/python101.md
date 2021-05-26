@@ -462,15 +462,18 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 
 和十几年前不同，现在不仅学习资料都是一丢丢的而且质量非常高，推荐：
 
--   [Programming with Mosh](https://programmingwithmosh.com/) ㊫ [Python Tutorial - Python for Beginners \[2020\]](https://www.youtube.com/watch?v=kqtD5dpn9C8)
--   [Clever Programmer](https://www.cleverprogrammer.com/) ㊫ [Python Tutorial for Beginners - Full Course in 11 Hours \[2020\]](https://www.youtube.com/watch?v=4F2m91eKmts)
--   [freeCodeCamp](https://www.freecodecamp.org/) ㊫ [Learn Python - Full Course for Beginners \[Tutorial\]](https://www.youtube.com/watch?v=rfscVS0vtbw)
--   [freeCodeCamp](https://www.freecodecamp.org/) ㊫ [Python for Everybody - Full University Python Course](https://www.youtube.com/watch?v=8DvywoWv6fI)
--   [freeCodeCamp](https://www.freecodecamp.org/) ㊫ [Intermediate Python Programming Course](https://www.youtube.com/watch?v=HGOBQPFzWKo)
+-   [Programming with Mosh](https://programmingwithmosh.com/)
+    -   [<i class="fab fa-youtube"></i>&nbsp;&nbsp;Python Tutorial - Python for Beginners \[2020\]](https://www.youtube.com/watch?v=kqtD5dpn9C8)
+-   [Clever Programmer](https://www.cleverprogrammer.com/)
+    -   [<i class="fab fa-youtube"></i>&nbsp;&nbsp;Python Tutorial for Beginners - Full Course in 11 Hours \[2020\]](https://www.youtube.com/watch?v=4F2m91eKmts)
+-   [freeCodeCamp](https://www.freecodecamp.org/)
+    -   [<i class="fab fa-youtube"></i>&nbsp;&nbsp;Learn Python - Full Course for Beginners \[Tutorial\]](https://www.youtube.com/watch?v=rfscVS0vtbw)
+    -   [<i class="fab fa-youtube"></i>&nbsp;&nbsp;Python for Everybody - Full University Python Course](https://www.youtube.com/watch?v=8DvywoWv6fI)
+    -   [<i class="fab fa-youtube"></i>&nbsp;&nbsp;Intermediate Python Programming Course](https://www.youtube.com/watch?v=HGOBQPFzWKo)
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; 以上都是些我早自学 Python 前想知道的。小结：
+以上都是些我早自学 Python 前想知道的，小结：
 
 -   选择 Python3
 -   为每个项目建立 virtual env
