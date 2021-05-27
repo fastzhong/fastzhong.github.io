@@ -1,5 +1,5 @@
 +++
-title = "CI/CD  概揽"
+title = "CI/CD & DevOps 概揽"
 date = "2018-08-15T12:19:19+08:00"
 categories = ["DevOps"]
 tags = []
