@@ -39,7 +39,7 @@ toc = true
 
 这个马来西亚的 Spark Liang 小哥讲得真的是清晰易懂，对入门小白很有帮助，推荐他的 [股票系列](https://www.youtube.com/playlist?list=PLge7qz6fjCvc8tnhM0Z09C-24BI0DAN6H)，在学习股票前已经看他的各种视频一段时间了，都很好。
 
-YouTube 上有不少“含金量”的股票教学和实战视频，科普第一人，[李永乐老师](https://www.youtube.com/playlist?list=PLOrDt87s8A3qVVaSmxpttNKzP80tSEH83)，从物理第一性原理出发，揭示股票，买卖的底层原理，闲暇读读，非常有趣。
+科普第一人，[李永乐老师](https://space.bilibili.com/9458053)，经常揭示金融，经济的底层原理，闲暇读读，非常有趣。不过，聪明如李老师，炒股也是亏本的 😅[李永乐老师 2 月 9 日油管直播之炒股建议](https://www.bilibili.com/video/BV1K741147Xq)😅。
 
 ## 找到方法
 
@@ -47,6 +47,7 @@ YouTube 上有不少“含金量”的股票教学和实战视频，科普第一
 
 > 🔥 [美股入门 | 炒股到底能赚钱吗？](https://www.youtube.com/watch?v=dKWhoRJHBTs)  
 > 🔥 [美股入门 | 为什么你炒股总亏钱？揭秘没人愿意告诉你的股票交易真相！](https://www.youtube.com/watch?v=qEwA_nXM3JE)  
+> 🔥 [【半佛】学股票吗亲？倾家荡产的那种。](https://www.bilibili.com/video/BV1Y7411W7br)  
 > 🔥 [CLEC 一億元的投資理財講座（二）你絕對不能錯過 2021 年 1 月 9 日 CLEC 投資理財教育學院](https://www.youtube.com/watch?v=SKupWmBAbXg)
 
 ![投资要禅定](/images/stock/投资要禅定.png)

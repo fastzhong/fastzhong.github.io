@@ -352,9 +352,9 @@ roles/
 - include: site-misc.yml
 ```
 
-### 重点：变量 vars
+### 重点：变量（vars）
 
-运维的复杂性和灵活性由变量 vars 来体现的，Ansible 的 var 可在多处定义，并有 [优先顺序](http://docs.ansible.com/ansible/playbooks_variables.html)。不过不用那么复杂，关键是搞清楚变量应用的范围：
+运维的复杂性和灵活性由变量（vars）来体现的，Ansible 的 var 可在多处定义，并有 [优先顺序](http://docs.ansible.com/ansible/playbooks_variables.html)。不过不用那么复杂，关键是搞清楚变量应用的范围：
 
 -   <font color="orange">全局变量</font> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
 
@@ -427,9 +427,9 @@ roles/
 
 -   <font color="orange">Ansible 默认/内置变量</font>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
 
-### 重点：标签 tags
+### 重点：标签（tags）
 
-在调试和部署的时候，有些任务需要重复多次的，而 playbook 包含从头到尾全部的操作，所以需要指定特定的任务（过滤掉其它的），这时候标签 tags 发挥作用。Ansible 命令行支持两种标签指定方式：
+在调试和部署的时候，有些任务需要重复多次的，而 playbook 包含从头到尾全部的操作，所以需要指定特定的任务（过滤掉其它的），这时候标签（tags）发挥作用。Ansible 命令行支持两种标签指定方式：
 
 -   -t or --tags
 -   --skip-tags
