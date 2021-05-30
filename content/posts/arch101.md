@@ -106,6 +106,8 @@ toc = true
 
 ## 主要的架构模式
 
+架构模式都不新鲜，看似简单，关键还在于具体应用，用好了威力无穷：
+
 ✦ <font color="orange">客户端-服务器模式（client-server）</font>  
 最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
 ![client-server](/images/arch/client-server.png#center)
@@ -142,7 +144,7 @@ toc = true
 Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
 ![sidecar](/images/arch/sidecar.png#center)
 
-以上的架构都不新鲜，好坏关键还在于具体应用的技术以及对系统的理解和实践上。更多的参考：
+更多可参考：
 
 -   [微软文档：Application design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
 -   [solution-architecture-patterns](https://chanakaudaya.github.io/solution-architecture-patterns/)
@@ -188,7 +190,7 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 ![历史名称](/images/arch/names.png#center)
 
-纵观开发历史，微服务不是什么新东西，仍旧是代码的拆分和集成，和 component-based 或 SOA 是一致的，只是层面不同。微服务不是针对小型软件或者单个项目层面，因为大部分的软件项目还没有等到解耦，拆分，长期演化成为”硬“需求，项目已经结束或者死掉啦。但反之，不同技术实力的团队，不同的项目，不同的地点，不同的时间，重复开发和实现，微服务解耦特性就能把软件的最大价值发挥出来，否则都是在做 silo application/project。所以微服务在政府，大公司或大型项目中推广和应用才能发挥其威力。一个 legacy 变成几十个 legacy，总体质量反而指数级下降。
+纵观开发历史，微服务不是什么新东西，仍旧是代码的拆分和集成，和 component-based 或 SOA 是一致的，只是层面不同。微服务不是针对小型软件或者单个项目层面，因为大部分的软件项目还没有等到解耦，拆分，长期演化成为”硬“需求，项目已经结束或者死掉啦。但反之，不同技术实力的团队，不同的项目，不同的地点，不同的时间，重复开发和实现，微服务解耦特性就能把软件的最大价值发挥出来，否则都是在做 silo application/project。所以微服务在政府，大公司或大型项目中推广和应用才能发挥其威力。
 
 另外，微服务还包含了开发团队的架构，运维的架构，这是和以往的纯系统架构概念非常不同的地方，也是实施微服务可能忽略的地方。微服务同时锁定了以 service 为导向的开发和运维模式（service oriented development and operation）。
 
@@ -202,47 +204,58 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 ![ 微服务技术栈](/images/microservices/microservices-stack.jpg#center)
 
-在我看来，注册，配置，数据一致性，链路跟踪，是微服务最基础和特有的关键点。
+在我看来，注册，配置，数据一致性，链路跟踪，是微服务最基础和特有的技术点。
 
 对应每个点都可以找到相应的具体技术，微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试（对比以前的 Corba，DCOM，J2EE，Web Services），不是发展大方向。
 
 Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考： [<i class="fas fa-external-link-alt"></i>&nbsp; 服务网格（Service Mesh ）101](/posts/service-mesh-101/)
 
-💬 分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，有时间才好好整理。
-
 ## 微服务/分布式的坑
 
-代码和工程的质量仍是灵魂，拆分和集成并不意味着可重用/可扩展就是必然。
+代码和工程的质量仍是灵魂，拆分和集成并不意味着可重用/可扩展就是必然。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
 
 > `如果你不能设计一个优良的单体系统，那么微服务也帮不上忙`
 
 -   大规模的微服务实施往往变成一抓就死，一放就散。游击队战术的引入，各组人马自行乱搞，各种 style，违背了 KISS 和 DRY 的金典，引入更多更复杂的技术，反而使得整体性变得异常复杂，脆弱，低效和难以维护；
+
 -   一个好的 API 设计已经如此不易，想要设计优良的、对外的、可复用的 service 对大多数小团队其实是无法胜任；
+
 -   技术滥用或不慎用，滥用分布式调用 ⏤ 远程同步（RPC/REST） 或 远程异步（消息系统）从而导致：
 
     -   可读性下降、出错性上升：异步调用促使程序的碎片化，增加了流程处理和错误处理的复杂度，降低了程序可读性，响应速度，以及数据处理效率；
     -   性能下降：基于 Json 的 REST 还是序列/反序列 RPC 调用增加了数据的正确性和完整性判断，同时调用链急剧加长；
     -   并发问题：由此而导致奇怪问题次数大增，如网包或 message 丢失，同时 debug 变得比较困难的
-    -   对于关键的商业系统，如何确保消息的 exactly-once
+    -   对于关键的商业系统，如何确保消息的可靠性，顺序性
 
--   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个版本；
+-   分布式系统调用除 RPC 外就是消息系统支撑的 Event Driven Architecture ⏤ 异步是系统集成最主要也是最重要的手段，名词也是满天飞，ESB（Enterprise Service Bus），Event Sourcing，CQRS，Streaming Processing，还有更隐晦的 Reactive Systems 等等，被推崇得像一粒粒银弹/迷魂弹：
+
+![beyond-microservices](/images/arch/beyond-microservices.png#center)
+
+`㊟` Domain-Drive Design（DDD）从来都是个纸上的东西，正确的废话而已，拿来做服务拆分没有一点帮助
+
+-   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个拷贝和版本；
 
 -   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎变成 一坨一坨的屎 💩💩💩；
 
--   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font>（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，⚠️ 网上那个鼓吹很多的 [saga pattern](https://microservices.io/patterns/data/saga.html) 也是出自那些 evangelist
+    或者所谓的 paper architect，用来解决实际数据一致性问题基本是不可行的。统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font>（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
 
-    -   网络是稳定的
-    -   网络传输的延迟是零
-    -   网络的带宽是无穷大
-    -   网络是安全的
-    -   网络的拓扑不会改变
-    -   只有一个系统管理员
-    -   传输数据的成本为零
-    -   整个网络是同构的
+        -   网络是稳定的
+        -   网络传输的延迟是零
+        -   网络的带宽是无穷大
+        -   网络是安全的
+        -   网络的拓扑不会改变
+        -   只有一个系统管理员
+        -   传输数据的成本为零
+        -   整个网络是同构的
 
-强大的运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，等等。除了这些运维辅助手段，简洁的接口设计，编码质量，设计文档，是每一个好系统的特征。
+-   强大的基础设施，运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，蓝绿部署，等等。
 
-> `系统集成依旧是所有复杂商业软件系统设计的难点和关键点`
+-   除了这些直接的运维辅助手段，还有需要各种工具应对接口设计，编码质量，设计文档，项目多模块管理，等等。
+
+如果要展开，上面这些点包含了很多技术细节，架构设计上倾向 decouple/loosely coupled 来解决复杂性问题，但商业从来不是 decouple/loosely coupled 的，总结一句就是：
+
+> `系统集成依旧是所有复杂商业软件系统设计的难点和关键点，越复杂的系统越需要系统性的设计`
 
 ## 微服务的小结
 
@@ -251,7 +264,6 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 -   DevOps 必须先行；
 -   复杂度加大，开发体验下降，对开发者要求提高；
 -   复杂系统不易，复杂系统的微服务实施必须谨慎，相当谨慎；
--   以云原生为基础架构的微服务是技术发展的方向；
 
 99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[📃 How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
