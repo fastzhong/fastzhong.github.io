@@ -10,12 +10,14 @@ toc = true
 
 <!--more-->
 
-![good-bye](/images/stock/good-bye.jpg#center)
-
 ## 树立观念
 
 一本改变我三观的书：  
-![穷爸爸富爸爸](/images/stock/rich.jpg)
+![穷爸爸富爸爸](/images/stock/rich.jpg#center)
+
+你要怎么赚钱，要和谁学赚钱，有了下面这张图就一目了然了：
+
+![收入](/images/stock/income.jpg#center)
 
 ### Why invest, Why US stock
 
@@ -44,6 +46,8 @@ toc = true
 ## 找到方法
 
 投资基本分为两种：`短期-投机` 🆚 `长期-投资`。金融市场庞大且包含非理性，学习十辈子都学不完，而且每个人都是要亏点钱才能有所体会，只是看亏了多少，亏了能否生存，成长。`投资是反人性的，而投机是人性使然`，新手都做不到长期-投资，这也是为什么很多道理或者巴菲特看似很简单，99.99%的人却做不到的原因。所以来不及解释了，先上车后买票。金融市场的背后充满了人性险恶，"水很深"，小白都是被割韭菜的，想要打怪升级做好亏钱的心理准备，而且一定要跟对师傅，光靠自己基本死路一条。
+
+![good-bye](/images/stock/good-bye.jpg#center)
 
 > 🔥 [美股入门 | 炒股到底能赚钱吗？](https://www.youtube.com/watch?v=dKWhoRJHBTs)  
 > 🔥 [美股入门 | 为什么你炒股总亏钱？揭秘没人愿意告诉你的股票交易真相！](https://www.youtube.com/watch?v=qEwA_nXM3JE)  
@@ -107,7 +111,6 @@ toc = true
 | 303  | [The Age of Turbulence: Adventures in a New World ](https://www.amazon.com/Age-Turbulence-Adventures-New-World/dp/B000W56R7I/ref=sr_1_1?dchild=1&keywords=The+Age+of+Turbulence+Adventures+in+a+New+World+by+Alen+Greenspan&qid=1616452631&s=books&sr=1-1) <br/> [我們的新世界](https://book.douban.com/subject/2269541/)                                                                                                          |
 | 304  | [The Map and the Territory 2.0: Risk, Human Nature, and the Future of Forecasting](https://www.amazon.com/Map-Territory-2-0-Nature-Forecasting-ebook/dp/B00L9B7QW4/ref=sr_1_1?dchild=1&keywords=The+Map+and+the+Territory%3A+Risk%2C+Human+Nature%2C+and+the+Future+of+Forecasting&qid=1616452838&s=books&sr=1-1) <br/> [世界經濟的未來版圖：危機、人性，以及如何修正失靈的預測機制](https://www.books.com.tw/products/0010639867) |
 | 305  | [Business Cycles: History, Theory and Investment Reality](https://www.amazon.com/Business-Cycles-History-Investment-Reality-ebook/dp/B001GXQOHS/ref=sr_1_1?dchild=1&keywords=Business+Cycles%3A+History%2C+Theory+and+Investment+Reality&qid=1616453209&s=books&sr=1-1) <br/> [逃不开的经济周期](https://book.douban.com/subject/3265599/)                                                                                         |
-| 306  | [股市之神 - 是川銀藏](https://book.douban.com/subject/3421226/)                                                                                                    
-
+| 306  | [股市之神 - 是川銀藏](https://book.douban.com/subject/3421226/)                                                                                                                                                                                                                                                                                                                                                                    |
 
                                                                                                                                                                                                                                                               |
