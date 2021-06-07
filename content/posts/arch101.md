@@ -7,7 +7,7 @@ tags = ["microservices"]
 toc = true
 +++
 
-一个好的架构师离不开三个核心东西：技术，人，问题，总结自己的经验 🤔
+一个好的架构师离不开三个核心东西：问题，技术，人
 
 <!--more-->
 
@@ -21,150 +21,139 @@ toc = true
 
 从事商业性的系统开发超过二十年了，经手的 mission critical 系统最少也有十几，二十个，对自己最擅长的方面做个总结。
 
--   复杂系统的设计是需要有技术手段做支撑的，如果不懂得造好飞机如何设计好的飞机，所以架构师本身必须是个资深的程序员，熟悉各种技术手段，各个子系统，前后端，以及软件开发的全周期，必须是个全才，具备相当的技术“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习、思考、实践 ⏤ 学习好的系统设计，思考后面的思想，实际中应用和解决问题，是提高水平的唯一方法。
-
-> `复杂系统的设计是需要有具体核心技术做支撑`
-
 -   架构 architecture 来源于建筑行业，架构就是 blueprint 实施蓝图。软件架构的实质还是软件，也就是代码 ⏤ 架构师自己如何编码，只是没有全部亲自写出来。对于复杂系统，架构应该是系统设计之上更高级的抽象，我认为的架构，系统设计，代码应该是同源的，划分代码，组织代码，运行代码，支撑代码，等等，都是以代码为核心。
 
-> `所谓架构和系统设计，其本质都是代码设计，也就是架构师给出的代码结构，脱离代码的架构都是耍流氓`
+> `所谓架构和系统设计，其本质都是代码设计，也就是架构师给出的代码结构，脱离代码的架构都是耍流氓，脱离业务的代码也是耍流氓`
 
 -   系统设计和软件如何编码一样，范围很广，基础理论杂，主要还是来源于实践经验，里面的很多设计决定和哲学相关。所以不仅仅是懂怎么做的，更多是体会为什么要这么设计所以原则很重要。架构和系统的本质还是编程，系统级别的编程，所以编程的一些经典原则也非常适用：
 
-    -   <font color="orange">DRY</font>：Don’t repeat yourself  
+    -   <span class="kwd">DRY</span>：Don’t repeat yourself  
         系统设计中你碰到的问题别人都已经碰到过了，向高手学习他们的解题方法。另外，别重复别人的错误，对于设计和架构，不止学技术，懂得来龙去脉非常重要。
 
-    -   <font color="orange">KISS</font>：Keep it simple, stupid!  
+    -   <span class="kwd">KISS</span>：Keep it simple, stupid!  
         我更喜欢解读成 Keep it stupid, so it can be simple（笨方法往往是最好的方法）。
 
-    -   <font color="orange">Avoid Creating a YAGNI</font>：You aren’t going to need it  
+    -   <span class="kwd">Avoid Creating a YAGNI</span>：You aren’t going to need it  
         类似 MVP（Minimum Viable Product）- 极简原则，可造可不造 ⏤ 别造， 可用可不用 ⏤ 别用，不知道怎么做 ⏤ 先研究，这在设计 API 时非常有用，同样可以应用在系统设计上。
 
-    -   <font color="orange">Abstraction Principle</font>
+    -   <span class="kwd">Abstraction Principle</span>
 
-    -   <font color="orange">Minimize Coupling</font>  
+    -   <span class="kwd">Minimize Coupling</span>  
         解耦原则：复杂问题的解决方法来源解耦，解的过程就是深入认识问题的过程 ⏤ 如果代码的力量来源抽象，那么系统的威力就来源于解耦，这是两根大棒，但不要“滥用”（💡 抽象和解耦都是有代价的），得不断提高这方面的能力
 
-    -   <font color="orange">Separation of Concerns</font>
+    -   <span class="kwd">Separation of Concerns</span>
 
-    -   <font color="orange">Single Responsibility Principle</font>
+    -   <span class="kwd">Single Responsibility Principle</span>
 
-    -   <font color="orange">Maximize Cohesion</font>  
+    -   <span class="kwd">Maximize Cohesion</span>  
         像搭积木一样，解决问题和写代码时尽量采用组合或延续的办法而不是从头开始，复用的威力
 
-    -   <font color="orange">Open/Closed Principle</font>  
+    -   <span class="kwd">Open/Closed Principle</span>  
         完整性和灵活性是架构师和优秀程序猿时常考虑的问题，也是 NB 或菜鸟的区别所在
 
-    -   <font color="orange">Don’t make me think</font>  
+    -   <span class="kwd">Don’t make me think</span>  
         把问题讲清楚，问题已经解决一大半了
 
-    -   <font color="orange">Principle of least astonishment</font>  
+    -   <span class="kwd">Principle of least astonishment</span>  
         一切和想的一样，no news is good news
 
-    -   <font color="orange">Avoid Premature Optimization</font>
+    -   <span class="kwd">Avoid Premature Optimization</span>
 
-<font color="orange">SOLID</font> 原则是一套比较经典且流行的架构原则（主要还是名字起得好）：
+<span class="kwd">SOLID</span> 原则是一套比较经典且流行的架构原则（主要还是名字起得好）：
 
 -   单一职责：与 Unix 哲学所倡导的“Do one thing and do it well”不谋而合；
+
 -   开闭原则：用新增（扩展）来取代修改（破坏现有封装），这与函数式的 immutable 思想也有异曲同工之妙；
+
 -   里式替换：父类能够出现的地方子类一定能够出现，这样它们之间才算是具备继承的“Is-A”关系；
+
 -   接口隔离：不要让一个类依赖另一个类中用不到的接口，简单说就是最小化组件之间的接口依赖和耦合；
+
 -   依赖反转：依赖抽象类与接口，而不是具体实现；让低层次模块依赖高层次模块的稳定抽象，实现解耦。
 
 此外，我们做架构设计时也会尽量遵循如下一些原则（与上述 SOLID 原则在本质上也是相通的）：
 
 -   正交性：架构同一层次拆分出的各组件之间，应该尽量保持正交，即彼此职责独立，边界清晰，没有重叠；
+
 -   高内聚：同一组件内部应该是高度内聚的（cohesive），像是一个不可分割的整体（否则就应该拆开）；
+
 -   低耦合：不同组件之间应该尽量减少耦合（coupling），既降低相互的变化影响，也能增强组件可复用性；
+
 -   隔离变化：许多架构原则与模式的本质都是在隔离变化 —— 将预期可能变化的部分都隔离到一块，减少发生变化时受影响（需要修改代码、重新测试或产生故障隐患）的其他稳定部分。
 
 > `系统设计更多的是艺术而不是科学，优良的系统设计遵循编程的原则和模式`
+
+-   复杂系统的设计是需要有技术手段做支撑的，架构师本身必须是个很好的程序员，具备相当的“深度”与“宽度”。所以架构师必须爱好学习，持续不断的学习，持续编码，保持对最优秀技术的敏感度，才能设计出真正优秀的架构。和其它事物一样，学习、思考、实践 ⏤ 学习好的系统设计，思考后面的思想，实际中应用和解决问题，是提高架构水平的唯一方法。
+
+> `复杂系统的设计是需要有具体核心技术做支撑`
 
 -   面对的是复杂系统的设计，通常没有固定的对错答案和所谓的 silver bullet。一个优秀架构师的成长需要经验积累，这和通常单项技术被动学习有所不同。一个优秀架构师最重要的能力是分析和抓住复杂事物的本质。例如五代战机的特点就是 4S - 隐身性能、超音速巡航、高机动型和超视距打击，五代战机的设计核心就是回答如何实现 4S。架构师最重要的能力还来源于深度思考，学习的不只是技术本身，还思考技术的来龙去脉，前因后果，思考解决问题的方法论 ⏤ 也就是套路，不断归纳和总结。
 
 > `系统设计具有非常强烈的问题驱动，架构师自我思考和实践的特点，必须能够回答系统的核心问题是什么，解决的关键是什么`
 
--   通常程序员只是一个人在编码，向组长负责。而架构师需要面对不同的 staleholder，带领一大群人编码完成项目。 一个优秀的架构师对系统设计考虑的问题必须非常全面，内部的，外部的，看得到的，看不到的，现在的，将来的，例如新技术的成熟度，实施该模块团队的技术储备，用户体验，项目的资金和时限，承受风险的能力，等等。需求是软件开发的原动力，商业、客户、技术都是在变化的，而一个系统的开发大都需要 2，3 年，所以架构师必须对需求有一定深度的理解和前瞻性，能够引领和超越客户、领导的提出需求，这些都影响架构的选型，扩展，冗余以及性能设计。越复杂的系统和商业需求越是考验一个架构师。高大上的系统还会区分出专门的商业架构，系统架构，基础设施架构，数据架构，安全架构等等，我本身的理解是系统架构师的认识要达到和商业架构师同一个层面，而优秀的架构师往往是两者合一。
+-   通常程序员只是一个人在编码，向组长负责。而架构师需要面对不同的 staleholder，带领一大群人编码完成项目，需要很好工程能力以及跨领域的知识。 一个优秀的架构师对系统设计考虑的问题必须非常全面，内部的，外部的，看得到的，看不到的，现在的，将来的，例如新技术的成熟度，实施该模块团队的技术储备，用户体验，项目的资金和时限，承受风险的能力，等等。需求是软件开发的原动力，商业、客户、技术都是在变化的，而一个系统的开发大都需要 2，3 年，所以架构师必须对需求和商业有一定深度的理解和前瞻性，能够引领和超越客户、领导的提出需求，这些都影响架构的选型，扩展，冗余以及性能设计。越复杂的系统和商业需求越是考验一个架构师。除了专业知识，架构师还要有较好的软实力，如沟通技巧，组织管理能力，情绪控制能力，理解他人等。这些东西都是不能从书本直接得到，而需要经验的积累。
 
 > `系统设计是一个架构师对技术，人，问题综合理解的体现`
-
-## 系统架构图
-
-软件系统的架构通常需要包含如下四类核心要素：  
-元素（elements）：将系统拆分为一组元素 - 模块、组件、结构体、子系统；  
-关系（relationships）：不同元素之间的关系 - 交互、依赖 、继承、组合、聚合；  
-属性（properties）：每个元素具备的属性 - 名称、职责、接口、实现限制等；  
-原理（principles）：为什么这么设计 - 拆分依据、设计原则、决策原因等。
-
-“4+1”是一种视图模型（view model），可以通过多种共存的视图描述软件密集型系统的架构。这些视图基于不同项目干系人（利益相关者）的视点（viewpoint），例如：终端用户、开发者、系统工程师和项目经理。“4+1”由 4 种基础视图和一些经过挑选的用例或场景（即额外的“+1”视图）组成，各自的具体含义如下：
-
--   <font color="orange">逻辑视图（Logical view）</font>：描述系统为终端用户提供的功能，一般会通过 UML 中的类图和状态图来表示；
--   <font color="orange">过程视图（Process view）</font>：描述系统的动态行为，包括流程和交互等，一般会通过 UML 中的时序图、活动图和通讯图来表示；
--   <font color="orange">开发视图（Development view）</font>：从程序员的视角来阐述系统，也被称为“实现视图”，一般会通过 UML 中的组件图和包图来表示；
--   <font color="orange">物理视图（Physical view）</font>：从系统工程师的角度来描述系统，包括系统组件的物理拓扑、各组件之间的物理连接，也被称为“部署视图”，一般会通过 UML 中的部署图来表示；
--   <font color="orange">场景（Scenarios）</font>：通过一小组用例或场景来描述架构，包括系统中各种对象和进程之间的交互时序，也被称为“用例视图”。这些场景会被用于识别架构元素（architectural elements）以及阐述和验证整个架构设计，也可以被作为架构原型的测试起
 
 ## 主要的架构模式
 
 架构模式都不新鲜，看似简单，关键还在于具体应用，用好了威力无穷：
 
-✦ <font color="orange">客户端-服务器模式（client-server）</font>  
-最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
-![client-server](/images/arch/client-server.png#center)
+-   客户端-服务器模式 <span class="kwd">client-server</span>  
+    最早的大型机系统所采用，从瘦客户端到富客户端，解决多个客户分享同一昂贵资源的问题，复杂处理全部集中在一处，简单直接，现在很多系统依旧采用的设计。  
+    ![client-server](/images/arch/client-server.png#center)
 
-✦ <font color="orange">分层模式（layered design）</font>  
-著名代表就是三层架构，随着 Internet 的发展，后端变得复杂，主从模式分离出表示层（也称 UI 层）、应用层（也称服务层）、数据层；后来还发展出 middleware，中台等共享基础架构层。  
-![3-tier](/images/arch/3-tier.jpg#center)
+-   分层模式 <span class="kwd">layered design</span>  
+    著名代表就是三层架构，随着 Internet 的发展，后端变得复杂，主从模式分离出表示层（也称 UI 层）、应用层（也称服务层）、数据层；后来还发展出 middleware，中台等共享基础架构层。  
+    ![3-tier](/images/arch/3-tier.jpg#center)
 
-✦ <font color="orange">模型-视图-控制器模式（MVC）</font>  
-解决应用层复杂的数据处理变化及数据展示关系，MVC 有多个变型，从后端 MVC 到前端 MVC。  
-![mvc](/images/arch/mvc.png#center)
+-   模型-视图-控制器模式 <span class="kwd">MVC</span>  
+    解决应用层复杂的数据处理变化及数据展示关系，MVC 有多个变型，从后端 MVC 到前端 MVC。  
+    ![mvc](/images/arch/mvc.png#center)
 
-✦ <font color="orange">主从模式（master-slave）</font>  
-这是由于高可用要求，这种模式由两部分组成，multicster 和 slaves，slave 通常作为 master 的备胎。  
-![master-slave](/images/arch/master-slave.png#center)
+-   主从模式 <span class="kwd">master-slave</span>  
+    这是由于高可用要求，这种模式由两部分组成，multicster 和 slaves，slave 通常作为 master 的备胎。  
+    ![master-slave](/images/arch/master-slave.png#center)
 
-✦ <font color="orange">Broker 模式</font>  
-这是数量级的关系，单台机器已无法胜任，要求在多台机器上同时执行，需要一个中间代理人，由代理模组件管理如何发布处理到具体的处理节点上。  
-![broker](/images/arch/broker.png#center)
+-   代理模式 <span class="kwd">broker</span>  
+    这是数量级的关系，单台机器已无法胜任，要求在多台机器上同时执行，需要一个中间代理人，由代理模组件管理如何发布处理到具体的处理节点上。  
+    ![broker](/images/arch/broker.png#center)
 
-✦ <font color="orange">事件总线模式（enterprise bus）</font>  
-系统越来越复杂和庞大，需要解耦，有了总线，各组件可以拆分出来。有了事件总线，也就意为着采用事件监听和事件响应模式。  
-![EBS](/images/arch/EBS.jpg#center)
+-   事件总线模式 <span class="kwd">enterprise bus</span>  
+    系统越来越复杂和庞大，需要解耦，有了总线，各组件可以拆分出来。有了事件总线，也就意为着采用事件监听和事件响应模式。  
+    ![EBS](/images/arch/EBS.jpg#center)
 
-✦ <font color="orange">流水线模式（workflow/pipeline）</font>  
-这个常见于系统集成和数据处理，Spring Integration、Mule 都是采用该模式。  
-![pipeline](/images/arch/pipeline.png#center)
+-   流水线模式 <span class="kwd">workflow/pipeline</span>  
+    这个常见于系统集成和数据处理，Spring Integration、Mule 都是采用该模式。  
+    ![pipeline](/images/arch/pipeline.png#center)
 
-✦ <font color="orange">单体 🆚 微服务模式（monolith vs microservices）</font>  
-近来流行的微服务模式
-![microservice](/images/arch/microservice.png#center)
+-   单体 <span class="kwd">monolith</span> 🆚 微服务模式 <span class="kwd">microservices</span>  
+    近来流行的微服务模式
+    ![microservice](/images/arch/microservice.png#center)
 
-✦ <font color="orange">边车模式（sidecar）</font>  
-Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
-![sidecar](/images/arch/sidecar.png#center)
+-   边车模式 <span class="kwd">sidecar</span>  
+    Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从应用中剥离出来。
+    ![sidecar](/images/arch/sidecar.png#center)
 
 更多可参考：
 
--   [微软文档：Application design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
--   [solution-architecture-patterns](https://chanakaudaya.github.io/solution-architecture-patterns/)
+[<i class="fas fa-external-link-alt"></i>&nbsp; 微软文档：Application design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)  
+[<i class="fas fa-external-link-alt"></i>&nbsp; solution-architecture-patterns](https://chanakaudaya.github.io/solution-architecture-patterns/)
 
 ## 分布式系统的学习
 
-✦ 入门可参考：[面向分布式系统工程师的分布式系统理论（译）](/posts/distributed101/)
+-   入门可参考：[面向分布式系统工程师的分布式系统理论（译）](/posts/distributed101/)
 
-✦ 通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，可对现代数据密集型系统采用的技术可以有个很好的了解：
-![ 数据密集型应用系统设计](/images/arch/data-intensive-system.png#center)
-此书有八百多个 Reference，所以也可以进一步细读。
+-   通读一遍 [Designing Data-Intensive Applications 中文版：数据密集型应用系统设计](https://drive.google.com/file/d/129k7s6JxdaX3ku-PoFm7i8HLdRAJl-t5/view?usp=sharing)，可对现代数据密集型系统采用的技术可以有个很好的了解：
+    ![ 数据密集型应用系统设计](/images/arch/data-intensive-system.png#center)  
+     此书有八百多个 Reference，所以也可以进一步细读。
 
-题外：系统偏向以命令方式还是数据方式集成是个难点，很多架构师都没有想清楚，导致系统混乱不堪。
+    💡 题外：系统偏向以命令方式还是数据方式集成是个难点，很多架构师都没有想清楚，导致系统混乱不堪。
 
-✦ 名校开的分布式系统设计课，数据库系统课，等等，以及所列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：
-
-[㊮ 分布式系统(Distributed System)资料](https://github.com/ty4z2008/Qix/blob/master/ds.md)  
-[㊮ 分布式系统领域经典论文翻译集](http://duanple.com/?p=170)
-
-[MIT 6.824: Distributed Systems](https://pdos.csail.mit.edu/6.824/schedule.html) 是经典课程，油管上有课程视频。
+-   名校开的分布式系统设计课，数据库系统课，等等，以及所列出的阅读清单（reading list），通常包括了各种经典论文，有事没事可以拿来读读，还有人主动翻译了：  
+     [㊮ 分布式系统(Distributed System)资料](https://github.com/ty4z2008/Qix/blob/master/ds.md)  
+     [㊮ 分布式系统领域经典论文翻译集](http://duanple.com/?p=170)  
+     [MIT 6.824: Distributed Systems](https://pdos.csail.mit.edu/6.824/schedule.html) 是经典课程，油管上有课程视频
 
 ## 微服务是什么和为什么
 
@@ -178,17 +167,17 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 我总结微服务有 4 个核心/鲜明特点：
 
--   <font color="orange">设计解耦（design independently）/商业拆分</font>：这里讲的架构不是技术架构，而是商业逻辑架构，这在大层面上决定了软件如何拆分，这可以应对商业需求在情况下不明确或者比较复杂下，先找出"基本解"。design independently 接下来的好处就是各部分的架构是 **持续可演化性**（continuously evolutionary），而单体架构（monolithic），在商业不明确或比较复杂情况下，特别是创业公司，设计上无法完全确定下来，导致开发迟迟无法开动或完成；同时一个部分的变化会直接引发整体做出变化，这导致两种恶性后果，一是某一部分成为瓶颈拖累整体，另一个是开发后，大家都无法持续改进。例如典型的三层架构，很多表，很多代码都是和自身负责的模块无关；一个小改动整个项目需要重新构建；某个底层库由于各个模块都依赖，到了一定时候，各个模块的视角不同，有的模块想改进这个库或采用完全新的技术，但动不了了，成为技术瓶颈或死结，所谓的 legacy，重构无望，这时候只有等更高层做决定，推倒重来。注意微服务不只是技术拆分，因为，代码技术上是可以做到随意拆分，而企业或商业运作是不能随意拆分的，拆分需要符合体制和流程，微服务的系统最终由人来运作，所以不是所有的项目都适用微服务架构。
+-   设计解耦（design independently）/商业拆分：这里讲的架构不是技术架构，而是商业逻辑架构，这在大层面上决定了软件如何拆分，这可以应对商业需求在情况下不明确或者比较复杂下，先找出"基本解"。design independently 接下来的好处就是各部分的开发是可持续演化性（continuously evolutionary），而单体架构（monolithic），在商业不明确或比较复杂情况下，特别是创业公司，设计上无法完全确定下来，导致开发迟迟无法开动或完成；同时一个部分的变化会直接引发整体做出变化，这导致两种恶性后果，一是某一部分成为瓶颈拖累整体，另一个是开发后，大家都无法持续改进。例如典型的三层架构，很多表，很多代码都是和自身负责的模块无关；一个小改动整个项目需要重新构建；某个底层库由于各个模块都依赖，到了一定时候，各个模块的视角不同，有的模块想改进这个库或采用完全新的技术，但动不了了，成为技术瓶颈或死结，所谓的 legacy，重构无望，这时候只有等更高层做决定，推倒重来。注意微服务不只是技术拆分，因为，代码技术上是可以做到随意拆分，而企业或商业运作是不能随意拆分的，拆分需要符合体制和流程，微服务的系统最终由人来运作，所以不是所有的项目都适用微服务架构。
 
--   <font color="orange">技术解耦（implement independently）/多元化技术</font>：要体现微服务的最大威力一定是采用 polyglot，已有的软件解决方案可以直接采纳，管他是 javascript 还是 python 开发的，管他是自己开发还是他人已经提供的，也不管是通过 lib 或者还是 api。传统的 java 或 .net 包头包尾，一种数据库，一个通用数据层，要承担不同的技术考量，结果自然局部非最优解。技术解耦带来了技术革新，例如各种 nosql，而且在不同公司，不同项目中可实现重用，实现快速开发，宏观层面上发挥了最大效益：**“Service Endpoint first instead of APIs”**。所以微服务属于八仙过海各显神通，不再是单一的三层架构，从一层（如 serverless），到 n 层，都是可能的。
+-   技术解耦（implement independently）/多元化技术：要体现微服务的最大威力一定是采用 polyglot，已有的软件解决方案可以直接采纳，管他是 javascript 还是 python 开发的，管他是自己开发还是他人已经提供的，也不管是通过 lib 或者还是 api。传统的 java 或 .net 包头包尾，一种数据库，一个通用数据层，要承担不同的技术考量，结果自然局部非最优解。技术解耦带来了技术革新，例如各种 nosql，而且在不同公司，不同项目中可实现重用，实现快速开发，宏观层面上发挥了最大效益：**“Service Endpoint first instead of APIs”**。所以微服务属于八仙过海各显神通，不再是单一的三层架构，从一层（如 serverless），到 n 层，都是可能的。
 
--   <font color="orange">资源解耦（sourcing independently）/游击队战术（coway rule & full stack developers）</font>：标准解释 ✓ 一个 service 团队的规模不超过两个 pizza。小团队才能带来快速灵活技术和快速迭代，“大象能跳舞”是个伪命题。要注意的是游击队战术不是适用所有的企业和商业模式，也不是所有的企业具备游击队的人员结构，所以微服务不是每个企业都适合的。
+-   资源解耦（sourcing independently）/游击队战术（coway rule & full stack developers）：标准解释 ✓ 一个 service 团队的规模不超过两个 pizza。小团队才能带来快速灵活技术和快速迭代，“大象能跳舞”是个伪命题。要注意的是游击队战术不是适用所有的企业和商业模式，也不是所有的企业具备游击队的人员结构，所以微服务不是每个企业都适合的。
 
--   <font color="orange">部署&运行解耦（deploy&run independently）/自动化运维（devops）</font>：自动化运维（DevOps）不是微服务特有的，在现有的项目或系统上完全可以实施自动化运维，也可以看到巨大效益，CI/CD 在微服务提出之前已经存在了。但自动化运维是实施微服务的必备技术，拆分和 ployglot 后对自动化运维提出了很高的要求，一堆不同质的东西可以单独部署，升级，同时又要组合在一起无间隙运行。容器技术的出现，对微服务所要求的大规模自动化运维提供了必要的技术基础。
+-   部署&运行解耦（deploy&run independently）/自动化运维（devops）：自动化运维（DevOps）不是微服务特有的，在现有的项目或系统上完全可以实施自动化运维，也可以看到巨大效益，CI/CD 在微服务提出之前已经存在了。但自动化运维是实施微服务的必备技术，拆分和 ployglot 后对自动化运维提出了很高的要求，一堆不同质的东西可以单独部署，升级，同时又要组合在一起无间隙运行。容器技术的出现，对微服务所要求的大规模自动化运维提供了必要的技术基础。
 
-微服务的核心仍就是沿用“模块化”式思路设计整个系统，目的是达到软件的 <font color="orange">可重用</font> 和 <font color="orange">可扩展</font> 。
+微服务的核心仍就是沿用“模块化”式思路设计整个系统，目的是达到<span class="ulmarker">软件的可重用和可扩展</span>。
 
-![历史名称](/images/arch/names.png#center)
+![历史](/images/arch/names.png#center)
 
 纵观开发历史，微服务不是什么新东西，仍旧是代码的拆分和集成，和 component-based 或 SOA 是一致的，只是层面不同。微服务不是针对小型软件或者单个项目层面，因为大部分的软件项目还没有等到解耦，拆分，长期演化成为”硬“需求，项目已经结束或者死掉啦。但反之，不同技术实力的团队，不同的项目，不同的地点，不同的时间，重复开发和实现，微服务解耦特性就能把软件的最大价值发挥出来，否则都是在做 silo application/project。所以微服务在政府，大公司或大型项目中推广和应用才能发挥其威力。
 
@@ -204,15 +193,15 @@ Kubernetes 为基础的微服务底层架构，把网络通信，安全，等从
 
 ![ 微服务技术栈](/images/microservices/microservices-stack.jpg#center)
 
-在我看来，注册，配置，数据一致性，链路跟踪，是微服务最基础和特有的技术点。
+在我看来，<span class="ulmarker">注册，配置，数据一致性，链路跟踪</span>，是微服务最基础和特有的技术点。
 
 对应每个点都可以找到相应的具体技术，微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试（对比以前的 Corba，DCOM，J2EE，Web Services），不是发展大方向。
 
-Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的明天，参考： [<i class="fas fa-external-link-alt"></i>&nbsp; 服务网格（Service Mesh ）101](/posts/service-mesh-101/)
+以 Cloud Native 为基础才是微服务的明天，但是目前火热的 service mesh 仍然不成熟，参考： [<i class="fas fa-external-link-alt"></i>&nbsp; 服务网格（Service Mesh ）101](/posts/service-mesh-101/)
 
 ## 微服务/分布式的坑
 
-代码和工程的质量仍是灵魂，拆分和集成并不意味着可重用/可扩展就是必然。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
+<span class="ulmarker">代码和工程的质量仍是软件的灵魂，拆分和集成并不意味着可重用/可扩展就是必然</span>。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
 
 > `如果你不能设计一个优良的单体系统，那么微服务也帮不上忙`
 
@@ -231,14 +220,13 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 ![beyond-microservices](/images/arch/beyond-microservices.png#center)
 
-`㊟` Domain-Drive Design（DDD）从来都是个纸上的东西，正确的废话而已，拿来做服务拆分没有一点帮助
+就像 Domain-Drive Design（DDD）从来都是个纸上的东西，正确的废话而已，拿来做服务拆分没有太大的帮助
 
 -   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个拷贝和版本；
 
--   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎变成 一坨一坨的屎 💩💩💩；
+-   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎变成一坨一坨的屎 💩💩💩；
 
--   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加 <font color="orange">数据和系统正确性</font> 的难度，⚠️ 网上那个鼓吹很多的 [saga pattern](https://microservices.io/patterns/data/saga.html) 也是出自那些 evangelist
-    或者所谓的 paper architect，用来解决实际数据一致性问题基本是不可行的。统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 <font color="orange"> 分布式系统之殇 </font>（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加数据和系统正确性的难度，⚠️ 网上那个鼓吹很多的 [saga pattern](https://microservices.io/patterns/data/saga.html) 也是出自那些 evangelist 或者所谓的 paper architect，用来解决实际数据一致性问题基本是不可行的。统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 `分布式系统之殇`（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
 
         -   网络是稳定的
         -   网络传输的延迟是零
@@ -253,7 +241,7 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 -   除了这些直接的运维辅助手段，还有需要各种工具应对接口设计，编码质量，设计文档，项目多模块管理，等等。
 
-如果要展开，上面这些点包含了很多技术细节，架构设计上倾向 decouple/loosely coupled 来解决复杂性问题，但商业从来不是 decouple/loosely coupled 的，总结一句就是：
+如果要展开，上面这些点包含了很多技术细节，架构设计上往往倾向 decouple/loosely coupled 来解决复杂性问题，但<span class="ulmarker">商业从来不是 decouple/loosely coupled 的</span>，总结一句就是：
 
 > `系统集成依旧是所有复杂商业软件系统设计的难点和关键点，越复杂的系统越需要系统性的设计`
 
@@ -267,6 +255,6 @@ Cloud Native，以及以 Cloud Native 为基础的网格服务才是微服务的
 
 99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[📃 How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
-> `作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy），我的办法就是 KISS`
+> 作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy），我的办法就是 `KISS`
 
 ![complexity](/images/arch/complexity.jpg#center)

@@ -54,15 +54,15 @@ YAML 语法以健值对为基础，可以表达散列表、标量等数据结构
 -   缩进时不允许使用 Tab 键，只允许使用空格
 -   缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
 -   基本数据类型：支持整型、浮点型、时间戳类型、布尔（true/false，yes/no）、字符串等基本数据类型
--   序列（数组）里配置项通过 <font color="orange">-</font> 来代表
--   序列（数组）的元素是 Primary（字符串，数值，布尔）可以用 <font color="orange">[]</font> 来表示
+-   序列（数组）里配置项通过 <span class="kwd2">-</span> 来代表
+-   序列（数组）的元素是 Primary（字符串，数值，布尔）可以用 <span class="kwd2">[]</span> 来表示
 -   多个健值对可构造成复杂结构（Object），如上图所示的 microservices 数组元素
--   键值用 <font color="orange">:</font> 来分隔
--   注释用 <font color="orange">#</font>，没有多行注释
--   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <font color="orange">\\</font> 表达，如换行 \n
--   多行字符串用 <font color="orange">｜</font> 打头
+-   键值用 <span class="kwd2">:</span> 来分隔
+-   注释用 <span class="kwd2">#</span>，没有多行注释
+-   字符串可以用‘或“来包裹，也可以完全不用，特殊字符则用 <span class="kwd2">\\</span> 表达，如换行 \n
+-   多行字符串用 <span class="kwd2">｜</span> 打头
 -   通过 \$xxx 来引用环境变量
--   动态值用 <font color="orange">{{}}</font> （placeholder）来表示
+-   动态值用 <span class="kwd2">{{}}</span> （placeholder）来表示
 
 下面是个例子（Ansible 的 playbook）：
 
@@ -111,13 +111,13 @@ Ansible 从一个管理节点（management node）上通过 ssh 发送命令（P
 
 图中包含了 Ansible 的基本概念/术语：
 
--   <font color="orange">Ansible Inventory</font>：定义目标机器，程序在哪里执行
--   <font color="orange">Ansible Modules</font>： Ansible 自带或自己扩展的程序，运行后达到一定的作用/目的
--   <font color="orange">Ansible Playbook</font>：指示如何执行 Modules，把 Inventory 和 Modules 连接在一起
+-   <span class="kwd2">Ansible Inventory</span>：定义目标机器，程序在哪里执行
+-   <span class="kwd2">Ansible Modules</span>： Ansible 自带或自己扩展的程序，运行后达到一定的作用/目的
+-   <span class="kwd2">Ansible Playbook</span>：指示如何执行 Modules，把 Inventory 和 Modules 连接在一起
 
 ✦ [inventory](https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html)
 
-<font color="orange">inventory</font> 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为机器变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
+inventory 以 一个或多个 YAML 文本文件形式存在（非标准 YAML），可定义机器的信息（也称为机器变量），包含 主机名、ip、端口、登录用户名 等。执行时通常要给 Ansible 指定一个 inventory 。动态机器信息 或外部 inventory 不在这里讨论。
 
 编写 inventory 也是个技巧，下面 inventory 的例子定义了 dev 环境中的机器：
 
@@ -152,25 +152,25 @@ ansible_ssh_user=ansible
 ansible_ssh_private_key_file="/home/ansible/.ssh/id_rsa"
 ```
 
-> myapp-db1 ansible_ssh_host=172.16.0.62
+<span class="kwd">myapp-db1 ansible_ssh_host=172.16.0.62</span>
 
 定义了 myapp-db1 这台机器 host，ansible_ssh_host 是系统变量名，用来定义此台机器的 IP 地址（其实是隶属于 myapp-db1 的一个 key），自己可以加入自定义的变量。
 
-> [dev:children]
+<span class="kwd">[dev:children]</span>
 
 children 这个关键字说明 dev 的成员 myapp-dbs 和 myapp-apps 不是单个 host，而是一个组，[myapp-dbs]和[myapp-apps]则分别定义了他们的组成员
 
-> [dev:vars]
+<span class="kwd">[dev:vars]</span>
 
 vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（dev 的通用变量），ansible_ssh_user 和 ansible_ssh_private_key_file 也都是系统变量名。
 
 ✦ [task & module](https://ansible-tran.readthedocs.io/en/latest/docs/modules.html)
 
-<font color="orange">task</font> 就是最小执行单位（类似编程里的方法），<font color="orange">module/模块</font> 就是提供一组相关的 task（类似编程里的类或者包）。Ansible 提供的 task 接近 2000 个（linux shell 的命令基本都用 Python 实现了），核心模块超过 400 个，运维需要的东西基本都包括了，具体见 [Ansbile Module 文档](http://docs.ansible.com/ansible/modules_by_category.html)。自己也可以通过 Python 扩充任务模块（[编写自己的模块](http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html)），这个也不在本文讨论范畴，现有的模块已经基本够用了。
+<span class="kwd2">task</span> 就是最小执行单位（类似编程里的方法），<span class="kwd"2>module/模块</span> 就是提供一组相关的 task（类似编程里的类或者包）。Ansible 提供的 task 接近 2000 个（linux shell 的命令基本都用 Python 实现了），核心模块超过 400 个，运维需要的东西基本都包括了，具体见 [Ansbile Module 文档](http://docs.ansible.com/ansible/modules_by_category.html)。自己也可以通过 Python 扩充任务模块（[编写自己的模块](http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html)），这个也不在本文讨论范畴，现有的模块已经基本够用了。
 
 ✦ [playbook](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks.html)
 
-<font color="orange">playbook</font> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
+<span class="kwd2">playbook</span> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
 
 编写 playbook 是使用 Ansible 的主要工作，playbook 里定义了一系列的 tasks，每一段包含下面的一些核心元素：
 
@@ -224,7 +224,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 ✦ [role](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
 
-<font color="orange">role</font> 由几部分组成：
+<span class="kwd2">role</span> 由几部分组成：
 
 -   defaults: 定义该 role 用到默认变量，该 role 运行时自动加入这里定义的变量，但其定义的变量优先级别最低，若已在其他地方定义，可被覆盖
 -   vars: 该 role 运行时自动加入这里定义的变量，通常可把需要传入的变量定义在这里，vars 和 defaults 很类似，通常把必须用到变量的放在 defaults 里，可变的放在 vars 里，例如 tasks 里针对不同的 OS，版本用到的变量，需要到的时候可以引入，include_vars 可自动在此目录中寻找变量文件（相对路径）
@@ -239,7 +239,7 @@ role 类似你自己已经开发好的一个程序，完成固定的功能，可
 
 ![Ansible 结构](/images/ansible/ansible-internal.png#center)
 
-> task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
+💡 task，module，playbook，role 这些概念结合 Ansible 实际例子一看就会明白。
 
 ## 项目实战
 
@@ -356,13 +356,13 @@ roles/
 
 运维的复杂性和灵活性由变量（vars）来体现的，Ansible 的 var 可在多处定义，并有 [优先顺序](http://docs.ansible.com/ansible/playbooks_variables.html)。不过不用那么复杂，关键是搞清楚变量应用的范围：
 
--   <font color="orange">全局变量</font> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
+-   <span class="kwd2">全局变量</span> vars/main：不受部署环境影响，到处都要用到，全局变量的例子比如 project_name, app_user，db_port, 等等。
 
--   <font color="orange">环境变量</font> env_xxx/group_vars/all/xxx：项目开发中通常有多个环境 xxx：local, dev, stag, uat, prod，有些变量随环境改变而改变，但相当于该环境下的全局变量，除了 inventory/机器变量外，其它的变量例子如 host file, resource_dir，repo_url，等等。
+-   <span class="kwd2">环境变量</span> env_xxx/group_vars/all/xxx：项目开发中通常有多个环境 xxx：local, dev, stag, uat, prod，有些变量随环境改变而改变，但相当于该环境下的全局变量，除了 inventory/机器变量外，其它的变量例子如 host file, resource_dir，repo_url，等等。
 
-💬 Ansible 没有提出全局变量和环境变量的使用和区别，只有 <font color="orange">机器变量</font>（group_vars & host_vars），Ansible Best Practices 里把它们当做了全局变量，但结构上是支持的，也就是每个环境下都可以分别有 inventory 和 group_vars & host_vars，而 all 就是默认的机器组，所以 env_xxx/group_vars/all/下所有的变量文件都会被识别为机器全局变量，而且 all 的机器变量引用时不需要前缀指定，特定的 group_vars & host_vars 变量 xxx 必须指明是哪个 group {{ groups["dbs"].xxx }} 或 host{{ hostvars["db1"].xxx }}，“groups”和“hostvars”是 Ansible 内置变量。为了支持全局变量（各个环境都使用），可以通过 file link 的方法让每个 env_xxx/group_vars/all/main 指向同一个文件，上图中的 env_dev/group_vars/all/main 指向 vars/main。
+💬 Ansible 没有提出全局变量和环境变量的使用和区别，只有 <span class="kwd2">机器变量</span>（group_vars & host_vars），Ansible Best Practices 里把它们当做了全局变量，但结构上是支持的，也就是每个环境下都可以分别有 inventory 和 group_vars & host_vars，而 all 就是默认的机器组，所以 env_xxx/group_vars/all/下所有的变量文件都会被识别为机器全局变量，而且 all 的机器变量引用时不需要前缀指定，特定的 group_vars & host_vars 变量 xxx 必须指明是哪个 group {{ groups["dbs"].xxx }} 或 host{{ hostvars["db1"].xxx }}，“groups”和“hostvars”是 Ansible 内置变量。为了支持全局变量（各个环境都使用），可以通过 file link 的方法让每个 env_xxx/group_vars/all/main 指向同一个文件，上图中的 env_dev/group_vars/all/main 指向 vars/main。
 
--   <font color="orange">支持多 OS，多基础设施的变量</font>：这种变量主要是支撑产品级的软件项目，通常是动态的，通过任务执行来设定，例如上面的 dbservers.yml 里引用的 vars.yml:
+-   <span class="kwd2">支持多 OS，多基础设施的变量</span>：这种变量主要是支撑产品级的软件项目，通常是动态的，通过任务执行来设定，例如上面的 dbservers.yml 里引用的 vars.yml:
 
 ```yaml
 - name: define os family (suse)
@@ -388,7 +388,7 @@ roles/
 
 变量 os_family 在以后的 tasks 和 roles 中都可能用到。
 
--   <font color="orange">role 变量</font>：这些变量应用范畴只是该 role，是传统意义上各软件 component 的参数变量，在 role 里定义和使用，但 playbook 调用时可以进行指定或覆盖默认值，例如一个 Tomcat 的 war 部署时传入 war_name：
+-   <span class="kwd2">role 变量</span>：这些变量应用范畴只是该 role，是传统意义上各软件 component 的参数变量，在 role 里定义和使用，但 playbook 调用时可以进行指定或覆盖默认值，例如一个 Tomcat 的 war 部署时传入 war_name：
 
 ```yaml
 - name: deploy my app1
@@ -400,7 +400,7 @@ roles/
       - { role: tomcat-deploy, war_name: "app1", tags: ["app1"] }
 ```
 
--   <font color="orange">Ansible 流程和控制变量</font>：上面的变量主要用来支持配置的，还有一些属于控制或者辅助控制 Ansible 流程的，这些通过 Ansible 提供的功能来指定，例如从命令行输入：
+-   <span class="kwd2">Ansible 流程和控制变量</span>：上面的变量主要用来支持配置的，还有一些属于控制或者辅助控制 Ansible 流程的，这些通过 Ansible 提供的功能来指定，例如从命令行输入：
 
 ```yaml
 - name: create app user name & password
@@ -425,14 +425,14 @@ roles/
 
 流程控制变量的例子见下面。
 
--   <font color="orange">Ansible 默认/内置变量</font>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
+-   <span class="kwd2">Ansible 默认/内置变量</span>：例如 {{ playbook_dir }} 获得当前运行的 playbook 路径, {{ role_path }} 则是当前 role 的路径，这里有个 [非常好的参考](https://github.com/lorin/ansible-quickref)
 
 ### 重点：标签（tags）
 
 在调试和部署的时候，有些任务需要重复多次的，而 playbook 包含从头到尾全部的操作，所以需要指定特定的任务（过滤掉其它的），这时候标签（tags）发挥作用。Ansible 命令行支持两种标签指定方式：
 
--   -t or --tags
--   --skip-tags
+-   <span class="kwd">-t</span> or <span class="kwd">--tags</span>
+-   <span class="kwd">--skip-tags</span>
 
 怎么打标签关键是看需要做什么样的动作，例如 provision-dbs.yml 里：
 
@@ -460,8 +460,7 @@ roles/
 如果我在命令行里指定标签 hostfile，这样就能执行部分特定的 common 任务。通过不同标签的组合也可以完成一定的任务，例如用于升级系统的 tomcat：
 
 ```yaml
->
-    play appservers.yml -t tomcat,app1
+> play appservers.yml -t tomcat,app1
 ```
 
 标签 tag 最终是落在每一个 task 上的（透过 playbook，role），但直接给每个 task 打标签就很麻烦，为保持 role 的可移植，我基本不在 role 里打标签。我遇到了 playbook 的 include 打上标签，但不起作用（Ansible bug or defect?）。
@@ -487,7 +486,7 @@ Ansible 的设置文件可以按顺序下面找到：
 4.  /etc/ansible/ansible.cfg
 ```
 
-⚠️ 他们不会一起生效或者相互覆盖，遇到第一个设置文件就停止。下面是 ansible.cfg 例子：
+⚠️ 他们不会一起生效或者相互覆盖，遇到第一个设置文件就停止。下面是 <span class="kwd">ansible.cfg</span> 例子：
 
 ```yaml
 [defaults]
@@ -551,7 +550,7 @@ fact_caching_timeout = 86400
 -   Wildcard： web\*.app.com
 -   Regx： (~web[0-9]+)
 
-通过-t 和-l 就能指定在 {某个目标机器} 做 {某个动作}，例如只在 db1 这台机器上执行 mysql：
+通过 <span class="kwd">-t</span> 和 <span class="kwd">-l</span> 就能指定在 {某个目标机器} 做 {某个动作}，例如只在 db1 这台机器上执行 mysql：
 
 ```bash
 > play dbservers.yml -t mysql -l db1
@@ -656,7 +655,7 @@ item.0 和 item.1 对应循环体的循环变量。
 
 ### ansible-vault 存储敏感信息
 
-密码等属于敏感信息，可以把包含敏感信息的文件通过 <font color="white">ansible-vault</font> 加密，加密后的文件看起来就像乱码而非明文，例如：
+密码等属于敏感信息，可以把包含敏感信息的文件通过 <span class="kwd">ansible-vault</span> 加密，加密后的文件看起来就像乱码而非明文，例如：
 
 ```bash
 > cat password.txt
@@ -765,7 +764,7 @@ $ export ANSIBLE_STRATEGY=debug
         verbosity：3
 ```
 
-注意 verbosity，Ansible 命令行用 <font color="orange">-v，-vv, -vvv, -vvvv</font> 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
+注意 verbosity，Ansible 命令行用 <span class="kwd">-v，-vv, -vvv, -vvvv</span> 等来控制 debug 输出的 verbosity 程度，当 verbosity: 3 时，-v，-vv 时将看不到 debug 的输出。
 
 ### 其它运行技巧
 

@@ -32,7 +32,7 @@ toc = true
 
 ## plugins
 
-✦ _vagrant-cachier_
+<span class="kwd">vagrant-cachier</span>
 这玩意在 VM 下载包的时候（agt，yum，etc.）可以缓存，如三台 centOS 的 VM 只需下载 centOS 一次。安装：
 
 ```cmd
@@ -47,7 +47,7 @@ Vagantfile 里加入这段：
 	end
 ```
 
-✦ _vagrant-hostsupdater_
+<span class="kwd">vagrant-hostsupdater</span>
 VM 和主机里的 hosts 文件都会得到更新，这样 VM 和主机里的都可以直接通过 hostname 通讯。安装：
 
 ```cmd
@@ -264,13 +264,13 @@ end
 
 各模式的特点总结如下：
 
-| 网络模式         |             VM <\-> VM             |            VM \-> Host             |            VM <\- Host             |        VM \-> LAN/Internet         |        VM <\- LAN/Internet         |
-| ---------------- | :--------------------------------: | :--------------------------------: | :--------------------------------: | :--------------------------------: | :--------------------------------: |
-| NAT（default）   | <span style="color:pink">−</span>  | <span style="color:green">✚</span> |            Port Forward            | <span style="color:green">✚</span> |            Port Forward            |
-| NAT Network      | <span style="color:green">✚</span> | <span style="color:green">✚</span> |            Port Forward            | <span style="color:green">✚</span> |            Port Forward            |
-| Bridged          | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:green">✚</span> |
-| Internal Network | <span style="color:green">✚</span> | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  |
-| Host-only        | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:green">✚</span> | <span style="color:pink">−</span>  | <span style="color:pink">−</span>  |
+| 网络模式         |            VM <\-> VM             |            VM \-> Host            |            VM <\- Host            |        VM \-> LAN/Internet        |        VM <\- LAN/Internet        |
+| ---------------- | :-------------------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
+| NAT（default）   | <span style="color:grey">−</span> |                ✅                 |           Port Forward            |                ✅                 |           Port Forward            |
+| NAT Network      |                ✅                 |                ✅                 |           Port Forward            |                ✅                 |           Port Forward            |
+| Bridged          |                ✅                 |                ✅                 |                ✅                 |                ✅                 |                ✅                 |
+| Internal Network |                ✅                 | <span style="color:grey">−</span> | <span style="color:grey">−</span> | <span style="color:grey">−</span> | <span style="color:grey">−</span> |
+| Host-only        |                ✅                 |                ✅                 |                ✅                 | <span style="color:grey">−</span> | <span style="color:grey">−</span> |
 
 #### NAT（default）
 
@@ -278,21 +278,20 @@ end
 
 这是默认模式或者通过 GUI/命令行指定，会自动产生一个默认的虚拟 NAT router（图中的 10.0.2.2），通常是虚拟机的 DHCP。
 
-特点：
+-   特点：
 
-```md
-命令行例子：VBoxManage modifyvm VM_name --nic1 nat
+    ```md
+    命令行例子：VBoxManage modifyvm VM_name --nic1 nat
 
--   虚拟机可以直接访问 Internet
--   每台虚拟机完全隔离
-```
+    -   虚拟机可以直接访问 Internet
+    -   每台虚拟机完全隔离
+    ```
 
-缺点：
-
-```md
--   虚拟机之间无法通信
--   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
-```
+-   缺点：
+    ```md
+    -   虚拟机之间无法通信
+    -   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
+    ```
 
 #### NAT Network
 
@@ -300,39 +299,39 @@ end
 
 和 NAT 类似，这种模式下，还会按照要求产生一个虚拟的 NAT network（图中的 10.0.2.0/24），默认的 Gateway（10.0.2.1）也会自动产生。
 
-特点：
+-   特点：
 
-```md
-命令行例子：VBoxManage natnetwork add --netname natnet1 --network "192.168.22.0/24" --enable
+    ```md
+    命令行例子：VBoxManage natnetwork add --netname natnet1 --network "192.168.22.0/24" --enable
 
--   虚拟机可以直接访问 Internet
--   虚拟机之间可以通信
-```
+    -   虚拟机可以直接访问 Internet
+    -   虚拟机之间可以通信
+    ```
 
-缺点：
-
-```md
--   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
-```
+-   缺点：
+    ```md
+    -   宿主机和虚拟机也无法通信，除非把虚拟机的端口暴露出来（port forwarding），但一个端口只能对应一个虚拟机
+    ```
 
 #### Bridged Adapter
 
 ![virtualbox bridge](/images/vm/vb-bridge.png#center)
 
 这是默认模式，会产生一个默认的 router/gateway（例如图中的 10.0.0.2）
-特点：
 
-```md
--   完全暴露虚拟机
--   虚拟机和宿主机处在统一网络
-```
+-   特点：
 
-缺点：
+    ```md
+    -   完全暴露虚拟机
+    -   虚拟机和宿主机处在统一网络
+    ```
 
-```md
--   需要让网络卡工作在 Promiscuous 模式下（一个网络卡绑定不同的 MAC 地址，接收所有的 packet），不少 wireless 网络卡不支持这一模式
--   通常公司网络都采用 DHCP，所以有可能无法指定虚拟机的 IP，或者违反公司的网络安全策略
-```
+-   缺点：
+
+    ```md
+    -   需要让网络卡工作在 Promiscuous 模式下（一个网络卡绑定不同的 MAC 地址，接收所有的 packet），不少 wireless 网络卡不支持这一模式
+    -   通常公司网络都采用 DHCP，所以有可能无法指定虚拟机的 IP，或者违反公司的网络安全策略
+    ```
 
 #### Internal Network
 
@@ -340,18 +339,18 @@ end
 
 注意，上图显示的是个混合模式，VM1 配置成 NAT 模式，VM2 & VM3 只是 Internal Network 模式，但同时指定 VM1 为 gateway，这样就可以通过 VM1 连接 Internet。
 
-特点：
+-   特点：
 
-```md
--   方式简单
--   虚拟机之间可以通信
-```
+    ```md
+    -   方式简单
+    -   虚拟机之间可以通信
+    ```
 
-缺点：
+-   缺点：
 
-```md
--   和外界完全隔离
-```
+    ```md
+    -   和外界完全隔离
+    ```
 
 #### Host-only
 
@@ -359,26 +358,26 @@ end
 
 先配置多一个虚拟的 Host 网卡，让所有的 VM 和 Host 共享。
 
-特点：
+-   特点：
 
-```md
--   虚拟机之间可以通信
--   虚拟机和宿主机之间可以通信
-```
+    ```md
+    -   虚拟机之间可以通信
+    -   虚拟机和宿主机之间可以通信
+    ```
 
-缺点：
+-   缺点：
 
-```md
--   和外界完全隔离
-```
+    ```md
+    -   和外界完全隔离
+    ```
 
 ### vagrant 网络模式
 
 vagrant 定义/支持三种网络模式：
 
--   port forwarding（default）：对应 virtualbox 的 NAT
--   private network：对应 virtualbox 的 Host-only 或者 Internal Network
--   public network：对应 virtualbox 的 Bridged Network
+-   `port forwarding`（default）：对应 virtualbox 的 NAT
+-   `private network`：对应 virtualbox 的 Host-only 或者 Internal Network
+-   `public network`：对应 virtualbox 的 Bridged Network
 
 注意的是，Vagrant 启动虚拟机时，会自动在虚拟机中添加一块 VirtualBox NAT 类型的网卡，然后再创建 Vagrantfile 配置文件所描述的网络。Vagrant 将宿主机的 TCP/2222 端口转发到 虚拟机的 TCP/22 端口，这样就可以使用 vagrant ssh 命令快速地连接虚拟机。同时，虚拟机使用这块自动创建的 NAT 网卡访问外部网络。
 

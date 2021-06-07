@@ -15,7 +15,7 @@ toc = true
 
 ## Docker Desktop 安装
 
-安装 Docker 本地运行环境，直接采用 Docker Desktop。
+安装 Docker 本地运行环境，直接采用 `Docker Desktop`。
 
 Docker 桌面版的安装比较简单，下载后直接拖拽至 Applications：
 
@@ -209,7 +209,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ## Application in Docker
 
-在 Docker 里运行多个容器，并把他们组织在一起形成完整的一个应用（container -> service -> stack）。
+在 Docker 里运行多个容器，并把他们组织在一起形成完整的一个应用 <span class="kwd">container</span> -> <span class="kwd">service</span> -> <span class="kwd">stack</span>。
 
 Kubernetes 早已一统容器管理的江湖，这里就略去 docker 这部分的高级功能。
 

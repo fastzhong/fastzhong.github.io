@@ -17,7 +17,7 @@ toc = true
 
 Kubernetes 作为容器集群系统，通过健康检查+重启策略实现了 Pod 故障自我修复能力，通过调度算法实现将 Pod 分布式部署，并保持预期副本数，根据负载节点失效状态自动在其他节点拉起 Pod，实现了应用层的高可用性。
 
-针对 Kubernetes 集群，高可用性还应包含以下两个层面的考虑：etcd 数据库的高可用性和 Kubernetes 控制节点组件的高可用性。etcd 将采用 3 个节点单独组建集群实现高可用。控制节点/Master 扮演着总控中心的角色，通过不断与负载节点上的 kubelet 和 kube-proxy 进行通信来维护整个集群的健康工作状态。如果控制节点故障，将无法使用 kubectl 工具或者 API 做任何集群管理。控制节点主要有三个服务 kube-apiserver、kube-controller-manager 和 kube-scheduler，其中 kube-controller-manager 和 kube-scheduler 组件自身通过选择机制已经实现了高可用，所以控制节点高可用主要针对 kube-apiserver 组件，而该组件是以 HTTP API 提供服务，因此对其高可用与 Web 服务器类似，增加负载均衡器对其负载均衡即可，并且可水平扩容。
+针对 Kubernetes 集群，高可用性还应包含以下两个层面的考虑：etcd 数据库的高可用性和 Kubernetes 控制节点组件的高可用性。etcd 将采用 3 个节点单独组建集群实现高可用。控制节点/Master 扮演着总控中心的角色，通过不断与负载节点上的 kubelet 和 kube-proxy 进行通信来维护整个集群的健康工作状态。如果控制节点故障，将无法使用 kubectl 工具或者 API 做任何集群管理。控制节点主要有三个服务 <span class="kwd">kube-apiserver</span>、<span class="kwd">kube-controller-manager</span> 和 <span class="kwd">kube-scheduler</span>，其中 kube-controller-manager 和 kube-scheduler 组件自身通过选择机制已经实现了高可用，所以控制节点高可用主要针对 kube-apiserver 组件，而该组件是以 HTTP API 提供服务，因此对其高可用与 Web 服务器类似，增加负载均衡器对其负载均衡即可，并且可水平扩容。
 
 集群架构如下：  
 ![k8s cluster](/images/k8s/multi-master.jpg#center)
@@ -1138,11 +1138,11 @@ CoreDNS is running at https://192.168.100.100:6443/api/v1/namespaces/kube-system
 
 ## e2e test
 
-[此处省略 xxx 字......]
+...... <span class="strike">此处省略 xxx 字</span> ......
 
 ## 附：Kubernetes 中使用到的 CA 和证书
 
-K8s 各个组件提供的接口中包含了集群的内部信息。如果这些接口被非法访问，将影响集群的安全，因此组件之间的通信需要采用<span style="color:orange">双向 TLS 认证</span>。即客户端和服务器端都需要验证对方的身份信息，以避免恶意第三方伪造身份窃取信息或者对系统进行攻击。为了相互验证对方的身份，通信双方中的任何一方都需要做下面两件事情：
+K8s 各个组件提供的接口中包含了集群的内部信息。如果这些接口被非法访问，将影响集群的安全，因此组件之间的通信需要采用<span class="ulmarker">双向 TLS 认证</span>。即客户端和服务器端都需要验证对方的身份信息，以避免恶意第三方伪造身份窃取信息或者对系统进行攻击。为了相互验证对方的身份，通信双方中的任何一方都需要做下面两件事情：
 
 -   向对方提供标明自己身份的一个证书
 -   验证对方提供的身份证书是否合法，是否伪造的？
@@ -1229,19 +1229,19 @@ X.509 客户端认证：
     -   对于 kube-proxy 其 CN/User 必须是系统默认的"system:kube-proxy"
     -   对于 kubelet 其 Organiation/Group 必须是"system:nodes"而且 CN/User 必须是"system:node:{hostname}"，每个 kubelet 都要有自己的 identity 是因为 Kubernetes 可以使用 Node Authorizer 和 Node Restriction Admission 插件，用来定义和限制 kubelet 读写其所在负载节点上的资源
 
-<span style="color:orange">TLS Bootstrapping 机制</span>既然需要为每一个负载节点上的 Kubelet 分别生成一个证书（system:node:{hostname}），由于负载节点可能很多，手动生成 Kubelet 证书的过程会比较繁琐，apiserver 启用 TLS Bootstrapping 认证机制来自动颁发证书，TLS Bootstraping 工作流程：
+<span class="kwd">TLS Bootstrapping</span> 机制既然需要为每一个负载节点上的 Kubelet 分别生成一个证书（system:node:{hostname}），由于负载节点可能很多，手动生成 Kubelet 证书的过程会比较繁琐，apiserver 启用 TLS Bootstrapping 认证机制来自动颁发证书，TLS Bootstraping 工作流程：
 
 ![TLS bootstraping](/images/k8s/bootstrap-token.png#center)
 
 1. kube-apiserver 生成一个随机 bootstrap token
 2. 将该 bootstrap token 写入到一个 kubeconfig 文件中，作为 kubelet 调用 kube-apiserver 的客户端验证方式
-3. 通过<span style="color:orange"> --bootstrap-kubeconfig </span>启动参数将 bootstrap token 传递给 kubelet 进程
+3. 通过<span class="kwd">--bootstrap-kubeconfig</span> 启动参数将 bootstrap token 传递给 kubelet 进程
 4. Kubelet 采用 bootstrap token 调用 kube-apiserver API，kube-apiserver 收到证书签名请求（CSR）请求后，对其中的 Token 进行认证，生成 kubelet 所需的服务器和客户端证书
 5. 证书生成后，Kubelet 采用生成的证书和 kube-apiserver 进行通信，并删除本地的 kubeconfig 文件，以避免 bootstrap token 泄漏风险
 
 ## 附：Service Account Token
 
-K8s 可以为 pod 指定一个 service account，并为其产生<span style="color:orange">Service Account Token</span>（JWT），然后 pod 中的应用程序就可以用此 token 和 apiserver 通信（获取集群的信息，甚至对集群进行改动）。ServiceAccount 主要包含了三个内容：namespace、Token 和 CA。namespace 指定了 pod 所在的 namespace，CA 用于验证 apiserver 的证书，token 用作身份验证。它们都通过 mount 的方式保存在 pod 的文件系统中。
+K8s 可以为 pod 指定一个 service account，并为其产生 <span class="kwd">Service Account Token</span>（JWT），然后 pod 中的应用程序就可以用此 token 和 apiserver 通信（获取集群的信息，甚至对集群进行改动）。ServiceAccount 主要包含了三个内容：namespace、Token 和 CA。namespace 指定了 pod 所在的 namespace，CA 用于验证 apiserver 的证书，token 用作身份验证。它们都通过 mount 的方式保存在 pod 的文件系统中。
 
 service account 证书被用于生成和验证 service account token。该证书的用法和前面介绍的其他证书不同，因为实际上使用的是其公钥和私钥，而并不需要对证书进行验证。下图展示了 kubernetes 中生成、使用和验证 service account token 的过程：
 

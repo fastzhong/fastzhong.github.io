@@ -27,7 +27,7 @@ CSS 样式具有复杂的内在继承性，为了对付这种复杂性，各种�
 
 ## 使用 CSS 实现简单样式
 
-让我们从一个很简单的网页开始，只有简单的 index.hml 和 index.css 文件，index.html 是这样的：
+让我们从一个很简单的网页开始，只有简单的 <span class="kwd">index.hml</span> 和 <span class="kwd">index.css</span> 文件，index.html 是这样的：
 
 ```html
 <!DOCTYPE html>
@@ -178,7 +178,7 @@ aside {
 
 CSS float 属性最早引入是让图片定位在文本栏的左边或者右边（就像你看到的新闻报纸）。Web 开发者发现并利用了一个事实 - 可定位的其实不只是图片，而是任意 HTML 元素 - 通过定位整个 div 元素里的内容，可以把网页纵横分割成不同的部分。因为这种纵横分割是通过想象的，随意的，所以很难保持准确一致的分割。
 
-在 2006 年，A List Apart 上发表了一篇文章[In Search of the Holy Grail](https://alistapart.com/article/holygrail)（寻找圣杯），该文章介绍了一种详尽的，所谓圣杯的布局方法（注：圣杯指的就是至高无上，完美） - 这就是经典的三栏式布局，布局包括三部分 - 头部（header），三栏主体部（3 columns），和注脚部（footer）。这么简单的布局居然被冠以“圣杯”，真是难以置信，可想而知在当时的技术条件下，想要通过 CSS 产生一致性的布局难度确实是很大的。
+在 2006 年，A List Apart 上发表了一篇文章 [In Search of the Holy Grail](https://alistapart.com/article/holygrail)（寻找圣杯），该文章介绍了一种详尽的，所谓圣杯的布局方法（注：圣杯指的就是至高无上，完美） - 这就是经典的三栏式布局，布局包括三部分 - 头部（header），三栏主体部（3 columns），和注脚部（footer）。这么简单的布局居然被冠以“圣杯”，真是难以置信，可想而知在当时的技术条件下，想要通过 CSS 产生一致性的布局难度确实是很大的。
 
 下面展示的就是把这篇文章所描述的 float 布局应用到前面的例子上：
 
@@ -233,7 +233,7 @@ footer {
 
 CSS flexbox 属性的第一次出现是在 2009 年，但被广泛采纳则到了 2015 年。flexbox 被用来定义那些必须横跨不同行或列的区域，从这点上要比 float 更适合于页面布局。对于开发人员讲，在用了近 10 年的 float 布局后，在页面布局上终于可以不再需要借助于各种 float 的“黑”技巧。
 
-下面就是我们上述例子的 flexbox 布局，采纳了[Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/)所描述的技巧（该网站专门展示各种 flexbox 布局的例子，很受欢迎）。注意到我们增加了一个 div 容器，把之前的三栏包含其内：
+下面就是我们上述例子的 flexbox 布局，采纳了 [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/) 所描述的技巧（该网站专门展示各种 flexbox 布局的例子，很受欢迎）。注意到我们增加了一个 div 容器，把之前的三栏包含其内：
 
 ```html
 <!DOCTYPE html>
@@ -296,17 +296,17 @@ aside {
 
 ![5](/images/modern-css/5.png#center)
 
-三栏都齐高而且充满了整个页面，看起来挺完美了，不过该布局方法有一些小缺陷。一个是浏览器支持，目前只有较新的浏览器支持 flexbox，旧的则不行。当然，浏览器厂商正在更尽力地停止对旧浏览器的支持，让网页设计者们有比较一致的开发体验。另一个是我们得加入这段 `<div class="container">`，最好的办法应该 - 理想情况下，任何的 CSS 布局不应该改变任何原有 HTML 文本。
+三栏都齐高而且充满了整个页面，看起来挺完美了，不过该布局方法有一些小缺陷。一个是浏览器支持，目前只有较新的浏览器支持 flexbox，旧的则不行。当然，浏览器厂商正在更尽力地停止对旧浏览器的支持，让网页设计者们有比较一致的开发体验。另一个是我们得加入这段 <span class="kwd">&lt;div class="container"&gt;</span>，最好的办法应该 - 理想情况下，任何的 CSS 布局不应该改变任何原有 HTML 文本。
 
 所以最大的问题还是 CSS 代码本身 - flexbox 避免了 float 的“黑”技巧，但是 CSS 变得没有那么直观 - 没有看上去像是用于定义布局的。flexbox 代码不易阅读，也无法让开发者对于各个元素在页面上的布局状况产生视觉上的直观感。这样导致在编写 flexbox 布局代码时，编写人员得不断地臆想和测试。
 
-非常重要的一点是，flexbox 是本身设计用来针对一个行或列内的页面元素所占位置的大小进行调节，而非整个页面的布局！虽然它可以为布局工作而且也比 float 好，但是我们终于有了针对整个页面 - 多行多列布局而发展出来的 CSS 规范，这个规范就是 `CSS grid` ！
+非常重要的一点是，flexbox 是本身设计用来针对一个行或列内的页面元素所占位置的大小进行调节，而非整个页面的布局！虽然它可以为布局工作而且也比 float 好，但是我们终于有了针对整个页面 - 多行多列布局而发展出来的 CSS 规范，这个规范就是 <span class="kwd">CSS grid</span> ！
 
 ### grid 布局
 
 CSS grid 规范第一次提出是在 2011 年（其实也就在 flexbox 规范提出后不久），但是却花了超长时间获得不同浏览器的支持。直到 2018 年初，CSS grid 才在大多数较新的浏览器上得到支持（其实要和过去一、两年比，这是个巨大的进步）。
 
-下面是 grid 布局，采用了这篇文章（[CSS tricks](https://css-tricks.com/css-grid-one-layout-multiple-ways/)）中介绍的第一种方法。注意在同样的例子里，我们去掉了 `<div class="container">`（那是为了 flexbox 布局而加入的），HTML 是原装不动的，下面是 CSS：
+下面是 grid 布局，采用了这篇文章（[CSS tricks](https://css-tricks.com/css-grid-one-layout-multiple-ways/)）中介绍的第一种方法。注意在同样的例子里，我们去掉了 <span class="kwd">&lt;div class="container"&gt;</span>（那是为了 flexbox 布局而加入的），HTML 是原装不动的，下面是 CSS：
 
 ```css
 /* GRID-BASED LAYOUT */
@@ -343,7 +343,7 @@ footer {
 
 从视觉效果看，和 flexobox 布局一样。但是，相关的 CSS 代码易读而且清楚的表明了所需要达到的页面布局效果。行、列的总体大小和形状定义在 body 这个选择器里，而各个 grid 中的东西则分别定义。
 
-有一个比较令人困惑的是 `{% label primary@grid-column %}` 属性，它定义了开始/结束栏。令人困惑是因为这个例子里，总共 3 栏，但数字却是从 1 到 4，看了下面这张图就比较容易理解了（[在线演示版](https://codepen.io/peterxjang/pen/vdLROM?editors=1100)）：
+有一个比较令人困惑的是 <span class="kwd">{% label primary@grid-column %}</span> 属性，它定义了开始/结束栏。令人困惑是因为这个例子里，总共 3 栏，但数字却是从 1 到 4，看了下面这张图就比较容易理解了（[在线演示版](https://codepen.io/peterxjang/pen/vdLROM?editors=1100)）：
 
 ![6](/images/modern-css/6.png#center)
 
@@ -357,7 +357,7 @@ footer {
 
 到此我们讨论了用 CSS 来实现简单样式以及布局。现在我们进入工具讨论，那些帮助提高 CSS 开发体验的工具（视 CSS 为计算机的一种语言），从 CSS 预处理器（css preprocessor）开始。
 
-CSS 预处理器让你使用另一种语言，但会将之转化为 CSS，这样浏览器才能理解。 这个非常重要，因为早期浏览器在支持新的特性方面脚步都非常缓慢。第一个重要的 CSS 预处理器是[Sass](http://sass-lang.com/)，在 2006 年发布。它的优点是更简洁的语法（用缩进取代括号，取消分号，等），并加入了一些 CSS 没有的语法特性，例如变量，helper functions，calculations。下面是上面的例子中颜色的部分用 Sass 的变量来实现：
+CSS 预处理器让你使用另一种语言，但会将之转化为 CSS，这样浏览器才能理解。 这个非常重要，因为早期浏览器在支持新的特性方面脚步都非常缓慢。第一个重要的 CSS 预处理器是 [Sass](http://sass-lang.com/)，在 2006 年发布。它的优点是更简洁的语法（用缩进取代括号，取消分号，等），并加入了一些 CSS 没有的语法特性，例如变量，helper functions，calculations。下面是上面的例子中颜色的部分用 Sass 的变量来实现：
 
 ```css
 $dark-color: #4a4a4a
@@ -378,7 +378,7 @@ nav, aside
 
 变量可以重用并且是用\$符来定义的，括号和分号没有了，看起来更干净。除了干净的语法，Sass 对 CSS 引入变量等特性在当时是具有突破性的，因为它开启了编写更简洁和更易维护的 CSS 代码的可能性。
 
-要使用 Sass，你必须先安装[Ruby](https://www.ruby-lang.org/en/documentation/installation/)，该编程语言用来把 Sass 代码编译成正常的 CSS 代码。然后你还得安装[Sass gem](http://sass-lang.com/install)，然后运行命令行把你的.sass 文件变成.css 文件：
+要使用 Sass，你必须先安装 [Ruby](https://www.ruby-lang.org/en/documentation/installation/)，该编程语言用来把 Sass 代码编译成正常的 CSS 代码。然后你还得安装 [Sass gem](http://sass-lang.com/install)，然后运行命令行把你的.sass 文件变成.css 文件：
 
 ```bash
 sass --watch index.sass index.css
@@ -413,9 +413,9 @@ aside {
 }
 ```
 
-和 Sass 的例子差不多（用`@`符而非`$`符定义变量），但没有 Sass 代码漂亮，因为保留了 CSS 的括号和分号。当然因为更接近 CSS 所以更容易让开发人员采纳它。在 2012 年，Less 用 Javascript 重写（取代了原来的 Ruby），这让 Less 的编译更快，同时更吸引开发人员，特别是那些已经采纳、使用[Node.js](https://nodejs.org/en/)的。
+和 Sass 的例子差不多（用 `@` 符而非 `$` 符定义变量），但没有 Sass 代码漂亮，因为保留了 CSS 的括号和分号。当然因为更接近 CSS 所以更容易让开发人员采纳它。在 2012 年，Less 用 Javascript 重写（取代了原来的 Ruby），这让 Less 的编译更快，同时更吸引开发人员，特别是那些已经采纳、使用 [Node.js](https://nodejs.org/en/) 的。
 
-要把上面的代码转成正常的 CSS 代码，你首先要[安装 Node.js](https://nodejs.org/en/download/)，然后[安装 Less](http://lesscss.org/#using-less-installation)，接下来跑命令：
+要把上面的代码转成正常的 CSS 代码，你首先要 [安装 Node.js](https://nodejs.org/en/download/)，然后 [安装 Less](http://lesscss.org/#using-less-installation)，接下来跑命令：
 
 ```bash
 lessc index.less index.css
@@ -423,9 +423,9 @@ lessc index.less index.css
 
 类似的，上面的命令把 index.less 里的代码转成 index.css 里正常 CSS 代码。注意的是，不像 sass 命令，Less 没有-watch 选项，意味着你必须安装和使用额外的工具来取得同样的效果。这对于那些习惯命令行的编程人员不是什么难事，但对于那些只想使用 CSS 预处理器的开发人员上手又增加了一道实实在在的门坎。
 
-当 Less 获得大家的认可时，Sass 的开发人员也做出了调整，在 2010 年增加了一种新的语法 - [SCSS](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#SCSS__Sassy_CSS_)（和 Less 类似，是 CSS 的超集）。他们还发布了新工具[LibSass](http://sass-lang.com/libsass)，用 C/C++实现 Sass Ruby 编译引擎，这让它更快并且在其它编程语言里也能够使用。
+当 Less 获得大家的认可时，Sass 的开发人员也做出了调整，在 2010 年增加了一种新的语法 - [SCSS](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#SCSS__Sassy_CSS_)（和 Less 类似，是 CSS 的超集）。他们还发布了新工具 [LibSass](http://sass-lang.com/libsass)，用 C/C++实现 Sass Ruby 编译引擎，这让它更快并且在其它编程语言里也能够使用。
 
-另一个 CSS 预处理工具是[Stylus](http://stylus-lang.com/)，在 2010 年出现，用 Node.js 开发，和 Sass、Less 比较关注在更简洁的语法上。基本上 CSS 预处理的讨论不外乎这三个使用最广泛的工具。它们所提供的特性也很类似，最终你任选一个都不会错。
+另一个 CSS 预处理工具是 [Stylus](http://stylus-lang.com/)，在 2010 年出现，用 Node.js 开发，和 Sass、Less 比较关注在更简洁的语法上。基本上 CSS 预处理的讨论不外乎这三个使用最广泛的工具。它们所提供的特性也很类似，最终你任选一个都不会错。
 
 当然，有人会对 CSS 预处理的必要性提出质疑，因为浏览器正在而且最终会实现它们的特性（如变量，calculations）。更进一步，有一种不同的处理方法 - CSS 后处理让 CSS 预处理变得不再需要（当然这个观点不无争议）。接下来我们就谈谈后处理。
 
@@ -447,7 +447,7 @@ h6 {
 }
 ```
 
-`-` 开头的部分称为“浏览器开发商前缀”（vendor prefixes）。它的作用是让浏览器识别出这些是实验性的新增特性，开发人员可以采用之，虽然它们还没有彻底被浏览器实现。这里 `-ms` 前缀是给微软 IE 的，`-moz` 是给 Mozilla 火狐浏览器的，`-webkit` 是给采用 webkit 渲染引擎的（谷歌的 Chome，Safari，新版的 Opera 浏览器都采纳之）。
+<span class="kwd">-</span> 开头的部分称为“浏览器开发商前缀”（vendor prefixes）。它的作用是让浏览器识别出这些是实验性的新增特性，开发人员可以采用之，虽然它们还没有彻底被浏览器实现。这里 <span class="kwd">-ms</span> 前缀是给微软 IE 的，<span class="kwd">-moz</span> 是给 Mozilla 火狐浏览器的，<span class="kwd">-webkit</span> 是给采用 webkit 渲染引擎的（谷歌的 Chome，Safari，新版的 Opera 浏览器都采纳之）。
 
 为了使用这些 CSS 新增特性，要记住这些不同的 vendor prefixes，这是挺烦人的。当需要的时候，如果能有一个工具自动把 vendor prefixes 加入就太好了。当然我们可以通过 CSS 预处理，例如像下面这样（SCSS）：
 
@@ -469,9 +469,9 @@ h6 {
 }
 ```
 
-这里使用了 Sass 的 `@mixins` 特性，它让你定义一段 CSS，然后在其它地方重用。当这个文件编译成正常的 CSS 代码时，任何@include 的语句将会被匹配的 @mixin 所定义的 CSS 代码取代。总的讲，这方法不算坏，但你需要为每一个需要 vendor prefixes 的 CSS 特性定义一个 mixins。这些 mixin 代码则需要维护，因为当浏览器支持这些特性时，你就需要移除相应的 vendor prefixes。
+这里使用了 Sass 的 <span class="kwd">@mixins</span> 特性，它让你定义一段 CSS，然后在其它地方重用。当这个文件编译成正常的 CSS 代码时，任何@include 的语句将会被匹配的 @mixin 所定义的 CSS 代码取代。总的讲，这方法不算坏，但你需要为每一个需要 vendor prefixes 的 CSS 特性定义一个 mixins。这些 mixin 代码则需要维护，因为当浏览器支持这些特性时，你就需要移除相应的 vendor prefixes。
 
-对比 mixins，还有一更好的方法是只写基本的 CSS，然后通过工具识别出那些需要加入 vendor prefixes 的 CSS 特性，并自动加入。CSS 后处理器就是可以做这个的。举个例子，如果你使用[PostCSS](http://postcss.org/)和其[autoprefixer plugin](https://github.com/postcss/autoprefixer)，你就可以只写不带 vendor prefixes 的 CSS，然后让 PostCSS 做剩下的工作：
+对比 mixins，还有一更好的方法是只写基本的 CSS，然后通过工具识别出那些需要加入 vendor prefixes 的 CSS 特性，并自动加入。CSS 后处理器就是可以做这个的。举个例子，如果你使用 [PostCSS](http://postcss.org/) 和其 [autoprefixer plugin](https://github.com/postcss/autoprefixer)，你就可以只写不带 vendor prefixes 的 CSS，然后让 PostCSS 做剩下的工作：
 
 ```css
 h1,
@@ -504,19 +504,19 @@ h6 {
 
 ### OOCSS
 
-[OOCSS](https://github.com/stubbornella/oocss/wiki)（Object Oriented CSS）`面向对象的 CSS` 第一次出现在 2009 年，这个方法基于两个原则。第一个是`结构（structure）和皮肤（skin）样式必须分离`。此原则意味着定义结构（如布局）的 CSS 代码不应该和定义皮肤的（如颜色，字体，等）混在一起。 这样更容易进行“换肤”。第二个原则是`容器和内容必须分离`。此原则意味着要把页面元素当作可重用的对象 - 对象意味着它无论在页面的任何位置上看起来都是一样的。
+[OOCSS：面向对象的 CSS](https://github.com/stubbornella/oocss/wiki)（Object Oriented CSS ）第一次出现在 2009 年，这个方法基于两个原则。第一个是<span class="ulmarker">结构（structure）和皮肤（skin）样式必须分离</span>。此原则意味着定义结构（如布局）的 CSS 代码不应该和定义皮肤的（如颜色，字体，等）混在一起。 这样更容易进行“换肤”。第二个原则是<span class="ulmarker">容器和内容必须分离</span>。此原则意味着要把页面元素当作可重用的对象 - 对象意味着它无论在页面的任何位置上看起来都是一样的。
 
 OOCSS 提供了深思熟虑的原则，但在实行上并没有太具体的规定，后来的 SMACSS 继承了它的核心概念，但加入了很多细节让其在实践中更容易上手。
 
 ### SMACSS
 
-[SMACSS](https://smacss.com/)（Scalable and Modular Architecture for CSS）`模块化并可扩展的 CSS` 第一次出现在 2011 年，这个方法让你基于五个分类规则编写 CSS - `基本规则（base rules`，`布局规则（layout rules`，`模块规则（modules）`，`状态规则（ state rules）`， 以及`主题规则（theme rules）`。SMACSS 也推荐一定的命名规范，如对于布局规则，布局相关样式类，名字一律加前缀 l- 或者 layout- ；对于状态规则，样式类名字则加入相关状态描述前缀，例如 is-hidden 或者 is-collapsed。
+[SMACSS：模块化并可扩展的 CSS](https://smacss.com/)（Scalable and Modular Architecture for CSS）第一次出现在 2011 年，这个方法让你基于五个分类规则编写 CSS - 基本规则（base rules），布局规则（layout rules），模块规则（modules），状态规则（ state rules）， 以及主题规则（theme rules）。SMACSS 也推荐一定的命名规范，如对于布局规则，布局相关样式类，名字一律加前缀 <span class="kwd">l-</span> 或者 <span class="kwd">layout-</span> ；对于状态规则，样式类名字则加入相关状态描述前缀，例如 is-hidden 或者 is-collapsed。
 
 和 OOCSS 相比，SMACSS 虽然有着更具体详细的规定，但是要求使用者想清楚采纳哪种具体的 CSS 规则，放入哪种分类当中。后来的方法如 BEM 让 CSS 编写者无需为其中的一些事情考虑，这使得它们的上手更容易些。
 
 ### BEM
 
-[BEM](https://en.bem.info/)（Block，Element，Modifier）第一次出现是在 2010 年，基本思想是把用户界面分成独立的几大块。`块（block）` 指的是一种可重用东西，例如搜索表单 - 被定义为 &lt;form class="search-form"&gt; &lt;/form&gt;。`元素（element）` 指的是块里的一部分，本身不能单独拿出来重用，例如搜索表单里的按钮 - 被定义为 &lt;button class="search-form\_\_button"&gt;Search&lt;/button&gt;。`修改者（modifier）` 指的是那些可以改变块或者元素的东西，这些改变包括块或元素的样式，状态，以及相关允许的动作，例如一个搜索表单禁用按钮 - 被定义为 &lt;button class="search-form\_\_button search-form\_\_button--disabled"&gt;Search&lt;/button&gt;。
+[BEM](https://en.bem.info/)（Block，Element，Modifier）第一次出现是在 2010 年，基本思想是把用户界面分成独立的几大块。<span class="kwd">块（block）</span> 指的是一种可重用东西，例如搜索表单 - 被定义为 &lt;form class="search-form"&gt; &lt;/form&gt;。<span class="kwd">元素（element）</span> 指的是块里的一部分，本身不能单独拿出来重用，例如搜索表单里的按钮 - 被定义为 &lt;button class="search-form\_\_button"&gt;Search&lt;/button&gt;。<span class="kwd">修改者（modifier）</span> 指的是那些可以改变块或者元素的东西，这些改变包括块或元素的样式，状态，以及相关允许的动作，例如一个搜索表单禁用按钮 - 被定义为 &lt;button class="search-form\_\_button search-form\_\_button--disabled"&gt;Search&lt;/button&gt;。
 
 BEM 比较容易理解，有着一套命名规范让新手使用而无需做太多复杂的考虑。但不好的另一面是，有些样式类名超长，和传统所提倡的 CSS 命名有冲突 - 传统上提倡 CSS 的样式类名对人来讲最好有意义。下面看看 Atomic CSS 如何把这种非传统做法带到另一个层次。
 

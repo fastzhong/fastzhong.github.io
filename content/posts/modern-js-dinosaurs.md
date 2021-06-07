@@ -27,7 +27,7 @@ draft = false
 
 ## 最原始的方法
 
-让我们用原始的方法 - 手工方式指定文件的下载和连接。下面就是一个简单的 intex.html 文件，里面包含 Javascript 代码文件的连接：
+让我们用原始的方法 - 手工方式指定文件的下载和连接。下面就是一个简单的 <span class="kwd">ntex.html</span> 文件，里面包含 Javascript 代码文件的连接：
 
 index.js 就是和 index.html 在同一网站服务器目录下的另一个文件，内容如下：
 
@@ -46,14 +46,14 @@ index.js 就是和 index.html 在同一网站服务器目录下的另一个文�
 </html>
 ```
 
-这行 &lt;script src="index.js"&gt;&lt;/script&gt; 我们让浏览器载入了同一目录下的 index.js ：
+这行 &lt;script src="index.js"&gt;&lt;/script&gt; 我们让浏览器载入了同一目录下的 <span class="kwd">index.js</span> ：
 
 ```javascript
 // index.js
 console.log("Hello from JavaScript!");
 ```
 
-这两个文件就构成了你所需要的一个简单网页。现在我们加入一个简单的第三方 Javascript 库（不是我们自己开发的）moment.js，这个库可以帮我们格式化日期，举个例子，我们可以调用 moment 这个方法：
+这两个文件就构成了你所需要的一个简单网页。现在我们加入一个简单的第三方 Javascript 库（不是我们自己开发的）<span class="kwd">moment.js</span>，这个库可以帮我们格式化日期，举个例子，我们可以调用 moment 这个方法：
 
 ```javascript
 moment().startOf("day").fromNow(); // 20 hours ago
@@ -93,9 +93,9 @@ console.log(moment().startOf("day").fromNow());
 
 ## 包管理器的方法：NPM
 
-从 2010 年起，各种 Javascript 包管理器 package manager 开始出现，可以自动下载、升级各种库。在 2013 年，[Bower](https://bower.io/)包管理器无疑是最流行的包管理器，但到了 2015 年左右，被[npm](https://www.npmjs.com/)超越。
+从 2010 年起，各种 Javascript 包管理器 package manager 开始出现，可以自动下载、升级各种库。在 2013 年，[Bower](https://bower.io/) 包管理器无疑是最流行的包管理器，但到了 2015 年左右，被 [npm](https://www.npmjs.com/) 超越。
 
-> _需要指明的是，[Yarn](https://yarnpkg.com/en/)作为 npm 替代品，虽然在 2016 年 yarn 从 npm 上抢走了很多的注意力，但 Yarn 内部依旧是 npm。_
+> _需要指明的是，[Yarn](https://yarnpkg.com/en/) 作为 npm 替代品，虽然在 2016 年 yarn 从 npm 上抢走了很多的注意力，但 Yarn 内部依旧是 npm。_
 
 npm 原来是作为 [node.js](https://nodejs.org/en/) 的包管理器，node.js 是设计在服务器端运行的 Javascript Runtime，而不是前端。让 npm 变成了在浏览器里运行的各种 Javascript 库的管理器，感觉会有点怪怪的。
 
@@ -129,7 +129,7 @@ $ npm init
 $ npm install moment --save
 ```
 
-这个命令会做两件事：下载 momen.js 包里所有的代码到一个叫 node_modules 的目录里，第二，更新 package.json，并记录 moment.js 成为一个项目依赖。
+这个命令会做两件事：下载 momen.js 包里所有的代码到一个叫 <span class="kwd">node_modules</span> 的目录里，第二，更新 package.json，并记录 moment.js 成为一个项目依赖。
 
 这个将来分享项目给其它 Javascript 开发人员时有用，因为不需要分享 node_module 目录，那样太大了，只要分享 package.json 就好，然后 npm install 会根据它来下载和安装所需的 Javascript 包。
 
@@ -158,7 +158,7 @@ npm 帮我们解决了下载和更新，但坏处是我们得在 node_modules �
 
 大部分的编程语言提供 import 机制把代码从一个文件载入到另一文件里。Javascript 最初没有设计这个（没有 module 的概念），原因是 Javascript 只是设计在浏览器里跑的，而浏览器是没有读写本地文件系统的权限的（安全原因）。所以在很长时间里，如果你把 Javascript 代码分散在几个文件里，只能通过全局变量载入这些文件。这正是上面的例子所展示的，整个 moment.min.js 被载入到 HTML 里，并定义给全局变量 moment，这个变量可以被之后载入任何 Javascript 文件所调用。
 
-在 2009 年，开启了一个名为 CommonJS 的项目，为了在浏览器之外实现这个目标。CommonJS 很大一部分是对 Javascript 的模块 module 给出规范，以便 Javascript 最终可以像其它编程语言那样可以在不同的文件之间 import 或 export，而非通过全局变量。而采用 CommonJS 最著名的就是 node.js ：
+在 2009 年，开启了一个名为 <span class="kwd">CommonJS</span> 的项目，为了在浏览器之外实现这个目标。CommonJS 很大一部分是对 Javascript 的模块 module 给出规范，以便 Javascript 最终可以像其它编程语言那样可以在不同的文件之间 import 或 export，而非通过全局变量。而采用 CommonJS 最著名的就是 node.js ：
 
 ![2](/images/modern-js/2.png#center)
 
@@ -175,13 +175,13 @@ console.log(moment().startOf("day").fromNow());
 
 但如果试着在浏览器端这样做，会得到错误信息（require is not defined）。这就是需要模块捆绑器 module bundler 这种工具的原因。模块捆绑器通过一个构建动作产生最终和浏览器兼容的 Javascript 来解决这个问题。这个例子里，我们可以让模块捆绑器搜索所有的 require 语句（这些语句在浏览器里都是不支持），把它们取代成实际的文件，最终结果变成一个大大的 Javascript 文件（这也是捆绑名字的由来），而且我们也就不再需要这些 require 语句了。
 
-现在让我们来看看如何用 Webpack 实现前面这个例子。首先我们安装 Webpack 到这个项目里。Webpack 本身也是 npm 的一个包，所以同样通过 npm 安装：
+现在让我们来看看如何用 <span class="kwd">Webpack</span> 实现前面这个例子。首先我们安装 Webpack 到这个项目里。Webpack 本身也是 npm 的一个包，所以同样通过 npm 安装：
 
 ```bash
 $ npm install webpack --save-dev
 ```
 
-注意 _--save-dev_ 这个参数表明 Webpack 是个开发依赖（开发环境依赖的包而非生产环境），这在项目文件 package.json 里可以看到 - 运行上面的命令后 package.json 会被自动更新成：
+注意 <span class="kwd">--save-dev</span> 这个参数表明 Webpack 是个开发依赖（开发环境依赖的包而非生产环境），这在项目文件 package.json 里可以看到 - 运行上面的命令后 package.json 会被自动更新成：
 
 ```json
 {
@@ -257,9 +257,9 @@ $ ./node_modules/.bin/webpack
 
 > _转译『Tanspiling』好像是在 Javascript 发展中出现的，“恐龙”以前没有听过，只听过编译『Compiling』，区别是转译用于同质语言，编译用于不同质语言，转译是编译的特例。例如把 C“编译”成机器代码，而把 Typescript“转译”为 Javascript。_
 
-对于 CSS，这类新的语言有 Sass ，Less 和 Stylus 等。对于 Javascript，曾经最有名的是 Coffeescript（出现于 2010 年），而现在用得最多的则是 babel 和 Typescript 。Coffeescript 对 Javascript 的改进甚多 - optional parentheses，significant whitespace，等等。 babel 不是新的语言，它是一个转译器，把新版本的 Javascript（[ES2015](https://babeljs.io/learn-es2015/)或更高版本）转成老旧版本（ES5），因为不是所有的浏览器都支持新版本的 Javascript。很多人选择 babel 因为它本身和 Javscript 很接近。
+对于 CSS，这类新的语言有 Sass ，Less 和 Stylus 等。对于 Javascript，曾经最有名的是 Coffeescript（出现于 2010 年），而现在用得最多的则是 babel 和 Typescript 。Coffeescript 对 Javascript 的改进甚多 - optional parentheses，significant whitespace，等等。 babel 不是新的语言，它是一个转译器，把新版本的 Javascript（ [ES2015](https://babeljs.io/learn-es2015/) 或更高版本）转成老旧版本（ES5），因为不是所有的浏览器都支持新版本的 Javascript。很多人选择 babel 因为它本身和 Javscript 很接近。
 
-_Javascript 语言是个奇葩，其标准一直缺失，比较著名的是[ECMAscript](https://zh.wikipedia.org/wiki/ECMAScript)_
+_Javascript 语言是个奇葩，其标准一直缺失，比较著名的是 [ECMAscript](https://zh.wikipedia.org/wiki/ECMAScript)_
 
 让我们在上面的例子中加入 babel。首先，安装 babel:
 
@@ -267,7 +267,7 @@ _Javascript 语言是个奇葩，其标准一直缺失，比较著名的是[ECMA
 $ npm install babel-core babel-preset-env babel-loader --save-dev
 ```
 
-我们为开发环境安装了三个包：babel-core 这个是 babel 的主体，babel-preset-env 这个用来定义那些新的 Javvascript 特性需要转译，最后 babel-loader 则是为了让 babel 和 Webpack 共同工作。 我们需要在 webpack.config.js 中加入 babel-loader：
+我们为开发环境安装了三个包：<span class="kwd">babel-core</span> 这个是 babel 的主体，<span class="kwd">babel-preset-env</span> 这个用来定义那些新的 Javvascript 特性需要转译，最后 <span class="kwd">babel-loader</span> 则是为了让 babel 和 Webpack 共同工作。 我们需要在 webpack.config.js 中加入 babel-loader：
 
 ```json
 // webpack.config.js
@@ -309,7 +309,7 @@ var name = "Bob",
 console.log(`Hello ${name}, how are you ${time}?`);
 ```
 
-我们也可以使用[ES2015 import statement](https://babeljs.io/learn-es2015/#ecmascript-2015-features-modules)而不是 require 来载入模块：
+我们也可以使用 [ES2015 import statement](https://babeljs.io/learn-es2015/#ecmascript-2015-features-modules) 而不是 require 来载入模块：
 
 ```javascript
 // index.js
@@ -338,7 +338,7 @@ console.log("Hello " + name + ", how are you " + time + "?");
 // ...
 ```
 
-虽然这个例子没有什么好让人激动的，但代码转译是很厉害的功能。例如新的 Javascritp 特性[async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)能让你写出更好的代码。尽管转译有时看起来麻烦，但是对 Javascript 的改进在过去几年起了巨大的作用，因为程序员可以现在就使用和测试其未来的语言特性。
+虽然这个例子没有什么好让人激动的，但代码转译是很厉害的功能。例如新的 Javascritp 特性 [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) 能让你写出更好的代码。尽管转译有时看起来麻烦，但是对 Javascript 的改进在过去几年起了巨大的作用，因为程序员可以现在就使用和测试其未来的语言特性。
 
 我们粗略完成想要做的事，整个流程还是有很多可以改进的地方。如果我们关心性能，我们可以压缩最终的捆绑文件，这个不难，只需要往 Webpack 里加。所以下面我们看看各种方便的工具，用来解决各种各样的问题。
 
@@ -381,7 +381,7 @@ console.log("Hello " + name + ", how are you " + time + "?");
 $ npm run build
 ```
 
-这将触发 Webpack 运行，并且显示执行的进度（--pregress），同时最小化输出（-p）.
+这将触发 Webpack 运行，并且显示执行的进度 <span class="kwd">--pregress</span>，同时最小化输出 <span class="kwd">-p</span>。
 
 执行下面的命令就可运行 watch 脚本：
 
@@ -389,7 +389,7 @@ $ npm run build
 $ npm run watch
 ```
 
-这将触发 Webpack 自动重新运行如果 Javascript 的文件有所改变（--watch），这对开发是很有帮助的。
+这将触发 Webpack 自动重新运行如果 Javascript 的文件有所改变 <span class="kwd">--watch</span>，这对开发是很有帮助的。
 
 注意我们不必指明 Webpack 的路径，因为 node.js 知道 npm 模块都在 node_modules 目录下。我们还可以安装 webpack-dev-server 这辅助工具，这是个简易实时重载的 web 服务器：
 
@@ -433,7 +433,7 @@ $ npm run server
 
 它会自动在你浏览器里打开 index.html（localhost:8080）。任何时候如果你改动了 index.js 里的 Javascript，webpack-dev-server 会自动重新构造捆绑 Javascript 文件并且让你的浏览器自动刷新。这不仅节约你的时间，而且让你专注在你的代码，而不是在代码，浏览器之间不停切换以检测所做的修改。
 
-你还可以做更多的事情，你可以在[这里](https://webpack.js.org/guides/development/)了解更多的 Webpack 以及 webpack-dev-server。当然你也可以类似的用 npm 脚本把 Sass 转换成 CSS，压缩图像文件，等等，任何命令行可以做的事都可以包含进来。更多 npm 脚本的高级特性可以观看 Kate Hudson 的[这个讲座](https://www.youtube.com/watch?v=0RYETb9YVrk)。
+你还可以做更多的事情，你可以在 [这里](https://webpack.js.org/guides/development/) 了解更多的 Webpack 以及 webpack-dev-server。当然你也可以类似的用 npm 脚本把 Sass 转换成 CSS，压缩图像文件，等等，任何命令行可以做的事都可以包含进来。更多 npm 脚本的高级特性可以观看 Kate Hudson 的 [这个讲座](https://www.youtube.com/watch?v=0RYETb9YVrk)。
 
 ## 结语
 

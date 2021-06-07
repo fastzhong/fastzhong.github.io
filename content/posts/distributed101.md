@@ -26,7 +26,7 @@ Gwen Shapira，曾今 的 Cloudera 工程师，现在引领 Kafka，在 [Twitter
 
 但是，很遗憾，对分布式系统理论方面的重大研究成果和思想进行概括、归纳、背景分析的‘导引’性质的优秀材料非常缺乏；特别是没有那种高屋建瓴的材料。对这块空白区域的思考让我想到了另一个有趣的问题：
 
-<font color="orange">一个分布式系统工程师应该知道些什么分布式系统理论？</font>
+`一个分布式系统工程师应该知道些什么分布式系统理论？`
 
 在这种情况下，一知半解（a little theory）并不会是一件多危险的事情。因此我尝试整理一个列表，罗列出作为一个分布式系统工程师的我认为能够直接应用于我日常工作的基础理论。如果你认为我漏掉了一些东西，请联系我。
 
@@ -39,10 +39,15 @@ Gwen Shapira，曾今 的 Cloudera 工程师，现在引领 Kafka，在 [Twitter
 -   [分布式系统研究综述报告](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)：一篇经典的论文，解释了为什么不能将远程交互当作本地对象处理。
 -   [关于分布式计算的若干谬论](http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing)：分布式计算方面的 8 点谬论，提醒系统设计者可能会忘记的几类事情。
 
-你需要知道分布式系统中的 <font color="orange">Safety</font> 和 <font color="orange">Liveness</font> 属性：
+你需要知道分布式系统中的 `Safety` 和 `Liveness` 属性：
 
--   Safety 属性指的是不好的结果永远不会发生：系统永远不返回不一致的结果就是 Safety 属性，例如系统不会在同一时刻选出两个 leader；
--   Liveness 属性指的是好的结果最终会发生：系统最终一定会返回 API 调用的结果就是 Liveness 属性，例如系统保障每个磁盘写调用一定会处理完成。
+```txt
+Safety 属性指的是不好的结果永远不会发生：系统永远不返回不一致的结果就是 Safety 属性，例如系统不会在同一时刻选出两个 leader；
+```
+
+```txt
+Liveness 属性指的是好的结果最终会发生：系统最终一定会返回 API 调用的结果就是 Liveness 属性，例如系统保障每个磁盘写调用一定会处理完成。
+```
 
 ## 失败和时间
 

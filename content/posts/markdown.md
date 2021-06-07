@@ -45,7 +45,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 这是个**黑体字 strong**
 ```
 
-效果：<font color="orange">**黑体字 strong**</font>
+<span class="label">效果</span><font color="orange">**黑体字 strong**</font>
 
 ### 斜体字 italic
 
@@ -55,7 +55,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 这是个*斜体字 italic*
 ```
 
-效果：<font color="orange"> _斜体字 italic_</font>
+<span class="label">效果</span><font color="orange"> _斜体字 italic_</font>
 
 ### 删除线 strikethrought
 
@@ -65,7 +65,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ~~加一条删除线 strikethrought~~
 ```
 
-效果：<font color="orange">~~加一条删除线 strikethrought~~</font>
+<span class="label">效果</span><font color="orange">~~加一条删除线 strikethrought~~</font>
 
 ### 引用块
 
@@ -73,7 +73,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 > 道可，道非，常道
 ```
 
-效果：<font color="orange">
+<span class="label">效果</span><font color="orange">
 
 > 道可，道非，常道
 
@@ -94,7 +94,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
     -   广州
 ```
 
-效果： <font color="orange">
+<span class="label">效果</span> <font color="orange">
 
 -   美国
 -   俄罗斯
@@ -121,7 +121,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 6. 亿
 ```
 
-效果： <font color="orange">
+<span class="label">效果</span> <font color="orange">
 
 1. 个
 2. 十
@@ -141,7 +141,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 [点击就去 Google](https://www.google.com)
 ```
 
-效果：[点击就去 Google](https://www.google.com)
+<span class="label">效果</span>[点击就去 Google](https://www.google.com)
 
 ### 图片 image
 
@@ -149,7 +149,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 ![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
 ```
 
-效果：![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
+<span class="label">效果</span>![Singapore](http://www.rw-designer.com/icon-image/924-48x48x32.png)
 
 ### 表格 table
 
@@ -163,7 +163,7 @@ Markdown 就是一种轻量级的标记语言（Lightweight Markup Language）�
 |   3    | 王二 |  40  |
 ```
 
-效果：<font color="orange">
+<span class="label">效果</span><font color="orange">
 
 | 职工号 | 姓名 | 年龄 |
 | :----- | :--- | :--: |
@@ -184,7 +184,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 这个不是\*\*黑体字\*\*
 ```
 
-效果：<font color="orange">
+<span class="label">效果</span><font color="orange">
 
 这个不是\# 标题  
 这个不是\*\*黑体字\*\*
@@ -199,7 +199,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 ---
 ```
 
-效果：
+<span class="label">效果</span>
 
 ---
 
@@ -211,7 +211,7 @@ markdown 支持在特殊字符前面插入 `\`，插入之后，将不再解析�
 [^k]: 云上的操作系统
 ```
 
-效果：用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛  
+<span class="label">效果</span>用 Markdown[^1]写文档；Kubernetes[^k]非常 NB，你确定不想玩玩嘛  
 [^1]: Markdown 一种简易的纯文本标记语言
 [^k]: 云上的操作系统
 
@@ -232,7 +232,7 @@ printf("Hello world!\n");
 ```
 ````
 
-效果：
+<span class="label">效果</span>
 
 ```c
 # include <stdio.h>
@@ -251,15 +251,15 @@ void main(){
 <u>下划线</u>
 ```
 
-效果：<font color="orange"><u>下划线</u></font>
+<span class="label">效果</span><font color="orange"><u>下划线</u></font>
 
 也不支持字体颜色：
 
 ```html
-<font color="orange">绿色字体</font>
+<span style="color:green">绿色字体</span>
 ```
 
-效果：<font color="green">绿色字体</font>
+<span class="label">效果</span><span style="color:green">绿色字体</span>
 
 ### 画图
 
@@ -267,7 +267,7 @@ Typora 支持简单的 Markdown 画图，但至今我还没有看到比较好的
 
 ## 在线练习
 
-<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;[操练一把](https://www.markdowntutorial.com/)
+[<i class="fas fa-external-link-alt"></i>&nbsp; 操练一把](https://www.markdowntutorial.com/)
 
 ## 工具
 

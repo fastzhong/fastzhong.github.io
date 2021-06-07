@@ -1,6 +1,6 @@
 +++
-title = "VS Code 功夫"
-date = 2010-01-01T13:08:47+08:00
+title = "VS Code 功夫 - 安装"
+date = 2007-01-01T13:08:47+08:00
 readingTime = true
 categories = ["工具"]
 tags = ["功夫系列", "vs code"]
@@ -8,17 +8,15 @@ toc = true
 draft = true
 +++
 
-很多配置，此文有点长 ☕️
+之前用 Sublime，不过这几年转至 VS Code，虽然没有 Sublime 快，但插件丰富，颜值超靓，大厂支持，已有一统江湖之势
 
 <!--more-->
 
 ---
 
-之前用 Sublime，挺喜欢，不过现在转至 VS Code，虽然没有 Sublime 快，但足已，而且插件更丰富，颜值超靓，更快更新，毕竟是一个人和一个世界软件顶尖公司开发团队的差别。
-
 ## 外观
 
-> `主题`，`字体`，`颜色` 是构成颜值的关键三要素。
+<span class="kwd">主题</span>，`字体`，`颜色` 是构成颜值的关键三要素。
 
 ### 字体
 
@@ -307,22 +305,6 @@ CTRL + , = 打开用户设置
 
 ### Python
 
-🗓TBD
-
 ### Go
 
-🗓TBD
-
 ### Java
-
-> -   [Language Support for Java, by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-> -   [Debugger for Java, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
-> -   [Java Dependency Viewer, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
-> -   [Maven for Java, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
-> -   [Java Test Runner, by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
-
-Spring 支持
-
-> -   [Spring Boot Tools](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot)
-> -   [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
-> -   [Spring Boot Snippets](https://marketplace.visualstudio.com/items?itemName=developersoapbox.vscode-springboot-snippets)

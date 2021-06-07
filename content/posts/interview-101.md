@@ -5,7 +5,6 @@ readingTime = true
 categories = ["职业发展"]
 tags = ["面试指南系列"]
 toc = true
-draft = false
 +++
 
 想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是小人物“被面&面了无数次”后的小总结。
@@ -18,7 +17,7 @@ draft = false
 
 我的定义就是：
 
--   好领导（working under a good leader）
+-   好的领导（working under a good leader）
 -   有趣的工作（interesting work）
 -   高的报酬（highly paid）
 
@@ -145,7 +144,7 @@ draft = false
 
 ### 算法编程
 
-> `Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.`
+> Being good at algorithm interviews does NOT mean you are a good programmer and vice versa.
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 

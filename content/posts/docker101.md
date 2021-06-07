@@ -23,7 +23,7 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 
 ![problem](/images/docker/TheProblem3.jpg#center)
 
-文档的问题其实反应了背后的工程问题 - 软件的安装和配置，还好有自动化运维工具（[Ansible 快速上手到项目最佳实战](/posts/ansible101/)）：
+文档的问题其实反应了背后的工程问题 - 软件的安装和配置，还好有自动化运维工具 [<i class="fas fa-external-link-alt"></i>&nbsp; Ansible 快速上手到项目最佳实战](/posts/ansible101/)：
 
 ![ansible](/images/docker/ansible.jpg#center)
 
@@ -45,57 +45,57 @@ Docker 🐳 是继 Java 十多年之后又一个“颠覆性”的技术，接�
 	<img src="/images/docker/container-history.png" alt="容器历史">  <!-- src处填写路径（本地或网络） width 和 height 就是控制图片的大小的-->
 </div>
 
--   <font color="orange">1979：Chroot Jail</font>  
+-   1979：<span class="kwd">Chroot Jail</span>  
     Chroot Jail 应该是第一种容器化技术，90 年代的系统管理员一定对 chroot 不陌生，为了安全，Apache Web 服务器都进行 chroot 配置。
 
     ![chroot](/images/docker/chroot.gif#center)
 
--   <font color="orange">1991：Linux</font>  
+-   1991：<span class="kwd">Linux</span>  
     1991 年 Linus Torvalds 在 PC 上开发了 Linux 内核。
 
--   <font color="orange">2000：FreeBSD Jail</font>  
+-   2000：<span class="kwd">FreeBSD Jail</span>  
     2000 年末，FreeBSD OS 第一次将 chroot 引入操作系统，实现不单是文件而且是进程级别的隔离，并且可以分配不同的 IP 地址。
 
--   <font color="orange">2001：Linux VServer</font>  
+-   2001：<span class="kwd">Linux VServer</span>  
     比 chroot 进一步，Linux VServer 在系统级别实现虚拟化，同一个内核，却可以运行多个不同的 Linux distributions。
 
--   <font color="orange">2004：Solaris Container</font>  
+-   2004：<span class="kwd">Solaris Container</span>  
     实现 Solaris 版本的 Liunx VServer
 
--   <font color="orange">2005：OpenVZ</font>  
+-   2005：<span class="kwd">OpenVZ</span>  
     新的 Linux Kernel 直接支持虚拟化，而 Linux VServer 和 OpenVZ 都需要对 kernel 打补丁才能支持容器的创建。
 
--   <font color="orange">2006-2007：Process Container/CGroups</font>  
+-   2006-2007：<span class="kwd">Process Container/CGroups</span>  
     2006 年 Google 开发的技术，实现对进程进行资源的控制（CPU、内存、磁盘 I/O、网络，等），一年后 Process Container 更名为 cgroups，cgroups 最后融入了 Linux Kernel 2.6.24。
 
--   <font color="orange">2008：LXC</font>  
-    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （<font color="orange">L</font>inu<font color="orange">X</font> <font color="orange">C</font>ontainer）包装了内核原生的 CGroups ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等）。LXC 是第一个功能较完整的容器管理器。CloudFoundry 在 2011 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
+-   2008：<span class="kwd">LXC</span>  
+    和之前的 Liunx VServer、Solaris Container、OpenVZ 类似，但 LXC （LinuX Container）包装了内核原生的 CGroups ，通过一系列的 API 允许普通程序创建和管理容器，每一个容器进程拥有自己的虚拟空间（CPU，内存，I/O，网络，等）。LXC 是第一个功能较完整的容器管理器。CloudFoundry 在 2011 年开发了 Warden，采用 LXC 并提供 API 来管理动态的容器资源。
 
     ![lxc](/images/docker/lxc.png#center)
 
--   <font color="orange">2009：Apache Mesos</font>  
+-   2009：<span class="kwd">Apache Mesos</span>  
     2009 年 UC Berkeley RAD 实验室开发的分布式系统运行平台。
 
--   <font color="orange">2013：Docker</font>  
+-   2013：<span class="kwd">Docker</span>  
     2013 年，基于 LXC 的 Docker 出世：
 
     ![docker](/images/docker/docker.png#center)
 
     后来 LXC 被 libcontainer 替换。
 
--   <font color="orange">2013：LMCTFY</font>  
+-   2013：<span class="kwd">LMCTFY</span>  
     Google 开源了自己的容器运行技术栈 LMCTFY（Let me contain that for you），同时和 Docker 合作，把其相关的概念和抽象移植到 libcontainer。
 
     CoreOS 发布和 Docker 类似的 Rocket。
 
--   <font color="orange">2016 ~ ：CNCF & Kubernetes</font>  
+-   2016 ~ ：CNCF & <span class="kwd">Kubernetes</span>  
     容器生态圈逐渐兴旺，CNCF 2016 年接收了 Kubernetes - Google 开源生产级别的容器集群运维管理平台（脱胎于 Google 内部 Borg 系统）。
 
 Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的技术，但又有两个共同点，都是为了：  
-✅ 资源隔离  
-✅ 资源控制
+ ✅ 资源隔离  
+ ✅ 资源控制
 
-<font color="orange">VM（Virtual Machine）</font>一般指在实体机器上创建的虚拟机器，VM 又分为 “System Virtual Machine” 和 “Process Virtual Machine”。对于 Guest OS 而言，VM 就像是一台真实的机器，而 Hypervisor 是关键技术，用来处理 VM 的 CPU，内存，网络等，Hypervisor 又分为 Type1 & 2：
+<span class="kwd">VM</span>（Virtual Machine）一般指在实体机器上创建的虚拟机器，VM 又分为 “System Virtual Machine” 和 “Process Virtual Machine”。对于 Guest OS 而言，VM 就像是一台真实的机器，而 Hypervisor 是关键技术，用来处理 VM 的 CPU，内存，网络等，Hypervisor 又分为 Type1 & 2：
 
 ![hyper-v](/images/docker/hyper-v.png#center)
 
@@ -124,7 +124,7 @@ Jail，Virtual Private Servers，Zones，Containers，VMs，等都是不同的�
 
 ![kernel space](/images/docker/kernel-space.png#center)
 
-Linux 把内存空间划分为 Kernel & User Space （系统空间和用户空间），我们的程序都是放在用户空间里，但所有的计算，储存，通讯最终都是通过调用底层的 Kernel 来完成的，而用户和系统空间的交互需要通过一系列系统调用『System Call』。划分的一个重要目的就是对 资源进行保护：
+Linux 把内存空间划分为 Kernel & User Space （系统空间和用户空间），我们的程序都是放在用户空间里，但所有的计算，储存，通讯最终都是通过调用底层的 Kernel 来完成的，而用户和系统空间的交互需要通过一系列系统调用 <span class="kwd">System Call</span>。划分的一个重要目的就是对 资源进行保护：
 
 ![rings](/images/docker/rings.png#center)
 
@@ -144,7 +144,7 @@ tmp_buf = mmap(file, len); # mmap here is from a C library
 
 ![process](/images/docker/process.jpg#center)
 
-Linux 有几个特殊的进程，pid 为 0 的 idle 进程被成为上帝进程，其创建 pid 为 1 的 /sbin/init 进程和 pid 为 2 的 kthreadd 进程，前者负责执行内核的一部分初始化工作和系统配置，也会创建一些类似 getty 的注册进程，而后者负责管理和调度其他的内核进程：
+Linux 有几个特殊的进程，pid 为 0 的 idle 进程被成为“上帝进程”，其创建 pid 为 1 的 /sbin/init 进程和 pid 为 2 的 kthreadd 进程，前者负责执行内核的一部分初始化工作和系统配置，也会创建一些类似 getty 的注册进程，而后者负责管理和调度其他的内核进程：
 
 ![process 0，1，2](/images/docker/process0.png#center)
 
@@ -327,7 +327,7 @@ $ cat cpu.cfs_quota_us
 
 ### rootfs
 
-Linux 万事皆为 file，或者叫 rootfs（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录：
+Linux 万事皆为 file，或者叫 <span class="kwd">rootfs</span>（根文件系统）. rootfs 不仅具有普通文件系统的存储数据文件的功能，还包含了一个操作系统所需要的文件，配置和目录，其它的文件系统才能依次加载到 root 下，但并不包含系统内核。 在 Linux 中，文件和内核是分开存放的，操作系统只有在开启启动时才会加载指定的内核。rootfs 包含一般我们熟知的 /bin，/sbin，/dev，/etc，/var，/proc 等目录：
 
 ![linux file system](/images/linux/cheatsheet-linux-fs.jpeg#center)
 
@@ -375,19 +375,19 @@ Docker 的核心架构（2019）：
 
 ![docker architecture](/images/docker/docker-architecture.png#center)
 
--   <span style="color: orange">Docker Client</span>：接收 docker 命令并发送至 Docker daemon，可以通过以下三种方式和 Docker daemon 通信：tcp://host:port, unix://path_to_socket, fd://socketfd
+-   <span class="kwd">Docker Client</span>：接收 docker 命令并发送至 Docker daemon，可以通过以下三种方式和 Docker daemon 通信：<span class="kwd">tcp://host:port</span> <span class="kwd">unix://path_to_socket</span> <span class="kwd">fd://socketfd</span>
 
--   <span style="color: orange">Docker Daemeon</span>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求，其中的 Engine 是 Docker 架构中的运行引擎，同时也 Docker 运行的核心模块，它扮演 Docker container 存储仓库的角色，并且通过执行 job 的方式来操纵管理这些容器。Job 可以认为是 Docker 架构中 Engine 内部最基本的工作执行单元。，Docker 可以做的每一项工作，都可以抽象为一个 job，其设计与 Unix 进程相仿，比如说：Job 有一个名称，有参数，有环境变量，有标准的输入输出，有错误处理，有返回状态等。
+-   <span class="kwd">Docker Daemeon</span>：监听任何创建或运行容器以及其它容器相关的 Docker API 请求，其中的 Engine 是 Docker 架构中的运行引擎，同时也 Docker 运行的核心模块，它扮演 Docker container 存储仓库的角色，并且通过执行 job 的方式来操纵管理这些容器。Job 可以认为是 Docker 架构中 Engine 内部最基本的工作执行单元。，Docker 可以做的每一项工作，都可以抽象为一个 job，其设计与 Unix 进程相仿，比如说：Job 有一个名称，有参数，有环境变量，有标准的输入输出，有错误处理，有返回状态等。
 
--   <span style="color: orange">Docker Registries</span>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)（公有仓库），私有仓库则需 Docker Registry 软件单独建立如 Harbor，镜像按照[repository]:[tag]来精确定义。
+-   <span class="kwd">Docker Registries</span>：存放 Docker image 的地方，默认的是 [Docker Hub](https://hub.docker.com/)（公有仓库），私有仓库则需 Docker Registry 软件单独建立如 Harbor，镜像按照 [repository]:[tag] 来精确定义。
 
--   <span style="color: orange">Graph</span>：Docker 的内部数据库，存储每个容器镜像（通过下载或 Dockerfile 构建）的信息：镜像元数据，大小，rootfs，以及节点之间的关联。
+-   <span class="kwd">Graph</span>：Docker 的内部数据库，存储每个容器镜像（通过下载或 Dockerfile 构建）的信息：镜像元数据，大小，rootfs，以及节点之间的关联。
 
 ![graph](/images/docker/docker-graph.png#center)
 
--   <span style="color: orange">graphitedriver</span>，<span style="color: orange">networkdriver</span>，<span style="color: orange">execdriver</span>：驱动模块，通过 driver，Docker 可以实现对不同 Docker 容器执行环境的定制 - Graphdriver 主要用于完成容器镜像的管理，包括存储与获取；Networkdriver 的用途是完成 Docker 容器网络环境的配置；Execdriver 作为 Docker 容器的执行驱动，负责创建容器运行命名空间、容器资源使用的统计与限制、容器内部进程的真正运行。
+-   <span class="kwd">graphitedriver</span> <span class="kwd">networkdriver</span> <span class="kwd">execdriver</span>：驱动模块，通过 driver，Docker 可以实现对不同 Docker 容器执行环境的定制 - Graphdriver 主要用于完成容器镜像的管理，包括存储与获取；Networkdriver 的用途是完成 Docker 容器网络环境的配置；Execdriver 作为 Docker 容器的执行驱动，负责创建容器运行命名空间、容器资源使用的统计与限制、容器内部进程的真正运行。
 
--   <span style="color: orange">libcontainer</span>：一个 Go 语言设计实现的库，设计初衷是希望该库可以不依靠任何依赖，直接访问内核中与容器相关的 API，Docker 通过调用 libcontainer，而最终操纵容器的 namespace、cgroups、apparmor、网络设备以及防火墙规则等。
+-   <span class="kwd">libcontainer</span>：一个 Go 语言设计实现的库，设计初衷是希望该库可以不依靠任何依赖，直接访问内核中与容器相关的 API，Docker 通过调用 libcontainer，而最终操纵容器的 namespace、cgroups、apparmor、网络设备以及防火墙规则等。
 
 Docker 创建和运行容器的大致流程：
 
@@ -422,27 +422,27 @@ Docker 创建和运行容器的大致流程：
 
 > build faster, test faster, deploy faster, update faster, recover faster
 
--   To reusable code: **libraries**
+-   To reusable code: <span class="kwd2">libraries</span>
 
     -   code once，import to every project
 
--   To reuse binary: **java**
+-   To reuse binary: <span class="kwd2">java</span>
 
     -   compile once，executable everywhere
 
--   To reuse local environment: **virtual machine**
+-   To reuse local environment: <span class="kwd2">virtual machine</span>
 
     -   create once，share for every team member
 
--   To reuse infrastructure: **devops tools**
+-   To reuse infrastructure: <span class="kwd2">devops tools</span>
 
     -   define once，provision somewhere
 
--   To re-use immutable, deployable, runnable artifact: **container**
+-   To re-use immutable, deployable, runnable artifact: <span class="kwd2">container</span>
 
     -   build once, deploy everywhere & run (without installation/configuration)
 
-容器带来革命性的软件打包方式：app 和所有的 dependencies 都打包在一起 - a single binary，具有**consistent，portable，immutable，versionable**的特性，朝着 everything as code 演化。
+容器带来革命性的软件打包方式：app 和所有的 dependencies 都打包在一起 - a single binary，具有 consistent，portable，immutable，versionable 的特性，朝着 everything as code 演化。
 
 > Identical environment is crucial for delivering high quality software
 

@@ -48,7 +48,7 @@ FaaS 具体和 IaaS，PaaS 的比较如下：
 -   和已有的应用集成（云端和非云端）
 -   厂商绑定
 
-针对最后一点，随着各厂商支持 k8s，k8s 上的 Knaive 就提供了统一的 serverless 基础框架，同时 CNCF 着手知道统一的 [cloudevent](https://cloudevents.io/)和 [workdlow](https://github.com/cncf/wg-serverless/blob/master/workflow/spec/spec.md)。
+针对最后一点，随着各厂商支持 k8s，k8s 上的 Knaive 就提供了统一的 serverless 基础框架，同时 CNCF 着手知道统一的 [cloudevent](https://cloudevents.io/) 和 [workdlow](https://github.com/cncf/wg-serverless/blob/master/workflow/spec/spec.md)。
 
 ## Serverless 的应用场景
 

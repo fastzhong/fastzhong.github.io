@@ -294,7 +294,7 @@ default via 10.0.2.2 dev enp0s3
 192.168.100.0/24 dev enp0s8  proto kernel  scope link  src 192.168.100.21
 ```
 
--   初始化集群 <span style="color:orange">k8s\-master1：192\.168\.100\.11 </span>
+-   初始化集群 k8s\-master1：192\.168\.100\.11
 
 ```bash
 kubeadm init \

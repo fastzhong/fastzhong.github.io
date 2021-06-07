@@ -1,5 +1,5 @@
 +++
-title = "Python 102 in 2021（基本语法）"
+title = "Python 102（基本语法）"
 date = 2021-02-18T01:08:47+08:00
 readingTime = true
 categories = ["编程"]
@@ -94,8 +94,8 @@ if __name__=="__main__":
 
 三个文件其实都差不多：
 
--   第一个倾向于称之模块 module，定义或声明，没有执行什么，可以被别的 python 文件作为模块引入并调用（import）；
--   第二个倾向于称之脚本 script，主要是可以独立执行，\_\_main\_\_是主函数入口，输出如下：
+-   第一个倾向于称之模块 <span class="kwd">module</span>，定义或声明，没有执行什么，可以被别的 python 文件作为模块引入并调用（import）；
+-   第二个倾向于称之脚本 <span class="kwd">script</span>，主要是可以独立执行，\_\_main\_\_是主函数入口，输出如下：
 
 ```bash
 [I] ➜ python add2.py

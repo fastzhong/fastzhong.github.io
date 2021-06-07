@@ -13,9 +13,9 @@ Json 满天飞，Jackson 作为 Json 序列化/反序列化的最强大的 Java 
 
 ### 通用注解（序列化/反序列化）
 
-#### @JsonRootName
+#### <span class="kwd">@JsonRootName</span>
 
-无 `@JsonRootName` 时：
+无 @JsonRootName 时：
 
 ```java
 public class MyBean {
@@ -33,7 +33,7 @@ public class MyBean {
 }
 ```
 
-有 `@JsonRootName` 时：
+有 @JsonRootName 时：
 
 ```java
 @JsonRootName(value = "bean")
@@ -54,7 +54,7 @@ public class MyBean {
 }
 ```
 
-#### @JsonProperty
+#### <span class="kwd">@JsonProperty</span>
 
 自定义对应的 Json 字段名：
 
@@ -75,7 +75,7 @@ public class MyBean {
 }
 ```
 
-#### @JsonFormat
+#### <span class="kwd">@JsonFormat</span>
 
 自定义对应的 Json 值格式：
 
@@ -84,8 +84,8 @@ public class MyBean {
     public int id = 1;
     public String name = "My Bean";
     @JsonFormat(
-      shape = JsonFormat.Shape.STRING,
-      pattern = "dd-MM-yyyy hh:mm:ss")
+        shape = JsonFormat.Shape.STRING,
+        pattern = "dd-MM-yyyy hh:mm:ss")
     public Date eventDate = new Date();
 }
 ```
@@ -100,11 +100,11 @@ public class MyBean {
 }
 ```
 
-#### @JsonUnwrapped
+#### <span class="kwd">@JsonUnwrapped</span>
 
 ```java
 public class MyBean {
-    public int id = 1;
+public int id = 1;
 
     @JsonUnwrapped
     public Name name = new Name();
@@ -113,6 +113,7 @@ public class MyBean {
         public String firstName = "Mr";
         public String lastName = "Bean";
     }
+
 }
 ```
 
@@ -126,7 +127,7 @@ name 字段将会被展开值取代，对应的 json：
 }
 ```
 
-#### @JsonView
+#### <span class="kwd">@JsonView</span>
 
 通过定义 View，代码层控制可序列化/反序列化的字段：
 
@@ -152,8 +153,7 @@ public class MyBean {
 
 ```java
 @Test
-public void whenSerializingUsingJsonView()
-  throws JsonProcessingException {
+public void whenSerializingUsingJsonView() throws JsonProcessingException {
     MyBean bean = new MyBean();
 
     String result = new ObjectMapper()
@@ -163,12 +163,13 @@ public void whenSerializingUsingJsonView()
     assertThat(result, containsString("1"));
     assertThat(result, containsString("My Bean"));
     assertThat(result, not(containsString("iloveu")));
+
 }
 ```
 
-#### @JsonFilter
+#### <span class="kwd">@JsonFilter</span>
 
-类似 `@JsonView`，通过定义 Filter，代码层控制可序列化/反序列化的字段：
+类似 @JsonView，通过定义 Filter，代码层控制可序列化/反序列化的字段：
 
 ```java
 @JsonFilter("myFilter")
@@ -182,25 +183,22 @@ public class MyBean {
 ```java
 MyBean bean = new MyBean();
 
-FilterProvider filters
-    = new SimpleFilterProvider().addFilter(
+FilterProvider filters = new SimpleFilterProvider().addFilter(
         "myFilter",
         SimpleBeanPropertyFilter.filterOutAllExcept("token");
 
 String result = new ObjectMapper()
-  .writer(filters)
-  .writeValueAsString(bean);
-
+    .writer(filters)
+    .writeValueAsString(bean);
 ```
 
-#### @JsonIdentityInfo @JsonManagedReference @JsonBackReference
+#### <span class="kwd">@JsonIdentityInfo</span> <span class="kwd">@JsonManagedReference</span> <span class="kwd">@JsonBackReference</span>
 
-如果两个对象互相引用，序列化/反序列化时，`@JsonIdentityInfo` 可以避免陷入无限递归调用：
+如果两个对象互相引用，序列化/反序列化时，@JsonIdentityInfo 可以避免陷入无限递归调用：
 
 ```java
 @JsonIdentityInfo(
-  generator = ObjectIdGenerators.PropertyGenerator.class,
-  property = "id")
+generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class ItemWithIdentity {
     public int id;
     public String itemName;
@@ -208,8 +206,7 @@ public class ItemWithIdentity {
 }
 
 @JsonIdentityInfo(
-  generator = ObjectIdGenerators.PropertyGenerator.class,
-  property = "id")
+generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class UserWithIdentity {
     public int id;
     public String name;
@@ -222,7 +219,7 @@ UserWithIdentity 和 ItemWithIdentity 相互引用：
 ```java
 @Test
 public void whenSerializingUsingJsonIdentityInfo_thenCorrect()
-  throws JsonProcessingException {
+    throws JsonProcessingException {
     UserWithIdentity user = new UserWithIdentity(1, "John");
     ItemWithIdentity item = new ItemWithIdentity(2, "book", user);
     user.addItem(item);
@@ -232,6 +229,7 @@ public void whenSerializingUsingJsonIdentityInfo_thenCorrect()
     assertThat(result, containsString("book"));
     assertThat(result, containsString("John"));
     assertThat(result, containsString("userItems"));
+
 }
 ```
 
@@ -269,7 +267,7 @@ public class UserWithIdentity {
 
 ### 序列化注解 Java -> Json
 
-#### @JsonPropertyOrder
+#### <span class="kwd">@JsonPropertyOrder</span>
 
 这个控制输出字段的顺序：
 
@@ -290,21 +288,22 @@ public class MyBean {
 }
 ```
 
-`@JsonPropertyOrder(alphabetic=true)` 可以按字段名排序输出。
+@JsonPropertyOrder(alphabetic=true) 可以按字段名排序输出。
 
-#### @JsonGetter，@JsonAnyGetter
+#### <span class="kwd">@JsonGetter</span> <span class="kwd">@JsonAnyGetter</span>
 
-这个取代 `@JsonProperty`，指定该字段的 getter 方法：
+这个取代 @JsonProperty，指定该字段的 getter 方法：
 
 ```java
 public class MyBean {
-    public int id = 1;
-    public String name = "My Bean";
+public int id = 1;
+public String name = "My Bean";
 
     @JsonGetter("name")
     public String getMyName() {
         return name.toUpperCase();
     }
+
 }
 ```
 
@@ -317,18 +316,19 @@ public class MyBean {
 }
 ```
 
-`@JsonAnyGetter` 则可以对“动态字段”，例如 Map 的 key 进行序列化：
+@JsonAnyGetter 则可以对“动态字段”，例如 Map 的 key 进行序列化：
 
 ```java
 public class MyBean {
-    public int id = 1;
-    public String name = "My Bean";
-    private Map<String, String> properties;
+public int id = 1;
+public String name = "My Bean";
+private Map<String, String> properties;
 
     @JsonAnyGetter
     public Map<String, String> getProperties() {
         return properties;
     }
+
 }
 ```
 
@@ -343,9 +343,9 @@ properties 里的 attr1、attr2 会被“动态”输出：
 }
 ```
 
-#### @JsonSerializer
+#### <span class="kwd">@JsonSerializer</span>
 
-`@JsonSerializer` 指明特定的序列化：
+@JsonSerializer 指明特定的序列化：
 
 ```java
 public class MyBean {
@@ -362,8 +362,7 @@ public class MyBean {
 public class OptimizedBooleanSerializer extends JsonSerializer<Boolean> {
 
     @Override
-    public void serialize(Boolean aBoolean, JsonGenerator jsonGenerator,
-        SerializerProvider serializerProvider)
+    public void serialize(Boolean aBoolean, JsonGenerator jsonGenerator, SerializerProvider serializerProvider)
     throws IOException, JsonProcessingException {
 
         if(aBoolean){
@@ -372,24 +371,26 @@ public class OptimizedBooleanSerializer extends JsonSerializer<Boolean> {
             jsonGenerator.writeNumber(0);
         }
     }
+
 }
 ```
 
 通常用来控制对特殊格式的输出。
 
-#### @JsonValue，@JsonRawValue
+#### <span class="kwd">@JsonValue</span> <span class="kwd">@JsonRawValue</span>
 
-`@JsonValue` 定义序列化输出：
+@JsonValue 定义序列化输出：
 
 ```java
 public class MyBean {
-    public int id = 1;
-    public String name = "My Bean";
+public int id = 1;
+public String name = "My Bean";
 
     @JsonValue
     public String toJson() {
         return this.id + ", " + this.name;
     }
+
 }
 ```
 
@@ -399,7 +400,7 @@ public class MyBean {
 "1, My Bean"
 ```
 
-`@JsonRawValue` 指明该字段的值直接输出（就是序列化后的值），不做序列化：
+@JsonRawValue 指明该字段的值直接输出（就是序列化后的值），不做序列化：
 
 ```java
 public class MyBean {
@@ -419,7 +420,7 @@ public class MyBean {
 }
 ```
 
-放上 `@JsonRawValue`:
+放上 @JsonRawValue:
 
 ```java
 public class MyBean {
@@ -442,26 +443,27 @@ public class MyBean {
 
 ### 反序列化注解 Json -> Java
 
-#### @JsonSetter，@JsonAnySetter
+#### <span class="kwd">@JsonSetter</span> <span class="kwd">@JsonAnySetter</span>
 
-和 `JsonGetter` 类似，`@JsonSetter` 取代 `@JsonProperty`，指定该字段的 setter 方法：
+和 JsonGetter 类似，@JsonSetter 取代 @JsonProperty，指定该字段的 setter 方法：
 
 ```java
 public class MyBean {
-    public int id = 1;
-    private String name;
+public int id = 1;
+private String name;
 
     @JsonSetter("name")
     public void setTheName(String name) {
         this.name = name.toLowerCase();
     }
+
 }
 ```
 
 ```java
 @Test
 public void whenDeserializingUsingJsonSetter()
-  throws IOException {
+throws IOException {
 
     String json = "{\"id\":1,\"name\":\"MY BEAN\"}";
 
@@ -469,10 +471,11 @@ public void whenDeserializingUsingJsonSetter()
       .readerFor(MyBean.class)
       .readValue(json);
     assertEquals("my bean", bean.getTheName());
+
 }
 ```
 
-和 `@JsonAnyGetter` 类似，在反序列化时，`@JsonAnySetter` 对于所有没有匹配的字段进行处理：
+和 @JsonAnyGetter 类似，在反序列化时，@JsonAnySetter 对于所有没有匹配的字段进行处理：
 
 ```json
 {
@@ -485,20 +488,21 @@ public void whenDeserializingUsingJsonSetter()
 
 ```java
 public class MyBean {
-    public int id;
-    public String name;
-    private Map<String, String> properties;
+public int id;
+public String name;
+private Map<String, String> properties;
 
     @JsonAnySetter
     public void add(String key, String value) {
         properties.put(key, value);
     }
+
 }
 ```
 
 json 里的 attr1、attr2 会被“动态”注入到 properties 里。
 
-#### @JacksonInject
+#### <span class="kwd">@JacksonInject</span>
 
 通过代码赋值，而非从 Json 反序列化中得到：
 
@@ -509,15 +513,16 @@ public class MyBean {
 
     @JsonInject
     publicc String createdby;
+
 }
 
 String json = "{\"name\":\"My bean\"}";
 
-InjectableValues inject = new InjectableValues.Std()
-  .addValue(int.class, 1);
-BeanWithInject bean = new ObjectMapper().reader(inject)
-  .forType(BeanWithInject.class)
-  .readValue(json);
+InjectableValues inject = new InjectableValues.Std().addValue(int.class, 1);
+BeanWithInject bean = new ObjectMapper().
+    reader(inject).
+    forType(BeanWithInject.class).
+    readValue(json);
 
 String json = "{\"id\":1, \"name\":\"My Bean\"}";
 
@@ -528,9 +533,9 @@ MyBean bean = new ObjectMapper()
     .readValue(json);
 ```
 
-#### @JsonCreator
+#### <span class="kwd">@JsonCreator</span>
 
-反序列化时，需要创建 Java 对象，结合 `@JsonProperty`，`@JsonCreator` 用来指明如何创建：
+反序列化时，需要创建 Java 对象，结合 @JsonProperty，@JsonCreator 用来指明如何创建：
 
 ```json
 {
@@ -551,12 +556,13 @@ public class MyBean {
         this.id = id;
         this.name = name;
     }
+
 }
 ```
 
-#### @JsonDeserializer
+#### <span class="kwd">@JsonDeserializer</span>
 
-和 `@JsonSerializer` 类似，`@JsonDesearilizer` 指明特定的反序列化：
+和 @JsonSerializer 类似，@JsonDesearilizer 指明特定的反序列化：
 
 ```java
 public class MyBean {
@@ -584,12 +590,13 @@ public class OptimizedBooleanDeserializer extends JsonDeserializer<Boolean> {
             return true;
         return false;
     }
+
 }
 ```
 
 ### 控制注解
 
-#### @JsonAutoDetect
+#### <span class="kwd">@JsonAutoDetect</span>
 
 通过 Java 的可见性控制序列化/反序列化，如果可见性不匹配则排除：
 
@@ -615,9 +622,9 @@ id 字段被排除。
 
 对应的值包括：ANY，DEFAULT，NON_PRIVATE，NONE，PROTECTED_AND_PRIVATE 和 PUBLIC_ONLY。
 
-#### @JsonIgnoreProperties，@JsonIgnore
+#### <span class="kwd">@JsonIgnoreProperties</span> <span class="kwd">@JsonIgnore</span>
 
-忽略掉 `@JsonIgnoreProperties，` 所有指定的字段：
+忽略掉 @JsonIgnoreProperties， 所有指定的字段：
 
 ```java
 @JsonIgnoreProperties（{“firstName”，“lastName”}）
@@ -633,29 +640,30 @@ public class MyBean {
 
 ```json
 {
-"bean id":1，
-"name":"My bean"
+    "bean id":1，
+    "name":"My bean"
 }
 ```
 
-`@JsonIgnore` 和 `@JsonIgnoreProperties` 类似，可忽略单个字段，上面的等价于：
+@JsonIgnore 和 @JsonIgnoreProperties 类似，可忽略单个字段，上面的等价于：
 
 ```java
 public class MyBean {
-    public int id = 1;
-    public String name = "My Bean";
+public int id = 1;
+public String name = "My Bean";
 
     @JsonIgnore
     public String createdby = "张三";
 
     @JsonIgnore
     public String updatedby = "李四";
+
 }
 ```
 
-`@JsonIgnore` 出现字段、getter、setter、creator 上任何一个，序列化/反序列化都会忽略，如果 getter 上 `@JsonProperty`，setter 上 `@JsonIgnore`，则该字段“只读” - 只能序列化，不能反序列化。
+@JsonIgnore 出现字段、getter、setter、creator 上任何一个，序列化/反序列化都会忽略，如果 getter 上 @JsonProperty，setter 上 @JsonIgnore，则该字段“只读” - 只能序列化，不能反序列化。
 
-#### @JsonInclude
+#### <span class="kwd">@JsonInclude</span>
 
 序列化时控制当字段值为 null/空/默认值 时是否排除：
 
@@ -685,9 +693,9 @@ public void whenSerializingUsingJsonInclude()
 
 三个注解组合处理多态：
 
--   @JsonTypeInfo：定义指明具体类型值的属性
--   @JsonSubTypes：通过类型值指明具体的 class
--   @JsonTypeName：定义 class 对应的具体类型值
+-   <span class="kwd">@JsonTypeInfo</span>：定义指明具体类型值的属性
+-   <span class="kwd">@JsonSubTypes</span>：通过类型值指明具体的 class
+-   <span class="kwd">@JsonTypeName</span>：定义 class 对应的具体类型值
 
 例子：
 
@@ -699,6 +707,7 @@ public class Zoo {
       use = JsonTypeInfo.Id.NAME,
       include = As.PROPERTY,
       property = "type")
+
     @JsonSubTypes({
         @JsonSubTypes.Type(value = Dog.class, name = "dog"),
         @JsonSubTypes.Type(value = Cat.class, name = "cat")
@@ -820,7 +829,6 @@ public class Token {
 
 ```java
 @Test
-@Test
 public void whenSerializingUsingMixInAnnotationt()
   throws JsonProcessingException {
     MyBean bean = new MyBean();
@@ -869,4 +877,4 @@ public void whenDisablingAllAnnotations()
 
 ---
 
-💡 如果上面的注解不能满足，任何时候可以在 class 和字段级别 定制 `Serializer` & `Deserializer` 来达到精细控制序列化/反序列化的目的。
+💡 如果上面的注解不能满足，任何时候可以在 class 和字段级别 定制 Serializer & Deserializer 来达到精细控制序列化/反序列化的目的。
