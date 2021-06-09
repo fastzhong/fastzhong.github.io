@@ -112,3 +112,7 @@ if __name__=="__main__":
 ```
 
 有了以上知识基本上可以开始编程，其它一些非常有用的高级功能，如 lambda，itertools， decorator 等等以后做博客。
+
+---
+
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Python 的语法总结：[<i class="fas fa-external-link-alt"></i>&nbsp; Learn python3 in one picture.](https://github.com/coodict/python3-in-one-pic)
