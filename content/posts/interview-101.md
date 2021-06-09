@@ -152,9 +152,9 @@ toc = true
 
 ### Java
 
-福利：收集了些非常好的知识点汇总和面试题 [㊮ 链接](https://github.com/fastzhong/interview/tree/master/Java)
+💎 福利：[收集了些非常好的知识点汇总和面试题](https://github.com/fastzhong/interview/tree/master/Java)
 
-系统学习，成效才会卓著：[<i class="fas fa-external-link-alt"></i>&nbsp; TBD]()
+💎 系统学习，成效才会卓著：[Java 全栈知识体系 - BAT 大厂面试题与全栈知识体系结合](https://www.pdai.tech/md/outline/x-outline.html)
 
 ### 系统设计
 

@@ -15,7 +15,7 @@ toc = true
 
 -   GitHub 上的资料 - 除了拿来面试，也是学习架构的大宝藏：
 
-    -   [<i class="fas fa-external-link-alt"></i>&nbsp; Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+    -   [<i class="fas fa-external-link-alt"></i>&nbsp; The System Design Primer（中文翻译：系统设计入门）](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 
     -   [<i class="fas fa-external-link-alt"></i>&nbsp; System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
 
