@@ -10,6 +10,13 @@ toc = true
 
 <!--more-->
 
+需要回答两个新手终极问题：
+
+```md
+1. 什么是炒股？
+2. 炒股能赚钱吗，如何炒才赚钱？
+```
+
 ## 树立观念
 
 一本改变我三观的书：  
@@ -17,7 +24,7 @@ toc = true
 
 [知乎：程序员怎样才能实现财富自由?](https://www.zhihu.com/question/455138788)
 
-这些答案太长长长长长长长长长长长长了！
+这些答案太长长长长长长长长长长长长了 🙈
 
 你要怎么赚钱，要和谁学赚钱，有了下面这张图就一目了然了：
 
@@ -59,14 +66,15 @@ toc = true
 
 ## 找到方法
 
+-   [美股入门 | 炒股到底能赚钱吗？](https://www.youtube.com/watch?v=dKWhoRJHBTs)
+-   [美股入门 | 为什么你炒股总亏钱？揭秘没人愿意告诉你的股票交易真相！](https://www.youtube.com/watch?v=qEwA_nXM3JE)
+-   [【半佛】学股票吗亲？倾家荡产的那种。](https://www.bilibili.com/video/BV1Y7411W7br)
+
 投资基本分为两种：<span class="kwd">短期-投机</span> 🆚 <span class="kwd">长期-投资</span>。金融市场庞大且包含非理性，学习十辈子都学不完，而且每个人都是要亏点钱才能有所体会，只是看亏了多少，亏了能否生存，成长。<span class="ulmarker">投资是反人性的，而投机是人性使然</span>，新手都做不到长期-投资，这也是为什么很多道理或者巴菲特看似很简单，99.99%的人却做不到的原因。所以来不及解释了，先上车后买票。金融市场的背后充满了人性险恶，"水很深"，小白都是被割韭菜的，想要打怪升级做好亏钱的心理准备，而且一定要跟对师傅，光靠自己基本死路一条。
 
 ![good-bye](/images/stock/good-bye.jpg#center)
 
-> 🔥 [美股入门 | 炒股到底能赚钱吗？](https://www.youtube.com/watch?v=dKWhoRJHBTs)  
-> 🔥 [美股入门 | 为什么你炒股总亏钱？揭秘没人愿意告诉你的股票交易真相！](https://www.youtube.com/watch?v=qEwA_nXM3JE)  
-> 🔥 [【半佛】学股票吗亲？倾家荡产的那种。](https://www.bilibili.com/video/BV1Y7411W7br)  
-> 🔥 [CLEC 一億元的投資理財講座（二）你絕對不能錯過 2021 年 1 月 9 日 CLEC 投資理財教育學院](https://www.youtube.com/watch?v=SKupWmBAbXg)
+> 🔥🔥🔥 [CLEC 一億元的投資理財講座（二）你絕對不能錯過 2021 年 1 月 9 日 CLEC 投資理財教育學院](https://www.youtube.com/watch?v=SKupWmBAbXg)
 
 ![投资要禅定](/images/stock/投资要禅定.png)
 
@@ -74,7 +82,7 @@ toc = true
 
 ## 开始行动
 
-> 🔥 买进，长期持有，打死不卖，就富有！
+> `买进，长期持有，打死不卖，就富有！`
 
 ![QQQ](/images/stock/qqq.png)
 
