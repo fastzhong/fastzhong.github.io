@@ -8,7 +8,7 @@
         {{- if $nav.showTags -}}
         <a class="nav item" href="{{- `/tags/` | relLangURL -}}"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;标签</a>
         {{- end -}}
-        <!-- <a class="nav item" href="{{- `/serials/` | relURL -}}"><i class="fas fa-star" aria-hidden="true"></i>&nbsp;系列</a> -->
+        <!-- <a class="nav item" href="{{- `/bits/` | relURL -}}"><i class="fas fa-book-reader" aria-hidden="true"></i>&nbsp;bits</a> -->
         <a class="nav item" href="{{- `/about/` | relURL -}}"><i class="far fa-user" aria-hidden="true"></i>&nbsp;关于</a>
         {{- range $nav.custom -}}
         {{- $url := .url | safeURL -}}

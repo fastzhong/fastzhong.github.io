@@ -8,9 +8,6 @@ description = "fastzhong.com"
 <form action="">
   <input type="checkbox" checked="checked"> 攒过机器<br>
   <input type="checkbox" checked="checked"> 修过电脑<br>
-  <input type="checkbox" checked="checked"> 拥有多台MBP，iMac，iPhone，iPad，不是果粉<br>
-  <input type="checkbox" checked="checked"> 拥有一款机械键盘<br>
-  <input type="checkbox" checked="checked"> 熟悉一款纯文本编辑器<br>
   <input type="checkbox" checked="checked"> 创业但失败<br>
   <input type="checkbox" checked="checked"> 带领过百人开发团队<br>
   <input type="checkbox" checked="checked"> 有一只可爱的 🐶<br>
