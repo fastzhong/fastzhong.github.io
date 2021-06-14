@@ -504,7 +504,7 @@ h6 {
 
 ### OOCSS
 
-[OOCSS：面向对象的 CSS](https://github.com/stubbornella/oocss/wiki)（Object Oriented CSS ）第一次出现在 2009 年，这个方法基于两个原则。第一个是<span class="ulmarker">结构（structure）和皮肤（skin）样式必须分离</span>。此原则意味着定义结构（如布局）的 CSS 代码不应该和定义皮肤的（如颜色，字体，等）混在一起。 这样更容易进行“换肤”。第二个原则是<span class="ulmarker">容器和内容必须分离</span>。此原则意味着要把页面元素当作可重用的对象 - 对象意味着它无论在页面的任何位置上看起来都是一样的。
+[OOCSS：面向对象的 CSS](https://github.com/stubbornella/oocss/wiki)（Object Oriented CSS ）第一次出现在 2009 年，这个方法基于两个原则。第一个是<span class="uline">结构（structure）和皮肤（skin）样式必须分离</span>。此原则意味着定义结构（如布局）的 CSS 代码不应该和定义皮肤的（如颜色，字体，等）混在一起。 这样更容易进行“换肤”。第二个原则是<span class="uline">容器和内容必须分离</span>。此原则意味着要把页面元素当作可重用的对象 - 对象意味着它无论在页面的任何位置上看起来都是一样的。
 
 OOCSS 提供了深思熟虑的原则，但在实行上并没有太具体的规定，后来的 SMACSS 继承了它的核心概念，但加入了很多细节让其在实践中更容易上手。
 

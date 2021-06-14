@@ -16,7 +16,7 @@ Wordpress，Blogger，Tumblr，Medium，...，统统不入法眼，程序员喜�
 -   `GitHub`：博客服务器和存放的地方，通过 git 来同步本地和 Github 的内容
 -   `VS Code`/`Typora`：博客内容编辑器，或者任何其它 markdown 编辑器
 -   `Hugo`：博客生成器（基于 Go 开发）
--   `netlify`: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务，<span class="ulmarker">关键是 🆓</span>
+-   `netlify`: 直连 Github，自动构建，自定义域名，CDN 加速，HTTPS，等， 一条 🐉 服务，<span class="uline">关键是 🆓</span>
 
 静态博客生成器多如牛毛（出名的如 Jekyll，Gatsby，Hexo），各种比较在此：
 

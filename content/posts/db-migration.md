@@ -17,8 +17,6 @@ toc = true
 
 ## Flyway
 
-### 工作方式
-
 数据库的变更可以用 sql 或者 java 来记录，Flyway 通过下面的步骤实现数据库变更：
 
 1. Flyway 先在数据库中检查自己的元数据表（默认为<span class="kwd">SCHEMA_VERSION</span>）是否存在，如果没有，则创建一个；
@@ -27,9 +25,7 @@ toc = true
 4. 否则，变更会按从低到高排序，并依次执行；
 5. 执行完，在<span class="kwd">SCHEMA_VERSION</span>做相应的记录
 
-下面以 Maven 方式来实现 Flyway 的数据库变更。
-
-### 例子
+Flyway 可以通过 Maven/Gradle，程序（Spring），或者命令行来执行变更操作，下面以 Maven 方式为例。
 
 1. Flyway Maven Plugin
 
@@ -173,9 +169,7 @@ $ mvn clean flyway:migrate -Dflyway.configFile=src/main/resources/db/migration
 
 ## Liquibase
 
-### 工作方式
-
-与 Flyway 非常类似，但是 Liquibase 比较复杂，下面也以 Maven 方式来实现 Liquibase 的数据库变更。
+工作方式与 Flyway 非常类似，但是 Liquibase 稍微复杂点，下面也以 Maven 方式来实现 Liquibase 的数据库变更。
 
 1. 和 Flyway 类似，引入 Liquibase plugin：
 

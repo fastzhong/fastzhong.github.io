@@ -175,7 +175,7 @@ toc = true
 
 -   部署&运行解耦（deploy&run independently）/自动化运维（devops）：自动化运维（DevOps）不是微服务特有的，在现有的项目或系统上完全可以实施自动化运维，也可以看到巨大效益，CI/CD 在微服务提出之前已经存在了。但自动化运维是实施微服务的必备技术，拆分和 ployglot 后对自动化运维提出了很高的要求，一堆不同质的东西可以单独部署，升级，同时又要组合在一起无间隙运行。容器技术的出现，对微服务所要求的大规模自动化运维提供了必要的技术基础。
 
-微服务的核心仍就是沿用“模块化”式思路设计整个系统，目的是达到<span class="ulmarker">软件的可重用和可扩展</span>。
+微服务的核心仍就是沿用“模块化”式思路设计整个系统，目的是达到<span class="uline">软件的可重用和可扩展</span>。
 
 ![历史](/images/arch/names.png#center)
 
@@ -193,7 +193,7 @@ toc = true
 
 ![ 微服务技术栈](/images/microservices/microservices-stack.jpg#center)
 
-在我看来，<span class="ulmarker">注册，配置，数据一致性，链路跟踪</span>，是微服务最基础和特有的技术点。
+在我看来，<span class="uline">注册，配置，数据一致性，链路跟踪</span>，是微服务最基础和特有的技术点。
 
 对应每个点都可以找到相应的具体技术，微服务的老大和先行者是 AWS，可惜它不开源。业界广泛的开源方案就是 Spring 系列的 Spring Boot & Spring Cloud，另一套是正在兴起是基于容器和 Kubernetes 的 服务网格（Service Mesh）。Spring Cloud 虽然是目前最成熟的方案，但从技术高度讲，我认为是开倒车或者说属于第一代的技术尝试（对比以前的 Corba，DCOM，J2EE，Web Services），不是发展大方向。
 
@@ -201,7 +201,7 @@ toc = true
 
 ## 微服务/分布式的坑
 
-<span class="ulmarker">代码和工程的质量仍是软件的灵魂，拆分和集成并不意味着可重用/可扩展就是必然</span>。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
+<span class="uline">代码和工程的质量仍是软件的灵魂，拆分和集成并不意味着可重用/可扩展就是必然</span>。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
 
 > `如果你不能设计一个优良的单体系统，那么微服务也帮不上忙`
 
@@ -241,7 +241,7 @@ toc = true
 
 -   除了这些直接的运维辅助手段，还有需要各种工具应对接口设计，编码质量，设计文档，项目多模块管理，等等。
 
-如果要展开，上面这些点包含了很多技术细节，架构设计上往往倾向 decouple/loosely coupled 来解决复杂性问题，但<span class="ulmarker">商业从来不是 decouple/loosely coupled 的</span>，总结一句就是：
+如果要展开，上面这些点包含了很多技术细节，架构设计上往往倾向 decouple/loosely coupled 来解决复杂性问题，但<span class="uline">商业从来不是 decouple/loosely coupled 的</span>，总结一句就是：
 
 > `系统集成依旧是所有复杂商业软件系统设计的难点和关键点，越复杂的系统越需要系统性的设计`
 

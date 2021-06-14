@@ -137,7 +137,7 @@ JIT 在 JVM 上得到了极大应用，号称还快过原生编译型语言的�
 
 ![PyPy JIT](/images/python/PyPy.png#center)
 
-1. PyPy 的解释器是用 RPython 编写的，RPython 类似 Python，相当于 Python 的子集，而且是<span class="ulmarker">强类型</span>
+1. PyPy 的解释器是用 RPython 编写的，RPython 类似 Python，相当于 Python 的子集，而且是<span class="uline">强类型</span>
 2. RPython 被编译成了的各种目标机器代码，默认的编译器实现是针对 C 的，但和 CPython 编译器比较，加入了 JIT，除了 C，理论上同样也可以有针对其它平台如 JVM 的实现
 
 还有各种 Python 的解释器，编译器，扩展等，不过 CPython（默认）是最完整的 Python 解释器，即是官方，也是使用的首选。

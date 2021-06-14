@@ -6,7 +6,7 @@ tags = []
 toc = false
 +++
 
-别扯了，DevOps 的核心就是自动化，而且最好能做到<span class="ulmarker">全程自动化</span>
+别扯了，DevOps 的核心就是自动化，而且最好能做到<span class="uline">全程自动化</span>
 
 <!--more-->
 
