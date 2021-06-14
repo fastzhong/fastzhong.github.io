@@ -1,5 +1,5 @@
 +++
-title = "数据库变更管理：Flyway 和 Liquibase"
+title = "数据库变更管理：Flyway & Liquibase"
 date = 2021-06-14T11:08:47+08:00
 readingTime = true
 categories = ["DevOps"]
@@ -248,7 +248,7 @@ referencePassword=
 
 3. 变更脚本
 
-src/main/resources/db/migration/changelog-master.xml:
+changeLogFile 指明了变更脚本：src/main/resources/db/migration/changelog-master.xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -277,7 +277,7 @@ src/main/resources/db/migration/changelog-master.xml:
 </databaseChangeLog>
 ```
 
-changelog-master.xml 是个主文件，具体的变更记录在 3 个文件里，例如 2021061401_add_entity_Company.xml：
+<span class="kwd">Vchangelog-master.xml</span> 是个主文件，具体的变更记录在 3 个文件里，例如 <span class="kwd">V2021061401_add_entity_Company.xml</span>：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -341,7 +341,7 @@ changelog-master.xml 是个主文件，具体的变更记录在 3 个文件里�
     </changeSet>
 ```
 
-注意到 changeSet 可以包括 <span class="kwd">rollback</span>，当出错执行的回滚语句或者可以指定执行。
+注意到 changeSet 可以包括 <span class="kwd">rollback</span>，当出错执行的回滚语句或者可以指定 rollback 时执行。
 
 执行变更操作：
 
@@ -349,7 +349,7 @@ changelog-master.xml 是个主文件，具体的变更记录在 3 个文件里�
 $ mvn liquibase:update
 ```
 
-在项目开始时，也可以从数据库已有的结构反向生成 changeLogFile：
+在项目开始时，也可以从数据库已有的表结构反向生成 changeLogFile：
 
 ```bash
 $ mvn liquibase:generateChangeLog
@@ -361,7 +361,7 @@ $ mvn liquibase:generateChangeLog
 $ mvn liquibase:diff
 ```
 
-💡 这个还蛮有用的，例如可以通过 Hibernate Entities 在本地数据库自动生成 schema，然后和生产环境中的数据库比较
+💡 这个还蛮有用的，例如可以通过 Hibernate Entities 在本地数据库自动生成表结构，然后和生产环境中的数据库比较
 
 如果觉得 XML 繁琐的话，Liquibase 也支持 Json，YAML 格式。
 
@@ -380,13 +380,13 @@ $ mvn liquibase:diff
 
 -   通用的变更同时支持不同的数据库，如 createTable
 -   Liquibase 开源版本支持 diff 模式
--   Liquibase 开源版本支持回滚 rollback，而 Flyway 必须用商业版
--   两者执行变更的顺序不同，Flyway 通过固定的文件名格式来确定顺序，而 Liquibase 就是通过文件的顺序来执行，所以开发人员要做好文件名的管理，例如按照日期/时间顺序命名
+-   Liquibase 开源版本支持回滚 rollback，而此特性 Flyway 必须用商业版
+-   两者执行变更的顺序方法不同，Flyway 通过固定的文件名格式来确定顺序，而 Liquibase 就是通过文件的顺序来执行，所以开发人员还要遵守好文件命名规则，例如按照日期/时间顺序命名
 
 两者都提供开源和商业版本，具体参见：
 
--   [Flyway](https://flywaydb.org/download)
+-   [Flyway 商业版](https://flywaydb.org/download)
 
--   [Liquibase](https://www.liquibase.com/product)
+-   [Liquibase 商业版](https://www.liquibase.com/product)
 
-<i class="fas fa-map-marker-alt"></i> 小结：两者差别不大，因其功能多，个人“稍微”倾向 Liquibase
+<i class="fas fa-map-marker-alt"></i> 小结：两者差别不大，因功能多，个人“稍微”倾向 Liquibase
