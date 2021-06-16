@@ -365,17 +365,18 @@ $ mvn liquibase:diff
 
 -   都是 Java 开发的开源数据库变更管理工具
 -   支持大部分的数据库
--   都可以通过命令行或者 Maven/Gradle plugin 执行
--   和 Spring 已经无缝集成
--   非常类似的实现方式
+-   和 Maven/Gradle 无缝集成
+-   和 Spring 无缝集成
+-   非常类似的变更实现方式
 -   复杂变更如果 SQL 不能满足的话，都可以用 Java 代码实现
 
-较大区别是 Flyway 的变更以纯 sql 为脚本，简单直接；Liquibase 比较厚重，当然花样也比较多，包括：
+较大区别是 Flyway 的变更以纯 SQL 为脚本，简单直接；Liquibase 比较厚重，当然花样也比较多，包括：
 
--   通用的变更同时支持不同的数据库，如 createTable
--   Liquibase 开源版本支持 diff 模式
+-   可指定不同的 profile
+-   具有通用的变更操作支持不同的数据库，如 createTable
+-   Liquibase 开源版本支持 diff 模式，而此特性 Flyway 必须用商业版
 -   Liquibase 开源版本支持回滚 rollback，而此特性 Flyway 必须用商业版
--   两者执行变更的顺序方法不同，Flyway 通过固定的文件名格式来确定顺序，而 Liquibase 就是通过文件的顺序来执行，所以开发人员还要遵守好文件命名规则，例如按照日期/时间顺序命名
+-   两者指定变更执行顺序的方法不同，Flyway 通过固定的文件名格式来确定顺序，而 Liquibase 就是通过给定文件的顺序来执行，所以开发人员还要遵守好文件命名规则，例如按照日期/时间顺序命名
 
 两者都提供开源和商业版本，具体参见：
 
