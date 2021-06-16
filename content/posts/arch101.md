@@ -199,7 +199,7 @@ toc = true
 
 以 Cloud Native 为基础才是微服务的明天，但是目前火热的 service mesh 仍然不成熟，参考： [<i class="fas fa-external-link-alt"></i>&nbsp; 服务网格（Service Mesh ）101](/posts/service-mesh-101/)
 
-## 微服务/分布式的坑
+## 大规模微服务/分布式的坑
 
 <span class="uline">代码和工程的质量仍是软件的灵魂，拆分和集成并不意味着可重用/可扩展就是必然</span>。相对 monolith，微服务/分布式系统对技术/人其实提出了很高的要求。
 
@@ -220,13 +220,13 @@ toc = true
 
 ![beyond-microservices](/images/arch/beyond-microservices.png#center)
 
-就像 Domain-Drive Design（DDD）从来都是个纸上的东西，正确的废话而已，拿来做服务拆分没有太大的帮助
+-   Domain-Drive Design（DDD）从来都是个纸上的东西，正确的废话而已，拿来做服务拆分没有太大的帮助，没过几年又会拉出来炒一炒，因为那是个可以忽悠人的好东西；
 
 -   多重数据拷贝：采用微服务后，除了把变更数据记录在本地数据库外，还对外广播，同时无形把网络流量拉升若干个数量级，同时相同或类似的数据拷贝存在无数个拷贝和版本；
 
 -   复杂性、封闭性增加，质量下降：服务的拆分很容易变成 premature optimization（一开始时就拆分而不是系统成熟时或对系统有成熟认识时拆分），做着做着，Json 和 REST 会变得越来越臃肿，理论上可以各自演进，实际却极大可能从一坨屎变成一坨一坨的屎 💩💩💩；
 
--   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加数据和系统正确性的难度，⚠️ 网上那个鼓吹很多的 [saga pattern](https://microservices.io/patterns/data/saga.html) 也是出自那些 evangelist 或者所谓的 paper architect，用来解决实际数据一致性问题基本是不可行的。统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 failures，如何能能从失败中恢复到正确状态，必须在设计中事先考虑，这应该 `分布式系统之殇`（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)），经典的分布式设计或编码 8 种错误假设：
+-   所有的微服务拆分之后还要合成一个有机的整体，系统控制和设计不会因为拆分而消失，反而因为拆分而在整体上大大增加数据和系统正确性的难度，⚠️ 网上那个鼓吹很多的 [saga pattern](https://microservices.io/patterns/data/saga.html) 也是出自那些 evangelist 或者所谓的 paper architect，用来解决实际数据一致性问题基本是不可行的。统一的系统设计和实施尤其重要，系统如何正确控制和响应各种 `分布式系统之殇`（[Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)）- <span class="uline">这方面绝大多数开发人员包括架构师都欠缺考虑或者没有很好的经验</span>，经典的分布式设计或编码 8 种错误假设：
 
         -   网络是稳定的
         -   网络传输的延迟是零
@@ -239,7 +239,7 @@ toc = true
 
 -   强大的基础设施，运维，监控，调试，恢复手段对微服务尤其重要，例如死信队列，流量重放，数据高可用，动态日志，容器化应用，蓝绿部署，等等。
 
--   除了这些直接的运维辅助手段，还有需要各种工具应对接口设计，编码质量，设计文档，项目多模块管理，等等。
+-   除了这些直接的运维辅助手段，还有需要各种工具应对接口设计，编码质量，设计文档，项目多模块管理，测试等等。
 
 如果要展开，上面这些点包含了很多技术细节，架构设计上往往倾向 decouple/loosely coupled 来解决复杂性问题，但<span class="uline">商业从来不是 decouple/loosely coupled 的</span>，总结一句就是：
 
@@ -255,6 +255,6 @@ toc = true
 
 99% 的软件项目都是被“复杂度”杀死的，而这是微服务/分布式系统的死结（参考经典文章：[📃 How Complex Systems Fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)）。
 
-> 作为架构师，抛开各种技术和复杂表象，其工作核心就是: 对抗熵增（We want to fight entropy），我的办法就是 `KISS`
+> 作为架构师，抛开各种技术和复杂表象，其工作核心就是: `对抗熵增`（We want to fight entropy）
 
 ![complexity](/images/arch/complexity.jpg#center)

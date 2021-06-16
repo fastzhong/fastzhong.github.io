@@ -7,7 +7,7 @@ tags = ["ansible"]
 toc = true 
 +++
 
-Ansible，运维工具里的瑞士军刀，比老牌 Puppet，Chef 好用太多
+Ansible，运维工具里的瑞士军刀，简单、粗暴
 
 <!--more-->
 
@@ -172,7 +172,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 
 <span class="kwd2">playbook</span> 也是 yaml 文本文件存在，类似于编程中你自己开发的程序，把不同的 task 串联在一起（类似调用不同的方法和类），完成你想要的事情。
 
-编写 playbook 是使用 Ansible 的主要工作，playbook 里定义了一系列的 tasks，每一段包含下面的一些核心元素：
+编写 playbook 是使用 Ansible 进行运维的主要工作，playbook 里定义了一系列的 tasks，每一段包含下面的一些核心元素：
 
 | 名称                | 含义                                                                                             |
 | ------------------- | ------------------------------------------------------------------------------------------------ |
@@ -296,7 +296,7 @@ roles/
 
 ### 四部曲
 
-如何编写和组织 inventory，role，playbook 是 Ansible 自动化实施的主要工作内容。我总结了这个四部曲的套路：
+<span class="uline">如何编写和组织 inventory，role，playbook 是 Ansible 自动化实施的主要工作内容</span>，我总结了这个四部曲的套路：
 
 ![Ansible Steps](/images/ansible/ansible-steps.png#center)
 

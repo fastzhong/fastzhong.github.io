@@ -21,9 +21,9 @@ toc = true
 
 -   课程：
 
-    -   [Educative: Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design)（付费）
+    -   [Educative: Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design) 💵
 
-    -   [AlgoExpert: SystemsExpert](https://www.algoexpert.io/systems/product)（付费）
+    -   [AlgoExpert: SystemsExpert](https://www.algoexpert.io/systems/product) 💵
 
     -   [Interview Daemon: System Design (Real World Examples)](https://interviewdaemon.com/courses/design-real-world-examples/) 🆓
 
@@ -93,4 +93,4 @@ toc = true
 
 [<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 我理解的架构 & 架构师（兼谈微服务）](/posts/arch101)
 
-[<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 淘宝服务端高并发分布式架构演进之路](/posts/taobao/) ⏤ 互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。
+[<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; 淘宝服务端高并发分布式架构演进之路](/posts/arch-taobao/) ⏤ 互联网应用的典型架构，架构是互通的，了解后至少懂得大方向。

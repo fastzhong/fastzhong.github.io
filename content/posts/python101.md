@@ -475,7 +475,7 @@ Python 是学习编程的首选，没有之一（如果连 Python 都学不会�
 
 ---
 
-以上都是些我早自学 Python 前想知道的，小结：
+以上都是些我 n 年前自学 Python 想知道的，小结：
 
 -   选择 Python3
 -   为每个项目建立 virtual env
