@@ -271,7 +271,7 @@ changeLogFile 指明了变更脚本：src/main/resources/db/migration/changelog-
 </databaseChangeLog>
 ```
 
-<span class="kwd">Vchangelog-master.xml</span> 是个主文件，具体的变更记录在 3 个文件里，例如 <span class="kwd">V2021061401_add_entity_Company.xml</span>：
+<span class="kwd">changelog-master.xml</span> 是个主文件，具体的变更记录在 3 个文件里，例如 <span class="kwd">V2021061401_add_entity_Company.xml</span>：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -355,7 +355,7 @@ $ mvn liquibase:generateChangeLog
 $ mvn liquibase:diff
 ```
 
-💡 这个还蛮有用的，例如可以通过 Hibernate Entities 在本地数据库自动生成表结构，然后和生产环境中的数据库比较
+💡 这个还蛮有用的，例如可以通过 Hibernate Entities 在本地数据库自动生成表结构，然后和生产环境中的数据库比较 - 但是不能做到数据库和changeLogFile直接比较。
 
 如果觉得 XML 繁琐的话，Liquibase 也支持 Json，YAML 格式。
 
