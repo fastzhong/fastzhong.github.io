@@ -3,7 +3,7 @@ author = "老火靓汤"
 description = "fastzhong.com"
 +++
 
-主要是自己的一些学习笔记，断断续续地更新:)
+主要是自己的一些学习笔记，断断续续地更新：
 
 ## 工具
 
@@ -31,7 +31,9 @@ description = "fastzhong.com"
 
 📖 {{< newtabref href="/bits/interview-algo.html" title="算法面试" >}}
 
-📖 {{< newtabref href="/bits/csapp.html" title="深入理解计算机系统" >}}
+📖 {{< newtabref href="/bits/csapp.html" title="深入理解计算机系统（CSAPP）" >}}
+
+📖 {{< newtabref href="/bits/aupe.html" title="（AUPE）" >}}
 
 📖 {{< newtabref href="/bits/sip.html" title="SIP" >}}
 
