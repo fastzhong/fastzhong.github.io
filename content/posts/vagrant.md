@@ -375,9 +375,9 @@ end
 
 vagrant 定义/支持三种网络模式：
 
--   `port forwarding`（default）：对应 virtualbox 的 NAT
--   `private network`：对应 virtualbox 的 Host-only 或者 Internal Network
--   `public network`：对应 virtualbox 的 Bridged Network
+-   <span class="kwd">port forwarding</span>（default）：对应 virtualbox 的 NAT
+-   <span class="kwd">private network</span>：对应 virtualbox 的 Host-only 或者 Internal Network
+-   <span class="kwd">public network</span>：对应 virtualbox 的 Bridged Network
 
 注意的是，Vagrant 启动虚拟机时，会自动在虚拟机中添加一块 VirtualBox NAT 类型的网卡，然后再创建 Vagrantfile 配置文件所描述的网络。Vagrant 将宿主机的 TCP/2222 端口转发到 虚拟机的 TCP/22 端口，这样就可以使用 vagrant ssh 命令快速地连接虚拟机。同时，虚拟机使用这块自动创建的 NAT 网卡访问外部网络。
 

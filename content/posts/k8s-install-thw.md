@@ -67,7 +67,7 @@ Kubernetes 中使用到的 CA 和证书：
 
 ## VM
 
-和 kubeadm 的一样：[<i class="fas fa-external-link-alt"></i>&nbsp; Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
+和 kubeadm 的一样：<i class="fas fa-external-link-alt"></i>&nbsp; [Kubernetes 安装 - kubeadm](/posts/k8s-install-kubeadm)
 
 ```bash
 [I] ➜ vagrant status

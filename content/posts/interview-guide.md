@@ -148,7 +148,8 @@ toc = true
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 
-⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：[<i class="fas fa-external-link-alt"></i>&nbsp; 算法编程面试指南](/posts/interview-algo)
+⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：<i class="fas fa-book-open"></i>
+&nbsp; [算法编程面试指南](/bits/leetcode)
 
 ### 编程/Java
 
@@ -161,7 +162,8 @@ toc = true
 
 ### 系统设计
 
-系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：[<i class="fas fa-external-link-alt"></i>&nbsp; 系统设计面试指南](/posts/interview-system)
+系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：<i class="fas fa-book-open"></i>
+&nbsp; [系统设计面试指南](/bits/system-design)
 
 ---
 

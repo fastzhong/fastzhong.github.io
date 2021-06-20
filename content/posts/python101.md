@@ -111,7 +111,7 @@ print "Hello, World!"
 编译型与解释型，两者各有利弊。编译型由于直接运行目标机器代码，无中间步骤，已针对平台优化，通常速度和效率高；解释型的抽象于平台，跨平台可移植性好。
 ```
 
-`Python 语言到底是被解释还是被编译的？`
+> `Python 语言到底是被解释还是被编译的？`
 
 Python 的实现方式和 Java 类似，想兼顾两者优势，Python 语言的默认解释器（从官方下载的 Python）是 C 实现的 ⏤ <span class="kwd">CPython</span>（直接叫 Python），CPython 把 Python 程序编译成 bytecode（称为中间代码），然后 bytecode 可运行在 CPython 的虚拟机上。
 

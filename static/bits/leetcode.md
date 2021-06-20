@@ -30,9 +30,9 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
   - 前两百多道都是经典题，先刷热题 HOT 100 ～ 200，再刷精选 TOP 面试题，之后刷其他的题。
 
-    <img src="interview-algo.assets/leetcode-algo-20210611185213645.png" alt="leetcode algo" style="zoom: 67%;" />
+    <img src="leetcode.assets/leetcode-algo-20210611185213645.png" alt="leetcode algo" style="zoom: 67%;" />
 
-    <img src="interview-algo.assets/leetcode-top.png" alt="leetcode top" style="zoom: 67%;" />
+    <img src="leetcode.assets/leetcode-top.png" alt="leetcode top" style="zoom: 67%;" />
 
   - easy/hard 一般不会考，碰到 hard 的就缴枪自认倒霉吧
 
@@ -43,11 +43,11 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 - ==策略 B：循序渐进==
 
   1. 基础：Leetcode -> Explore -> Learn 针对各个数据结构和算法的分类学习 + 练习:
-     <img src="interview-algo.assets/leetcode-learn.png" alt="leetcode learn" style="zoom: 67%;" />
+     <img src="leetcode.assets/leetcode-learn.png" alt="leetcode learn" style="zoom: 67%;" />
 
      Leetcode 中文站的资料就更多：https://leetcode-cn.com/leetbook/
 
-     <img src="interview-algo.assets/leetcode-cn.png" alt="leetcode-cn" style="zoom:67%;" />
+     <img src="leetcode.assets/leetcode-cn.png" alt="leetcode-cn" style="zoom:67%;" />
 
      算法基础好的或者学校刚毕业的可以跳过这部分，直接刷题。
 
@@ -184,6 +184,8 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 油管和 B 站上都有很多人在讲解，可自行搜索，同一题有时需要交叉听听不同人的讲解：
 
+
+
 - 💁🏻‍♂️ 花花酱
 
   ```markdown
@@ -191,8 +193,12 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
   ```
 
   - 油管：[花花酱 LeetCode 视频讲解](https://docs.google.com/spreadsheets/d/1HV-iKgYJL4DpSOX1M-HcYG1cmz5CQxoduLOdEoTnIXo/edit#gid=0)
+
   - B 站：[花花酱 LeetCode](https://space.bilibili.com/9880352)
+
   - 网站：https://zxi.mytechroad.com/blog/
+
+    
 
 - 💁🏻‍♂️ 篮子王
 
@@ -201,17 +207,26 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
   ```
 
   - 油管：[basketwangCoding](https://www.youtube.com/playlist?list=PLH8TFsY0qnE2R9kf_9vahNY6pG9601z_4)（Java 版）
+
   - B 站：[basketwangCoding](https://space.bilibili.com/108657656)
+
+    
 
 - 💁🏻‍♂️ 小小福
 
   - 油管：[FuFu LeetCode](https://www.youtube.com/channel/UCCMpGENpr93ENbfdinP3QeQ/playlists)
+
   - B 站：[小小福 Leetcode 力扣讲解](https://space.bilibili.com/440336692/channel/detail?cid=99774&ctype=0)
+
+    
 
 - 💁🏻‍♂️ 古城算法
 
   - 油管：[古城算法](https://www.youtube.com/c/古城算法/playlists)
+  
   - B 站：[古城算法](https://space.bilibili.com/21630984/channel/detail?cid=162960&ctype=0)
+  
+    
 
 ### 7.2. 英文讲解（课程）
 
@@ -219,11 +234,25 @@ MIT，Stanford，CMU，Coursera，Edx，Udacity 上都有大学的数据结构�
 
 - [Zero to Master Master the Coding Interview: Big Tech (FAANG) Interviews](https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep)
   油管：[Coding Interview Prep | Master LeetCode | Get Hired](https://www.youtube.com/playlist?list=PL2HX_yT71umC1tZjYtaEmmG6U4pVRXt58)
+  
+  
+  
 - [Back To Back SWE](https://backtobackswe.com/)
   油管：[Software Engineering Interviews](https://www.youtube.com/playlist?list=PLiQ766zSC5jPIKibTa5qtXpwgwEBalDV4)
+  
+  
+  
 - [AlgoExpert](https://www.algoexpert.io/product)（100 道）
+
+  
+
 - [InterviewPro](https://www.techseries.dev/)（100 道）
+
+  
+
 - [Interview Cake](https://www.interviewcake.com/)
+
+  
 
 ### 7.3. 各路大神作业
 
@@ -245,23 +274,23 @@ VS Code里安装插件后：
 
 1. 唤出 Leetcode
 
-   <img src="interview-algo.assets/leetcode-20210612072200387.png" alt="leetcode" style="zoom:67%;" />
+   <img src="leetcode.assets/leetcode-20210612072200387.png" alt="leetcode" style="zoom:67%;" />
 
 2. 先 Switch Endpoint 选“中国” or “US”，两边 leetcode 不同
-   <img src="interview-algo.assets/leetcode-endpoint.png" alt="leetcode endpoint" style="zoom:67%;" />
+   <img src="leetcode.assets/leetcode-endpoint.png" alt="leetcode endpoint" style="zoom:67%;" />
 
    
 
 3. Sign in：⚠️ 注意 leetcode US 已经不能支持账号 Sign in，必须通过 cookie（从 Chrome 浏览器中 login，然后把完整的 cookie 拷贝过来)
-   <img src="interview-algo.assets/leetcode-cookie.webp" alt="leetcode cookie" style="zoom:67%;" />
+   <img src="leetcode.assets/leetcode-cookie.webp" alt="leetcode cookie" style="zoom:67%;" />
 
-   <img src="interview-algo.assets/leetcode-cookie.png" alt="leetcode cookie" style="zoom:80%;" />
+   <img src="leetcode.assets/leetcode-cookie.png" alt="leetcode cookie" style="zoom:80%;" />
 
 4. 接下来点击最右边导航条上 leetcode 标签
-   <img src="interview-algo.assets/leetcode-demo.gif" alt="leetcode demo" style="zoom:67%;" />
+   <img src="leetcode.assets/leetcode-demo.gif" alt="leetcode demo" style="zoom:67%;" />
 
 5. 开刷
-   <img src="interview-algo.assets/leetcode-submit.png" alt="leetcode submit" style="zoom:67%;" />
+   <img src="leetcode.assets/leetcode-submit.png" alt="leetcode submit" style="zoom:67%;" />
 
 ## 8.2. IntelliJ 插件
 
@@ -270,11 +299,11 @@ VS Code里安装插件后：
 IntelliJ里安装插件后： 
 
 1. 配置
-   <img src="interview-algo.assets/shuzijun-config.png" alt="config" style="zoom:67%;" />
+   <img src="leetcode.assets/shuzijun-config.png" alt="config" style="zoom:67%;" />
 
 2. 使用
-   <img src="interview-algo.assets/shuzijun-use.gif" alt="use" style="zoom:67%;" />
-   <img src="interview-algo.assets/shuzijun-debug.gif" alt="debug" style="zoom:67%;" />
+   <img src="leetcode.assets/shuzijun-use.gif" alt="use" style="zoom:67%;" />
+   <img src="leetcode.assets/shuzijun-debug.gif" alt="debug" style="zoom:67%;" />
 
 ### 8.3. Chrome 插件
 

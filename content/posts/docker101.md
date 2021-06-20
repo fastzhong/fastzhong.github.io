@@ -458,4 +458,4 @@ Docker 创建和运行容器的大致流程：
 ㊫ [深入理解 overlayfs（一）：初识](https://blog.csdn.net/luckyapple1028/article/details/77916194)  
 ㊫ [深入理解 overlayfs（二）：使用与原理分析](https://blog.csdn.net/luckyapple1028/article/details/78075358)  
 ㊫ 关于容器 runtime，参考 [Ian Lewis container-runtime-series](https://www.ianlewis.org/en/tag/container-runtime-series)  
-㊫ 在线动手学习 Docker：[Play with Docker](https://www.docker.com/play-with-docker) 以及 [Katacoda](https://katacoda.com/courses/container-runtimes)
+㊫ 在线动手学习 Docker：[Katacoda](https://katacoda.com/courses/container-runtimes)

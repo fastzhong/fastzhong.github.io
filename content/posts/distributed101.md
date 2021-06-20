@@ -11,8 +11,8 @@ Distributed systems theory for the distributed systems engineer 简单明了的�
 
 <!--more-->
 
-原文：[<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; Distributed systems theory for the distributed systems engineer（2014）](http://the-paper-trail.org/blog/distributed-systems-theory-for-the-distributed-systems-engineer/)  
-译者：[<i class="fas fa-external-link-alt"></i>&nbsp; 夏永锋](http://blog.xiayf.cn/2014/08/10/Distributed-systems-theory-for-the-distributed-systems-engineer/)
+原文：<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp; [istributed systems theory for the distributed systems engineer（2014）](http://the-paper-trail.org/blog/distributed-systems-theory-for-the-distributed-systems-engineer/)  
+译者：<i class="fas fa-external-link-alt"></i>&nbsp; [夏永锋](http://blog.xiayf.cn/2014/08/10/Distributed-systems-theory-for-the-distributed-systems-engineer/)
 
 原文在 2018 年进行了更新，我在夏永锋译文基础上做了部分更改。
 
@@ -26,7 +26,7 @@ Gwen Shapira，曾今 的 Cloudera 工程师，现在引领 Kafka，在 [Twitter
 
 但是，很遗憾，对分布式系统理论方面的重大研究成果和思想进行概括、归纳、背景分析的‘导引’性质的优秀材料非常缺乏；特别是没有那种高屋建瓴的材料。对这块空白区域的思考让我想到了另一个有趣的问题：
 
-`一个分布式系统工程师应该知道些什么分布式系统理论？`
+> `一个分布式系统工程师应该知道些什么分布式系统理论？`
 
 在这种情况下，一知半解（a little theory）并不会是一件多危险的事情。因此我尝试整理一个列表，罗列出作为一个分布式系统工程师的我认为能够直接应用于我日常工作的基础理论。如果你认为我漏掉了一些东西，请联系我。
 

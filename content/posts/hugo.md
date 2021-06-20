@@ -23,4 +23,4 @@ Wordpress，Blogger，Tumblr，Medium，...，统统不入法眼，程序员喜�
 -   [staticgen.com](https://www.staticgen.com/)
 -   [staticsitegenerators.net](https://staticsitegenerators.net/)
 
-[<i class="fas fa-external-link-alt"></i>&nbsp; 常用在线工具](https://tool.lu/)
+<i class="fas fa-external-link-alt"></i>&nbsp; [常用在线工具](https://tool.lu/)

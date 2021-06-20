@@ -50,3 +50,37 @@ toc = false
 -   养成复合型思维模式，平时多学习跨领域的知识；
 
 我们从外界获得的资讯，都已经被消化在股市里，所以不经过自己的思考，是不可能单纯依靠资讯获利，这就是为什么绝大多数人在股市中赚钱靠的其实是运气，而亏钱靠的是实力。<span class="uline">“独立”</span>思考，控制情绪，<span class="uline">“理性”</span>投资，学习股神巴菲特的两大法宝之一。
+
+---
+
+附：Philip Fisher's 15-point checklist, which he used before investing in any stock.
+
+1. Does the company have products or services with sufficient market potential to make possible a sizable increase in sales for at least several years?
+
+2. Does the management have a determination to continue to develop products or processes that will still further increase total sales potentials when the growth potentials of currently attractive product lines have largely been exploited?
+
+3. How effective are the company's research-and-development efforts in relation to its size?
+
+4. Does the company have an above-average sales organization?
+
+5. Does the company have a worthwhile profit margin?
+
+6. What is the company doing to maintain or improve profit margins?
+
+7. Does the company have outstanding labor and personnel relations?
+
+8. Does the company have outstanding executive relations?
+
+9. Does the company have depth and talent in its management?
+
+10. How good are the company's cost analysis and accounting controls?
+
+11. Are there other aspects of the business, somewhat peculiar to the industry involved, which will give the investor important clues as to how outstanding the company may be in relation to its competition?
+
+12. Does the company have a short-range or long-range outlook in regard to profits?
+
+13. In the foreseeable future will the growth of the company require sufficient equity financing so that the larger number of shares then outstanding will largely cancel the existing stockholders' benefit from this anticipated growth?
+
+14. Does management talk freely to investors about its affairs when things are going well but "clam up" when troubles and disappointments occur?
+
+15. Does the company have a management of unquestionable integrity?

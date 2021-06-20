@@ -233,7 +233,7 @@ vars 这个关键字说明里面的变量将作用在所有的 dev 成员上（d
 -   tasks：该 role 需要执行的 tasks，类似 playbook，include 可在此目录中寻找 tasks 文件（相对路径）
 -   handlers：定义该 role 需要的回调 task，在 tasks 里可以调用
 
-role 类似你自己已经开发好的一个程序，完成固定的功能，可以重复使用。你也可以直接使用社区里别人开发和分享的 role。社区里包含大量的 role，基本上你想做的事情都有人实现了，或者把 source code 拷下来，自己稍微修改，顺便学习如何编写自己的 role：[一个安装和配置 mysql 的 role](https://github.com/geerlingguy/ansible-role-mysql)。
+role 类似你自己已经开发好的一个程序，完成固定的功能，可以重复使用。你也可以直接使用社区里别人开发和分享的 role。社区里包含大量的 role，基本上你想做的事情都有人实现了，或者把 source code 拷下来，自己稍微修改，顺便学习如何编写自己的 role：<i class="fab fa-github" aria-hidden="true"></i>&nbsp;[一个安装和配置 mysql 的 role](https://github.com/geerlingguy/ansible-role-mysql)。
 
 在运行时，Ansbile 把 playbook 结合 inventory 和 module/roles 编译成 Python 程序，managed node 通过 SSH 将其发送至目标机器，然后在目标机器上执行。 Ansible 把目标机器看成是一个状态机，每做一个 task，状态会发生改变，通过若干 task 后，目标机器就从原始状态达到你想要的状态，实现“状态变化管理”。如果目标机器已经处于目标状态中，该 task 就不会被执行。每一步变化是“等幂”的 - 可重复，可验证。
 
@@ -245,7 +245,7 @@ role 类似你自己已经开发好的一个程序，完成固定的功能，可
 
 ### 项目模版
 
-💡 快速实战必读：[Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
+🔥 快速实战必读：<i class="fas fa-external-link-alt"></i>&nbsp; [Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
 
 ```bash
 production                # inventory file for production servers
@@ -471,7 +471,7 @@ roles/
 
 ### 安装
 
-Ansible 只安装在 management node 上，安装 Ansible 通过 Linux 上各种包安装工具如 RedHat 的 yum，Suse 的 zypper，Mac 的 brew 等，很容易搞定），如果 offline 安装，手动安装所需要的 rpm。由于 Ansible 是 Python 编写的，所以也可以用 pip 来安装。具体参见（[官方安装文档](http://docs.ansible.com/ansible/intro_installation.html)）。
+Ansible 只安装在 management node 上，安装 Ansible 通过 Linux 上各种包安装工具如 RedHat 的 yum，Suse 的 zypper，Mac 的 brew 等，很容易搞定），如果 offline 安装，手动安装所需要的 rpm。由于 Ansible 是 Python 编写的，所以也可以用 pip 来安装。具体参见：<i class="fas fa-external-link-alt"></i>&nbsp; [官方安装文档](http://docs.ansible.com/ansible/intro_installation.html)。
 
 Ansible 的目标机器可以是 Linux 或 Windows，但目前 management node 必须是 Linux，虽然有各种 hack，但强烈不建议 Windows 作为 management node。
 
@@ -583,7 +583,7 @@ myapp-app1 ansible_ssh_host=172.16.0.60 ansible_ssh_private_key_file=/etc/ansibl
 myapp-app2 ansible_ssh_host=172.16.0.61 ansible_ssh_private_key_file=/etc/ansible/keys/app2.pem
 ```
 
--   让 SSH/SSH-Agent 自己去解决（参考 [SSH 功夫](/posts/ssh/)）
+-   让 SSH/SSH-Agent 自己去解决
 
 ### 有条件执行
 

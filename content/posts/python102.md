@@ -11,7 +11,7 @@ Python 基本语法，有编程经验的可以瞬间上手
 
 <!--more-->
 
-参考：[<i class="fas fa-external-link-alt"></i>&nbsp; Python 101](/posts/python101)
+参考：<i class="fas fa-external-link-alt"></i>&nbsp; [Python 101](/posts/python101)
 
 ## 安装 Anaconda
 
@@ -45,7 +45,7 @@ print("Hello, world!")
 
 ## Python 基本语法
 
-㊫ 结合代码看一目了然 [Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
+㊫ 结合代码看一目了然 <i class="fab fa-github" aria-hidden="true"></i>&nbsp; [Python101 notebook](https://github.com/fastzhong/fastzhong.github.io/blob/master/static/resources/python101.ipynb)
 
 ![Python3](/images/python/Python3.png#center)
 
@@ -115,4 +115,4 @@ if __name__=="__main__":
 
 ---
 
-<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Python 的语法总结：[<i class="fas fa-external-link-alt"></i>&nbsp; Learn python3 in one picture.](https://github.com/coodict/python3-in-one-pic)
+<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Python 的语法总结：<i class="fas fa-external-link-alt"></i>&nbsp; [Learn python3 in one picture.](https://github.com/coodict/python3-in-one-pic)

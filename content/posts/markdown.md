@@ -267,7 +267,7 @@ Typora 支持简单的 Markdown 画图，但至今我还没有看到比较好的
 
 ## 在线练习
 
-[<i class="fas fa-external-link-alt"></i>&nbsp; 操练一把](https://www.markdowntutorial.com/)
+<i class="fas fa-external-link-alt"></i>&nbsp; [操练一把](https://www.markdowntutorial.com/)
 
 ## 工具
 
