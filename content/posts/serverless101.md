@@ -2,7 +2,7 @@
 title = "Serverless 101"
 date = 2018-01-30T10:18:02+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["serverless"]
 toc = true
 +++

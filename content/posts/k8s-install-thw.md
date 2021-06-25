@@ -2,7 +2,7 @@
 title = "Kubernetes 安装 - THW"
 date = 2020-10-05T04:08:47+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["kubernetes"]
 toc = true
 +++

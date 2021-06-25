@@ -2,7 +2,7 @@
 title = "Kubernetes Pod"
 date = 2010-10-06T06:08:47+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["kubernetes"]
 toc = false
 draft = true

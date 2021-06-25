@@ -1,6 +1,6 @@
 .kwd {
     display: inline-block;
-    color: orange;
+    color: coral;
     font-size: 12px;
     line-height: 1;
     padding: 3px 5px;
@@ -11,12 +11,12 @@
 }
 
 .kwd2 {
-    color: orange
+    color: coral;
 }
 
 .label {
     display: inline-block;
-    color: aqua;
+    color: limegreen;
     font-size: 12px;
     line-height: 1;
     padding: 3px 5px;
@@ -29,7 +29,7 @@
 
 .uline {
     --line-yellow: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23fc0' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    --line-dark: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='hsl(33, 100%, 50%)' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    --line-dark: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='hsl(15, 72%, 70%)' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     font-family: var(--system);
     font-size: 1rem;
     line-height: 1.7;

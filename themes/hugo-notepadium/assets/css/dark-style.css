@@ -29,7 +29,7 @@ code,
 kbd,
 tt,
 samp {
-  color: #fc6a5d;
+  color: coral;
 }
 
 pre {
@@ -58,12 +58,12 @@ a {
 }
 
 .tag {
-  color: #fc6a5d;
+  color: #6f4e37;
 }
 
 .category {
   color: rgba(255,255,255,.85);
-  background-color: #8a4a4a;
+  background-color: #6f4e37;
 }
 
 .article.markdown-body h1,

@@ -2,7 +2,7 @@
 title = "Docker/容器 101（2020.9更新）"
 date = 2017-05-01T07:28:59+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["docker"]
 toc = true
 +++

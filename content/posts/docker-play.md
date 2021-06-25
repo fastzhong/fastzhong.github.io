@@ -2,7 +2,7 @@
 title = "Docker 实操（Mac）"
 date = 2020-08-30T05:08:47+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["docker"]
 toc = true
 +++

@@ -2,7 +2,7 @@
 title = "AWS 容器"
 date = 1999-08-01T13:08:47+08:00
 readingTime = true
-categories = ["云 & 云原生"]
+categories = ["Cloud Native"]
 tags = ["aws"]
 toc = true 
 draft = true
