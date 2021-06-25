@@ -53,6 +53,12 @@ toc = false
 
 ---
 
+附：简单法则
+
+-   自己认知范围，产品自己用得上，用户体验“<span class='kwd2'>震惊</span>”
+-   过去没有，现在有，将来会更多，无限多
+-   <span class='uline'>持续关注上述两点</span> - 新产品继续震惊，市场越来越大
+
 附：Philip Fisher's 15-point checklist, which he used before investing in any stock.
 
 1. Does the company have products or services with sufficient market potential to make possible a sizable increase in sales for at least several years?
