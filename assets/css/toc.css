@@ -24,6 +24,7 @@
     text-indent: 5px;
     font-size: 14px;
     text-decoration: none;
+    color: rgba(255,255,255,.65);
 }
 .tocify ul li a:before {
     content: "• ";
@@ -47,7 +48,7 @@
     margin-left: 2rem;
 }
 .tocify li a:hover {
-    color: white;
+    color: #3eaf7c;
 }
 
 @media only screen and (max-width: 1080px) {
