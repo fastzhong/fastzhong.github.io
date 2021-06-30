@@ -1,10 +1,11 @@
 +++
-title = "面试终极指南"
+title = "面试指南"
 date = 2020-03-20T07:28:59+08:00
 readingTime = true
 categories = ["职业发展"]
 tags = ["面试指南系列"]
 toc = true
+
 +++
 
 想创业，立志当大老板的除外，那是更高的目标和要求，思维和方法也大大的不同，这里只是小人物“被面&面了无数次”后的小总结。
@@ -13,15 +14,13 @@ toc = true
 
 ## 好工作？
 
-找工作最核心的一个问题就是“如何判断一个好的工作”，而答案是如何让自己受益最大，关键点是长期成长回报。
-
-我的定义就是：
+找工作最核心的一个问题就是“如何判断一个好的工作”，我的定义就是：
 
 -   好的领导（working under a good leader）
 -   有趣的工作（interesting work）
 -   高的报酬（highly paid）
 
-三者兼有基本是在做梦，只能权衡。现在的趋势是竞争越来越激烈啦。
+三者兼有基本是在做梦，只能权衡。如果自己有短期、长期规划则更好，就不需要找答案了。现在的趋势是竞争越来越激烈，对于普通人而言，关键点是如何让自己受益最大，有长期成长回报。99%都是打工的，钱说了算。面试的过程相对很短，找人和找工作我自己都倾向有人介绍。
 
 ## 简历
 
@@ -57,6 +56,8 @@ toc = true
 5. _<font color="orange">压力练习</font>_：面试的时候难免紧张，可能会严重影响发挥，通过平时多找机会参与交流分享，或找人做压力面试来改善
 6. _<font color="orange">表达练习</font>_：表达能力非常影响在面试中的表现，能否简练地将答案告诉面试官，可以通过给自己讲解的方式刻意练习
 7. _<font color="orange">重点针对</font>_：面试官会针对简历提问，所以请针对简历上写的所有技术点以及个人优势进行重点准备
+
+> 面试也是一种沟通，注意沟通技巧，要留心对方的动作，语气，意图
 
 ### “普遍性”难题
 
@@ -149,7 +150,7 @@ toc = true
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 
 ⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：<i class="fas fa-book-open"></i>
-&nbsp; [算法编程面试指南](/bits/leetcode)
+&nbsp; [算法编程面试指南](https://bits.fastzhong.com/cs/algo/leetcode.html)
 
 ### 编程/Java
 
@@ -157,6 +158,7 @@ toc = true
 
 💎 系统学习，成效才会卓著（入坑需谨慎发量）：
 
+-   [Java工程师成神之路](https://hollischuang.github.io/toBeTopJavaer/#/menu?id=to-be-top-javaer-java工程师成神之路)
 -   [Java 全栈知识体系 - BAT 大厂面试题与全栈知识体系结合](https://www.pdai.tech/md/outline/x-outline.html)
 -   [2021 年黑马程序年黑马程序员 Java 学习路线图](https://www.bilibili.com/read/cv9965357)
 -   [尚硅谷 2021 年度全网最全 Java 学习路线](https://www.bilibili.com/read/cv5216534)
@@ -164,7 +166,7 @@ toc = true
 ### 系统设计
 
 系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：<i class="fas fa-book-open"></i>
-&nbsp; [系统设计面试指南](/bits/system-design)
+&nbsp; [系统设计面试指南](https://bits.fastzhong.com/dev/sys-design/)
 
 ---
 

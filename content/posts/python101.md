@@ -15,7 +15,14 @@ Python 近两三年伴随着机器学习变得很火，其实 🐍 比 ☕️ �
 
 ## 最人类化的编程语言
 
-Why Python，请看 Python 的编程哲学
+Python 在几百中在用编程语言中可以说是稳居 Top 5，看一看其表现：
+
+![tiobe long term](/images/python/tiobe_long_term.png#center)
+![tiobe hall of fame](/images/python/tiobe_hall.png#center)
+
+和其排名相比，Python 在热门语言里属于比较低调的。而 Python 之所以“热门”，我觉得主要原因有二：其一，非常友好，从编程语言讲，使用者体验最佳；其二，使用广泛。
+
+第一点是最突出的，请看 Python 的编程哲学：
 
 ```python
 >>> import this
@@ -61,7 +68,9 @@ Namespaces are one honking great idea -- let's do more of those!
 命名空间大法好，不搞不是地球人
 ```
 
-Python 在我看来是最“美”的编程语言，易读性极好，很可惜不是我和很多人第一次学习编程的语言，否则学习编程就不用那么费力了 - 因为看 Python 的代码，就像看散文一样，比较一下各种 Hello World：
+Python 在我看来是最“美”的编程语言，易读性极好，很可惜不是我和很多人第一次学习编程的语言，否则学习编程就不用那么费力了 - 看 Python 的代码，就像看散文一样，如果学不会 Python，我认为就没有必要从事软件开发啦。
+
+比较一下各种 Hello World：
 
 ```C
 /* C */
