@@ -68,7 +68,7 @@ Namespaces are one honking great idea -- let's do more of those!
 命名空间大法好，不搞不是地球人
 ```
 
-Python 在我看来是最“美”的编程语言，易读性极好，很可惜不是我和很多人第一次学习编程的语言，否则学习编程就不用那么费力了 - 看 Python 的代码，就像看散文一样，如果学不会 Python，我认为就没有必要从事软件开发啦。
+Python 在我看来是最“美”的编程语言，易读性极好，很可惜不是我和很多人第一次学习编程的语言，否则学习编程就不用那么费力了 - 看 Python 的代码，就像看散文一样，<span class="uline">如果学不会 Python，我认为就没有必要从事软件开发啦</span>。
 
 比较一下各种 Hello World：
 
