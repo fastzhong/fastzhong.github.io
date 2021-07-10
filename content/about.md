@@ -1,6 +1,8 @@
 +++
-author = "老火靓汤"
+title = ""
 description = "fastzhong.com"
+date = ""
+author = "老火靓汤"
 +++
 
 > 许多人觉得，成功后才会快乐，却忘记了，能快乐生活，就是最大的成功。
@@ -16,6 +18,8 @@ description = "fastzhong.com"
   <input type="checkbox" checked="checked"> 脱发 😂<br>
     <input type="checkbox" checked="checked"> “入土级”老司机，欢迎正常性骚扰 😊<br>
 </form>
+
+<i class="fas fa-book-reader" aria-hidden="true"></i>&nbsp; [bits 学习笔记](https://bits.fastzhong.com)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/fastzhong?label=%40fastzhonng&style=social)](https://twitter.com/fastzhong)
 [![GitHub followers](https://img.shields.io/github/followers/fastzhong?label=fastzhong&style=social)](htttps://github.com/fastzhong)
