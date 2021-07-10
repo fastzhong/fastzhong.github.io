@@ -1,0 +1,14 @@
+<section id="footer">
+    {{- $copyright := site.Copyright -}}
+    {{- if not $copyright -}}
+        {{- $copyright = site.Title | safeHTML -}}
+    {{- end -}}
+    {{- partial "copyright.html" ($copyright | safeHTML) -}}
+</section>
+{{- partial "math.html" . -}}
+{{- partial "syntax.html" . -}}
+{{- if not .Site.IsServer -}}
+    {{- template "_internal/google_analytics_async.html" . -}}
+    {{- template "_internal/baidu_tongji.html" . -}}
+{{- end -}}
+{{- partial "custom-js.html" . -}}
