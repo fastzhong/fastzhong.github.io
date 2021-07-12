@@ -2,7 +2,7 @@
 title = "面试指南"
 date = 2020-03-20T07:28:59+08:00
 readingTime = true
-categories = ["职业发展"]
+categories = ["程序员成展"]
 tags = ["面试指南系列"]
 toc = true
 
@@ -149,8 +149,8 @@ toc = true
 
 我经历了不下一、二十次，坦白讲算法编程面试和算法编程关系就像托福考试和使用英语。面试造核弹，入职拧螺丝，996 那种拧法。所以现在除非 Google 之流，其它公司要求算法编程面试的，我一般都回绝。
 
-⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月的时间）：<i class="fas fa-book-open"></i>
-&nbsp; [算法编程面试指南](https://bits.fastzhong.com/cs/algo/leetcode.html)
+⚠️ 算法编程是所有技术准备中最难也是需要时间最久的（6 个月或更长的时间）：<i class="fas fa-book-open"></i>
+&nbsp; {{< newtab title="Leedcode Study Guide" href="https://bits.fastzhong.com/cs/algo/leetcode.html" >}}
 
 ### 编程/Java
 
@@ -158,7 +158,7 @@ toc = true
 
 💎 系统学习，成效才会卓著（入坑需谨慎发量）：
 
--   [Java工程师成神之路](https://hollischuang.github.io/toBeTopJavaer/#/menu?id=to-be-top-javaer-java工程师成神之路)
+-   [Java 工程师成神之路](https://hollischuang.github.io/toBeTopJavaer/#/menu?id=to-be-top-javaer-java工程师成神之路)
 -   [Java 全栈知识体系 - BAT 大厂面试题与全栈知识体系结合](https://www.pdai.tech/md/outline/x-outline.html)
 -   [2021 年黑马程序年黑马程序员 Java 学习路线图](https://www.bilibili.com/read/cv9965357)
 -   [尚硅谷 2021 年度全网最全 Java 学习路线](https://www.bilibili.com/read/cv5216534)
@@ -166,7 +166,7 @@ toc = true
 ### 系统设计
 
 系统设计难定量定性，范围较广，越有经验越占优。准备一下还是可以互掐一番的：<i class="fas fa-book-open"></i>
-&nbsp; [系统设计面试指南](https://bits.fastzhong.com/dev/sys-design/)
+&nbsp; {{< newtab title="System Design Solutions" href="https://bits.fastzhong.com/dev/sys-design/solutions/" >}}
 
 ---
 

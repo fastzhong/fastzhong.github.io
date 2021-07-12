@@ -2,7 +2,7 @@
 title = "系统设计面试指南"
 date = 2020-05-23T13:08:47+08:00
 readingTime = true
-categories = ["职业发展"]
+categories = ["程序员成展"]
 tags = ["面试指南系列"]
 toc = true
 +++
